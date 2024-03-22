@@ -1,0 +1,57 @@
+:root {
+    --nav-height: 5vw;
+    --nav-vertical-padding: 10vw;
+  }
+  body {
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+  }
+  .main-nav {
+    display: flex;
+    flex-direction: row;
+    padding: calc(var(--nav-vertical-padding)/2) 5vw  calc(var(--nav-vertical-padding)/2) 5vw;
+    align-items: center;
+    justify-content: space-between;
+    height: var(--nav-height);
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    width: 90vw;
+    background-color: #333;
+    transition: background-color .4s;
+  }
+  .main-nav.half-transparent {
+    background-color: var(--theme-primary);
+  }
+  
+  .main-nav > .primary > .app-name{
+   font-size: 5vw;
+  }
+  
+  .main-nav > .secondery {
+    justify-content: end;
+    align-items: center;
+    gap: 1.5vw;
+  }
+  .main-nav > .secondery > .notification-button {
+    width: 9vw;
+    height: 9vw;
+    background-color: transparent;
+    border: none;
+    position: relative;
+  
+  }
+  .main-nav > .secondery > .notification-button > .badge {
+    border: 1px solid white;
+    font-size: 2.5vw;
+    top: 0;
+    right: 0;
+  }
+  .main-nav > .secondery > .profile-button {
+    width: 8vw;
+    height: 8vw;
+    border: none;
+    background-color: transparent;
+  }
+  
+  

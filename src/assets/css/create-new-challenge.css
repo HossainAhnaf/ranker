@@ -1,0 +1,155 @@
+:root {
+  --form-bg-color: #515152
+}
+
+.create-new-challenge-form-wrapper {
+  margin-top: calc(var(--nav-vertical-padding) + var(--nav-height) + 10vh);
+  border-radius: 5vw;
+  background-color: var(--form-bg-color);
+  width: 85%;
+  margin-left: 3vw;
+  padding: 4vw;
+  padding-bottom: 2v5;
+  gap: 3vw;
+}
+.create-new-challenge-form-wrapper > form {
+  gap: 4vw
+}
+
+.create-new-challenge-form-wrapper > form > .group-1 {
+  width: 100%;
+  gap: 5vw;
+  margin-top: 2vw;
+
+}
+
+.create-new-challenge-form-wrapper > form > .group-1 > .custom-field {
+  width: 100%;
+}
+
+
+.create-new-challenge-form-wrapper > form > .group-1 > .custom-field > .placeholder {
+  --bg-color: var(--form-bg-color);
+  --color: lightgray;
+
+  --active-bg-color: var(--form-bg-color);
+  --active-color: white
+
+}
+.create-new-challenge-form-wrapper > form > .group-1 > .custom-field > :is(input,textarea) {
+  --bg-color: var(--form-bg-color);
+  --color: white;
+  --border-color: white
+}
+
+
+/* title field */
+.create-new-challenge-form-wrapper > form > .group-1 > .title-field {
+  height: 5vh;
+}
+
+.create-new-challenge-form-wrapper>form>.group-1 >.title-field>input {
+  padding: .5vh 1vw;
+  font-size: 4vw;
+}
+.create-new-challenge-form-wrapper > form > .group-1 > .title-field > .placeholder {
+  padding: 1vh 1vw;
+  font-size: 4vw;
+}
+
+.create-new-challenge-form-wrapper > form > .group-1 > .title-field > input:is(:focus,:not(:placeholder-shown)) + .placeholder {
+  padding: 0 2vw;
+  top: -40%;
+}
+
+/* desc field */
+
+
+.create-new-challenge-form-wrapper>form>.group-1 >.description-field {
+  height: 15vh;
+}
+
+
+.create-new-challenge-form-wrapper>form>.group-1 >.description-field>.placeholder {
+  padding: 1.5vw;
+  font-size: 4vw;
+
+}
+.create-new-challenge-form-wrapper >
+form >.group-1 > .description-field > :is(input,textarea):is(:focus,:not(:placeholder-shown)) + .placeholder {
+  padding: 0 1.5vw;
+  left: 2%;
+  top: -10%;
+
+}
+.create-new-challenge-form-wrapper>form>.group-1 >.due-date-label {
+  gap: 3vw;
+  align-items: center;
+  justify-content: left;
+  width: 100%;
+
+}
+.create-new-challenge-form-wrapper>form>.group-1 >.due-date-label > .name {
+  color: lightgray;
+ font-size: 4vw;
+}
+.create-new-challenge-form-wrapper>form>.group-1 >.due-date-label > input {
+  background-color: transparent;
+  border-color: white;
+  color: white;
+  outline: none;
+ font-size: 4vw;
+}
+
+/* group 2 */
+.create-new-challenge-form-wrapper>form>.group-2 {
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2vw;
+}
+.create-new-challenge-form-wrapper>form>.group-2 >.difficulty-label {
+  gap: 2vw;
+}
+.create-new-challenge-form-wrapper>form>.group-2 >.difficulty-label > .name {
+  color: lightgray;
+  font-size: 4vw;
+}
+.create-new-challenge-form-wrapper>form>.group-2 >.difficulty-label > .select {
+  --border-color: white;
+  font-size: 4vw;
+}
+.create-new-challenge-form-wrapper>form>.group-2 >.difficulty-label > .select > .options-wrapper > .option {
+  --bg-color: var(--form-bg-color);
+  --active-bg-color: #444;
+}
+.create-new-challenge-form-wrapper>form>.group-2 >.difficulty-label > .select > .options-wrapper > .option.easy{
+  color: green !important;
+}
+.create-new-challenge-form-wrapper>form>.group-2 >.difficulty-label > .select > .options-wrapper > .option.medium{
+  color: orange !important;
+}
+.create-new-challenge-form-wrapper>form>.group-2 >.difficulty-label > .select > .options-wrapper > .option.hard{
+  color: red !important;
+}
+
+.create-new-challenge-form-wrapper>form>.group-2   > .pinned-label {
+  width: 50%;
+  gap: 2vw;
+  color: lightgray;
+  font-size: 4.5vw;
+}
+
+.create-new-challenge-form-wrapper>form>.group-2   > .pinned-label > .switch-wrapper {
+  width: 40%;
+  height: 100%;
+}
+
+.create-new-challenge-form-wrapper > form > button[type="submit"] {
+  padding: 1.5vw 3.5vw;
+  border-radius: 4vw;
+  border: none;
+  margin-top: 4vw;
+  font-weight: bold;
+  font-size: 4vw;
+}

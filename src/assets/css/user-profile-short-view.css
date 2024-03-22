@@ -1,0 +1,98 @@
+.side-navigation-bar > .primary > .user-profile-short-view {
+    gap: 1vw;
+    color: white;
+    height: 100%;
+  
+  }
+  .side-navigation-bar > .primary > .user-profile-short-view > .primary {
+    gap: 1vw;
+  }
+  .side-navigation-bar > .primary > .user-profile-short-view > .primary > .logo-wrapper {
+    width: 9vw;
+    height: 9vw;
+  }
+  
+  .side-navigation-bar > .primary > .user-profile-short-view > .primary > .username-wrapper > .username {
+    font-size: 4vw;
+  }
+  .side-navigation-bar > .primary > .user-profile-short-view > .primary > .username-wrapper> .rank {
+   font-size: 3vw;
+  }
+  
+  .side-navigation-bar > .primary > .user-profile-short-view > .primary > .username-wrapper> .rank.Sigma {
+  color: yellow;
+}
+
+.side-navigation-bar > .primary > .user-profile-short-view > .primary > .username-wrapper> .rank.Alpha {
+  color: red;
+}
+.side-navigation-bar > .primary > .user-profile-short-view > .primary > .username-wrapper> .rank.Beta {
+  color: skyblue;
+}
+.side-navigation-bar > .primary > .user-profile-short-view > .primary > .username-wrapper> .rank.Gamma {
+  color: brown;
+}
+.side-navigation-bar > .primary > .user-profile-short-view > .primary > .username-wrapper> .rank.Delta {
+  color: lime;
+
+}
+.side-navigation-bar > .primary > .user-profile-short-view > .primary > .username-wrapper> .rank.Omega {
+  color: grey;
+}
+
+
+
+
+
+
+
+  .side-navigation-bar > .primary > .user-profile-short-view > .secondery {
+    width: 100%;
+    height: 1vw;
+    align-items: left;
+    justify-content: left;
+    align-self: start;
+  }
+  .side-navigation-bar > .primary > .user-profile-short-view > .secondery> .progress-bar {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    position: relative;
+  }
+  .side-navigation-bar > .primary > .user-profile-short-view > .secondery> .progress-bar > .progress {
+    background-color: var(--theme-secondery-default);
+    background: var(--theme-secondery-gradient);
+    width: var(--progress);
+    height: 100%;
+  
+    animation: progress-animation 1s;
+  }
+  @keyframes progress-animation {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: var(--progress);
+    }
+  }
+
+  .side-navigation-bar > .primary > .user-profile-short-view >  .short-info{
+     --bg-color:#444;
+     font-size: 3vw;
+     font-weight: bold;
+     padding: 1vw 2vw;
+     width: max-content;
+     box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.5);
+     gap: 1vw;
+     border-radius: 5px;
+  }
+  .side-navigation-bar > .primary > .user-profile-short-view >  .tooltip-bottom::after{
+    bottom: 100%;
+    left: 50%;
+    margin-left: -2.5vw;
+    border-width: 2.5vw;
+  }
+
+  .side-navigation-bar > .primary > .user-profile-short-view >  .short-info > .info{
+   gap: 1vw; 
+  }

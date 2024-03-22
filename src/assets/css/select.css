@@ -1,0 +1,58 @@
+
+.select {
+    position: relative;
+  }
+  
+  .select > .selected-option {
+    padding: .5vw 2vw;
+    border: 0.1vw solid var(--border-color);
+  }
+  .select > .selected-option:after {
+    border-style: solid;
+    border-width: 0.10em 0.10em 0 0;
+    content: '';
+    display: inline-block;
+    left: 0.15em;
+    position: relative;
+    top: 0.4em;
+    transform: rotate(135deg);
+    vertical-align: top;
+    width: 0.45em;
+    height: 0.45em;
+    color: white;
+    margin-left: 2vw;
+  }
+  .select > .options-wrapper {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    background-color: var(--bg-color);
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.7);
+    top: 8vw;
+    left: 0;
+    outline: none;
+  }
+  .select > .options-wrapper > .option {
+    padding: 2vw 3vw;
+    background-color: var(--bg-color);
+    color: var(--color);
+    text-align: center;    
+    min-width: max-content;
+    width: calc(100% - 6vw);
+  }
+  
+  .select > .options-wrapper > .option.selected {
+   display: none;
+  }
+  .select > .options-wrapper > .option:active {
+    background-color: var(--active-bg-color);
+    color: var(--active-color);
+   
+  }
+  .select.active > .options-wrapper {
+    display: flex;
+  }
+  .select.active > .selected-option:after {
+    top: 0.8em;
+    transform: rotate(-45deg);
+  }

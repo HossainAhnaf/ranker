@@ -1,0 +1,86 @@
+.filter-option {
+    width: 60vw;
+    position: absolute;
+    left: 17vw;
+    top: calc(var(--nav-height) + 10vw);
+    box-shadow: 0 0 0 100vw rgba(0,0,0,0.5);
+    background-color: #515152;
+    z-index: 1000;
+    padding: 2vh 4vw 0 4vw;
+    gap: 4vw;
+  
+  }
+  
+ .filter-option > .title {
+    font-size: 6vw;
+  }
+  
+ .filter-option > .option {
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  
+  }
+  
+ .filter-option > .option > .name {
+    color: lightgray;
+    font-size: 4.5vw;
+  }
+ .filter-option > .option > .value {
+    border-bottom: .2vw solid gray;
+    
+  }
+  .filter-option > .option > .value > .selected-option{
+   font-size: 4.5vw;
+   padding: 0 4vw;
+  }
+  .filter-option > .option > .value > .options-wrapper{
+    --bg-color: #515152;
+    z-index: 1; 
+  }
+  .filter-option > .option > .value > .options-wrapper > .option{
+    --active-bg-color: #333;
+    font-size: 4.5vw;
+  }  
+ .filter-option > .features {
+    gap: 2vh
+  }
+ .filter-option > .features > .name {
+    color: lightgray;
+    width: 100%;
+    font-size: 5.5vw;
+  }
+ .filter-option > .features > .value {
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+    gap: 2vw;
+    flex-wrap: wrap;
+  }
+ .filter-option > .features > .value > .feature > p {
+    border: .5vw solid var(--theme-secondery-default);
+    padding: 1vw 3vw;
+    border-radius: 5vw;
+    background-color: #ffcfba;
+    color: var(--theme-secondery-default);
+    transition: background-color .2s;
+    font-size: 3vw;
+  }
+ .filter-option > .features > .value > .feature > input[type="checkbox"]:checked + p {
+    background-color: var(--theme-secondery-default);
+    color: white;
+  }
+  
+ .filter-option > .button-container {
+    justify-content: right;
+    align-items: center;
+    border-top: .1vw solid gray;
+  }
+ .filter-option > .button-container > button {
+    background-color: transparent;
+    color: var(--theme-secondery-default);
+    border: none;
+    padding: 3vw 4vw;
+    font-weight: bold;
+    font-size: 4vw;
+  }

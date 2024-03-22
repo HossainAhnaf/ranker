@@ -1,0 +1,97 @@
+.side-navigation-bar {
+    width: 55vw;
+    height: 100vh;
+    background-color: #333;
+    position: fixed;
+    z-index: 1001;
+    justify-content: start;
+    align-items: center;
+    transition: right .4s;
+    right: -55vw;
+    box-shadow: none;
+    top: 0;
+  }
+  .side-navigation-bar.active {
+    right: 0;
+    box-shadow: 0 0 50px 10px rgba(0,0,0,0.5);
+  }
+  .side-navigation-bar > .primary {
+    height: calc(var(--nav-height) + var(--nav-vertical-padding));
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+  }
+  
+ 
+  .side-navigation-bar > .primary  > .hide-button {
+    padding: .5vw 1vw;
+    border-radius: 2vw;
+    border: none;
+    width: 6vw;
+    height: 6vw;
+    background-color: transparent;
+  }
+  
+  .side-navigation-bar > .navigation-button-wrapper {
+    width: 100%;
+  }
+  
+  .side-navigation-bar > .navigation-button-wrapper > a {
+    width: 100%;
+    text-decoration: none;
+  }
+  .side-navigation-bar > .navigation-button-wrapper  button {
+    color: white;
+    width: 100%;
+    padding: 2vw;
+    background-color: #333;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    gap: 2vw;
+    justify-content: center;
+    align-items: center;
+    border: none;
+  }
+  
+  
+  .side-navigation-bar > .navigation-button-wrapper > a.active > button {
+    filter: brightness(70%);
+  }
+
+  .side-navigation-bar > .navigation-button-wrapper > a > button > .name {
+    font-size: 4vw; 
+  }
+  .side-navigation-bar > .navigation-button-wrapper  button > .svgCont {
+    width: 6vw;
+    height: 6vw;
+  }
+  .side-navigation-bar>.navigation-button-wrapper>a>button.profile-button>.svgCont {
+    width: 4vw;
+    height: 4vw;
+  }
+  .side-navigation-bar>.navigation-button-wrapper>a>button.create-new-challenge-button>.svgCont {
+    width: 5vw;
+    height: 5vw;
+  }
+  
+  
+  .side-navigation-bar > .navigation-button-wrapper > .log-out-button {
+    background-color: red;
+    position: absolute;
+    bottom: 0;
+    font-size: 4vw;
+    border: none;
+  }
+  
+  .side-navigation-bar>.navigation-button-wrapper>a>.notifications-button > .svgCont {
+    position: relative;
+    width: 7vw;
+    height: 7vw;
+  }
+  .side-navigation-bar>.navigation-button-wrapper>a>.notifications-button > .svgCont > .badge {
+    border: 1px solid white;
+    font-size: 2.5vw;
+    top: 0;
+    right: 0;
+  }
