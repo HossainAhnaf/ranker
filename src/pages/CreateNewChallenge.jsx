@@ -13,25 +13,14 @@ function CreateNewChallenge() {
 <section className="create-new-challenge-form-wrapper">
 <form className="flex-cm center">
 <div className="group-1 flex-cm center">
-
-{/* <label className="custom-field title-field">
-<input type="text" placeholder=" " maxLength="20" required />
-<span className="placeholder">title</span>
-</label> */}
- <TextField fieldType="input" required={true} placeholder="title" type="text" maxLength="2"/>
-
-
-<label className="custom-field description-field">
-<textarea placeholder=" " maxLength="300" required></textarea>
-<span className="placeholder">description</span>
-</label>
+ <TextField chassName="title-field" fieldType="input" required={true} placeholder="title" type="text" maxLength="2"/>
+<TextField chassName="description-field" fieldType="textarea" required={true} placeholder="description" maxLength="50"/>
 <label className="due-date-label flex-rw">
 <span className="name">Due date(optional)
 </span>
 <input type="date" />
 
 </label>
-
 
 </div>
 <div className="group-2 flex-rw">

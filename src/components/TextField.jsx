@@ -1,15 +1,15 @@
 import React from 'react'
 //css
 import '../assets/css/text-field.css'
-function TextField({fieldType,required,placeholder,type,maxLength}) {
+function TextField({chassName,fieldType,required,placeholder,type,maxLength}) {
   return (
-    <div class="text-field">
+    <div class={`text-field ${chassName}`}>
     {    
-     fieldType === "input" ?
-     <input type={type} maxLength={maxLength} required={required} />
+     fieldType === "input" 
+    ? <input type={type} maxLength={maxLength} required={required} />
     : <textarea required={required} maxLength={maxLength} ></textarea>
     }
-    <label>{placeholder}</label>
+    <label className='placeholder'>{placeholder}</label>
   </div>
   )
 }

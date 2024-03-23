@@ -7,9 +7,8 @@
   border-radius: 5vw;
   background-color: var(--form-bg-color);
   width: 85%;
-  margin-left: 3vw;
-  padding: 4vw;
-  padding-bottom: 2v5;
+  margin-left: 3.5vw;
+  padding: 5vw 4vw;
   gap: 3vw;
 }
 .create-new-challenge-form-wrapper > form {
@@ -45,35 +44,29 @@
 
 /* title field */
 .create-new-challenge-form-wrapper > form > .group-1 > .title-field {
-  height: 5vh;
+width: 90%;
 }
 
-.create-new-challenge-form-wrapper>form>.group-1 >.title-field>input {
-  padding: .5vh 1vw;
-  font-size: 4vw;
+ .create-new-challenge-form-wrapper>form>.group-1 >.title-field>input {
+  --font-size: 5vw;
 }
 .create-new-challenge-form-wrapper > form > .group-1 > .title-field > .placeholder {
-  padding: 1vh 1vw;
-  font-size: 4vw;
-}
+  --font-size: 5vw;
+  --active-color: var(--theme-secondery-default);
+} 
 
-.create-new-challenge-form-wrapper > form > .group-1 > .title-field > input:is(:focus,:not(:placeholder-shown)) + .placeholder {
-  padding: 0 2vw;
-  top: -40%;
-}
 
 /* desc field */
 
 
 .create-new-challenge-form-wrapper>form>.group-1 >.description-field {
-  height: 15vh;
+width: 90%;
 }
-
-
+.create-new-challenge-form-wrapper>form>.group-1 >.description-field > textarea{
+  --font-size: 5vw;
+}  
 .create-new-challenge-form-wrapper>form>.group-1 >.description-field>.placeholder {
-  padding: 1.5vw;
-  font-size: 4vw;
-
+  --font-size: 5vw;
 }
 .create-new-challenge-form-wrapper >
 form >.group-1 > .description-field > :is(input,textarea):is(:focus,:not(:placeholder-shown)) + .placeholder {
