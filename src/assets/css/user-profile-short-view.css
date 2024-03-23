@@ -2,7 +2,7 @@
     gap: 1vw;
     color: white;
     height: 100%;
-  
+   padding: 1vw 0;
   }
   .side-navigation-bar > .primary > .user-profile-short-view > .primary {
     gap: 1vw;

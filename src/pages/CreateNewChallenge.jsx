@@ -12,8 +12,17 @@ function CreateNewChallenge() {
     
 <section className="create-new-challenge-form-wrapper">
 <form className="flex-cm center">
-<div className="group-1 flex-cm center">
- <TextField chassName="title-field" fieldType="input" required={true} placeholder="title" type="text" maxLength="2"/>
+<div className="group-1 flex-cm center ">
+ {/* <TextField chassName="title-field" fieldType="input" required={true} placeholder="title" type="text" maxLength="2"/>
+<TextField chassName="description-field" fieldType="textarea" required={true} placeholder="description" maxLength="50"/> */}
+
+<label className="title-label flex-rw center">
+<span className="name">Title:</span>
+  <input type="text" placeholder=' '/>
+</label>
+
+{/* <div className='description-field' contentEditable={true}>
+</div> */}
 <TextField chassName="description-field" fieldType="textarea" required={true} placeholder="description" maxLength="50"/>
 <label className="due-date-label flex-rw">
 <span className="name">Due date(optional)
@@ -38,7 +47,7 @@ function CreateNewChallenge() {
 <div className="switch-wrapper">
 <label className="switch-small">
 <input type="checkbox" />
-<span className="slider"></span>
+<span className="slider "></span>
 </label>
 </div>
 </div>

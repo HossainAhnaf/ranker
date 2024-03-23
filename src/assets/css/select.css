@@ -14,7 +14,7 @@
     display: inline-block;
     left: 0.15em;
     position: relative;
-    top: 0.4em;
+    top: 1vw;
     transform: rotate(135deg);
     vertical-align: top;
     width: 0.45em;
@@ -53,6 +53,6 @@
     display: flex;
   }
   .select.active > .selected-option:after {
-    top: 0.8em;
+    top: 2vw;
     transform: rotate(-45deg);
   }
