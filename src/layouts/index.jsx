@@ -7,6 +7,7 @@ import SideNavigationBar from "../layouts/SideNavigationBar";
 function index() {
   return (
    <>
+  
    <header>
    <MainNav /> 
    <SideNavigationBar />
@@ -14,6 +15,7 @@ function index() {
    <main>
     <Outlet />
    </main>
+  
    </>
   )
 }

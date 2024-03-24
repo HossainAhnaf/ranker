@@ -19,7 +19,7 @@
     vertical-align: top;
     width: 0.45em;
     height: 0.45em;
-    color: white;
+    color: var(--chevron-color);
     margin-left: 2vw;
   }
   .select > .options-wrapper {

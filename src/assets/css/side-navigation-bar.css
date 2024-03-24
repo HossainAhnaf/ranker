@@ -1,7 +1,6 @@
 .side-navigation-bar {
     width: 55vw;
     height: 100vh;
-    background-color: #333;
     position: fixed;
     z-index: 1001;
     justify-content: start;
@@ -10,11 +9,14 @@
     right: -55vw;
     box-shadow: none;
     top: 0;
+    background-color: var(--layout-bg-color);
   }
   .side-navigation-bar.active {
     right: 0;
     box-shadow: 0 -5px 10px rgba(0,0,0,0.5);
   }
+ 
+
   .side-navigation-bar > .primary {
 
     height: calc(var(--nav-height) + var(--nav-vertical-padding));
@@ -39,7 +41,7 @@
   .side-navigation-bar > .navigation-button-wrapper {
     width: 100%;
     overflow-y: scroll;
-
+    margin-top: 1vw;
   }
   
   .side-navigation-bar > .navigation-button-wrapper > a {
@@ -47,10 +49,10 @@
     text-decoration: none;
   }
   .side-navigation-bar > .navigation-button-wrapper  button {
-    color: white;
     width: 100%;
     padding: 2vw;
-    background-color: #333;
+    background-color: var(--layout-bg-color);
+    color: var(--paragraph-color);
     font-weight: bold;
     display: flex;
     flex-direction: row;
@@ -61,8 +63,8 @@
   }
   
   
-  .side-navigation-bar > .navigation-button-wrapper > a.active > button {
-    filter: brightness(70%);
+  .side-navigation-bar > .navigation-button-wrapper > a:is(:active,.active) > button {
+    filter: brightness(90%);
   }
 
   .side-navigation-bar > .navigation-button-wrapper > a > button > .name {
@@ -71,6 +73,9 @@
   .side-navigation-bar > .navigation-button-wrapper  button > .svgCont {
     width: 6vw;
     height: 6vw;
+  }
+  .side-navigation-bar > .navigation-button-wrapper  button > .svgCont  .fill {
+   fill: var(--icon-color);
   }
   .side-navigation-bar>.navigation-button-wrapper>a>button.profile-button>.svgCont {
     width: 4vw;
@@ -82,17 +87,23 @@
   }
   
   
-  .side-navigation-bar > .navigation-button-wrapper > .log-out-button {
-    background-color: red;
+  .side-navigation-bar > .navigation-button-wrapper > .logout-button {
     font-size: 4vw;
     border: none;
+    color: red;
   }
-  
+  .side-navigation-bar > .navigation-button-wrapper > .logout-button:active {
+    filter: brightness(90%);  
+  }
+  .side-navigation-bar>.navigation-button-wrapper > .logout-button .svgCont .fill{
+    fill: red;
+   }
   .side-navigation-bar>.navigation-button-wrapper>a>.notifications-button > .svgCont {
     position: relative;
     width: 7vw;
     height: 7vw;
   }
+  
   .side-navigation-bar>.navigation-button-wrapper>a>.notifications-button > .svgCont > .badge {
     border: 1px solid white;
     font-size: 2.5vw;

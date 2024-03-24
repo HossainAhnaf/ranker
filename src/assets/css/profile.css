@@ -1,14 +1,14 @@
 /* info sections */
-
 .info-section {
   margin-top: calc(var(--nav-vertical-padding) + var(--nav-height) + 5vh);
-  border-radius: 5vw;
-  background-color: #515152;
-  width: 85%;
-  margin-left: 3vw;
-  padding: 4vw;
   margin-bottom: 20vw;
   gap: 3vw;
+  background-color: var(--container-bg-color);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+  border-radius: 5vw;
+  width: 85%;
+  margin-left: 3.5vw;
+  padding: 4vw;
 }
 
 
@@ -18,14 +18,21 @@
 .info-section>.primary {
   margin: 2vw 5vw;
   width: 100%;
+  gap: 2vw;
 }
 
 .info-section>.primary>.logoCont {
   width: 20vw;
   height: 20vw;
+  border-width: .5vw;
 }
 
-
+.info-section>.primary .username{
+  font-size: 5vw;
+  background-color: var(--info-bg-color);
+  padding: 1vw 4vw ;
+  border-radius: 3vw
+}
 .info-section > .xp-items-wrapper {
   width: 100%;
   justify-content: center;
@@ -39,14 +46,14 @@
   color: black;
   position: relative;
   overflow: hidden;
-  border: 1vw solid white;
-  transition: border-color 1s;
+  transition: box-shadow 1s;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
 }
 .info-section > .xp-items-wrapper > .progress-bar.increasing {
-  border-color: lime;
+  box-shadow: 0 0 30px 0 rgba(0, 255, 34, 0.397);
 }
 .info-section > .xp-items-wrapper > .progress-bar.decreasing {
-  border-color: red;
+  box-shadow: 0 0 30px 0 rgba(255, 0, 0, 0.856);
 }
 
 
@@ -141,12 +148,11 @@
   justify-content: space-between;
   border-radius: 3vw;
   overflow: hidden;
-  border: 1px solid white;
  font-size: small;
+ background-color: var(--info-bg-color);
 }
 .info-section > .info > .name {
   padding: 2vw 4vw;
-  border-right: 1px solid white;
   width: 44%
 }
 .info-section > .info > .value {
@@ -156,14 +162,15 @@
 }
 
 /*recent challenges*/
-.recent-challenges {
-  border-radius: 5vw;
-  background-color: #515152;
-  width: 85%;
-  margin-left: 4vw;
-  padding: 4vw;
+.recent-challenges { 
   margin-bottom: 3vw;
   gap: 1vw;
+  background-color: var(--container-bg-color);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+  border-radius: 5vw;
+  width: 85%;
+  margin-left: 3.5vw;
+  padding: 4vw;
 }
 
 .recent-challenges > .challenge-cards-wrapper {
@@ -172,10 +179,10 @@
   gap: 4vw;
   align-items: center;
   justify-content: top;
-  background-color: #515152;
   padding: 1vw 0;
   border-radius: 3vw;
   margin-top: 2vw;
+
 }
 
 .recent-challenges > .see-all-button {

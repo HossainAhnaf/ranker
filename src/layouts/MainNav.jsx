@@ -1,11 +1,11 @@
 //css
 import '../assets/css/main-nav.css'
 //hooks
-import React , { Children, useEffect, useState } from 'react'
+import React , {useEffect, useState } from 'react'
 import { showSideNavigationBar } from '../store/slices/sideNavigationBarSlice'
 import useDebounce from '../hooks/useDebounce'
 import UserLogo from '../components/UserLogo'
-import { useDispatch } from 'react-redux'
+import { useSelector , useDispatch  } from 'react-redux'
 import {logoSrc} from '../data/userData.json'
 
 //components
@@ -19,6 +19,8 @@ function MainNav() {
   
   const dispatch = useDispatch()
 
+  const theme = useSelector(state => state.themeSlice.theme)
+ 
   const [navbarHalfTransparent,setNavbarHalfTransparent] = useState(false)
  const removeNavbarHalfTransparent = useDebounce(()=> {
     setNavbarHalfTransparent(false)
@@ -33,14 +35,15 @@ function MainNav() {
 
 useEffect(()=>{
  window.addEventListener('scroll', navbarTransparentHandler)
+   console.log(theme);
  return ()=>{
   window.removeEventListener('scroll',navbarTransparentHandler)
  }
-})
+},[])
   return (
    <>
 
-<nav className={`main-nav ${navbarHalfTransparent ? 'half-transparent':''}`} >
+<nav className={`main-nav  ${navbarHalfTransparent ? 'half-transparent':''} theme-${theme} `} >
       <div className="primary flex-rw left">
         <h3 className="app-name" >
           <em>Samer Rank</em>

@@ -16,7 +16,7 @@ import plusSvg from '../assets/svg/plus(1).svg'
 import notificationSvg from '../assets/svg/notification.svg'
 import peopleSvg from '../assets/svg/people.svg'
 import settingsSvg from '../assets/svg/settings.svg'
-import logOutSvg from '../assets/svg/log-out.svg'
+import logoutSvg from '../assets/svg/logout.svg'
 import closeSvg from '../assets/svg/close(1).svg'
 
 //css
@@ -28,12 +28,12 @@ function SideNavigationBar() {
   const sideNavigationBarRef = useRef(null)
   
   const dispatch = useDispatch()
-  const {isActive} = useSelector(state=>state.sideNavigationBar)
-  
+  const isActive = useSelector(state=>state.sideNavigationBarSlice.isActive)
+  const theme = useSelector(state=>state.themeSlice.theme)
  
  const sideNavigationBarBlurHandler = ({relatedTarget})=>{
-    if (relatedTarget === null)
-    dispatch(hideSideNavigationBar())
+    // if (relatedTarget === null)
+    // dispatch(hideSideNavigationBar())
     
   }
   const AutoHideHandler = ()=>{
@@ -57,7 +57,7 @@ useEffect(()=>{
  
   return (
     <>
-     <div className={`side-navigation-bar flex-cm ${isActive ? 'active' : ''}`} tabIndex='0' onBlur={sideNavigationBarBlurHandler}  ref={sideNavigationBarRef} >
+     <div className={`side-navigation-bar theme-${theme} flex-cm ${isActive ? 'active' : ''}`} tabIndex='0' onBlur={sideNavigationBarBlurHandler}  ref={sideNavigationBarRef} >
         <div className="primary flex-rw">
           <UserProfileShortView />
           <button className="hide-button svgCont"  onClick={()=>dispatch(hideSideNavigationBar())}>
@@ -112,9 +112,9 @@ useEffect(()=>{
               </span> <span className="name">Settings</span>
             </button>
           </NavLink>
-            <button className="log-out-button">
+            <button className="logout-button">
               <span className="svgCont">
-                <Icon src={logOutSvg}/>
+                <Icon src={logoutSvg}/>
               </span>
               <span className="name">Log out</span>
             </button>

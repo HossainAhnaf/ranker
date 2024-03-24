@@ -1,16 +1,20 @@
 //modules
 import React, { useEffect, useRef } from 'react'
+import { useDispatch } from "react-redux";
+import {hideFilterOption} from '../store/slices/challengesSearchFormSlice'
 //components
 import Select from './Select'
 //css  
 import '../assets/css/filter-option.css'
 function FilterOption({setShowFilterOption}) {
-   
    const filterOptionRef = useRef(null)
-  
+
+   const dispatch = useDispatch()
+
    useEffect(()=>{
     filterOptionRef.current.focus()
    },[filterOptionRef])
+   
    useEffect(()=>{
      document.body.style.overflow = "hidden"
      return ()=>{
@@ -18,9 +22,10 @@ function FilterOption({setShowFilterOption}) {
 
       }
    },[])
+ 
   return (
 
-   <div className="filter-option flex-cm" tabIndex="0" ref={filterOptionRef} >
+   <div className="filter-option  flex-cm" tabIndex="0" ref={filterOptionRef} >
     <p className="title">
     Search filters
     </p>
@@ -63,7 +68,7 @@ function FilterOption({setShowFilterOption}) {
     </div>
     
     <div className="button-container flex-rw">
-    <button  className='button' onClick={()=>setShowFilterOption(false)}>Cancel</button>
+    <button  className='button' onClick={()=>dispatch(hideFilterOption())}>Cancel</button>
     <button className='button' >Aply</button>
     
     </div>

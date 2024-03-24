@@ -1,14 +1,17 @@
 .challenge-cards-wrapper{
-  overflow-y: scroll;
+ 
   align-items: center;
   justify-content: top;
+
 }
 .challenge-cards-wrapper > .challenge-card{
     width: 90%;
-    background-color: dimgray;
     padding: 3vw;
     border-radius: 3vw;
-  
+    background-color: var(--challenge-card-bg-color);
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5);
+    color: var(--paragraph-color-primary);
+
   }
   
   
@@ -33,6 +36,7 @@
     font-size: xx-small;
     padding: 1vw 2vw;
     border-radius: 2vw;
+    color: white;
   }
   .challenge-cards-wrapper > .challenge-card> .title > .difficulty.hard {
     background-color: red;

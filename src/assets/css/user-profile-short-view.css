@@ -1,6 +1,5 @@
 .side-navigation-bar > .primary > .user-profile-short-view {
     gap: 1vw;
-    color: white;
     height: 100%;
    padding: 1vw 0;
   }
@@ -10,6 +9,8 @@
   .side-navigation-bar > .primary > .user-profile-short-view > .primary > .logo-wrapper {
     width: 9vw;
     height: 9vw;
+    border-width: .3vw ; 
+   
   }
   
   .side-navigation-bar > .primary > .user-profile-short-view > .primary > .username-wrapper > .username {
@@ -17,27 +18,29 @@
   }
   .side-navigation-bar > .primary > .user-profile-short-view > .primary > .username-wrapper> .rank {
    font-size: 3vw;
-  }
+   -webkit-text-stroke-width: .2px;
+   -webkit-text-stroke-color: black;
+    }
   
   .side-navigation-bar > .primary > .user-profile-short-view > .primary > .username-wrapper> .rank.Sigma {
-  color: yellow;
+  color: var(--sigma-color);
 }
 
 .side-navigation-bar > .primary > .user-profile-short-view > .primary > .username-wrapper> .rank.Alpha {
-  color: red;
+    color: var(--alpha-color);
 }
 .side-navigation-bar > .primary > .user-profile-short-view > .primary > .username-wrapper> .rank.Beta {
-  color: skyblue;
+    color: var(--beta-color);
 }
 .side-navigation-bar > .primary > .user-profile-short-view > .primary > .username-wrapper> .rank.Gamma {
-  color: brown;
+    color: var(--gamma-color);
 }
 .side-navigation-bar > .primary > .user-profile-short-view > .primary > .username-wrapper> .rank.Delta {
-  color: lime;
+    color: var(--delta-color);
 
 }
 .side-navigation-bar > .primary > .user-profile-short-view > .primary > .username-wrapper> .rank.Omega {
-  color: grey;
+    color: var(--omega-color);
 }
 
 
@@ -58,6 +61,9 @@
     height: 100%;
     background-color: white;
     position: relative;
+    border: 1px solid black;
+    border-radius: 0 5vw 5vw 0;
+    overflow: hidden;
   }
   .side-navigation-bar > .primary > .user-profile-short-view > .secondery> .progress-bar > .progress {
     background-color: var(--theme-secondery-default);
@@ -77,7 +83,7 @@
   }
 
   .side-navigation-bar > .primary > .user-profile-short-view >  .short-info{
-     --bg-color:#444;
+     --bg-color: var(--layout-bg-color);
      font-size: 3vw;
      font-weight: bold;
      padding: 1vw 2vw;
