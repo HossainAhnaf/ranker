@@ -2,12 +2,12 @@ import { configureStore } from "@reduxjs/toolkit";
 //slices
 import sideNavigationBarSlice from './slices/sideNavigationBarSlice'
 import themeSlice from './slices/themeSlice'
-import challengesSearchFormSlice from './slices/challengesSearchFormSlice'
+import challengesSectionNavSlice from './slices/challengesSectionNavSlice'
 const store = configureStore({
     reducer:{
         themeSlice,
         sideNavigationBarSlice,
-        challengesSearchFormSlice
+        challengesSectionNavSlice
     }
 })
 

@@ -10,6 +10,7 @@ import {logoSrc} from '../data/userData.json'
 
 //components
 import Icon from 'react-inlinesvg'
+import ChallengesSectionNav from '../components/ChallengesSectionNav'
 //svg
 import notificationSvg from '../assets/svg/notification.svg'
 
@@ -60,6 +61,8 @@ useEffect(()=>{
        </button>
 
       </div>
+    <ChallengesSectionNav />
+
     </nav>
    </>
   )

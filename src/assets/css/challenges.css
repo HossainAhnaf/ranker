@@ -10,7 +10,10 @@
   justify-content: top;
   gap: 2vw;
 }
-
+.challenges-section > .challenges-section-nav {
+  border-radius: 3vw;
+  
+}
 .challenges-section > .challenge-cards-wrapper {
   width: 100%;
   height: 85%;

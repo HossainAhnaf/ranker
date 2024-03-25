@@ -1,7 +1,7 @@
 //modules
 import React, { useEffect, useRef } from 'react'
 import { useDispatch } from "react-redux";
-import {hideFilterOption} from '../store/slices/challengesSearchFormSlice'
+import {hideFilterOption} from '../store/slices/challengesSectionNavSlice'
 //components
 import Select from './Select'
 //css  

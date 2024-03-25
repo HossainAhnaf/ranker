@@ -62,3 +62,9 @@
    height: 100%;
   }
   
+/* challenges section nav */
+.main-nav > .challenges-section-nav {
+  position: fixed;
+  top: calc(var(--nav-height) + var(--nav-vertical-padding) - 2vh);
+  left: 0;
+}

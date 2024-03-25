@@ -1,20 +1,19 @@
 
-.challenges-section > nav {
+.challenges-section-nav {
     width: calc(100% - 8vw);
     margin: 2vw 0;
     background-color: var(--container-bg-color);
     padding: 2vw 4vw ;
-    border-radius: 3vw;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
     justify-content: space-between;
     align-items: center;
    }
   
   
-  .challenges-section > nav > a{
+  .challenges-section-nav > a{
     text-decoration: none ;
   }
-  .challenges-section > nav > a > .create-challenge-button {
+  .challenges-section-nav > a > .create-challenge-button {
     border-radius: 3vw;
     border: none;
     padding: 1.5vw 2vw;
@@ -25,21 +24,21 @@
   
   }
   
-  .challenges-section .create-challenge-button .svgCont {
+  .challenges-section-nav .create-challenge-button .svgCont {
     width: 4vw;
     height: 4vw;
   }
     
   /* challenges search form */
   
-  .challenges-section > nav > .challenges-search-form {
+  .challenges-section-nav > .challenges-search-form {
     gap: 0;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
     border-radius: 5vw;
     width: 60%;
     height: 7vw;
     }
-    .challenges-section > nav >    .challenges-search-form > input {
+    .challenges-section-nav >    .challenges-search-form > input {
       width: 70%;
       height: 100%;
       border: none;
@@ -48,11 +47,11 @@
       padding: 0 2vw;
       border-radius: 5vw 0 0 5vw; 
     }
- .challenges-section > nav >    .challenges-search-form > .button-container {
+ .challenges-section-nav >    .challenges-search-form > .button-container {
       width: 30%;
       height: 100%;
     }
-  .challenges-section > nav >  .challenges-search-form > .button-container > .search-button {
+  .challenges-section-nav >  .challenges-search-form > .button-container > .search-button {
       padding: 1vw 1.5vw;
       border: none;
       font-weight: bold;
@@ -63,7 +62,7 @@
       background: linear-gradient(to right,red 70%, orangered);
     }
     
-  .challenges-section > nav >  .challenges-search-form > .button-container > .filter-button {
+  .challenges-section-nav >  .challenges-search-form > .button-container > .filter-button {
       padding: 1vw 1.5vw;
       font-weight: bold;
       border-radius: 0 5vw 5vw 0;
@@ -74,7 +73,7 @@
     }
     
      
-  .challenges-section > nav >  .challenges-search-form > .button-container button svg{
+  .challenges-section-nav >  .challenges-search-form > .button-container button svg{
       width: 4vw;
       height: 4vw;
     }
