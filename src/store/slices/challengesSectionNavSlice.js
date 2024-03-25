@@ -1,23 +1,27 @@
 import { createSlice } from "@reduxjs/toolkit";
 
- const challengesSectionNavSlice = createSlice({
-  name:"challengesSectionNav",
-  initialState:{
-    isChallengesSectionNavInvisible:false,
-    isFilterOptionActive:false
+const challengesSectionNavSlice = createSlice({
+  name: "challengesSectionNav",
+  initialState: {
+    isChallengesSectionNavInvisible: false,
+    isFilterOptionActive: false
   },
-  reducers:{
-    setIsChallengesSectionNavInvisible(state,action){
-      state.isChallengesSectionNavInvisible = action.payload
+  reducers: {
+    showChallengesSectionExtraNav(state) {
+      state.isChallengesSectionNavInvisible = true
     },
-    showFilterOption(state){
+    hideChallengesSectionExtraNav(state) {
+      state.isChallengesSectionNavInvisible = false
+    },
+
+    showFilterOption(state) {
       state.isFilterOptionActive = true
     },
-   hideFilterOption(state){
-     state.isFilterOptionActive = false
-   }
+    hideFilterOption(state) {
+      state.isFilterOptionActive = false
+    }
   }
 
- })
- export const {showFilterOption,hideFilterOption} = challengesSectionNavSlice.actions
- export default challengesSectionNavSlice.reducer;
+})
+export const { showChallengesSectionExtraNav, hideChallengesSectionExtraNav, showFilterOption, hideFilterOption } = challengesSectionNavSlice.actions
+export default challengesSectionNavSlice.reducer;

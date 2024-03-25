@@ -67,4 +67,6 @@
   position: fixed;
   top: calc(var(--nav-height) + var(--nav-vertical-padding) - 2vh);
   left: 0;
+  background-color: var(--layout-bg-color);
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
 }

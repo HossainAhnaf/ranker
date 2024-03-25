@@ -19,9 +19,9 @@ import notificationSvg from '../assets/svg/notification.svg'
 function MainNav() {
   
   const dispatch = useDispatch()
-
-  const theme = useSelector(state => state.themeSlice.theme)
- 
+  
+  const {isChallengesSectionNavInvisible} = useSelector(state => state.challengesSectionNavSlice)
+  
   const [navbarHalfTransparent,setNavbarHalfTransparent] = useState(false)
  const removeNavbarHalfTransparent = useDebounce(()=> {
     setNavbarHalfTransparent(false)
@@ -35,8 +35,8 @@ function MainNav() {
   }
 
 useEffect(()=>{
- window.addEventListener('scroll', navbarTransparentHandler)
-   console.log(theme);
+ if (isChallengesSectionNavInvisible)    
+  window.addEventListener('scroll', navbarTransparentHandler)
  return ()=>{
   window.removeEventListener('scroll',navbarTransparentHandler)
  }
@@ -44,7 +44,7 @@ useEffect(()=>{
   return (
    <>
 
-<nav className={`main-nav  ${navbarHalfTransparent ? 'half-transparent':''} theme-${theme} `} >
+<nav className={`main-nav  ${navbarHalfTransparent ? 'half-transparent':''} `} >
       <div className="primary flex-rw left">
         <h3 className="app-name" >
           <em>Samer Rank</em>
@@ -61,11 +61,12 @@ useEffect(()=>{
        </button>
 
       </div>
-    <ChallengesSectionNav />
 
+     {
+      isChallengesSectionNavInvisible &&  <ChallengesSectionNav />
+     }
     </nav>
    </>
   )
 }
-
 export default MainNav

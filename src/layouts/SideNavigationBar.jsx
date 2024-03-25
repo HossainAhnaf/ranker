@@ -32,8 +32,8 @@ function SideNavigationBar() {
   const theme = useSelector(state=>state.themeSlice.theme)
  
  const sideNavigationBarBlurHandler = ({relatedTarget})=>{
-    // if (relatedTarget === null)
-    // dispatch(hideSideNavigationBar())
+    if (relatedTarget === null)
+    dispatch(hideSideNavigationBar())
     
   }
   const AutoHideHandler = ()=>{
