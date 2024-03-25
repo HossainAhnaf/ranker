@@ -52,7 +52,7 @@
     width: 100%;
     padding: 2vw;
     background-color: var(--layout-bg-color);
-    color: var(--paragraph-color);
+    color: var(--paragraph-color-primary);
     font-weight: bold;
     display: flex;
     flex-direction: row;
@@ -106,7 +106,7 @@
   
   .side-navigation-bar>.navigation-button-wrapper>a>.notifications-button > .svgCont > .badge {
     border: 1px solid white;
-    font-size: 2.5vw;
+    font-size: 2vw;
     top: 0;
     right: 0;
   }

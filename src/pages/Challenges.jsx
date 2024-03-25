@@ -26,9 +26,10 @@ function Challenges() {
     <section className="challenges-section flex-cm">
       <nav className="flex-rw">
         <span className="total-challenges">Total: <span className="data">100</span></span>
-            <div className="search-form-wrapper">
+            {/* <div className="search-form-wrapper">
+            </div>   */}
+
               <ChallengesSearchForm/>
-              </div>  
             {
          isFilterOptionActive &&  <FilterOption />
             }

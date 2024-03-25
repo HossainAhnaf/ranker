@@ -62,7 +62,7 @@
     background-color: white;
     position: relative;
     border: 1px solid black;
-    border-radius: 0 5vw 5vw 0;
+    border-radius: 5px;
     overflow: hidden;
   }
   .side-navigation-bar > .primary > .user-profile-short-view > .secondery> .progress-bar > .progress {
