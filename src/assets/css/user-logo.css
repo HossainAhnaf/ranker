@@ -1,0 +1,43 @@
+.user-logo{
+   position: relative;
+    border-style: solid;
+    border-color: var(--rank-color);
+    
+}   
+
+.user-logo.sigma{
+    --rank-color: var(--sigma-color);
+}   
+   
+.user-logo.alpha{
+    --rank-color: var(--alpha-color);
+}
+
+.user-logo.beta{
+    --rank-color: var(--beta-color);
+}
+
+.user-logo.gamma{
+    --rank-color: var(--gamma-color);
+}
+
+.user-logo.delta{
+    --rank-color: var(--delta-color);
+}
+
+.user-logo.omega{
+    --rank-color: var(--omega-color);
+}
+
+.user-logo > .level-badge{
+  font-size: var(--level-badge-font-size);  
+  background-color: var(--rank-color);
+  border-radius: 100%;
+  padding: calc(var(--level-badge-font-size) / 6) calc(var(--level-badge-font-size) / 2);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  color: black;
+  font-weight: bold;
+  border: calc(var(--level-badge-font-size) / 5) solid white;
+}

@@ -50,16 +50,17 @@
     right: 0;
   }
   .main-nav > .secondery > .profile-button {
-    width: 8vw;
-    height: 8vw;
+    width: 9vw;
+    height: 9vw;
     border: none;
     background-color: transparent;
   }
 
-  .main-nav > .secondery > .profile-button .logo-wrapper {
-   border-width: .3vw ;
+  .main-nav > .secondery > .profile-button .user-logo {
+   border-width: .5vw ;
    width: 100%;
    height: 100%;
+   --level-badge-font-size: 1.3vw;
   }
   
 /* challenges section nav */

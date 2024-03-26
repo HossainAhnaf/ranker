@@ -69,7 +69,7 @@ function Profile() {
     <>
       <section className="info-section flex-cm center">
         <div className="primary flex-cm center">
-          <UserLogo logoSrc={userData.logoSrc} />
+          <UserLogo logoSrc={userData.logoSrc} rank={userData.rank} level={userData.level} />
           <h3 className="username">{userData.username}</h3>
         </div>
         <Info name='Rank' value={userData.rank} />

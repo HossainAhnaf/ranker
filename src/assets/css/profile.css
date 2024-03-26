@@ -21,10 +21,12 @@
   gap: 2vw;
 }
 
-.info-section>.primary>.logoCont {
+.info-section>.primary>.user-logo {
   width: 20vw;
   height: 20vw;
-  border-width: .5vw;
+  border-width: .7vw;
+  --level-badge-font-size:3vw;
+
 }
 
 .info-section>.primary .username{

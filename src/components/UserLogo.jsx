@@ -1,13 +1,13 @@
+//modules
 import React, { forwardRef } from 'react'
 import defaultLogo from '../assets/img/user.jpeg'
-import {rank} from '../data/userData.json'
-
-const UserLogo = forwardRef(function UserLogo({logoSrc},ref) {
-  
- 
+//css
+import '../assets/css/user-logo.css'
+const UserLogo = forwardRef(function UserLogo({logoSrc,rank,level},ref) {
   return (
-    <div className="logo-wrapper imgCont logoCont" ref={ref} style={{'borderColor':`var(--${rank.toLowerCase()}-color)`,"borderStyle": 'solid'}}>
+    <div className={`user-logo ${rank.toLowerCase()} imgCont logoCont`} ref={ref} >
     <img src={logoSrc || defaultLogo} />
+     <span className="level-badge">{level}</span>
      </div>
   )
 })

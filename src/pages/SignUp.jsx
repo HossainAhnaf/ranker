@@ -12,7 +12,7 @@ function Signup() {
     <form className="signup-form">
     <h2 className="heading">Sign up</h2>
  
-    <OutlinedCustomField type="text" className="username" placeholder="username"  required={true}/>
+    <OutlinedCustomField type="text" className="username" placeholder="Username"  required={true}/>
     <small className="message">&nbsp;</small>
 
     <OutlinedCustomField type="email" className="email" placeholder="Email"  required={true}/>

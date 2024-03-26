@@ -6,11 +6,11 @@
   .side-navigation-bar > .primary > .user-profile-short-view > .primary {
     gap: 1vw;
   }
-  .side-navigation-bar > .primary > .user-profile-short-view > .primary > .logo-wrapper {
+  .side-navigation-bar > .primary > .user-profile-short-view > .primary > .user-logo {
     width: 9vw;
     height: 9vw;
-    border-width: .3vw ; 
-   
+    border-width: .5vw ; 
+    --level-badge-font-size: 1.3vw;
   }
   
   .side-navigation-bar > .primary > .user-profile-short-view > .primary > .username-wrapper > .username {

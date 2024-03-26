@@ -4,26 +4,28 @@ import '../assets/css/main-nav.css'
 import React , {useCallback, useEffect,useState } from 'react'
 import { showSideNavigationBar } from '../store/slices/sideNavigationBarSlice'
 import useDebounce from '../hooks/useDebounce'
-import UserLogo from '../components/UserLogo'
 import { useSelector , useDispatch  } from 'react-redux'
-import {logoSrc} from '../data/userData.json'
 import { useLocation } from 'react-router'
+import userDummyData from '../data/userData.json'
 
 //components
-import Icon from 'react-inlinesvg'
+import UserLogo from '../components/UserLogo'
 import ChallengesSectionNav from '../components/ChallengesSectionNav'
+import Icon from 'react-inlinesvg'
+
 //svg
 import notificationSvg from '../assets/svg/notification.svg'
 
 
 
 function MainNav() {
-  
+
   const dispatch = useDispatch()
   const location = useLocation()  
+  const [userData, setUserData] = useState(userDummyData)
   const {isChallengesSectionNavInvisible} = useSelector(state => state.challengesSectionNavSlice)
   
-
+ 
   const [navbarHalfTransparent,setNavbarHalfTransparent] = useState(true)
  const removeNavbarHalfTransparent = useDebounce(()=> {
     setNavbarHalfTransparent(false)
@@ -68,7 +70,7 @@ useEffect(()=>{
           <small className="badge">4</small>
         </button>
         <button className="profile-button" onClick={()=>dispatch(showSideNavigationBar())}>
-        <UserLogo logoSrc={logoSrc}/>
+        <UserLogo logoSrc={userData.logoSrc} rank={userData.rank} level={userData.level}/>
        </button>
 
       </div>

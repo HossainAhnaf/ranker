@@ -112,7 +112,7 @@ useEffect(()=>{
               </span> <span className="name">Settings</span>
             </button>
           </NavLink>
-          <Link to="/signup">
+          <Link to="/signin">
           <button className="logout-button">
               <span className="svgCont">
                 <Icon src={logoutSvg}/>

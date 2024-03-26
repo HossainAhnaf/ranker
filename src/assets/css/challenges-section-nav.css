@@ -44,7 +44,7 @@
       border: none;
       outline: none;
       font-size: 3.5vw;
-      padding: 0 2vw;
+      padding: 0 0 0 4vw;
       border-radius: 5vw 0 0 5vw; 
     }
  .challenges-section-nav >    .challenges-search-form > .button-container {

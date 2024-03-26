@@ -1,13 +1,15 @@
 
 .signin-form {
+  position: absolute;
+  top: 25%;
+  left: calc(11% - 2%);
   width: 80%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 5% 1%;
+  padding: 2% 1% 5% 1%;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
   border-radius: 2vw;
-  margin: 40% auto;
    background-color: var(--container-bg-color);
   
   }
@@ -15,13 +17,20 @@
   .signin-form>.heading {
   font-style: italic;
   color:var(--paragraph-color-primary);
-  margin-bottom: 2vh;
+  font-size: 7vw;
+  margin-bottom: 3vh;
   }
   
   .signin-form > .outlined-custom-field {
     width: 90%;
-  }
-  
+   }
+   .signin-form > .outlined-custom-field > input{
+    font-size: 4vw;
+   }
+   .signin-form > .outlined-custom-field > label{
+    font-size: 4vw;
+   }
+   
   .signin-form > .message {
   width: 90%;
   color: red;
@@ -32,6 +41,7 @@
   .signin-form > .have-not-account {
   width: 90%;
   margin-bottom: 2vh;
+  font-size: 4vw;
   }
   .signin-form > .have-not-account a{
     /* text-decoration: none; */
@@ -47,7 +57,8 @@
     padding: min(2vw,6px);
     border: none;
     border-radius: min(2vw,5px);
-    
+    font-size: 3vw;
+
     }
     .signin-form :is(button[type="submit"]:hover,button[type="submit"]:active) {
     background-color: orange;
