@@ -1,37 +1,37 @@
 .user-logo{
    position: relative;
     border-style: solid;
-    border-color: var(--rank-color);
+    border-color: var(--status-color);
     
 }   
 
 .user-logo.sigma{
-    --rank-color: var(--sigma-color);
+    --status-color: var(--sigma-color);
 }   
    
 .user-logo.alpha{
-    --rank-color: var(--alpha-color);
+    --status-color: var(--alpha-color);
 }
 
 .user-logo.beta{
-    --rank-color: var(--beta-color);
+    --status-color: var(--beta-color);
 }
 
 .user-logo.gamma{
-    --rank-color: var(--gamma-color);
+    --status-color: var(--gamma-color);
 }
 
 .user-logo.delta{
-    --rank-color: var(--delta-color);
+    --status-color: var(--delta-color);
 }
 
 .user-logo.omega{
-    --rank-color: var(--omega-color);
+    --status-color: var(--omega-color);
 }
 
 .user-logo > .level-badge{
   font-size: var(--level-badge-font-size);  
-  background-color: var(--rank-color);
+  background-color: var(--status-color);
   border-radius: 100%;
   padding: calc(var(--level-badge-font-size) / 6) calc(var(--level-badge-font-size) / 2);
   position: absolute;

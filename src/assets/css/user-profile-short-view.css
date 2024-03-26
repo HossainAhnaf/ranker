@@ -16,30 +16,30 @@
   .side-navigation-bar > .primary > .user-profile-short-view > .primary > .username-wrapper > .username {
     font-size: 4vw;
   }
-  .side-navigation-bar > .primary > .user-profile-short-view > .primary > .username-wrapper> .rank {
+  .side-navigation-bar > .primary > .user-profile-short-view > .primary > .username-wrapper> .status {
    font-size: 3vw;
    -webkit-text-stroke-width: .2px;
    -webkit-text-stroke-color: black;
     }
   
-  .side-navigation-bar > .primary > .user-profile-short-view > .primary > .username-wrapper> .rank.Sigma {
+  .side-navigation-bar > .primary > .user-profile-short-view > .primary > .username-wrapper> .status.Sigma {
   color: var(--sigma-color);
 }
 
-.side-navigation-bar > .primary > .user-profile-short-view > .primary > .username-wrapper> .rank.Alpha {
+.side-navigation-bar > .primary > .user-profile-short-view > .primary > .username-wrapper> .status.Alpha {
     color: var(--alpha-color);
 }
-.side-navigation-bar > .primary > .user-profile-short-view > .primary > .username-wrapper> .rank.Beta {
+.side-navigation-bar > .primary > .user-profile-short-view > .primary > .username-wrapper> .status.Beta {
     color: var(--beta-color);
 }
-.side-navigation-bar > .primary > .user-profile-short-view > .primary > .username-wrapper> .rank.Gamma {
+.side-navigation-bar > .primary > .user-profile-short-view > .primary > .username-wrapper> .status.Gamma {
     color: var(--gamma-color);
 }
-.side-navigation-bar > .primary > .user-profile-short-view > .primary > .username-wrapper> .rank.Delta {
+.side-navigation-bar > .primary > .user-profile-short-view > .primary > .username-wrapper> .status.Delta {
     color: var(--delta-color);
 
 }
-.side-navigation-bar > .primary > .user-profile-short-view > .primary > .username-wrapper> .rank.Omega {
+.side-navigation-bar > .primary > .user-profile-short-view > .primary > .username-wrapper> .status.Omega {
     color: var(--omega-color);
 }
 

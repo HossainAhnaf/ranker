@@ -1,0 +1,69 @@
+.peoples-section{
+    margin-top: calc(var(--nav-vertical-padding) + var(--nav-height) + 2vh);
+    width: 100%;
+}
+
+.peoples-section > .users-short-info-wrapper{
+    width: 80%;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    gap: 3vh;
+}
+.peoples-section > .users-short-info-wrapper > a{
+  color: inherit;
+  text-decoration: none;
+}
+.peoples-section > .users-short-info-wrapper .user-short-info{
+  width: calc(100% - 8vw);
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+  padding: 2vw 4vw;
+  border-radius: 3vw;
+  background-color: var(--container-bg-color);
+}
+.peoples-section > .users-short-info-wrapper > a:active{
+ filter: brightness(70%);
+}
+.peoples-section > .users-short-info-wrapper .user-short-info > .primary{
+  gap: 1.5vw;
+  padding-bottom: 2vw;
+ border-bottom: 1px solid var(--border-color);
+}
+.peoples-section > .users-short-info-wrapper .user-short-info > .primary > .user-logo{
+ width: 13vw;
+ height: 13vw;
+ border-width: .5vw;
+ --level-badge-font-size: 2vw;
+} 
+
+.peoples-section > .users-short-info-wrapper .user-short-info > .primary > .info-wrapper > .username{
+  font-size: 5vw;
+  font-weight: 500;
+}
+.peoples-section > .users-short-info-wrapper .user-short-info > .primary > .info-wrapper > .status{
+  font-size: 4vw;
+}
+.peoples-section > .users-short-info-wrapper .user-short-info > .primary > .info-wrapper > .status.sigma{
+  color: var(--sigma-color);
+}
+.peoples-section > .users-short-info-wrapper .user-short-info > .primary > .info-wrapper > .status.alpha{
+  color: var(--alpha-color);
+}
+.peoples-section > .users-short-info-wrapper .user-short-info > .primary > .info-wrapper > .status.beta{
+  color: var(--beta-color);
+}
+.peoples-section > .users-short-info-wrapper .user-short-info > .primary > .info-wrapper > .status.gamma{
+  color: var(--gamma-color);
+} 
+.peoples-section > .users-short-info-wrapper .user-short-info > .primary > .info-wrapper > .status.delta{
+  color: var(--delta-color);
+}
+.peoples-section > .users-short-info-wrapper .user-short-info > .primary > .info-wrapper > .status.omega{
+  color: var(--omega-color);
+}
+.peoples-section > .users-short-info-wrapper .user-short-info > .secondery > .rank{
+  color: var(--paragraph-color-secondary);
+
+
+}  

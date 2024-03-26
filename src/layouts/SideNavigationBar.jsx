@@ -97,7 +97,7 @@ useEffect(()=>{
               <span className="name">Notifications</span>
             </button>
           </NavLink>
-          <NavLink className={useActiveClassName}  to='/Peoples'>
+          <NavLink className={useActiveClassName}  to='/peoples'>
             <button>
               <span className="svgCont">
                 <Icon src={peopleSvg}/>

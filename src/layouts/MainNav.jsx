@@ -70,7 +70,7 @@ useEffect(()=>{
           <small className="badge">4</small>
         </button>
         <button className="profile-button" onClick={()=>dispatch(showSideNavigationBar())}>
-        <UserLogo logoSrc={userData.logoSrc} rank={userData.rank} level={userData.level}/>
+        <UserLogo logoSrc={userData.logoSrc} status={userData.status} level={userData.level}/>
        </button>
 
       </div>

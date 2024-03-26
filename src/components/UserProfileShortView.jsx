@@ -15,10 +15,10 @@ function UserProfileShortView() {
   return (
     <div className="user-profile-short-view flex-cm center tooltip" >
     <div className="primary flex-rw center">
-      <UserLogo logoSrc={userData.logoSrc} rank={userData.rank} level={userData.level} />
+      <UserLogo logoSrc={userData.logoSrc} status={userData.status} level={userData.level} />
       <div className="username-wrapper flex-cm">
         <b className="username">{userData.username}</b>
-        <small className={`rank ${userData.rank}`}>{userData.rank}</small>
+        <small className={`status ${userData.status}`}>{userData.status}</small>
       </div>
     </div>
     <div className="secondery">
