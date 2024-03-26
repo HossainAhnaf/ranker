@@ -1,34 +1,32 @@
+//modules
 import React from 'react';
-import './css/style.css';
+import { Link } from 'react-router-dom';
 
-function index() {
+//components
+import OutlinedCustomField from "../components/OutlinedCustomField"
+//css
+import '../assets/css/signup.css'
+
+function Signup() {
   return (
-    <form class="sign-up-form" enctype="multipart/form-data">
-    <h2 class="heading">Sign up</h2>
-    <label class="custom-field">
-      <input type="text" class="username" placeholder=" " required />
-      <span class="placeholder">username</span>
-    </label>
-    <small class="message">&nbsp;</small>
+    <form className="signup-form">
+    <h2 className="heading">Sign up</h2>
+ 
+    <OutlinedCustomField type="text" className="username" placeholder="username"  required={true}/>
+    <small className="message">&nbsp;</small>
 
-    <label class="custom-field">
-      <input type="email" class="email" placeholder=" " required />
-      <span class="placeholder">Email</span>
-    </label>
-    <small class="message">&nbsp;</small>
-    <label class="custom-field">
-      <input type="password" class="password" placeholder=" " required />
-      <span class="placeholder">Password</span>
-    </label>
-    <small class="message">&nbsp;</small>
-    <p><small>Already have a account? <a href="./sign-in.html">Sign in</a></small></p>
-    <br/>
-    <button class="positive" type="submit">Confirm</button>
+    <OutlinedCustomField type="email" className="email" placeholder="Email"  required={true}/>
+    <small className="message">&nbsp;</small>
+  
+    <OutlinedCustomField type="password" className="password" placeholder="Password"  required={true}/>
+    <small className="message">&nbsp;</small>
+    <p className='already-have-account'><small>Already have a account? <Link  to="/signin">Sign in</Link></small></p>
+    <button className="button positive" type="submit">Confirm</button>
   </form>
   )
 }
 
-export default index;
+export default Signup;
   
 
 

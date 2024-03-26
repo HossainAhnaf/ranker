@@ -87,15 +87,11 @@
   }
   
   
-  .side-navigation-bar > .navigation-button-wrapper > .logout-button {
-    font-size: 4vw;
-    border: none;
+  .side-navigation-bar > .navigation-button-wrapper  .logout-button {
     color: red;
   }
-  .side-navigation-bar > .navigation-button-wrapper > .logout-button:active {
-    filter: brightness(60%);  
-  }
-  .side-navigation-bar>.navigation-button-wrapper > .logout-button .svgCont .fill{
+  
+  .side-navigation-bar>.navigation-button-wrapper  .logout-button .svgCont .fill{
     fill: red;
    }
   .side-navigation-bar>.navigation-button-wrapper>a>.notifications-button > .svgCont {

@@ -2,7 +2,7 @@
 import React , {useRef,useEffect,useState} from "react"
 import {useSelector, useDispatch } from "react-redux"
 import { hideSideNavigationBar,sideNavigationBarAutoHideHandler} from "../store/slices/sideNavigationBarSlice"
-import { NavLink } from "react-router-dom"
+import { Link, NavLink } from "react-router-dom"
 import useActiveClassName from "../hooks/useActiveClassName"
 
 //components
@@ -112,12 +112,14 @@ useEffect(()=>{
               </span> <span className="name">Settings</span>
             </button>
           </NavLink>
-            <button className="logout-button">
+          <Link to="/signup">
+          <button className="logout-button">
               <span className="svgCont">
                 <Icon src={logoutSvg}/>
               </span>
               <span className="name">Log out</span>
             </button>
+          </Link>
         </div>
       </div>
     

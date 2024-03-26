@@ -5,7 +5,6 @@ import Select from '../components/Select'
 
 //css
 import '../assets/css/create-new-challenge.css'
-import TextField from '../components/TextField'
 
 function CreateNewChallenge() {
   return (

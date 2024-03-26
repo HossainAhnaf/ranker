@@ -1,0 +1,41 @@
+
+.outlined-custom-field {  
+  position: relative;    
+}
+
+.outlined-custom-field label {
+  position: absolute;
+  font-size: 1rem;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--container-bg-color);
+  color: gray;
+  padding: 0 0.3rem;
+  margin: 0 0.5rem;
+  transition: .1s ease-out;
+  transform-origin: left top;
+  pointer-events: none;
+}
+.outlined-custom-field input {
+  font-size: 1rem;
+  outline: none;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;  
+  padding: 2vw;
+  color: var(--paragraph-color-primary);
+  transition: 0.1s ease-out;
+  width: calc(100% - 4vw);
+  background-color: var(--container-bg-color);
+
+}
+.outlined-custom-field input:is(:focus,:not(:placeholder-shown)) {
+  border-color: var(--border-active-color);  
+}
+
+.outlined-custom-field input:is(:focus,:not(:placeholder-shown)) + label {
+  top: 0;
+  transform: translateY(-50%) scale(.9);
+  color: var(--border-active-color);
+
+}
