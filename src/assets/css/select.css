@@ -45,9 +45,10 @@
    display: none;
   }
   .select > .options-wrapper > .option:active {
-    background-color: var(--active-bg-color);
+    /* background-color: var(--active-bg-color);
     color: var(--active-color);
-   
+    */
+    filter: brightness(60%);
   }
   .select.active > .options-wrapper {
     display: flex;

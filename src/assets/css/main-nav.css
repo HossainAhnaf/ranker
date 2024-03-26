@@ -65,7 +65,7 @@
 /* challenges section nav */
 .main-nav > .challenges-section-nav {
   position: fixed;
-  top: calc(var(--nav-height) + var(--nav-vertical-padding) - 2vh);
+  top: calc(var(--nav-height) + var(--nav-vertical-padding) - 2vw);
   left: 0;
   background-color: var(--layout-bg-color);
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);

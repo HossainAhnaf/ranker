@@ -1,12 +1,13 @@
 //css
 import '../assets/css/main-nav.css'
 //hooks
-import React , {useEffect, useState } from 'react'
+import React , {useCallback, useEffect,useState } from 'react'
 import { showSideNavigationBar } from '../store/slices/sideNavigationBarSlice'
 import useDebounce from '../hooks/useDebounce'
 import UserLogo from '../components/UserLogo'
 import { useSelector , useDispatch  } from 'react-redux'
 import {logoSrc} from '../data/userData.json'
+import { useLocation } from 'react-router'
 
 //components
 import Icon from 'react-inlinesvg'
@@ -19,28 +20,38 @@ import notificationSvg from '../assets/svg/notification.svg'
 function MainNav() {
   
   const dispatch = useDispatch()
-  
+  const location = useLocation()  
   const {isChallengesSectionNavInvisible} = useSelector(state => state.challengesSectionNavSlice)
   
-  const [navbarHalfTransparent,setNavbarHalfTransparent] = useState(false)
+
+  const [navbarHalfTransparent,setNavbarHalfTransparent] = useState(true)
  const removeNavbarHalfTransparent = useDebounce(()=> {
     setNavbarHalfTransparent(false)
  }, 1000)
   
-  const navbarTransparentHandler = ()=> {
-    if (navbarHalfTransparent === false) {
+  const navbarTransparentHandler = useCallback(()=> {
+    if ( navbarHalfTransparent === false) {
       setNavbarHalfTransparent(true)
     }
     removeNavbarHalfTransparent()
-  }
+  },[setNavbarHalfTransparent,removeNavbarHalfTransparent])
+  
+useEffect(()=>{
+  if (location.pathname === '/challenges')
+  window.removeEventListener('scroll',navbarTransparentHandler)
+  else
+  window.addEventListener('scroll', navbarTransparentHandler)
+ 
+},[location])
+
 
 useEffect(()=>{
- if (isChallengesSectionNavInvisible)    
   window.addEventListener('scroll', navbarTransparentHandler)
  return ()=>{
   window.removeEventListener('scroll',navbarTransparentHandler)
  }
 },[])
+
   return (
    <>
 

@@ -98,7 +98,7 @@ function Profile() {
       <section className="recent-challenges flex-cm">
         <h3>Recent Challenges</h3>
         <ChallengeCardsWrapper data={challengesData} shortDesc={true} />
-        <button className="see-all-button positive">See all</button>
+        <button className="see-all-button button positive">See all</button>
       </section>
 
     </>

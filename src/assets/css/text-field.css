@@ -28,7 +28,7 @@
   }
  
    .text-field > :is(input,textarea):is(:focus,:valid) ~ label {
-    top: -80%;
+    top: 0;
     left: 0;
     color: var(--active-color);
     font-size: calc(var(--font-size) / 1.2);

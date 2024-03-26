@@ -64,7 +64,7 @@
   
   
   .side-navigation-bar > .navigation-button-wrapper > a:is(:active,.active) > button {
-    filter: brightness(90%);
+    filter: brightness(60%);
   }
 
   .side-navigation-bar > .navigation-button-wrapper > a > button > .name {
@@ -93,7 +93,7 @@
     color: red;
   }
   .side-navigation-bar > .navigation-button-wrapper > .logout-button:active {
-    filter: brightness(90%);  
+    filter: brightness(60%);  
   }
   .side-navigation-bar>.navigation-button-wrapper > .logout-button .svgCont .fill{
     fill: red;

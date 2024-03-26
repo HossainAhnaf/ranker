@@ -3,6 +3,8 @@
   --theme-primary: rgba(0,0,0,0.5);
   --theme-secondery-gradient: linear-gradient(to right,red,darkorange);
   --theme-secondery-default: orangered;
+  --border-active-color:var(--theme-secondery-default);
+
 }
 
 
@@ -12,7 +14,8 @@
   --container-bg-color: white;
   --paragraph-color-primary:black; 
   --paragraph-color-secondary:gray; 
- --layout-bg-color:white;
+  --border-color:gray;
+  --layout-bg-color:white;
  --challenge-card-bg-color:whitesmoke;
  --info-bg-color:whitesmoke;
   /* rank */
@@ -31,8 +34,9 @@
   --container-bg-color: #515151;
   --paragraph-color-primary:white; 
   --paragraph-color-secondary:lightgray; 
+  --border-color:lightgray;
   --layout-bg-color: #333 ;
-  --challenge-card-bg-color:#515151;
+  --challenge-card-bg-color:#6e6e6e;
   --info-bg-color:gray;
   /* rank */
   --sigma-color: yellow;
