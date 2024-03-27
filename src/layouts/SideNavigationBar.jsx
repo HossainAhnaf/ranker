@@ -1,5 +1,5 @@
 //modules
-import React , {useRef,useEffect,useState} from "react"
+import React , {useRef,useEffect} from "react"
 import {useSelector, useDispatch } from "react-redux"
 import { hideSideNavigationBar,sideNavigationBarAutoHideHandler} from "../store/slices/sideNavigationBarSlice"
 import { Link, NavLink } from "react-router-dom"
@@ -28,8 +28,10 @@ function SideNavigationBar() {
   const sideNavigationBarRef = useRef(null)
   
   const dispatch = useDispatch()
-  const isActive = useSelector(state=>state.sideNavigationBarSlice.isActive)
-  const theme = useSelector(state=>state.themeSlice.theme)
+
+  const {username} = useSelector(state=>state.userSlice)
+  const {isActive} = useSelector(state=>state.sideNavigationBarSlice)
+  const {theme} = useSelector(state=>state.themeSlice)
  
  const sideNavigationBarBlurHandler = ({relatedTarget})=>{
     if (relatedTarget === null)
@@ -65,7 +67,7 @@ useEffect(()=>{
           </button>
         </div>
         <div className="navigation-button-wrapper">
-          <NavLink className={useActiveClassName}  to="/">
+          <NavLink className={useActiveClassName}  to={`/profile/${username}`}>
             <button className="profile-button">
               <span className="svgCont">
                <Icon src={profileSvg}/>

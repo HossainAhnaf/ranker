@@ -14,8 +14,9 @@ export default createBrowserRouter(
     {
       element: <Layout />,
       children: [
+     
         {
-          path: '/',
+          path: '/profile/:username',
           element: <Profile />
         },
         {

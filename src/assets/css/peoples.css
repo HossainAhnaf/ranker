@@ -37,7 +37,7 @@
  --level-badge-font-size: 2vw;
 } 
 
-.peoples-section > .users-short-info-wrapper .user-short-info > .primary > .info-wrapper > .username{
+.peoples-section > .users-short-info-wrapper .user-short-info > .primary > .info-wrapper > .name{
   font-size: 5vw;
   font-weight: 500;
 }
@@ -64,6 +64,5 @@
 }
 .peoples-section > .users-short-info-wrapper .user-short-info > .secondery > .rank{
   color: var(--paragraph-color-secondary);
-
-
+ font-size: 3vw;
 }  

@@ -1,8 +1,8 @@
 //modules
 import React, { useEffect, useMemo, useState } from 'react';
-import userDummyData from '../data/userData.json'
 import dummyRecentChallengesData from '../data/recentChallengesData.json'
 import useSetValueFromStart from '../hooks/useSetValueFromStart'
+import { useParams } from 'react-router';
 
 //components
 import UserLogo from '../components/UserLogo';
@@ -14,26 +14,30 @@ import Info from '../components/Info';
 import '../assets/css/profile.css';
 
 function Profile() {
+   const params = useParams()
+   params.username
+  const {username} = useSelector(state=>state.userSlice)
 
-  const [userData, setUserData] = useState(userDummyData)
   const [challengesData, setChallengesData] = useState(dummyRecentChallengesData)
 
-  const progressParcentage = useMemo(() => (userData.xp / 1000) * 100, [userData.xp])
 
+  const progressParcentage = useMemo(() => (xp / 1000) * 100, [xp])
   const [progressParcentageText, setProgressParcentageText] = useState(0)
-
   const [lessThan10Percent, setLessThan10Percent] = useState('true')
 
+  
+  // const 
+   
 
-  const [challenges, setChallenges] = useState(0)
-  const [passed, setPassed] = useState(0)
-  const [failed, setFailed] = useState(0)
-  const [level, setLevel] = useState(0)
-  const [xp, setXp] = useState(0)
+  const [currentChallenges, setCurrentChallenges] = useState(0)
+  const [currentPassed, setCurrentPassed] = useState(0)
+  const [currentFailed, setCurrentFailed] = useState(0)
+  const [currentLevel, setCurrentLevel] = useState(0)
+  const [currentXp, setCurrentXp] = useState(0)
 
 
   useEffect(() => {
-    const fetchUserData = () => {
+    const fetchProfileData = () => {
       // fetch('')
       // .then(res=>res.text())
       // .then(setUserData)
@@ -44,11 +48,11 @@ function Profile() {
       // .then(setChallengesData)
     }
     const numberTypeInfoIncreaceHandler = () => {
-      useSetValueFromStart(0, userData.challenges, setChallenges)
-      useSetValueFromStart(0, userData.passed, setPassed)
-      useSetValueFromStart(0, userData.failed, setFailed)
-      useSetValueFromStart(0, userData.level, setLevel)
-      useSetValueFromStart(0, userData.xp, setXp)
+      useSetValueFromStart(0,currentChallenges,setCurrentChallenges)
+      useSetValueFromStart(0,currentPassed, setCurrentPassed )
+      useSetValueFromStart(0,currentFailed , setCurrentFailed )
+      useSetValueFromStart(0,currentLevel,setCurrentLevel )
+      useSetValueFromStart(0,currentXp,setCurrentXp)
     }
 
     const setXpProgressBarData = () => {
@@ -69,14 +73,14 @@ function Profile() {
     <>
       <section className="info-section flex-cm center">
         <div className="primary flex-cm center">
-          <UserLogo logoSrc={userData.logoSrc} status={userData.status} level={userData.level} />
-          <h3 className="username">{userData.username}</h3>
+          <UserLogo logoSrc={logoSrc} status={status} level={level} />
+          <h3 className="name">{name}</h3>
         </div>
-        <Info name='Rank' value={userData.rank} />
-        <Info name='Status' value={userData.status} />
-        <Info name='Challenges' value={challenges} />
-        <Info name='Passed' value={passed} />
-        <Info name='Failed' value={failed} />
+        <Info name='Rank' value={rank} />
+        <Info name='Status' value={status} />
+        <Info name='Challenges' value={currentChallenges} />
+        <Info name='Passed' value={currentPassed} />
+        <Info name='Failed' value={currentFailed} />
      
     
         <br />
@@ -90,17 +94,18 @@ function Profile() {
             </div>
           </div>
         </div>
-        <Info name='Level' value={`${level} / 10`} />
-        <Info name='Xp' value={`${xp} / 1000`} />
+        <Info name='Level' value={`${currentLevel} / 10`} />
+        <Info name='Xp' value={`${currentXp} / 1000`} />
       </section>
 
-
+     {
+      
       <section className="recent-challenges flex-cm">
         <h3>Recent Challenges</h3>
         <ChallengeCardsWrapper data={challengesData} shortDesc={true} />
         <button className="see-all-button button positive">See all</button>
       </section>
-
+     }
     </>
   )
 }

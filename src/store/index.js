@@ -1,10 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
 //slices
-import sideNavigationBarSlice from './slices/sideNavigationBarSlice'
+import userSlice from "./slices/userSlice";
 import themeSlice from './slices/themeSlice'
+import sideNavigationBarSlice from './slices/sideNavigationBarSlice'
 import challengesSectionNavSlice from './slices/challengesSectionNavSlice'
 const store = configureStore({
     reducer:{
+        userSlice,
         themeSlice,
         sideNavigationBarSlice,
         challengesSectionNavSlice

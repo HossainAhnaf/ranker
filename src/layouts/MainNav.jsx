@@ -6,7 +6,6 @@ import { showSideNavigationBar } from '../store/slices/sideNavigationBarSlice'
 import useDebounce from '../hooks/useDebounce'
 import { useSelector , useDispatch  } from 'react-redux'
 import { useLocation } from 'react-router'
-import userDummyData from '../data/userData.json'
 
 //components
 import UserLogo from '../components/UserLogo'
@@ -22,7 +21,9 @@ function MainNav() {
 
   const dispatch = useDispatch()
   const location = useLocation()  
-  const [userData, setUserData] = useState(userDummyData)
+ 
+  
+  const {logoSrc,status,level} = useSelector(state=>state.userSlice)
   const {isChallengesSectionNavInvisible} = useSelector(state => state.challengesSectionNavSlice)
   
  
@@ -70,7 +71,7 @@ useEffect(()=>{
           <small className="badge">4</small>
         </button>
         <button className="profile-button" onClick={()=>dispatch(showSideNavigationBar())}>
-        <UserLogo logoSrc={userData.logoSrc} status={userData.status} level={userData.level}/>
+        <UserLogo logoSrc={logoSrc} status={status} level={level}/>
        </button>
 
       </div>

@@ -1,0 +1,58 @@
+{
+
+ "allUsers":[
+  {
+    "logoSrc": "https://i1.sndcdn.com/avatars-DqyGmSE2L9topKbD-nhmyHQ-t240x240.jpg",
+    "username": "MdHossainAhnafOvi",
+    "name": "Md Hossain Ahnaf Ovi",
+    "rank": "1,000",
+    "status": "Sigma",
+    "challenges": 150,
+    "passed": 140,
+    "failed": 10,
+    "level": 3,
+    "xp": 400
+  },
+   {
+    "logoSrc": "https://t4.ftcdn.net/jpg/05/79/49/39/360_F_579493931_9AJrInxWGhyS4CNfVeVJwsusbN1k3q17.jpg",
+    "username": "MdHasanAhnafOmi",
+    "name": "Md Hasan Ahnaf Omi",
+
+    "rank": "25,000",
+    "status": "Alpha",
+    "challenges": 100,
+    "passed": 80,
+    "failed": 20,
+    "level": 9,
+    "xp": 30
+  }
+ ],
+ "singleUser":{ 
+  "MdHossainAhnafOvi":{
+    "logoSrc": "https://i1.sndcdn.com/avatars-DqyGmSE2L9topKbD-nhmyHQ-t240x240.jpg",
+    "username": "MdHossainAhnafOvi",
+    "name": "Md Hossain Ahnaf Ovi",
+    "rank": "1,000",
+    "status": "Sigma",
+    "challenges": 150,
+    "passed": 140,
+    "failed": 10,
+    "level": 3,
+    "xp": 400
+  },
+  "MdHasanAhnafOmi": {
+    "logoSrc": "https://t4.ftcdn.net/jpg/05/79/49/39/360_F_579493931_9AJrInxWGhyS4CNfVeVJwsusbN1k3q17.jpg",
+    "username": "MdHasanAhnafOmi",
+    "name": "Md Hasan Ahnaf Omi",
+
+    "rank": "25,000",
+    "status": "Alpha",
+    "challenges": 100,
+    "passed": 80,
+    "failed": 20,
+    "level": 9,
+    "xp": 30
+  }
+ }
+
+}  

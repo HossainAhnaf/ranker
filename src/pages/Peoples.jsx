@@ -1,23 +1,26 @@
 //modules
 import React, { useState } from 'react'
-import userDummyData from '../data/userData.json'
+//fake
+import {allUsers} from '../data/usersData.json'
 //components
 import UserLogo from '../components/UserLogo'
 //css
 import '../assets/css/peoples.css'
 import { Link } from 'react-router-dom'
+//users/
 function Peoples() {
-    const [userData, setUserData] = useState(userDummyData)
+    const [usersData, setUserData] = useState(allUsers)
   return (
     <section className="peoples-section">
       <div className="users-short-info-wrapper flex-cm center">
-       
-       <Link to='/'>
+     { usersData.map((userData)=>{
+        return (
+          <Link to={`profile/${userData.username}`}>
         <div className="user-short-info flex-cm">
           <div className="primary flex-rw center">
             <UserLogo logoSrc={userData.logoSrc} status={userData.status} level={userData.level} />
             <div className="info-wrapper flex-cm">
-              <b className="username">{userData.username}</b>
+              <b className="name">{userData.name}</b>
                <small className={`status ${userData.status.toLocaleLowerCase()}`}>{userData.status}</small>
             </div>
             </div>
@@ -26,6 +29,9 @@ function Peoples() {
           </div>
        </div>
        </Link>
+        )
+      }) 
+    } 
       </div>
     </section>
   )
