@@ -28,5 +28,8 @@ export default function useSetValueFromStart(startValue = 0, value, callback, ti
       callback(currentVal);
     }
   }, timing);
+
+  return interval
+  
 }
  

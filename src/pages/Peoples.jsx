@@ -13,9 +13,9 @@ function Peoples() {
   return (
     <section className="peoples-section">
       <div className="users-short-info-wrapper flex-cm center">
-     { usersData.map((userData)=>{
+     { usersData.map((userData,index)=>{
         return (
-          <Link to={`profile/${userData.username}`}>
+          <Link to={`/profile/${userData.username}`} key={index}> 
         <div className="user-short-info flex-cm">
           <div className="primary flex-rw center">
             <UserLogo logoSrc={userData.logoSrc} status={userData.status} level={userData.level} />
