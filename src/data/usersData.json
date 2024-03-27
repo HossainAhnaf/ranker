@@ -25,7 +25,72 @@
     "failed": 20,
     "level": 9,
     "xp": 30
+  },
+   {
+    "logoSrc": "https://randomuser.me/api/portraits/men/3.jpg",
+    "username": "MaxJohnson",
+    "name": "Max Johnson",
+    "rank": "8,500",
+    "status": "Delta",
+    "challenges": 220,
+    "passed": 200,
+    "failed": 20,
+    "level": 6,
+    "xp": 400
+  },
+  
+ {
+    "logoSrc": "https://randomuser.me/api/portraits/women/4.jpg",
+    "username": "EmilyBrown",
+    "name": "Emily Brown",
+    "rank": "15,000",
+    "status": "Beta",
+    "challenges": 190,
+    "passed": 170,
+    "failed": 20,
+    "level": 4,
+    "xp": 280
+  },
+  
+   {
+    "logoSrc": "https://randomuser.me/api/portraits/men/5.jpg",
+    "username": "DavidClark",
+    "name": "David Clark",
+    "rank": "12,500",
+    "status": "Alpha",
+    "challenges": 230,
+    "passed": 210,
+    "failed": 20,
+    "level": 8,
+    "xp": 450
+  },
+  
+ {
+    "logoSrc": "https://randomuser.me/api/portraits/women/6.jpg",
+    "username": "SarahMiller",
+    "name": "Sarah Miller",
+    "rank": "20,000",
+    "status": "Gamma",
+    "challenges": 170,
+    "passed": 150,
+    "failed": 20,
+    "level": 3,
+    "xp": 200
+  },
+  
+  {
+    "logoSrc": "https://randomuser.me/api/portraits/men/7.jpg",
+    "username": "AlexWilson",
+    "name": "Alex Wilson",
+    "rank": "30,000",
+    "status": "Sigma",
+    "challenges": 210,
+    "passed": 190,
+    "failed": 20,
+    "level": 5,
+    "xp": 320
   }
+  
  ],
  "singleUser":{ 
   "MdHossainAhnafOvi":{
@@ -52,7 +117,73 @@
     "failed": 20,
     "level": 9,
     "xp": 100
+  },
+  "MaxJohnson": {
+    "logoSrc": "https://randomuser.me/api/portraits/men/3.jpg",
+    "username": "MaxJohnson",
+    "name": "Max Johnson",
+    "rank": "8,500",
+    "status": "Delta",
+    "challenges": 220,
+    "passed": 200,
+    "failed": 20,
+    "level": 6,
+    "xp": 400
+  },
+  
+  "EmilyBrown": {
+    "logoSrc": "https://randomuser.me/api/portraits/women/4.jpg",
+    "username": "EmilyBrown",
+    "name": "Emily Brown",
+    "rank": "15,000",
+    "status": "Beta",
+    "challenges": 190,
+    "passed": 170,
+    "failed": 20,
+    "level": 4,
+    "xp": 280
+  },
+  
+  "DavidClark": {
+    "logoSrc": "https://randomuser.me/api/portraits/men/5.jpg",
+    "username": "DavidClark",
+    "name": "David Clark",
+    "rank": "12,500",
+    "status": "Alpha",
+    "challenges": 230,
+    "passed": 210,
+    "failed": 20,
+    "level": 8,
+    "xp": 450
+  },
+  
+  "SarahMiller": {
+    "logoSrc": "https://randomuser.me/api/portraits/women/6.jpg",
+    "username": "SarahMiller",
+    "name": "Sarah Miller",
+    "rank": "20,000",
+    "status": "Gamma",
+    "challenges": 170,
+    "passed": 150,
+    "failed": 20,
+    "level": 3,
+    "xp": 200
+  },
+  
+  "AlexWilson": {
+    "logoSrc": "https://randomuser.me/api/portraits/men/7.jpg",
+    "username": "AlexWilson",
+    "name": "Alex Wilson",
+    "rank": "30,000",
+    "status": "Sigma",
+    "challenges": 210,
+    "passed": 190,
+    "failed": 20,
+    "level": 5,
+    "xp": 320
   }
+  
+
  }
 
 }  

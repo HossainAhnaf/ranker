@@ -39,13 +39,13 @@ function MainNav() {
     removeNavbarHalfTransparent()
   },[setNavbarHalfTransparent,removeNavbarHalfTransparent])
   
-useEffect(()=>{
-  if (location.pathname === '/challenges')
-  window.removeEventListener('scroll',navbarTransparentHandler)
-  else
-  window.addEventListener('scroll', navbarTransparentHandler)
+// useEffect(()=>{
+//   if (location.pathname === '/challenges')
+//   window.removeEventListener('scroll',navbarTransparentHandler)
+//   else
+//   window.addEventListener('scroll', navbarTransparentHandler)
  
-},[location])
+// },[location])
 
 
 useEffect(()=>{
