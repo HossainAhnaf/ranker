@@ -14,8 +14,8 @@ import Info from '../components/Info';
 import '../assets/css/profile.css';
 
 function Profile() {
-   const params = useParams()
-   params.username
+   const adminUsername = useParams().username
+   
   const {username} = useSelector(state=>state.userSlice)
 
   const [challengesData, setChallengesData] = useState(dummyRecentChallengesData)
@@ -26,7 +26,15 @@ function Profile() {
   const [lessThan10Percent, setLessThan10Percent] = useState('true')
 
   
-  // const 
+  const [authorName,setAuthorName] = useState()
+  const [authorLogoSrc,setAuthorLogoSrc] = useState()
+  const [authorRank,setAuthorRank] = useState()
+  const [authorStatus,setAuthorStatus] = useState()
+  const [authorChallenges,setAuthorChallenges] = useState()
+  const [authorPassed,setAuthorPassed] = useState()
+  const [authorFailed,setAuthorFailed] = useState()
+  const [authorLevel,setAuthorLevel] = useState()
+  const [authorXp,setAuthorXp] = useState()
    
 
   const [currentChallenges, setCurrentChallenges] = useState(0)
@@ -73,11 +81,11 @@ function Profile() {
     <>
       <section className="info-section flex-cm center">
         <div className="primary flex-cm center">
-          <UserLogo logoSrc={logoSrc} status={status} level={level} />
+          <UserLogo logoSrc={authorLogoSrc} status={authorStatus} level={authorLevel} />
           <h3 className="name">{name}</h3>
         </div>
-        <Info name='Rank' value={rank} />
-        <Info name='Status' value={status} />
+        <Info name='Rank' value={authorRank} />
+        <Info name='Status' value={authorStatus} />
         <Info name='Challenges' value={currentChallenges} />
         <Info name='Passed' value={currentPassed} />
         <Info name='Failed' value={currentFailed} />
@@ -99,7 +107,7 @@ function Profile() {
       </section>
 
      {
-      
+    username === adminUsername &&
       <section className="recent-challenges flex-cm">
         <h3>Recent Challenges</h3>
         <ChallengeCardsWrapper data={challengesData} shortDesc={true} />

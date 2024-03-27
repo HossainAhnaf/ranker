@@ -7,7 +7,7 @@ import UserLogo from '../components/UserLogo'
 //css
 import '../assets/css/peoples.css'
 import { Link } from 'react-router-dom'
-//users/
+//users?q=hossain ovi
 function Peoples() {
     const [usersData, setUserData] = useState(allUsers)
   return (

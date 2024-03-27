@@ -5,9 +5,8 @@ import {singleUser} from '../../data/usersData.json'
  
  function fetchUserData(username){
     const data = singleUser[username]
-
   return data   
- } 
+} 
 
  const userSlice = createSlice({    
   name:"user",
