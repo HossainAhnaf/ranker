@@ -85,7 +85,6 @@ function Profile() {
    }
  
   useEffect(() => {
-    console.log(params.username);
    fetchProfileData()
    if (isAuthor) 
    fetchChallengesData()

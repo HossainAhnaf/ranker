@@ -1,10 +1,53 @@
 .peoples-section{
-    margin-top: calc(var(--nav-vertical-padding) + var(--nav-height) + 2vh);
+    margin-top: calc(var(--nav-vertical-padding) + var(--nav-height) + 5vh);
     width: 100%;
 }
 
+.peoples-section > .search-bar-wrapper {
+    width: 85%;
+    margin: 7vw auto;
+    background-color: var(--container-bg-color-secondery);
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5);
+    border-radius: 5vw;
+    justify-content: start;
+    align-items: center;
+  }
+  .peoples-section > .search-bar-wrapper > .search-bar {
+    width: 85%;
+    height: 8vw;
+    font-size: 4vw;
+    padding:0 3vw;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    align-self: flex-start;
+    color: var(--paragraph-color-primary);
+  }
+  .peoples-section > .search-bar-wrapper > .close-button {
+     width:4vw;
+     height:4vw;
+     background-color: transparent;
+     border: none;
+     display: none;
+    }
+    .peoples-section > .search-bar-wrapper > .search-bar:not(:placeholder-shown) + .close-button {
+        display: flex;
+    } 
+
+.peoples-section > .search-results{
+    width: 90%;
+    margin: 0 auto;
+    gap: 4vw;
+    margin-bottom: 8vw;
+
+}
+.peoples-section > .search-results > .users-short-info-wrapper{
+    width: 90%;
+    margin: 0 auto
+
+}
 .peoples-section > .recent-searches{
-    width: calc(90% - 4vw);
+    width: 90%;
     margin: 0 auto;  
 }
 
@@ -14,10 +57,7 @@
     color: var(--paragraph-color-secondary);
     margin-bottom: 4vw;
 }
-.peoples-section > .search-bar-wrapper {
-  width: 90%;
-  margin: 0 auto;
-}
+
 .peoples-section > .recent-searches > .users-short-info-wrapper{
     width: 90%;
    margin: 0 auto

@@ -15,9 +15,9 @@ import { createSlice } from "@reduxjs/toolkit";
         state.isActive = false
       },
       sideNavigationBarAutoHideHandler(state){
-        if (state.isActive && window.pageYOffset < (state.oldPageY - 150) || window.pageYOffset > (state.oldPageY + 150)) {
+        if (state.isActive && window.scrollY < (state.oldPageY - 150) || window.scrollY > (state.oldPageY + 150)) {
           state.isActive = false
-          state.oldPageY = window.pageYOffset
+          state.oldPageY = window.scrollY
         }
       }     
   }

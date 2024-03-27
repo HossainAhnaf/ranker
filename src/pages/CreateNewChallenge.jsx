@@ -14,21 +14,21 @@ function CreateNewChallenge() {
 <div className="group-1 flex-cm center ">
 
 <div className="title-field flex-rw center">
-<label for="title">Title:</label>
+<label htmlFor="title">Title:</label>
   <input id="title" type="text" placeholder=' '/>
 </div>
 
 
 {/* <TextField chassName="description-field" fieldType="textarea" required={true} placeholder="description" maxLength="50"/> */}
-<div class="description-field">
-  <label for="description">Description:</label>
+<div className="description-field">
+  <label htmlFor="description">Description:</label>
   <textarea id="description" placeholder="Enter your description here..." rows="7"></textarea>
 </div>
 
 
 
 <div className="due-date-field flex-rw">
-<label for="due-date">Due date(optional)
+<label htmlFor="due-date">Due date(optional)
 </label>
 <input id='due-date' type="date" />
 
@@ -46,7 +46,7 @@ function CreateNewChallenge() {
 </div>
 
 <div className="pinned-field flex-rw center">
-<label for="pinned">Pinned</label>
+<label htmlFor="pinned">Pinned</label>
 <div className="switch-wrapper">
 <label className="switch-small">
 <input id="pinned" type="checkbox" />
