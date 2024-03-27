@@ -10,7 +10,7 @@ import {singleUser} from '../../data/usersData.json'
 
  const userSlice = createSlice({    
   name:"user",
-  initialState:fetchUserData('MdHossainAhnafOvi'),
+  initialState:fetchUserData('MdHasanAhnafOmi'),
   reducers:{
 
   }

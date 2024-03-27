@@ -27,7 +27,7 @@
 }
 .peoples-section > .users-short-info-wrapper .user-short-info > .primary{
   gap: 1.5vw;
-  padding-bottom: 2vw;
+  padding-bottom: 3vw;
  border-bottom: 1px solid var(--border-color);
 }
 .peoples-section > .users-short-info-wrapper .user-short-info > .primary > .user-logo{

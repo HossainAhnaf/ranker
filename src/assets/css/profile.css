@@ -9,6 +9,7 @@
   width: 85%;
   margin-left: 3.5vw;
   padding: 4vw;
+  padding-top: 0;
 }
 
 
@@ -20,7 +21,11 @@
   width: 100%;
   gap: 2vw;
 }
-
+.info-section>.primary > .username{
+  font-size: 4vw;
+  color: var(--paragraph-color-secondary);
+  align-self: flex-start;
+}
 .info-section>.primary>.user-logo {
   width: 20vw;
   height: 20vw;
@@ -35,114 +40,21 @@
   padding: 1vw 4vw ;
   border-radius: 3vw
 }
-.info-section > .xp-items-wrapper {
-  width: 100%;
-  justify-content: center;
-  align-items: center;
+
+.info-section> div[role="progressbar"] {
+  --size: 60vw;
+  --fg: var(--theme-secondery-default);
+  --bg: var(--info-bg-color);
+  --inner-color:var(--container-bg-color);
+ box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
 }
-.info-section > .xp-items-wrapper > .progress-bar {
-  width: 45vw;
-  height: 40vw;
-  background-color: white;
-  border-radius: 100%;
-  color: black;
-  position: relative;
-  overflow: hidden;
-  transition: box-shadow 1s;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
-}
-.info-section > .xp-items-wrapper > .progress-bar.increasing {
-  box-shadow: 0 0 30px 0 rgba(0, 255, 34, 0.397);
-}
-.info-section > .xp-items-wrapper > .progress-bar.decreasing {
-  box-shadow: 0 0 30px 0 rgba(255, 0, 0, 0.856);
+.info-section >.rounded-progress-bar  > .number h3 {
+  font-weight: 200;
+  font-size: 9vw;
 }
 
-
-
-.info-section > .xp-items-wrapper > .progress-bar>.inner {
-  background-color: var(--theme-secondery-default);
-  background: linear-gradient(to right,red,darkorange);
-  width: 120%;
-  height: var(--value);
-  position: absolute;
-  left: -10%;
-  bottom: 0;
-  text-align: center;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  animation: fill 3s, wave 2s infinite;
-}
-
-.info-section > .xp-items-wrapper > .progress-bar.active>.inner {
-  border-top: .5vw solid orange;
-  animation: up-down 1s infinite, fill 3s, wave 2s infinite;
-  transition: height .5s;
-
-}
-@keyframes up-down {
-  0% {
-    border-width: .5vw;
-  }
-  25% {
-    border-width: 1vw;
-  }
-  50% {
-    border-width: 1.5vw;
-  }
-  75% {
-    border-width: 1vw;
-  }
-  100% {
-    border-width: .5vw;
-  }
-}
-.info-section > .xp-items-wrapper > .progress-bar>.inner>.progress {
-  font-weight: bolder;
-  font-size: 7vw;
-  color: black;
-}
-.info-section > .xp-items-wrapper > .progress-bar[data-less="true"]>.inner>.progress {
-  position: absolute;
-  bottom: 10%;
-}
-@keyframes fill {
-  0% {
-    height: 0%;
-    border-top: 1vw solid orange;
-  }
-  80% {
-    border-top: 4vw solid orange;
-  }
-  100% {
-    border-top: 0vw solid orange;
-    height: var(--value);
-  }
-
-}
-
-@keyframes wave {
-  0% {
-    transform: rotate(2deg);
-  }
-
-  25% {
-    transform: rotate(0deg);
-  }
-
-  50% {
-    transform: rotate(-2deg);
-  }
-
-  75% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(2deg);
-  }
+.info-section >.rounded-progress-bar > .number h3 span {
+  font-size: 6vw;
 }
 
 .info-section > .info {

@@ -17,14 +17,14 @@ import Info from '../components/Info';
 import '../assets/css/profile.css';
 
 function Profile() {
-   const adminUsername = useParams().username
+   const params = useParams()
   const {username,name,logoSrc,rank,status,challenges,passed,failed,level,xp} = useSelector(state=>state.userSlice)
-
-  const isAuthor = (username === adminUsername || adminUsername === 'me')
+  
+  const isAuthor = (username === params.username || params.username === 'me')
 
   const [challengesData, setChallengesData] = useState(dummyRecentChallengesData)
 
-
+  const [authorUsername,setAuthorUsername] = useState(username)
   const [authorName,setAuthorName] = useState(name)
   const [authorLogoSrc,setAuthorLogoSrc] = useState(logoSrc)
   const [authorRank,setAuthorRank] = useState(rank)
@@ -35,18 +35,9 @@ function Profile() {
   const [authorLevel,setAuthorLevel] = useState(level)
   const [authorXp,setAuthorXp] = useState(xp)
    
+  const [progressParcentage, setProgressParcentage] = useState(0)
 
-  const [currentChallenges, setCurrentChallenges] = useState(0)
-  const [currentPassed, setCurrentPassed] = useState(0)
-  const [currentFailed, setCurrentFailed] = useState(0)
-  const [currentLevel, setCurrentLevel] = useState(0)
-  const [currentXp, setCurrentXp] = useState(0)
-
-  
-  const progressParcentage = useMemo(() => (authorXp / 1000) * 100, [authorXp])
-  const [progressParcentageText, setProgressParcentageText] = useState(0)
-  const [lessThan10Percent, setLessThan10Percent] = useState('true')
-
+ 
 
  
    const fetchChallengesData = () => {
@@ -54,23 +45,20 @@ function Profile() {
     // .then(res=>res.json())
     // .then(setChallengesData)
   }
-  const setXpProgressBarData = (parcent) => {
-    useSetValueFromStart(0, parcent,setProgressParcentageText)
-    setLessThan10Percent(progressParcentageText <= 10 ? 'true' : 'false')
-  }
-  
+
   const numberTypeInfoIncreaceHandler = (challenges,passed,failed,level,xp) => {
-   useSetValueFromStart(0,challenges,setCurrentChallenges)
-    useSetValueFromStart(0,passed, setCurrentPassed)
-    useSetValueFromStart(0,failed, setCurrentFailed)
-    useSetValueFromStart(0,level,setCurrentLevel)
-    useSetValueFromStart(0,xp,setCurrentXp)
-    setXpProgressBarData((xp / 1000) * 100)
+   useSetValueFromStart(0,challenges,setAuthorChallenges)
+    useSetValueFromStart(0,passed, setAuthorPassed)
+    useSetValueFromStart(0,failed, setAuthorFailed)
+    useSetValueFromStart(0,level,setAuthorLevel)
+    useSetValueFromStart(0,xp,setAuthorXp)
+    useSetValueFromStart(0, (xp / 1000) * 100,setProgressParcentage)
   }
 
   const fetchProfileData = () => {
     if (!isAuthor) {
-     const {name,logoSrc,rank,status,challenges,passed,failed,level,xp} = singleUser[adminUsername]
+     const {username,name,logoSrc,rank,status,challenges,passed,failed,level,xp} = singleUser[params.username]
+     setAuthorUsername(username)
      setAuthorName(name)
      setAuthorLogoSrc(logoSrc)
      setAuthorRank(rank)
@@ -82,18 +70,25 @@ function Profile() {
      setAuthorXp(xp)
      numberTypeInfoIncreaceHandler(challenges,passed,failed,level,xp)
     } else{
+      setAuthorUsername(username)
+      setAuthorName(name)
+      setAuthorLogoSrc(logoSrc)
+      setAuthorRank(rank)
+      setAuthorStatus(status)
+      setAuthorChallenges(challenges)
+      setAuthorPassed(passed)
+      setAuthorFailed(failed)
+      setAuthorLevel(level)
+      setAuthorXp(xp)
       numberTypeInfoIncreaceHandler(challenges,passed,failed,level,xp)
     }
    }
  
   useEffect(() => {
-   if (isAuthor) 
-   //profile data will be set from redux
-    fetchChallengesData()
-   else
-   //only author can see active challenges
    fetchProfileData()
-  }, [])
+   if (isAuthor) 
+   fetchChallengesData()
+  }, [params])
   
 
  
@@ -101,26 +96,23 @@ function Profile() {
     <>
       <section className="info-section flex-cm center">
         <div className="primary flex-cm center">
+          <p className='username'>@{authorUsername}</p>
           <UserLogo logoSrc={authorLogoSrc} status={authorStatus} level={authorLevel} />
           <h3 className="name">{authorName}</h3>
         </div>
         <Info name='Rank' value={authorRank} />
         <Info name='Status' value={authorStatus} />
-        <Info name='Challenges' value={currentChallenges} />
-        <Info name='Passed' value={currentPassed} />
-        <Info name='Failed' value={currentFailed} />
+        <Info name='Challenges' value={authorChallenges} />
+        <Info name='Passed' value={authorPassed} />
+        <Info name='Failed' value={authorFailed} />
         <br />
         <hr />
         <br />
-        <div className="xp-items-wrapper flex-rw">
-          <div className="progress-bar" dataless={lessThan10Percent}>
-            <div style={{ '--value': progressParcentage + '%' }} className="inner">
-              <span className="progress">{progressParcentageText + '%'}</span>
-            </div>
-          </div>
-        </div>
-        <Info name='Level' value={`${currentLevel} / 10`} />
-        <Info name='Xp' value={`${currentXp} / 1000`} />
+   
+         <div role='progressbar' style={{"--value": progressParcentage}}></div>
+                
+        <Info name='Level' value={`${authorLevel} / 10`} />
+        <Info name='Xp' value={`${authorXp} / 1000`} />
       </section>
 
      {
