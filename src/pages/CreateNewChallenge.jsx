@@ -2,6 +2,7 @@
 import React, { useRef, useState } from 'react'
 
 //components
+import ChallengeCard from '../components/ChallengeCard'
 import OutlinedCustomField from '../components/OutlinedCustomField'
 import Select from '../components/Select'
 
@@ -16,10 +17,18 @@ function CreateNewChallenge() {
 
   const [addDiscription, setAddDiscription] = useState(false)
   const [addDueDate, setAddDueDate] = useState(false)
+  
 
-  const [descriptionValue, setDescriptionValue] = useState('')
+  //data
+  const [title, setTitle] = useState('')
+  const [description, setDescription] = useState('')
+  const [difficulty, setDifficulty] = useState('easy')
+  const [pinned, setPinned] = useState(false)
+
   const previous = (e) => {
     e.preventDefault()
+  
+
     const currentStep = stepIndicatorWrapperRef.current.querySelector('.step.current')
     const previousStep = currentStep.previousElementSibling
     currentStep.className = currentStep.className.replace('current', 'next')
@@ -33,6 +42,10 @@ function CreateNewChallenge() {
   }
   const next = (e) => {
     e.preventDefault()
+    const button = e.currentTarget
+    button.disabled = true
+    setTimeout(() => button.disabled = false, 300);
+
     const currentStep = stepIndicatorWrapperRef.current.querySelector('.step.current')
     const nextStep = currentStep.nextElementSibling
     currentStep.className = currentStep.className.replace('current', 'previous')
@@ -43,7 +56,15 @@ function CreateNewChallenge() {
     currentTab.className = currentTab.className.replace('current', 'previous')
     nextTab.className = nextTab.className.replace('next', 'current')
     setStep(step + 1)
+   
   }
+
+  const postChallengeData = (e) => {
+    e.preventDefault()
+    alert('data posted')
+  }
+
+
   return (
     <section className="create-new-challenge-section">
       <form >
@@ -57,24 +78,34 @@ function CreateNewChallenge() {
           <div className="tab current">
 
             <OutlinedCustomField className="title-field" placeholder="Title">
-              <input type="text" placeholder=" " maxLength={20} required={true} />
+              <input type="text" placeholder=" " maxLength={20}  onChange={(e) => setTitle(e.target.value)}  />
             </OutlinedCustomField>
             {
               addDiscription
                 ? <>
                   <OutlinedCustomField className="description-field" placeholder="Description"  >
-                    <textarea placeholder=" " maxLength={200} rows={4} onChange={(e) => setDescriptionValue(e.target.value)}>{descriptionValue}</textarea>
+                    <textarea placeholder=" " maxLength={200} rows={4} onChange={(e) => setDescription(e.target.value)} value={description}></textarea>
                   </OutlinedCustomField>
                   <button className="add-remove-button" onClick={() => setAddDiscription(false)}>Remove -</button>
                 </>
-                : <button className="add-remove-button" onClick={() => setAddDiscription(true)}>Add description +</button>
+                : <button className="add-remove-button" onClick={() =>{setAddDiscription(true);setDescription('')}}>Add description +</button>
             }
 
           </div>
           <div className="tab next">
+          {
+              addDueDate 
+             ? <>
+              <OutlinedCustomField className="title" placeholder="date" >
+                <input type="date" placeholder=" "  />
+              </OutlinedCustomField>
+              <button className="add-remove-button" onClick={() => setAddDueDate(false)}>Remove -</button>
+              </>
+              : <button className="add-remove-button" onClick={() => setAddDueDate(true)}>Add due date +</button>
+            }
             <div className="difficulty-label flex-rw ">
               <span className="name">Difficulty</span>
-              <Select>
+              <Select onChange={setDifficulty}>
                 <span className="option selected easy">Easy</span>
                 <span className="option medium">Medium</span>
                 <span className="option hard">Hard</span>
@@ -85,23 +116,17 @@ function CreateNewChallenge() {
               <label htmlFor="pinned">Pinned</label>
               <div className="switch-wrapper">
                 <label className="switch-small">
-                  <input id="pinned" type="checkbox" />
+                  <input id="pinned" type="checkbox" onChange={(e) => setPinned(e.target.checked)} checked={pinned} />
                   <span className="slider "></span>
                 </label>
               </div>
             </div>
           </div>
           <div className="tab next">
-            {
-              addDueDate 
-             ? <>
-              <OutlinedCustomField className="title" placeholder="date">
-                <input type="date" placeholder=" "  />
-              </OutlinedCustomField>
-              <button className="add-remove-button" onClick={() => setAddDueDate(false)}>Remove -</button>
-              </>
-              : <button className="add-remove-button" onClick={() => setAddDueDate(true)}>Add due date +</button>
-            }
+           <div className="result">
+            <h4 className="title">Result</h4>
+             <ChallengeCard title={title} description={description} difficulty={difficulty} pinned={pinned} id={5}/>
+             </div> 
           </div>
         </div>
 
@@ -109,7 +134,7 @@ function CreateNewChallenge() {
 
           {step > 0 && <button className="button negitive" onClick={previous}>Previous</button>}
           {step < 2 && <button className="button positive" onClick={next}>Next</button>}
-          {step === 2 && <button className="button positive" type="submit">Create</button>}
+          {step === 2 && <button className="button positive" type="submit" onClick={postChallengeData} >Create</button>}
         </div>
       </form>
 

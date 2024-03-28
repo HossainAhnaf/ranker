@@ -50,7 +50,7 @@
  align-items: center;
  width: 100%;
  margin: 0 auto;
-gap: 6vw; 
+/* gap: 6vw;  */
 position: absolute;
 transition: left .5s;
 }
@@ -75,15 +75,17 @@ transition: left .5s;
   border: none;
   color: var(--theme-secondery-default);
   font-size: 4vw;
+  margin-top: 1vw;
 }
 
 .create-new-challenge-section > form > .tabs-wrapper > .tab > .outlined-custom-field {
   width: 80%;
-}
-
-.create-new-challenge-section > form > .tabs-wrapper > .tab > .outlined-custom-field {
   --input-font-size: 5vw;
   --label-font-size: 3vw;
+}
+
+.create-new-challenge-section > form > .tabs-wrapper > .tab > .title-field {
+margin-bottom: 4vw;
 }
 .create-new-challenge-section > form > .tabs-wrapper > .tab >  .difficulty-label{
   width: 80%;
@@ -91,7 +93,7 @@ transition: left .5s;
   font-size: 5vw;
   justify-content: start;
   align-items: center;
-  margin-top: 2vw;
+  margin-top: 7vw;
 }
 .create-new-challenge-section > form > .tabs-wrapper > .tab >  .difficulty-label > .name{
  color: var(--paragraph-color-secondary);
@@ -107,17 +109,22 @@ transition: left .5s;
   font-size: 5vw;
   justify-content: start;
   align-items: center;
+  margin-top: 6vw;
 
 }
 .create-new-challenge-section > form > .tabs-wrapper > .tab > .pinned-field > .switch-wrapper{
 width: 40%;
 }
-/* .create-new-challenge-section > form > .tabs-wrapper > .tab > .description-field {
-  --input-font-size: 5vw;
-  --label-font-size: 3vw;
-} */
 
-.create-new-challenge-section > form > .button-wrapper {
+.create-new-challenge-section > form > .tabs-wrapper > .tab > .result{
+  width: 80%;
+}
+.create-new-challenge-section > form > .tabs-wrapper > .tab > .result > .title{
+ color: var(--paragraph-color-secondary);
+ font-size: 5vw;
+ margin-bottom: 3vw;
+}
+  .create-new-challenge-section > form > .button-wrapper {
   width: 90%;
   align-items: center;
   justify-content: end;

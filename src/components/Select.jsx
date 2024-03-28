@@ -2,7 +2,7 @@ import React, { Children, useEffect, useRef, useState } from 'react'
 
 //css
 import '../assets/css/select.css'
-export default function Select({className, children }) {
+export default function Select({className,onChange, children }) {
 
   const optionsWrapperRef = useRef(null)
   const selectedOptionRef = useRef(null)
@@ -11,7 +11,6 @@ export default function Select({className, children }) {
   const [selectedOptionText, setSelectedOptionText] = useState('')
   
   
-  selectedOptionText
   const showSelectOptions = () => {
       setIsActive(true)
   };
@@ -26,14 +25,18 @@ export default function Select({className, children }) {
     currentTarget.classList.add('selected')
     selectedOptionRef.current = currentTarget
     setSelectedOptionText(currentTarget.textContent) 
+    if (onChange)
+    onChange(currentTarget.textContent.toLowerCase())
+
     setIsActive(false)
+
   }
   useEffect(() => {
    selectedOptionRef.current = optionsWrapperRef.current.querySelector('.option.selected')
    setSelectedOptionText(selectedOptionRef.current.textContent)
    for (const option of optionsWrapperRef.current.querySelectorAll('.option'))
      option.addEventListener('click',optionClickHandler) 
-
+  
   }, [optionsWrapperRef])
 
   useEffect(() => {

@@ -35,10 +35,14 @@
     background-image: var(--theme-secondery-gradient);
     color: white;
   }
+
   .button:active {
     filter:brightness(70%)
   }  
-  
+  .button:disabled{
+    filter:brightness(50%)
+
+  }
   .negitive {
     background-color: var(--theme-primary) !important;
     color: white;
