@@ -5,7 +5,7 @@ import React , {useCallback, useEffect,useState } from 'react'
 import { showSideNavigationBar } from '../store/slices/sideNavigationBarSlice'
 import useDebounce from '../hooks/useDebounce'
 import { useSelector , useDispatch  } from 'react-redux'
-import { useLocation } from 'react-router'
+import { useLocation, useParams } from 'react-router'
 
 //components
 import UserLogo from '../components/UserLogo'
@@ -21,11 +21,12 @@ function MainNav() {
 
   const dispatch = useDispatch()
   const location = useLocation()  
- 
+  const params = useParams() 
+  const [title,setTitle] = useState('Samer Rank') 
   
   const {logoSrc,status,level} = useSelector(state=>state.userSlice)
   const {isChallengesSectionNavInvisible} = useSelector(state => state.challengesSectionNavSlice)
-  
+   
  
   const [navbarHalfTransparent,setNavbarHalfTransparent] = useState(true)
  const removeNavbarHalfTransparent = useDebounce(()=> {
@@ -38,15 +39,27 @@ function MainNav() {
     }
     removeNavbarHalfTransparent()
   },[setNavbarHalfTransparent,removeNavbarHalfTransparent])
-  
-// useEffect(()=>{
-//   if (location.pathname === '/challenges')
-//   window.removeEventListener('scroll',navbarTransparentHandler)
-//   else
-//   window.addEventListener('scroll', navbarTransparentHandler)
- 
-// },[location])
 
+  useEffect(()=>{    
+    if (location.pathname.startsWith('/profile')) 
+      setTitle(`Profile - ${params.username}`)
+    else if (location.pathname === '/challenges')
+      setTitle('Challenges')
+    else if (location.pathname === '/create-new-challenge')
+      setTitle('Create New Challenge')
+    else if (location.pathname === '/notifications')
+      setTitle('Notifications') 
+    else if (location.pathname === '/peoples')
+      setTitle('Peoples')
+    else if (location.pathname === '/settings')
+      setTitle('Settings')
+      else if (location.pathname === '/signin')
+      setTitle('Signin')
+    else if (location.pathname === '/signup')
+      setTitle('Signup')
+    else
+      setTitle('Samer Rank')
+  },[location])
 
 useEffect(()=>{
   window.addEventListener('scroll', navbarTransparentHandler)
@@ -61,7 +74,7 @@ useEffect(()=>{
 <nav className={`main-nav  ${navbarHalfTransparent ? 'half-transparent':''} `} >
       <div className="primary flex-rw left">
         <h3 className="app-name" >
-          <em>Samer Rank</em>
+          <em>{title}</em>
         </h3>
       </div>
 

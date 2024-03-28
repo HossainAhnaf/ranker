@@ -12,10 +12,14 @@ function Signin() {
     <h2 className="heading">Sign in</h2>
   
   
-    <OutlinedCustomField type="email" className="email" placeholder="Email"  required={true}/>
+    <OutlinedCustomField  className="email" placeholder="Email"  required={true}>
+      <input type="email" placeholder=" "  required={true}/>
+    </OutlinedCustomField>
     <small className="message">&nbsp;</small>
    
-    <OutlinedCustomField type="password" className="password" placeholder="Password"  required={true}/>
+    <OutlinedCustomField  className="password" placeholder="Password"  required={true}>
+      <input type="password" placeholder=" "  required={true}/>
+    </OutlinedCustomField>
     <small className="message">&nbsp;</small>
     <p className='have-not-account'><small>Haven't any account? <Link to="/signup">Sign up</Link></small></p>
 
