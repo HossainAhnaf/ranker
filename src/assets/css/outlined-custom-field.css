@@ -15,8 +15,15 @@
   transition: .1s ease-out;
   transform-origin: left top;
   pointer-events: none;
+} 
+.outlined-custom-field .input-label {
+top: 50%;
 }
-
+ 
+.outlined-custom-field .textarea-label {
+  top: 20%;
+}
+ 
 .outlined-custom-field :is(input,textarea) {
   font-size: var(--input-font-size);
   outline: none;
