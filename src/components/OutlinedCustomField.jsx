@@ -1,11 +1,15 @@
 import React from 'react'
 //css
 import '../assets/css/outlined-custom-field.css'
-function OutlinedCustomField({ chassName, required, placeholder, type, maxLength }) {
+function OutlinedCustomField({ className,placeholder,children }) {
+  
   return (
-    <div className={`outlined-custom-field ${chassName}`}>
-    <input placeholder=" "  type={type} maxLength={maxLength} required={required} />
-      <label>{placeholder}</label>
+    <div className={`outlined-custom-field ${className}`}>
+      {
+      children
+      
+      }
+      <label className={children.type === 'input' ? 'input-label' : 'textarea-label'} >{placeholder}</label>
     </div>
   )
 }

@@ -1,168 +1,99 @@
-:root {
-  --form-bg-color: #515152
-}
 
-.create-new-challenge-form-wrapper {
+.create-new-challenge-section {
   margin-top: calc(var(--nav-vertical-padding) + var(--nav-height) + 10vh);
-  border-radius: 5vw;
-  background-color: var(--container-bg-color);
-  width: 85%;
-  margin-left: 3.5vw;
-  padding: 5vw 4vw;
-  gap: 3vw;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
-}
-.create-new-challenge-form-wrapper > form {
-  gap: 4vw
-}
-
-.create-new-challenge-form-wrapper > form > .group-1 {
-  width: 100%;
-  gap: 5vw;
-  margin-top: 2vw;
 
 }
 
-
-/* title  */
-.create-new-challenge-form-wrapper > form > .group-1 > .title-field {
-width: 90%;
-gap: 2vw;
-justify-content: start;
-align-self: flex-start;
-
+.create-new-challenge-section > form {
+  width: 80%;
+  height: 100vw;
+  margin: 0 auto;
+  padding: 2vw 0;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5); 
 }
-.create-new-challenge-form-wrapper > form > .group-1 > .title-field > label {
-  color: var(--paragraph-color-secondary);
-  font-weight: bold;
-  font-size: 4.5vw;
-
-}
- .create-new-challenge-form-wrapper>form>.group-1 >.title-field>input {
-  background-color: transparent;
-  border: none;
-  outline: none;
-  color: var(--paragraph-color-primary);
-  border-bottom: 1px solid var(--border-color);
+.create-new-challenge-section > form > .step-indicator-wrapper {
+  width: 90%;
+  margin: 0 auto;
   font-size: 4vw;
-width: 70%;
-}
-
-.create-new-challenge-form-wrapper>form>.group-1 >.title-field > input:is(:focus,:not(:placeholder-shown))  {
- border-color: var(--border-active-color);
-}
-
-/* desc  */
-.create-new-challenge-form-wrapper>form>.group-1 >.description-field {
-  width: 90%;
-}
-
-.create-new-challenge-form-wrapper>form>.group-1 > .description-field > label {
-  font-weight: bold;
-  font-size: 3.5vw;  
-  color: var(--paragraph-color-secondary);
-}
-
-.create-new-challenge-form-wrapper>form>.group-1 > .description-field > textarea {
-  margin-top: .5vh;
-  width: calc(100% - 4vw);
-  padding: 2vw;
-  border: 1px solid var(--border-color);
-  border-radius: 5px;
-  font-size: 3vw;
-  resize: none;
-  background-color: var(--container-bg-color);
-  color: var(--paragraph-color-primary);
-}
-
-.create-new-challenge-form-wrapper>form>.group-1 >.description-field > textarea:is(:focus,:not(:placeholder-shown)){
-  border-color: var(--border-active-color);
-  outline: none;
-}
-
-/* due date */
-.create-new-challenge-form-wrapper>form>.group-1 >.due-date-field {
   gap: 3vw;
-  align-items: center;
-  justify-content: left;
-  width: 90%;
+  margin-bottom: 5vw;
+}
+.create-new-challenge-section > form > .step-indicator-wrapper > .step {
+  width: 100%;
+  height: 1vw;
+  content: ' ';
+  border-radius: 5vw;
+  transition: background-color .5s;
+}
 
+.create-new-challenge-section > form > .step-indicator-wrapper > .step.current {
+  background-color:var(--border-active-color) ;
 }
-.create-new-challenge-form-wrapper>form>.group-1 >.due-date-field > label {
-  color: var(--paragraph-color-secondary);
- font-size: 4vw;
- font-weight: bold;
+.create-new-challenge-section > form > .step-indicator-wrapper > .step.previous {
+  background-color:  rgb(255, 153, 0);
 }
-.create-new-challenge-form-wrapper>form>.group-1 >.due-date-field > input {
-  background-color: transparent;
-   border: none;
-  border: 1px solid var(--border-color);
-  padding: 1.5vw;
-  color: var(--paragraph-color-primary);
-  outline: none;
- font-size: 4vw;
+
+.create-new-challenge-section > form > .step-indicator-wrapper > .step.next {
+  background-color: var(--border-color);
 }
-.create-new-challenge-form-wrapper>form>.group-1 >.due-date-field > input:focus{
-border-color: var(--border-active-color);
+
+.create-new-challenge-section > form > .tabs-wrapper {
+  overflow: hidden;
+  position: relative;
+  height: 70%;
+  padding: 5vw 0;
+}
+.create-new-challenge-section > form > .tabs-wrapper > .tab {
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ width: 100%;
+ margin: 0 auto;
+gap: 6vw; 
+position: absolute;
+transition: left .5s;
+}
+
+
+.create-new-challenge-section > form > .tabs-wrapper > .tab.current {
+  left: 0;
+}
+
+.create-new-challenge-section > form > .tabs-wrapper > .tab.previous {
+  left: -100%;
 }  
 
-/* group 2 */
-.create-new-challenge-form-wrapper>form>.group-2 {
-  width: 90%;
-  justify-content: space-between;
+
+.create-new-challenge-section > form > .tabs-wrapper > .tab.next {
+  left: 100%;
+}  
+
+
+.create-new-challenge-section > form > .tabs-wrapper > .tab > .outlined-custom-field {
+  width: 80%;
+}
+
+.create-new-challenge-section > form > .tabs-wrapper > .tab > .title-field {
+  --input-font-size: 5vw;
+  --label-font-size: 3vw;
+}
+.create-new-challenge-section > form > .tabs-wrapper > .tab > .description-field {
+  --input-font-size: 5vw;
+  --label-font-size: 3vw;
+}
+
+.create-new-challenge-section > form > .button-wrapper {
+  width: 80%;
   align-items: center;
-  margin-top: 2vw;
+  justify-content: end;
+  margin: 0 auto;
+  gap: 3vw;
 }
-/* difficulty */
-.create-new-challenge-form-wrapper>form>.group-2 >.difficulty-label {
-  gap: 2vw;
-}
-.create-new-challenge-form-wrapper>form>.group-2 >.difficulty-label > .name {
-  color: var(--paragraph-color-secondary);
-  font-weight: bold;
-  font-size: 4vw;
-}
-
-.create-new-challenge-form-wrapper>form>.group-2 >.difficulty-label > .select {
-  font-size: 4vw;
-}
-.create-new-challenge-form-wrapper>form>.group-2 >.difficulty-label > .select > .options-wrapper > .option {
-  --bg-color: var(--container-bg-color);
-}
-.create-new-challenge-form-wrapper>form>.group-2 >.difficulty-label > .select > .options-wrapper > .option.easy{
-  color: green !important;
-}
-.create-new-challenge-form-wrapper>form>.group-2 >.difficulty-label > .select > .options-wrapper > .option.medium{
-  color: orange !important;
-}
-.create-new-challenge-form-wrapper>form>.group-2 >.difficulty-label > .select > .options-wrapper > .option.hard{
-  color: red !important;
-}
-/* pinned */
-.create-new-challenge-form-wrapper>form>.group-2   > .pinned-field {
-  width: 40%;
-  height: 100%;
-  gap: 2vw;
-  font-size: 3.5vw;
-
-}
-.create-new-challenge-form-wrapper>form>.group-2   > .pinned-field > label{
-  font-weight: bold;
-  color: var(--paragraph-color-secondary);
-  font-size: 4vw;
-
-}
-.create-new-challenge-form-wrapper>form>.group-2 > .pinned-field > .switch-wrapper {
-  width: 40%;
-  height: 100%;
-}
-
-.create-new-challenge-form-wrapper > form > button[type="submit"] {
-  padding: 1.5vw 3vw;
-  border-radius: 4vw;
-  border: none;
-  margin-top: 4vw;
-  font-weight: bold;
-  font-size: 4vw;
-  width: 70%;
+.create-new-challenge-section > form > .button-wrapper > button{
+ padding: 2vw 3.5vw;
+ font-weight: bold;
+ border-radius: 3vw;
+ border: none;
+ font-size: 5vw;
 }

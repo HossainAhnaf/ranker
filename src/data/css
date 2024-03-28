@@ -1,0 +1,154 @@
+.create-new-challenge-form-wrapper > form {
+  gap: 4vw
+}
+
+.create-new-challenge-form-wrapper > form > .group-1 {
+  width: 100%;
+  gap: 5vw;
+  margin-top: 2vw;
+
+}
+
+
+/* title  */
+.create-new-challenge-form-wrapper > form > .group-1 > .title-field {
+width: 90%;
+gap: 2vw;
+justify-content: start;
+align-self: flex-start;
+
+}
+.create-new-challenge-form-wrapper > form > .group-1 > .title-field > label {
+  color: var(--paragraph-color-secondary);
+  font-weight: bold;
+  font-size: 4.5vw;
+
+}
+ .create-new-challenge-form-wrapper>form>.group-1 >.title-field>input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: var(--paragraph-color-primary);
+  border-bottom: 1px solid var(--border-color);
+  font-size: 4vw;
+width: 70%;
+}
+
+.create-new-challenge-form-wrapper>form>.group-1 >.title-field > input:is(:focus,:not(:placeholder-shown))  {
+ border-color: var(--border-active-color);
+}
+
+/* desc  */
+.create-new-challenge-form-wrapper>form>.group-1 >.description-field {
+  width: 90%;
+}
+
+.create-new-challenge-form-wrapper>form>.group-1 > .description-field > label {
+  font-weight: bold;
+  font-size: 3.5vw;  
+  color: var(--paragraph-color-secondary);
+}
+
+.create-new-challenge-form-wrapper>form>.group-1 > .description-field > textarea {
+  margin-top: .5vh;
+  width: calc(100% - 4vw);
+  padding: 2vw;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  font-size: 3vw;
+  resize: none;
+  background-color: var(--container-bg-color);
+  color: var(--paragraph-color-primary);
+}
+
+.create-new-challenge-form-wrapper>form>.group-1 >.description-field > textarea:is(:focus,:not(:placeholder-shown)){
+  border-color: var(--border-active-color);
+  outline: none;
+}
+
+/* due date */
+.create-new-challenge-form-wrapper>form>.group-1 >.due-date-field {
+  gap: 3vw;
+  align-items: center;
+  justify-content: left;
+  width: 90%;
+
+}
+.create-new-challenge-form-wrapper>form>.group-1 >.due-date-field > label {
+  color: var(--paragraph-color-secondary);
+ font-size: 4vw;
+ font-weight: bold;
+}
+.create-new-challenge-form-wrapper>form>.group-1 >.due-date-field > input {
+  background-color: transparent;
+   border: none;
+  border: 1px solid var(--border-color);
+  padding: 1.5vw;
+  color: var(--paragraph-color-primary);
+  outline: none;
+ font-size: 4vw;
+}
+.create-new-challenge-form-wrapper>form>.group-1 >.due-date-field > input:focus{
+border-color: var(--border-active-color);
+}  
+
+/* group 2 */
+.create-new-challenge-form-wrapper>form>.group-2 {
+  width: 90%;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2vw;
+}
+/* difficulty */
+.create-new-challenge-form-wrapper>form>.group-2 >.difficulty-label {
+  gap: 2vw;
+}
+.create-new-challenge-form-wrapper>form>.group-2 >.difficulty-label > .name {
+  color: var(--paragraph-color-secondary);
+  font-weight: bold;
+  font-size: 4vw;
+}
+
+.create-new-challenge-form-wrapper>form>.group-2 >.difficulty-label > .select {
+  font-size: 4vw;
+}
+.create-new-challenge-form-wrapper>form>.group-2 >.difficulty-label > .select > .options-wrapper > .option {
+  --bg-color: var(--container-bg-color);
+}
+.create-new-challenge-form-wrapper>form>.group-2 >.difficulty-label > .select > .options-wrapper > .option.easy{
+  color: green !important;
+}
+.create-new-challenge-form-wrapper>form>.group-2 >.difficulty-label > .select > .options-wrapper > .option.medium{
+  color: orange !important;
+}
+.create-new-challenge-form-wrapper>form>.group-2 >.difficulty-label > .select > .options-wrapper > .option.hard{
+  color: red !important;
+}
+/* pinned */
+.create-new-challenge-form-wrapper>form>.group-2   > .pinned-field {
+  width: 40%;
+  height: 100%;
+  gap: 2vw;
+  font-size: 3.5vw;
+
+}
+.create-new-challenge-form-wrapper>form>.group-2   > .pinned-field > label{
+  font-weight: bold;
+  color: var(--paragraph-color-secondary);
+  font-size: 4vw;
+
+}
+.create-new-challenge-form-wrapper>form>.group-2 > .pinned-field > .switch-wrapper {
+  width: 40%;
+  height: 100%;
+}
+
+.create-new-challenge-form-wrapper > form > button[type="submit"] {
+  padding: 1.5vw 3vw;
+  border-radius: 4vw;
+  border: none;
+  margin-top: 4vw;
+  font-weight: bold;
+  font-size: 4vw;
+  width: 70%;
+} 

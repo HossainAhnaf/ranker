@@ -5,9 +5,8 @@
 
 .outlined-custom-field label {
   position: absolute;
-  font-size: 1rem;
+  font-size: var(--label-font-size);
   left: 0;
-  top: 50%;
   transform: translateY(-50%);
   background-color: var(--container-bg-color);
   color: gray;
@@ -17,8 +16,9 @@
   transform-origin: left top;
   pointer-events: none;
 }
-.outlined-custom-field input {
-  font-size: 1rem;
+
+.outlined-custom-field :is(input,textarea) {
+  font-size: var(--input-font-size);
   outline: none;
   border: 1px solid var(--border-color);
   border-radius: 5px;  
@@ -27,13 +27,13 @@
   transition: 0.1s ease-out;
   width: calc(100% - 4vw);
   background-color: var(--container-bg-color);
-
+resize: none;
 }
-.outlined-custom-field input:is(:focus,:not(:placeholder-shown)) {
+.outlined-custom-field :is(input,textarea):is(:focus,:not(:placeholder-shown)) {
   border-color: var(--border-active-color);  
 }
 
-.outlined-custom-field input:is(:focus,:not(:placeholder-shown)) + label {
+.outlined-custom-field :is(input,textarea):is(:focus,:not(:placeholder-shown)) + label {
   top: 0;
   transform: translateY(-50%) scale(.9);
   color: var(--border-active-color);
