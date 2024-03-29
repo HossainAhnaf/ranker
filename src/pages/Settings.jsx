@@ -1,6 +1,6 @@
 //modules
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link,Outlet } from 'react-router-dom'
 
 //components
 import Icon from 'react-inlinesvg'
@@ -20,7 +20,7 @@ function Settings() {
         <small className="description">Update your info to keep your account secure</small>
         </div> 
         <div className="settings-wrapper">
-         <Link to="name-and-contact-info" >    
+         <Link to="/name-and-contact-info" >    
           <div className="setting flex-rw">
             <div className="svgCont">
               <Icon src={profileSvg} />
@@ -28,7 +28,7 @@ function Settings() {
             <b>Name and contact information</b>
           </div>
           </Link>
-         <Link to="password-and-security" >
+         <Link to="/password-and-security" >
           <div className="setting flex-rw">
             <div className="svgCont">
               <Icon src={passwordSvg} />
@@ -46,7 +46,7 @@ function Settings() {
         </div> 
 
         <div className="settings-wrapper">       
-         <Link to="notifications-preference" >  
+         <Link to="/notifications-preference" >  
           <div className="setting flex-rw">
             <div className="svgCont">
               <Icon src={notificationSvg} />
@@ -54,7 +54,7 @@ function Settings() {
             <b>Notifications</b>
           </div>
           </Link>
-          <Link to="display" >
+          <Link to="/display" >
           <div className="setting flex-rw">
             <div className="svgCont">
               <Icon src={monitorSvg} />
@@ -65,6 +65,7 @@ function Settings() {
 
         </div>
       </div>
+
     </section>
   )
 }

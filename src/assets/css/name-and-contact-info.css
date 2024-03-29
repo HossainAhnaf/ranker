@@ -1,0 +1,41 @@
+.name-and-contact-info{
+    width: 100%;
+    margin-top: calc(var(--nav-vertical-padding) + var(--nav-height) + 5vh);
+}
+
+.name-and-contact-info>.info-wrapper{
+    width: 85%;
+    margin: 0 auto;
+    justify-content: start;
+    align-items: center;
+    background-color: var(--container-bg-color-secondary);
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+    border-radius: 5vw;
+    overflow: hidden;
+}
+
+.name-and-contact-info>.info-wrapper>.info{
+    width: calc(100% - 8vw);
+    font-size: 5vw;
+    padding: 2vw 4vw;
+    font-weight: 700;
+    background-color: inherit;
+    gap: 1vw;
+}
+
+.name-and-contact-info>.info-wrapper>.info:not(:last-child){
+    border-bottom: 1px solid var(--border-color);
+
+}
+
+
+.name-and-contact-info>.info-wrapper>.info > .value{
+    color: var(--paragraph-color-secondary);
+    background-color: var(--container-bg-color-secondary);
+}
+
+.name-and-contact-info>.info-wrapper>.info > .value:disabled{
+ border: none;
+ background-color: transparent;
+}  
+

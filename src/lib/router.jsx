@@ -41,28 +41,25 @@ export default createBrowserRouter(
         },
         {
           path: '/settings',
-          element: <Settings />,
-          children: [
-              {
-                path: 'name-and-contact-info',
-                element: <NameAndContactInfo />
-              },
-              {
-                path: 'password-and-security',
-                element: <PasswordAndSecurity />
-              },
-              {
-                path: 'notifications-preference',
-                element: <NotificationsPreference />
-              },
-              {
-                path: 'display',
-                element: <Display />
-              }
-
-
-            ]
+          element: <Settings />, 
         },
+        {
+          path: '/name-and-contact-info',
+          element: <NameAndContactInfo />
+        },
+        {
+          path: '/password-and-security',
+          element: <PasswordAndSecurity />
+        },
+        {
+          path: '/notifications-preference',
+          element: <NotificationsPreference />
+        },
+        {
+          path: '/display',
+          element: <Display />
+        },
+
         {
           path: '/signin',
           element: <Signin />
