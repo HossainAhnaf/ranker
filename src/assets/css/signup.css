@@ -23,18 +23,11 @@ font-size: 7vw;
 
 .signup-form > .outlined-custom-field {
   width: 90%;
+  --input-font-size: 4vw;
+  --label-font-size: 4vw;
 }
 
 
-.signup-form > .outlined-custom-field > input{
-  font-size: 4vw;
-  }
-
-  .signup-form > .outlined-custom-field > label{
-    font-size: 4vw;
-    }
-  
-  
 
 .signup-form > .message {
 width: 90%;
@@ -49,7 +42,7 @@ margin-bottom: 2vh;
 font-size: 4vw;
 }
 .signup-form > .already-have-account a{
-  color: var(--theme-secondery-default);
+  color: var(--theme-secondary-default);
   
 }
 

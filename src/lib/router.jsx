@@ -7,6 +7,7 @@ import Profile from "../pages/Profile";
 import Challenges from "../pages/Challenges";
 import CreateNewChallenge from "../pages/CreateNewChallenge";
 import Peoples from "../pages/Peoples";
+import Settings from "../pages/Settings";
 import Signin from "../pages/Signin";
 import Signup from "../pages/Signup";
 export default createBrowserRouter(
@@ -33,6 +34,10 @@ export default createBrowserRouter(
         {
           path: '/peoples',
           element: <Peoples />
+        },
+        {
+          path: '/settings',
+          element: <Settings />
         },
         {
           path: '/signin',

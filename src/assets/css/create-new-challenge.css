@@ -10,6 +10,7 @@
   margin: 0 auto;
   padding: 2vw 0;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5); 
+  background-color: var(--container-bg-color-secondary);
 }
 .create-new-challenge-section > form > .step-indicator-wrapper {
   width: 90%;
@@ -50,7 +51,6 @@
  align-items: center;
  width: 100%;
  margin: 0 auto;
-/* gap: 6vw;  */
 position: absolute;
 transition: left .5s;
 }
@@ -71,11 +71,13 @@ transition: left .5s;
 
 .create-new-challenge-section > form > .tabs-wrapper > .tab > .add-remove-button {
   width: 80%;
-  background-color: var(--container-bg-color-secondary);
+  background-color: transparent;
   border: none;
-  color: var(--theme-secondery-default);
+  color: var(--theme-secondary-default);
   font-size: 4vw;
   margin-top: 1vw;
+  padding: 1vw ;
+  border-radius: 3vw;
 }
 
 .create-new-challenge-section > form > .tabs-wrapper > .tab > .outlined-custom-field {

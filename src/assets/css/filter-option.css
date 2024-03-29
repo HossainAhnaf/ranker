@@ -63,16 +63,16 @@
     flex-wrap: wrap;
   }
  .filter-option > .features > .value > .feature > p {
-    border: .5vw solid var(--theme-secondery-default);
+    border: .5vw solid var(--theme-secondary-default);
     padding: 1vw 3vw;
     border-radius: 5vw;
     background-color: #ffcfba;
-    color: var(--theme-secondery-default);
+    color: var(--theme-secondary-default);
     transition: background-color .2s;
     font-size: 3vw;
   }
  .filter-option > .features > .value > .feature > input[type="checkbox"]:checked + p {
-    background-color: var(--theme-secondery-default);
+    background-color: var(--theme-secondary-default);
     color: white;
   }
   
@@ -83,7 +83,7 @@
   }
  .filter-option > .button-container > button {
     background-color: transparent;
-    color: var(--theme-secondery-default);
+    color: var(--theme-secondary-default);
     border: none;
     padding: 3vw 4vw;
     font-weight: bold;

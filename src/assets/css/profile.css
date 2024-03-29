@@ -36,7 +36,7 @@
   font-weight: bold;
   border: none;
   background-color: transparent;
-  color: var(--theme-secondery-default);
+  color: var(--theme-secondary-default);
   gap: .5vw;
 }
 
@@ -62,7 +62,7 @@
 
 .info-section> div[role="progressbar"] {
   --size: 60vw;
-  --fg: var(--theme-secondery-default);
+  --fg: var(--theme-secondary-default);
   --bg: var(--info-bg-color);
   --inner-color:var(--container-bg-color);
  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);

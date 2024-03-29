@@ -23,13 +23,10 @@
   
   .signin-form > .outlined-custom-field {
     width: 90%;
+    --input-font-size: 4vw;
+    --label-font-size: 4vw;
    }
-   .signin-form > .outlined-custom-field > input{
-    font-size: 4vw;
-   }
-   .signin-form > .outlined-custom-field > label{
-    font-size: 4vw;
-   }
+
    
   .signin-form > .message {
   width: 90%;
@@ -45,7 +42,7 @@
   }
   .signin-form > .have-not-account a{
     /* text-decoration: none; */
-    color: var(--theme-secondery-default);
+    color: var(--theme-secondary-default);
     
   }
   

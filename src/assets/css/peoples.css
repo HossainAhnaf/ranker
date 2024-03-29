@@ -6,7 +6,7 @@
 .peoples-section > .search-bar-wrapper {
     width: 85%;
     margin: 7vw auto;
-    background-color: var(--container-bg-color-secondery);
+    background-color: var(--container-bg-color-secondary);
     box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5);
     border-radius: 5vw;
     justify-content: start;

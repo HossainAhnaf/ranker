@@ -23,7 +23,6 @@ function MainNav() {
   const location = useLocation()  
   const params = useParams() 
   const [title,setTitle] = useState('Samer Rank') 
-  const [isNavSecondaryHidden,setIsNavSecondaryHidden] = useState(false)
   
   const {logoSrc,status,level} = useSelector(state=>state.userSlice)
   const {isChallengesSectionNavInvisible} = useSelector(state => state.challengesSectionNavSlice)
@@ -54,14 +53,10 @@ function MainNav() {
       setTitle('Peoples')
     else if (location.pathname === '/settings')
       setTitle('Settings')
-      else if (location.pathname === '/signin'){      
+      else if (location.pathname === '/signin')      
       setTitle('Signin')
-      setIsNavSecondaryHidden(true)  
-    }
-    else if (location.pathname === '/signup'){
+    else if (location.pathname === '/signup')
       setTitle('Signup')
-      setIsNavSecondaryHidden(true)
-    }
     else
       setTitle('Samer Rank')
   },[location])
@@ -83,8 +78,9 @@ useEffect(()=>{
         </h3>
       </div>
      {
-      !isNavSecondaryHidden &&
-      <div className="secondery flex-rw" >
+      location.pathname !== '/signin' && location.pathname !== '/signup' 
+        &&
+      <div className="secondary flex-rw" >
         <button className="notification-button badge-wrapper svgCont">
          <Icon src={notificationSvg}  />
           <small className="badge">4</small>

@@ -21,7 +21,7 @@ function UserProfileShortView() {
         <small className={`status ${status}`}>{status}</small>
       </div>
     </div>
-    <div className="secondery">
+    <div className="secondary">
       <div className="progress-bar ">
         <div className="progress" style={{'--progress':(xp / 1000) * 100 + '%' }} />
       

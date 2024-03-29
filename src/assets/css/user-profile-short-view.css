@@ -50,14 +50,14 @@
 
 
 
-  .side-navigation-bar > .primary > .user-profile-short-view > .secondery {
+  .side-navigation-bar > .primary > .user-profile-short-view > .secondary {
     width: 100%;
     height: 1vw;
     align-items: left;
     justify-content: left;
     align-self: start;
   }
-  .side-navigation-bar > .primary > .user-profile-short-view > .secondery> .progress-bar {
+  .side-navigation-bar > .primary > .user-profile-short-view > .secondary> .progress-bar {
     width: 50%;
     height: 100%;
     background-color: white;
@@ -66,9 +66,9 @@
     border-radius: 5px;
     overflow: hidden;
   }
-  .side-navigation-bar > .primary > .user-profile-short-view > .secondery> .progress-bar > .progress {
-    background-color: var(--theme-secondery-default);
-    background: var(--theme-secondery-gradient);
+  .side-navigation-bar > .primary > .user-profile-short-view > .secondary> .progress-bar > .progress {
+    background-color: var(--theme-secondary-default);
+    background: var(--theme-secondary-gradient);
     width: var(--progress);
     height: 100%;
   

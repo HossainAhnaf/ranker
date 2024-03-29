@@ -36,7 +36,7 @@ export default UsersShortInfoWrapper
 //     <small className={`status ${user.status.toLocaleLowerCase()}`}>{user.status}</small>
 //   </div>
 // </div>
-// <div className="secondery flex-cm">
+// <div className="secondary flex-cm">
 //   <small className="rank">Rank:{user.rank}</small>
 // </div>
 // </div>

@@ -1,9 +1,9 @@
 
 :root {
   --theme-primary: rgba(0,0,0,0.5);
-  --theme-secondery-gradient: linear-gradient(to right,red,darkorange);
-  --theme-secondery-default: orangered;
-  --border-active-color:var(--theme-secondery-default);
+  --theme-secondary-gradient: linear-gradient(to right,red,darkorange);
+  --theme-secondary-default: orangered;
+  --border-active-color:var(--theme-secondary-default);
 
 }
 
@@ -12,7 +12,7 @@
   --body-bg-color:white;
   --icon-color:black;
   --container-bg-color: white;
-  --container-bg-color-secondery: whitesmoke;
+  --container-bg-color-secondary: whitesmoke;
 
   --paragraph-color-primary:black; 
   --paragraph-color-secondary:gray; 
@@ -34,7 +34,7 @@
   --body-bg-color:#333;
   --icon-color:white;
   --container-bg-color: #515151;
-  --container-bg-color-secondery: #515151;
+  --container-bg-color-secondary: #515151;
   --paragraph-color-primary:white; 
   --paragraph-color-secondary:lightgray; 
   --border-color:lightgray;
