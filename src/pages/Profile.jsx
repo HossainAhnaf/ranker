@@ -11,8 +11,9 @@ import {singleUser} from '../data/usersData.json'
 import UserLogo from '../components/UserLogo';
 import ChallengeCardsWrapper from '../components/ChallengeCardsWrapper';
 import Info from '../components/Info';
-
-
+import Icon from 'react-inlinesvg';
+//svg
+import pencilSvg from '../assets/svg/pencil.svg';
 //css
 import '../assets/css/profile.css';
 
@@ -96,7 +97,15 @@ function Profile() {
     <>
       <section className="info-section flex-cm center">
         <div className="primary flex-cm center">
+         <div className="top-items-wrapper flex-rw"> 
           <p className='username'>@{authorUsername}</p>
+          <button className="profile-edit-button flex-rw center button">
+            <div className="svgCont flex-rw center">
+            <Icon src={pencilSvg} />   
+            </div> 
+            <span>Edit</span>
+          </button>
+          </div>
           <UserLogo logoSrc={authorLogoSrc} status={authorStatus} level={authorLevel} />
           <h3 className="name">{authorName}</h3>
         </div>

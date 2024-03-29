@@ -123,8 +123,8 @@ function CreateNewChallenge() {
             </div>
           </div>
           <div className="tab next">
-           <div className="result">
-            <h4 className="title">Result</h4>
+           <div className="result flex-cm center ">
+            <small className="title">By pressing 'Create' your challenge will be ready </small>
              <ChallengeCard title={title} description={description} difficulty={difficulty} pinned={pinned} id={5}/>
              </div> 
           </div>

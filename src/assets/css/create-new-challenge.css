@@ -118,11 +118,11 @@ width: 40%;
 
 .create-new-challenge-section > form > .tabs-wrapper > .tab > .result{
   width: 80%;
+  gap: 3vw;
 }
 .create-new-challenge-section > form > .tabs-wrapper > .tab > .result > .title{
  color: var(--paragraph-color-secondary);
- font-size: 5vw;
- margin-bottom: 3vw;
+ font-size: 4vw;
 }
   .create-new-challenge-section > form > .button-wrapper {
   width: 90%;
