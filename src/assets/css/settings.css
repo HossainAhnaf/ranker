@@ -35,8 +35,11 @@ gap: 1vw;
     justify-content: center;
     align-items: center;
 } 
-
-.settings-section > .settings-group > .settings-wrapper > .setting{
+.settings-section > .settings-group > .settings-wrapper > a{
+ text-decoration: none;
+ color: inherit;
+}
+.settings-section > .settings-group > .settings-wrapper  .setting{
     gap: 2vw;
     justify-content: start;
     align-items: center;
@@ -44,16 +47,16 @@ gap: 1vw;
     padding: 3vw 1vw;
     background-color: var(--layout-bg-color);
 }
-.settings-section > .settings-group > .settings-wrapper > .setting:active{
+.settings-section > .settings-group > .settings-wrapper  .setting:active{
  filter:  brightness(70%);
 }
 
-.settings-section > .settings-group > .settings-wrapper > .setting > .svgCont{
+.settings-section > .settings-group > .settings-wrapper  .setting > .svgCont{
     width: 5vw;
     height: 5vw;
 }
 
-.settings-section > .settings-group > .settings-wrapper > .setting > .svgCont .fill{
+.settings-section > .settings-group > .settings-wrapper  .setting > .svgCont .fill{
     fill: var(--paragraph-color-primary);
 
 }
