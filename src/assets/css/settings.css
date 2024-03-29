@@ -16,6 +16,7 @@
  align-items: start;
  margin-bottom: 3vw;
 gap: 1vw;
+
 }    
 
 .settings-section > .settings-group > .heading > .title{
@@ -41,7 +42,7 @@ gap: 1vw;
     align-items: center;
     font-size: 5vw;
     padding: 3vw 1vw;
-    background-color: var(--container-bg-color);
+    background-color: var(--layout-bg-color);
 }
 .settings-section > .settings-group > .settings-wrapper > .setting:active{
  filter:  brightness(70%);
