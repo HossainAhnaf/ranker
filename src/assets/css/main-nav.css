@@ -22,7 +22,23 @@
   .main-nav.half-transparent {
     background-color: transparent;
   }
-  
+
+   .main-nav > .primary  {
+    justify-content: center;
+    align-items: center;
+    gap: 2vw;
+   }
+
+   .main-nav > .primary > .back-button {
+    width: 7vw;
+    height: 7vw;
+    background-color: inherit;
+    border: none;
+   }   
+   .main-nav > .primary > .back-button .fill {
+    fill: var(--theme-secondary-default);
+   }
+
   .main-nav > .primary > .app-name{
    font-size: 5vw;
   }

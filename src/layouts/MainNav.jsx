@@ -13,6 +13,7 @@ import ChallengesSectionNav from '../components/ChallengesSectionNav'
 import Icon from 'react-inlinesvg'
 
 //svg
+import backSvg from '../assets/svg/back.svg'
 import notificationSvg from '../assets/svg/notification.svg'
 
 
@@ -26,6 +27,7 @@ function MainNav() {
   
   const {logoSrc,status,level} = useSelector(state=>state.userSlice)
   const {isChallengesSectionNavInvisible} = useSelector(state => state.challengesSectionNavSlice)
+  const {username} = useSelector(state=>state.userSlice)
   
  
   const [navbarHalfTransparent,setNavbarHalfTransparent] = useState(true)
@@ -40,26 +42,31 @@ function MainNav() {
     removeNavbarHalfTransparent()
   },[setNavbarHalfTransparent,removeNavbarHalfTransparent])
 
-  useEffect(()=>{    
-    if (location.pathname.startsWith('/profile')) 
-      setTitle(params.username)
-    else if (location.pathname === '/challenges')
-      setTitle('Challenges')
-    else if (location.pathname === '/create-new-challenge')
-      setTitle('Create New Challenge')
-    else if (location.pathname === '/notifications')
-      setTitle('Notifications') 
-    else if (location.pathname === '/peoples')
-      setTitle('Peoples')
-    else if (location.pathname === '/settings')
-      setTitle('Settings')
-      else if (location.pathname === '/signin')      
-      setTitle('Signin')
-    else if (location.pathname === '/signup')
-      setTitle('Signup')
+ 
+
+  const titles = {
+     '/challenges': 'Challenges',
+    '/create-new-challenge': 'Create New Challenge',
+    '/notifications': 'Notifications',
+    '/peoples': 'Peoples',
+    '/settings': 'Settings',
+    '/signin': 'Signin',
+    '/signup': 'Signup',
+    'default': 'Samer Rank'
+  }
+  
+  const isBackButtonVisible = useCallback((path)=> {
+    if (path in titles || (path.startsWith('/profile') && params.username === username) )
+      return false
     else
-      setTitle('Samer Rank')
-  },[location])
+      return true
+  })
+
+  useEffect(() => {
+    if (location.pathname.startsWith('/profile'))    
+      setTitle(params.username)
+    else setTitle(titles[location.pathname] || titles.default)
+  }, [location.pathname, params.username])
 
 useEffect(()=>{
   window.addEventListener('scroll', navbarTransparentHandler)
@@ -72,8 +79,14 @@ useEffect(()=>{
    <>
 
 <nav className={`main-nav  ${navbarHalfTransparent ? 'half-transparent':''} `} >
-      <div className="primary flex-rw left">
-        <h3 className="app-name" >
+      <div className="primary flex-rw ">
+       { 
+       isBackButtonVisible(location.pathname) &&
+        <button className="back-button button svgCont">
+          <Icon src={backSvg}  />
+        </button>
+       }
+      <h3 className="app-name" >
           <em>{title}</em>
         </h3>
       </div>
