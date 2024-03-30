@@ -10,7 +10,7 @@
     align-items: center;
     background-color: var(--container-bg-color);
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
-    border-radius: 5vw;
+    border-radius: 3vw;
     overflow: hidden;
 }
 
