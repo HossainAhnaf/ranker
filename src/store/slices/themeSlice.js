@@ -1,10 +1,11 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const getAppTheme = ()=>{
-  if (!localStorage.getItem('theme')) { 
+   if (!localStorage.getItem('theme') === null) {
+       
   const systemTheme = (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'theme-dark' : 'theme-light');
   localStorage.setItem('theme', systemTheme); 
- }
+  }
   return localStorage.getItem('theme')
 }
        
@@ -17,6 +18,8 @@ const getAppTheme = ()=>{
   reducers:{
     setTheme:(state,action)=>{
       state.theme = action.payload
+      localStorage.setItem('theme',action.payload)
+      
     }
   }
 

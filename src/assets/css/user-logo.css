@@ -39,5 +39,5 @@
   right: 0;
   color: black;
   font-weight: bold;
-  border: calc(var(--level-badge-font-size) / 5) solid white;
+  border: calc(var(--level-badge-font-size) / 5) solid var(--layout-bg-color);
 }

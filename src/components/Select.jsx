@@ -26,7 +26,7 @@ export default function Select({className,onChange, children }) {
     selectedOptionRef.current = currentTarget
     setSelectedOptionText(currentTarget.textContent) 
     if (onChange)
-    onChange(currentTarget.textContent.toLowerCase())
+    onChange(currentTarget.getAttribute('datavalue'))
 
     setIsActive(false)
 

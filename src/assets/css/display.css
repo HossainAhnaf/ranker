@@ -1,14 +1,50 @@
 .display{
   width: 100%;
-  margin-top: calc(var(--nav-vertical-padding) + var(--nav-height) + 5vw);
+  margin-top: calc(var(--nav-vertical-padding) + var(--nav-height) + 7vw);
 }
 
-.display > .preference{
+.display > .preferences-wrapper {
   width: 85%;
   margin: 0 auto;
-  background-color: var(--container-bg-color-secondary);
   box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5);
-  border-radius: 5vw;
-  justify-content: start;
+  border-radius: 3vw;
+}
+
+.display > .preferences-wrapper > .preference{
+  width: calc(100% - 6vw);
+  background-color: var(--container-bg-color-secondary);
+  justify-content: space-between;
   align-items: center;
+  padding: 4vw 3vw;
+  border-bottom: 1px solid var(--border-color);
+  
+}
+
+.display > .preferences-wrapper > .preference:first-child{
+  border-radius:3vw 3vw 0 0;
+}
+
+.display > .preferences-wrapper > .preference:last-child{
+  border-bottom: none;
+  border-radius:0 0 3vw 3vw;
+}
+
+
+.display > .preferences-wrapper > .preference > .indicators > .svgCont{
+  width: 7vw;
+  height: 7vw;
+
+}
+.display > .preferences-wrapper > .preference > .indicators > .svgCont .fill{
+fill: var(--paragraph-color-primary);
+}
+
+.display > .preferences-wrapper > .preference > .indicators > .name{
+  font-size: 5vw;
+  padding: 2vw 2vw;
+  color: var(--paragraph-color-primary);
+}
+.display > .preferences-wrapper > .preference > .select{
+ font-size: 5vw;
+ --bg-color:var(--container-bg-color-secondary);
 }
