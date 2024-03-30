@@ -4,8 +4,13 @@ import React from 'react'
 import '../assets/css/display.css'
 function Display() {
   return (
-    <div>
-      
+    <div className="display">
+     <div className="preference">
+       <div className="icon-side">
+
+       </div>
+       <b className="name">Theme</b>
+     </div>
     </div>
   )
 
