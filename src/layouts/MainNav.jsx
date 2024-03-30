@@ -5,7 +5,7 @@ import React , {useCallback, useEffect,useState } from 'react'
 import { showSideNavigationBar } from '../store/slices/sideNavigationBarSlice'
 import useDebounce from '../hooks/useDebounce'
 import { useSelector , useDispatch  } from 'react-redux'
-import { useLocation, useParams } from 'react-router'
+import { useLocation, useNavigate, useParams } from 'react-router'
 
 //components
 import UserLogo from '../components/UserLogo'
@@ -22,6 +22,7 @@ function MainNav() {
 
   const dispatch = useDispatch()
   const location = useLocation()  
+  const navigate = useNavigate()
   const params = useParams() 
   const [title,setTitle] = useState('Samer Rank') 
   
@@ -50,18 +51,28 @@ function MainNav() {
     '/notifications': 'Notifications',
     '/peoples': 'Peoples',
     '/settings': 'Settings',
+    '/name-and-contact-info': 'Name and Contact Info',
+    '/password-and-security': 'Password and Security',
+    '/notifications-preference': 'Notifications Preference',
+    '/display': 'Display',
     '/signin': 'Signin',
     '/signup': 'Signup',
     'default': 'Samer Rank'
   }
-  
+  const backButtonVisiblePathList = [
+    '/name-and-contact-info',
+    '/password-and-security',
+    '/notifications-preference',
+    '/display'    
+  ]
   const isBackButtonVisible = useCallback((path)=> {
-    if (path in titles || (path.startsWith('/profile') && params.username === username) )
-      return false
-    else
+    console.log(params.username,username);
+    if ((path.startsWith('/profile') && params.username !== username) || backButtonVisiblePathList.includes(path))
       return true
-  })
-
+    else
+      return false
+  },[params.username,username])
+  
   useEffect(() => {
     if (location.pathname.startsWith('/profile'))    
       setTitle(params.username)
@@ -82,7 +93,7 @@ useEffect(()=>{
       <div className="primary flex-rw ">
        { 
        isBackButtonVisible(location.pathname) &&
-        <button className="back-button button svgCont">
+        <button className="back-button button svgCont" onClick={()=>navigate(-1)}>
           <Icon src={backSvg}  />
         </button>
        }

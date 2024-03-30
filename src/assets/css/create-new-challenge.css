@@ -83,9 +83,15 @@ transition: left .5s;
 .create-new-challenge-section > form > .tabs-wrapper > .tab > .outlined-custom-field {
   width: 80%;
   --input-font-size: 5vw;
-  --label-font-size: 3vw;
+  --label-font-size: 3vw;  
 }
 
+.create-new-challenge-section > form > .tabs-wrapper > .tab > .outlined-custom-field > :is(input,textarea) {
+  background-color: var(--container-bg-color-secondary);
+}
+.create-new-challenge-section > form > .tabs-wrapper > .tab > .outlined-custom-field > label {
+ background-color: var(--container-bg-color-secondary);
+}
 .create-new-challenge-section > form > .tabs-wrapper > .tab > .title-field {
 margin-bottom: 4vw;
 }
