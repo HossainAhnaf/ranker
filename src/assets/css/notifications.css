@@ -1,19 +1,66 @@
 .notifications-section{
   width: 100%;
-  margin-top:  calc(var(--nav-vertical-padding) + var(--nav-height) + 9vw);
-  gap: 10vw;
+  margin-top:  calc(var(--nav-vertical-padding) + var(--nav-height) + 5vw);
+  gap: 3vw;
 }
+.notifications-section > nav {
+  width:calc(100% - 6vw) ;
+  padding: 0 3vw;
+}
+.notifications-section > nav > .filter-buttons-wrapper{
+  width: 50%;  
+  justify-content: start;
+  align-items: center;
+  gap: 2vw;
+}
+
+.notifications-section > nav > .filter-buttons-wrapper > .button{
+  font-size: 5vw;
+  padding: 1.5vw 3vw;
+  border-radius: 5vw;
+  border: none;
+  background-color: transparent;
+  color: var(--paragraph-color-primary);
+}
+
+.notifications-section > nav > .filter-buttons-wrapper > .button.active{
+  background-color: var(--theme-secondary-default);
+  color: white;
+}
+.notifications-section > nav > .secondary{
+  width: 50%;
+  justify-content: right;
+  align-items: center;
+}
+.notifications-section > nav > .secondary > .more-button{
+  width: 7vw;
+  height: 7vw;
+  background-color: transparent;
+  border: none;  
+} 
+.notifications-section > nav > .secondary > .more-button > svg{
+ transform: rotate(90deg);
+}
+.notifications-section > nav > .secondary > .more-button > .fill{
+  fill: var(--theme-secondary-default)
+
+}
+.notifications-section > nav > .secondary > .see-all-button{
+ color: var(--theme-secondary-default); 
+}
+
 .notifications-section > .group{
-  width: 85%;
-  background-color: var(--container-bg-color);
-  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+  width: 100%;
+  background-color: var(--layout-bg-color);
+  /* box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5); */
   border-radius: 3vw;
 } 
 .notifications-section > .group > .date{
   color: var(--paragraph-color-secondary);
-  width: 90%;
-  padding: 1.5vw 0;
+  width: calc(100% - 8vw);
+  padding: 1.5vw 4vw;
 font-size: 5vw;
+background-color: var(--container-bg-color-secondary);
 }
 .notifications-section > .group > .notifications-wrapper{
   width: 100%;
@@ -22,7 +69,7 @@ font-size: 5vw;
 
 .notifications-section > .group > .notifications-wrapper > .notification{
   width: calc(100% - 2vw);
-  background-color: var(--container-bg-color-secondary);
+  background-color: var(--layout-bg-color);
   padding: 3vw 1vw;
   gap: 1vw;
   position: relative;
@@ -97,7 +144,7 @@ display: flex;
   display: none;
   flex-direction: column;
   background-color: inherit;
-  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
   right: 10%;
   border-radius: 3vw;
   z-index: 1;
