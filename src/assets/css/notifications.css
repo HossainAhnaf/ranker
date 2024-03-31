@@ -91,7 +91,6 @@
 .notifications-section > .group{
   width: 100%;
   background-color: var(--layout-bg-color);
-  /* box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5); */
   border-radius: 3vw;
 } 
 .notifications-section > .group > .date{
