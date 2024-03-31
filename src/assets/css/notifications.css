@@ -8,7 +8,6 @@
   background-color: var(--container-bg-color);
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
   border-radius: 3vw;
-  overflow: hidden;
 } 
 .notifications-section > .group > .date{
   color: var(--paragraph-color-secondary);
@@ -26,6 +25,10 @@
   background-color: var(--container-bg-color-secondary);
   padding: 3vw 1vw;
   gap: 1vw;
+  position: relative;
+}
+.notifications-section > .group > .notifications-wrapper > .notification:last-child{
+ border-radius: 0 0 3vw 3vw;
 }
 
 .notifications-section > .group > .notifications-wrapper > .notification > .icon-wrapper{
@@ -70,4 +73,23 @@ gap: .5vw;
 }
 
 
+.notifications-section > .group > .notifications-wrapper > .notification > .more{
+  width: 7vw;
+  height: 7vw;
+}
+.notifications-section > .group > .notifications-wrapper > .notification > .more.active > .fill{
+ fill: var(--paragraph-color-primary)
+}
+.notifications-section > .group > .notifications-wrapper > .notification > .more-options-wrapper{
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  background-color: inherit;
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5);
+  right: 10%;
+  padding: 2vw;
+  border-radius: 3vw;
+  gap: 3vw;
+  z-index: 1;
+}
  

@@ -4,6 +4,7 @@ import fakeNotificationsData from '../data/notificationsData.json'
 //components
 import Icon from 'react-inlinesvg'
 //svg
+import moreSvg from '../assets/svg/more.svg'
 import growthSvg from '../assets/svg/growth.svg'
 import securitySvg from '../assets/svg/security-shield.svg'
 import handMikeSvg from '../assets/svg/hand-mike.svg'
@@ -42,10 +43,13 @@ function Notifications() {
                           })}
                         </div>
                       </div>
-                      <div className="more">
-                        <div className="line"></div>
-                        <div className="line"></div>
-                        <div className="line"></div>
+                      <div className="more svgCont">
+                        <Icon src={moreSvg} /> 
+                      </div> 
+                      <div className="more-options-wrapper">
+                        <span className="option">Mark as read</span>
+                        <span className="option">Remove this notification</span>
+                        <span className="option">Turn of these notifications</span>
                       </div>
                     </div>
                  )
