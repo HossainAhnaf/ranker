@@ -4,15 +4,20 @@ import fakeNotificationsData from '../data/notificationsData.json'
 //components
 import Icon from 'react-inlinesvg'
 //svg
-import moreSvg from '../assets/svg/more.svg'
 import growthSvg from '../assets/svg/growth.svg'
 import securitySvg from '../assets/svg/security-shield.svg'
 import handMikeSvg from '../assets/svg/hand-mike.svg'
+import moreSvg from '../assets/svg/more.svg'
+import tickSvg from '../assets/svg/tick(1).svg'
+import removeSvg from '../assets/svg/remove.svg'
+import removeAllSvg from '../assets/svg/remove-all.svg'
 //css
 import '../assets/css/notifications.css'
 function Notifications() {
   const [notificationsData, setNotificationsData] = useState(fakeNotificationsData)
-
+   const moreButtonClickHandler = ({currentTarget}) => {
+     currentTarget.classList.toggle('active')
+   } 
   return (
     <section className="notifications-section flex-cm center">
       {
@@ -36,20 +41,35 @@ function Notifications() {
                         <b className="title">{title}</b>
                         <small className="description">{description}</small>
                         <div className="links-wrapper flex-rw">
-                          {links.map(({ title, url }, index) => {
+                          {links.map(({ title, url }, linkIndex) => {
                             return (
-                              <a href={url} className="link button" key={index}>{title}</a>
+                              <a href={url} className="link button" key={linkIndex}>{title}</a>
                             )
                           })}
                         </div>
                       </div>
-                      <div className="more svgCont">
+                      <button className="more-button button svgCont" onClick={moreButtonClickHandler}>
                         <Icon src={moreSvg} /> 
-                      </div> 
+                      </button> 
                       <div className="more-options-wrapper">
-                        <span className="option">Mark as read</span>
-                        <span className="option">Remove this notification</span>
-                        <span className="option">Turn of these notifications</span>
+                        <button className="option button">
+                          <div className="svgCont">
+                            <Icon src={tickSvg} />
+                          </div>
+                          <p> Mark as read </p>
+                          </button>
+                          <button className="option button">
+                          <div className="svgCont">
+                            <Icon src={removeSvg} />
+                          </div>
+                          <p>Remove this notification</p>
+                          </button>
+                          <button className="option button">
+                          <div className="svgCont">
+                            <Icon src={removeAllSvg} />
+                          </div>
+                          <p>Turn of these notifications</p>
+                          </button>
                       </div>
                     </div>
                  )
