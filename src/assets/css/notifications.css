@@ -1,6 +1,6 @@
 .notifications-section{
   width: 100%;
-  margin-top:  calc(var(--nav-vertical-padding) + var(--nav-height) + 5vw);
+  margin-top:  calc(var(--nav-vertical-padding) + var(--nav-height) + 7vw);
   gap: 3vw;
 }
 .notifications-section > nav {
@@ -31,6 +31,7 @@
   width: 50%;
   justify-content: right;
   align-items: center;
+  position: relative;
 }
 .notifications-section > nav > .secondary > .more-button{
   width: 7vw;
@@ -42,8 +43,46 @@
  transform: rotate(90deg);
 }
 .notifications-section > nav > .secondary > .more-button > .fill{
-  fill: var(--theme-secondary-default)
+  fill: var(--paragraph-color-primary)
+}
 
+.notifications-section > nav > .secondary > .more-button.active > .fill{
+  fill: var(--theme-secondary-default)
+}
+.notifications-section > nav > .secondary > .more-button.active + .more-options-wrapper{
+  display: flex;
+}
+
+.notifications-section > nav > .secondary > .more-options-wrapper{
+  position: absolute;
+  display:none;
+  flex-direction: column;
+  background-color: inherit;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+  right: 20%;
+  border-radius: 3vw;
+  z-index: 1;
+  overflow: hidden;
+  width: max-content;
+  background-color: var(--layout-bg-color);
+}
+
+.notifications-section > nav > .secondary > .more-options-wrapper > .option{
+  display: flex;
+  align-items: center;
+  gap: 1.5vw;
+  color: var(--paragraph-color-primary);
+  font-size: 4vw;
+  background-color: inherit;
+  border: none;
+  padding: 2vw 4vw;
+}
+.notifications-section > nav > .secondary > .more-options-wrapper > .option > .svgCont{
+  width: 5vw;
+  height: 5vw;
+}
+.notifications-section > nav > .secondary > .more-options-wrapper > .option > .svgCont .fill{
+  fill: var(--paragraph-color-primary);
 }
 .notifications-section > nav > .secondary > .see-all-button{
  color: var(--theme-secondary-default); 

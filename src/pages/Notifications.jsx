@@ -1,9 +1,11 @@
 //modules
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 import fakeNotificationsData from '../data/notificationsData.json'
 //components
 import Icon from 'react-inlinesvg'
 //svg
+import settingsSvg from '../assets/svg/settings.svg'
 import growthSvg from '../assets/svg/growth.svg'
 import securitySvg from '../assets/svg/security-shield.svg'
 import handMikeSvg from '../assets/svg/hand-mike.svg'
@@ -13,7 +15,6 @@ import removeSvg from '../assets/svg/remove.svg'
 import removeAllSvg from '../assets/svg/remove-all.svg'
 //css
 import '../assets/css/notifications.css'
-import { Link } from 'react-router-dom'
 function Notifications() {
   const [notificationsData, setNotificationsData] = useState(fakeNotificationsData)
 
@@ -29,16 +30,22 @@ function Notifications() {
         </div>
         <div className="secondary flex-rw">
           <button className="more-button button svgCont" onClick={moreButtonClickHandler}>
-            <div className="more-options-wrapper">
+              <Icon src={moreSvg} />
+          </button>
+          <div className="more-options-wrapper">
               <button className="option button">
                 <div className="svgCont">
                   <Icon src={tickSvg} />
                 </div>
                 <p> Mark all as read </p>
               </button>
+              <button className="option button">
+                <div className="svgCont">
+                  <Icon src={settingsSvg} />
+                </div>
+                <p>Notifications Settings</p>
+              </button>
             </div>
-              <Icon src={moreSvg} />
-          </button>
           {/* <Link className="see-all-button button" to="/notifications">See all</Link> */}
         </div>
       </nav>
