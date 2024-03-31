@@ -1,4 +1,4 @@
-  {
+{
   "2 days ago": [
     {
       "title":"Sigma arrives!!",
@@ -6,9 +6,107 @@
       "type":"progress",
       "links":[
         {
-        "title":"View progress",
-        "url":"http://localhost:5173/profile/MdHasanAhnafOmi"
-      }
+          "title":"View progress",
+          "url":"http://localhost:5173/profile/MdHasanAhnafOmi"
+        }
+      ]
+    },
+    {
+      "title":"New Security Update",
+      "description":"A new security update has been implemented. Please ensure your account details are secure.",
+      "type":"security",
+      "links":[]
+    }
+  ],
+  "3 days ago": [
+    {
+      "title":"Challenge Announcement",
+      "description":"New challenge 'Coding Challenge #5' announced. Participate now!",
+      "type":"announcement",
+      "links":[
+        {
+          "title":"Join challenge",
+          "url":"http://localhost:5173/challenges/CodingChallenge5"
+        }
+      ]
+    }
+  ],
+  "4 days ago": [
+    {
+      "title":"Profile Update",
+      "description":"Your profile information has been updated successfully.",
+      "type":"others",
+      "links":[]
+    }
+  ],
+  "5 days ago": [
+    {
+      "title":"Weekly Summary",
+      "description":"Check out your weekly progress summary.",
+      "type":"others",
+      "links":[
+        {
+          "title":"View summary",
+          "url":"http://localhost:5173/summary/weekly"
+        }
+      ]
+    }
+  ],
+  "6 days ago": [
+    {
+      "title":"Beta Status Achieved",
+      "description":"Congratulations! You have achieved 'Beta' status.",
+      "type":"progress",
+      "links":[]
+    }
+  ],
+  "7 days ago": [
+    {
+      "title":"System Maintenance",
+      "description":"Scheduled system maintenance will take place on Saturday, 10:00 PM (GMT).",
+      "type":"announcement",
+      "links":[]
+    }
+  ],
+  "8 days ago": [
+    {
+      "title":"Challenge Completed",
+      "description":"You have successfully completed 'Coding Challenge #4'. Well done!",
+      "type":"progress",
+      "links":[]
+    }
+  ],
+  "9 days ago": [
+    {
+      "title":"New Feature Announcement",
+      "description":"Exciting new feature 'Live Coding Sessions' now available. Try it out!",
+      "type":"announcement",
+      "links":[
+        {
+          "title":"Explore feature",
+          "url":"http://localhost:5173/features/live-coding-sessions"
+        }
+      ]
+    }
+  ],
+  "10 days ago": [
+    {
+      "title":"Profile Verification",
+      "description":"Your profile has been successfully verified.",
+      "type":"others",
+      "links":[]
+    }
+  ],
+  "11 days ago": [
+    {
+      "title":"Coding Challenge Reminder",
+      "description":"Don't forget to participate in 'Coding Challenge #3'. Deadline approaching!",
+      "type":"announcement",
+      "links":[
+        {
+          "title":"Join challenge",
+          "url":"http://localhost:5173/challenges/CodingChallenge3"
+        }
       ]
     }
   ]

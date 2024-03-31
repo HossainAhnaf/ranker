@@ -1,6 +1,6 @@
 //modules
-import React , { useState } from 'react'
-import notificationsData from '../data/notificationsData.json'
+import React, { useState } from 'react'
+import fakeNotificationsData from '../data/notificationsData.json'
 //components
 import Icon from 'react-inlinesvg'
 //svg
@@ -10,47 +10,57 @@ import handMikeSvg from '../assets/svg/hand-mike.svg'
 //css
 import '../assets/css/notifications.css'
 function Notifications() {
-  const [notificationsData,setNotificationsData] = useState()
-  
+  const [notificationsData, setNotificationsData] = useState(fakeNotificationsData)
+
   return (
-    <div className="notifications-wrapper flex-cm center">
-    {
-     Object.keys(notificationsData).map((key,index)=>{
-       
-     })
-    }
-    </div>
+    <section className="notifications-section flex-cm center">
+      {
+        Object.keys(notificationsData).map((key, groupIndex) => {
+          return (
+            <div className="group flex-cm center" key={groupIndex}>
+              <b className="date">{key}</b>
+              <div className="notifications-wrapper flex-cm center">
+                {
+                  notificationsData[key].map(({ title, description, type, links }, index) => {
+                 return(
+                    <div className={`notification ${type} flex-rw `} key={index}>
+                      <div className="icon-wrapper">
+                        <div className="svgCont">
+                          {type === 'progress' && <Icon src={growthSvg} />}
+                          {type === 'security' && <Icon src={securitySvg} />}
+                          {type === 'announcement' && <Icon src={handMikeSvg} />}
+                        </div>
+                      </div>
+                      <div className="message-wrapper flex-cm">
+                        <b className="title">{title}</b>
+                        <small className="description">{description}</small>
+                        <div className="links-wrapper flex-rw">
+                          {links.map(({ title, url }, index) => {
+                            return (
+                              <a href={url} className="link button" key={index}>{title}</a>
+                            )
+                          })}
+                        </div>
+                      </div>
+                      <div className="more">
+                        <div className="line"></div>
+                        <div className="line"></div>
+                        <div className="line"></div>
+                      </div>
+                    </div>
+                 )
+                  })
+
+                }
+              </div>
+            </div>
+          )
+        })
+
+
+      }
+    </section>
   )
 }
 
 export default Notifications
-
-
-// notificationsData.map(({title,description,type,links},index)=>{
-//   return (
-//       <p>adad</p>
-//      )
-//     }) 
-      
-
-// <div className={`notification ${type} flex-rw `} key={index}>        
-// <div className="icon-wrapper">
-//    <div className="svgCont">
-//      {type === 'progress' && <Icon src={growthSvg} />}
-//      {type === 'security' && <Icon src={securitySvg} />}
-//      {type === 'announcement' && <Icon src={handMikeSvg} />}
-//    </div>
-// </div>
-// <div className="message-wrapper flex-cm">
-// <b className="title">{title}</b>
-//  <small className="description">{description}</small>
-//  <div className="links-wrapper flex-rw">
-//    {links.map(({title,url},index)=>{
-//      return (
-//        <a  href={url} className="link" key={index}>{title}</a>
-//      )
-//    })}
-//  </div>
-// </div>
- 
-// </div>
