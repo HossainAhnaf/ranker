@@ -37,8 +37,8 @@
     font-weight: 500;
   }
   
-  .users-short-info-wrapper .user-short-info >   .info-wrapper > .rank{
+  .users-short-info-wrapper .user-short-info >   .info-wrapper > .username{
     color: var(--paragraph-color-secondary);
-   font-size: 4vw;
+   font-size: 3.5vw;
   }  
   

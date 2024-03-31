@@ -14,7 +14,7 @@ function UsersShortInfoWrapper({userList}) {
               <UserLogo logoSrc={user.logoSrc} status={user.status} level={user.level} />
               <div className="info-wrapper flex-cm">
                 <b className="name">{user.name}</b>
-                <small className="rank">Rank:{user.rank}</small>
+                <small className="username">@{user.username}</small>
               </div>
           </div>
         </Link>
@@ -26,17 +26,3 @@ function UsersShortInfoWrapper({userList}) {
 }
 
 export default UsersShortInfoWrapper
-
-
-// <div className="user-short-info flex-cm">
-// <div className="primary flex-rw center">
-//   <UserLogo logoSrc={user.logoSrc} status={user.status} level={user.level} />
-//   <div className="info-wrapper flex-cm">
-//     <b className="name">{user.name}</b>
-//     <small className={`status ${user.status.toLocaleLowerCase()}`}>{user.status}</small>
-//   </div>
-// </div>
-// <div className="secondary flex-cm">
-//   <small className="rank">Rank:{user.rank}</small>
-// </div>
-// </div>

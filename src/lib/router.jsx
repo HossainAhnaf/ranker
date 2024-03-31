@@ -6,6 +6,7 @@ import Layout from "../layouts/";
 import Profile from "../pages/Profile";
 import Challenges from "../pages/Challenges";
 import CreateNewChallenge from "../pages/CreateNewChallenge";
+import Notifications from "../pages/Notifications";
 import Peoples from "../pages/Peoples";
 import Settings from "../pages/Settings";
 import NameAndContactInfo from "../pages/NameAndContactInfo";
@@ -34,6 +35,10 @@ export default createBrowserRouter(
         {
           path: '/create-new-challenge',
           element: <CreateNewChallenge />
+        },
+        {
+          path: '/notifications',
+          element: <Notifications />
         },
         {
           path: '/peoples',

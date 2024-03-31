@@ -99,12 +99,14 @@ function Profile() {
         <div className="primary flex-cm center">
          <div className="top-items-wrapper flex-rw"> 
           <p className='username'>@{authorUsername}</p>
+          {isAuthor &&
           <button className="profile-edit-button flex-rw center button">
             <div className="svgCont flex-rw center">
             <Icon src={pencilSvg} />   
             </div> 
             <span>Edit</span>
           </button>
+           }
           </div>
           <UserLogo logoSrc={authorLogoSrc} status={authorStatus} level={authorLevel} />
           <h3 className="name">{authorName}</h3>

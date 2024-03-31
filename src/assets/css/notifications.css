@@ -1,0 +1,56 @@
+.notifications-wrapper{
+  width: 100%;
+  margin-top:  calc(var(--nav-vertical-padding) + var(--nav-height) + 9vw);
+}
+.notifications-wrapper > .notification{
+  width: 85%;
+  background-color: var(--container-bg-color);
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+  padding: 3vw 2vw;
+  border-radius: 3vw;
+  gap: 1vw;
+}
+
+.notifications-wrapper > .notification > .icon-wrapper{
+  width: 10%;
+  justify-content: center;
+  align-items: top;
+  display: flex;
+  /* padding: 1vw; */
+}
+.notifications-wrapper > .notification > .icon-wrapper > .svgCont{
+  width: 6vw;
+  height: 6vw;
+}
+
+.notifications-wrapper > .notification > .message-wrapper{
+width: 90%;
+gap: .5vw;
+}
+
+.notifications-wrapper > .notification > .message-wrapper > .title{
+  font-size: 5vw;
+  font-weight: 500;
+  color: var(--paragraph-color-primary);
+}
+
+.notifications-wrapper > .notification > .message-wrapper > .description{
+  font-size: 4vw;
+  color: var(--paragraph-color-secondary);
+}
+
+.notifications-wrapper > .notification > .message-wrapper > .links-wrapper{
+  gap: 3vw;
+  margin-top: 1vw;
+  flex-wrap: wrap;
+
+}
+
+.notifications-wrapper > .notification > .message-wrapper > .links-wrapper > .link{
+  color: var(--theme-secondary-default);
+  text-decoration: none;
+  font-size: 3vw;
+}
+
+
+ 
