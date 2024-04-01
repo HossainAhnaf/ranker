@@ -32,7 +32,7 @@ function Notifications({shortView}) {
     }
   }
   return (
-    <section className="notifications-section flex-cm center">
+    <section className={`notifications-section ${shortView ? 'short-view' : ''} flex-cm`}>
       <nav className="flex-rw">
         <div className="filter-buttons-wrapper flex-rw">
           <button className="active  button">All</button>

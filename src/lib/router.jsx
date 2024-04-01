@@ -3,6 +3,7 @@ import { createBrowserRouter } from "react-router-dom";
 //layout
 import Layout from "../layouts/";
 //pages
+import Home from "../pages/Home";
 import Profile from "../pages/Profile";
 import Challenges from "../pages/Challenges";
 import CreateNewChallenge from "../pages/CreateNewChallenge";
@@ -22,7 +23,7 @@ export default createBrowserRouter(
       children: [
         {
           path: '/',
-          element: <p>lol</p>
+          element: <Home /> 
         },
         {
           path: '/profile/:username',

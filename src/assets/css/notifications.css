@@ -1,12 +1,14 @@
 .notifications-section{
   width: 100%;
-  margin-top:  calc(var(--nav-vertical-padding) + var(--nav-height) + 7vw);
 }
 .notifications-section > nav {
   width:calc(100% - 6vw) ;
   padding: 2vw 3vw;
-  
 }
+.notifications-section:not(.short-view) > nav{
+  margin-top:  calc(var(--nav-vertical-padding) + var(--nav-height) + 7vw);
+ 
+} 
 .notifications-section > nav > .filter-buttons-wrapper{
   width: 50%;  
   justify-content: start;

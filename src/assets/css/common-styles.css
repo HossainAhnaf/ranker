@@ -18,18 +18,9 @@
   
   button a {
     text-decoration: none;
-    color: white;
+    color: inherit;
   }
-  
-  .hidden {
-    display: none !important;
-    visibility: hidden !important;
-  
-  }
-  .unvisible {
-    visibility: hidden !important;
-  
-  }
+
   .positive {
     background-color: var(--theme-secondary-default);
     background-image: var(--theme-secondary-gradient);
