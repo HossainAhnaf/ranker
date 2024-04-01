@@ -5,7 +5,7 @@
       "title":"Sigma arrives!!",
       "description":"You need just '30xp' to become a 'Sigma'.",
       "type":"progress",
-       "isReaded": true,
+       "isReaded": false,
        "url":"/" 
     },
     
@@ -13,7 +13,7 @@
       "title":"New Security Update",
       "description":"A new security update has been implemented. Please ensure your account details are secure.",
       "type":"announcement",
-       "isReaded": false,
+       "isReaded": true,
       "url":"/"
     }
   ],
@@ -32,7 +32,7 @@
       "title":"Profile Update",
       "description":"Your profile information has been updated successfully.",
       "type":"others",
-       "isReaded": true,
+       "isReaded": false,
       "url":"/"
     }
   ],

@@ -66,7 +66,6 @@ function MainNav() {
     '/display'    
   ]
   const isBackButtonVisible = useCallback((path)=> {
-    console.log(params.username,username);
     if ((path.startsWith('/profile') && params.username !== username) || backButtonVisiblePathList.includes(path))
       return true
     else
@@ -105,7 +104,7 @@ useEffect(()=>{
       location.pathname !== '/signin' && location.pathname !== '/signup' 
         &&
       <div className="secondary flex-rw" >
-        <button className="notification-button badge-wrapper svgCont">
+        <button className="notification-button active badge-wrapper svgCont">
          <Icon src={notificationSvg}  />
           <small className="badge">4</small>
         </button>

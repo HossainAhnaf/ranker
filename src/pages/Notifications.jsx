@@ -16,11 +16,20 @@ import removeAllSvg from '../assets/svg/remove-all.svg'
 
 //css
 import '../assets/css/notifications.css'
-function Notifications() {
-  const [notificationsData, setNotificationsData] = useState(fakeNotificationsData)
+function Notifications({shortView}) {
   const navigate = useNavigate()
+
+  const [notificationsData, setNotificationsData] = useState(fakeNotificationsData)
   const moreButtonClickHandler = ({ currentTarget }) => {
     currentTarget.classList.toggle('active')
+  }
+
+  const notificationClickHandler = ({target,currentTarget},url) => {
+    const moreButton = currentTarget.querySelector('.more-button')
+     const moreOptionsWrapper = currentTarget.querySelector('.more-options-wrapper') 
+    if(target !==  moreButton && target !== moreOptionsWrapper && !moreOptionsWrapper.contains(target) && !moreButton.contains(target)){
+    navigate(url)
+    }
   }
   return (
     <section className="notifications-section flex-cm center">
@@ -30,9 +39,14 @@ function Notifications() {
           <button className="button">Unread</button>
         </div>
         <div className="secondary flex-rw">
-          <button className="more-button button svgCont" onClick={moreButtonClickHandler}>
+        { shortView
+        ? <Link className="see-all-button button" to="/notifications">See all</Link>
+        :
+        <>
+         <button className="more-button button svgCont" onClick={moreButtonClickHandler}>
               <Icon src={moreSvg} />
           </button>
+
           <div className="more-options-wrapper">
               <button className="option button">
                 <div className="svgCont">
@@ -44,10 +58,11 @@ function Notifications() {
                 <div className="svgCont">
                   <Icon src={settingsSvg} />
                 </div>
-                <p>Notifications Settings</p>
+                <Link to="/notifications-preference">Notifications Settings</Link>
               </button>
             </div>
-          {/* <Link className="see-all-button button" to="/notifications">See all</Link> */}
+        </>
+        }
         </div>
       </nav>
 
@@ -61,7 +76,7 @@ function Notifications() {
                 {
                   notificationsData[key].map(({ title, description, type, url,isReaded }, index) => {
                     return (
-                      <Link to={url} className={`notification ${type} ${isReaded ? 'readed' : ''} flex-rw `}   key={index} >
+                      <div className={`notification ${type} ${isReaded ? '' : 'unread'} flex-rw `}   onClick={(e)=>notificationClickHandler(e,url)} key={index} >
                         <div className="icon-wrapper">
                           <div className="svgCont">
                             {type === 'progress' && <Icon src={growthSvg} />}
@@ -97,7 +112,7 @@ function Notifications() {
                             <p>Turn of these notifications</p>
                           </button>
                         </div>
-                      </Link>
+                      </div>
                     )
                   })
 
@@ -112,5 +127,9 @@ function Notifications() {
     </section>
   )
 }
-
+ 
 export default Notifications
+
+Notifications.defaultProps = {
+  shortView: false
+}

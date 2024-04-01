@@ -20,7 +20,9 @@
   --layout-bg-color:white;
  --challenge-card-bg-color:whitesmoke;
  --info-bg-color:whitesmoke;
-  /* rank */
+
+ --notification-unread-bg-color:rgb(248, 228, 210); 
+  /* status */
   --sigma-color: orange;
   --alpha-color: red;
   --beta-color: blue;
@@ -42,7 +44,8 @@
     --layout-bg-color: #333 ;
     --challenge-card-bg-color:#6e6e6e;
     --info-bg-color:gray;
-    /* rank */
+    --notification-unread-bg-color:rgb(148, 131, 116) ;
+    /* status */
     --sigma-color: yellow;
     --alpha-color: red;
     --beta-color: skyblue;
@@ -65,7 +68,8 @@
   --layout-bg-color:white;
  --challenge-card-bg-color:whitesmoke;
  --info-bg-color:whitesmoke;
-  /* rank */
+ --notification-unread-bg-color:rgb(248, 228, 210); 
+  /* status */
   --sigma-color: orange;
   --alpha-color: red;
   --beta-color: blue;
@@ -86,7 +90,8 @@
   --layout-bg-color: #333 ;
   --challenge-card-bg-color:#6e6e6e;
   --info-bg-color:gray;
-  /* rank */
+  --notification-unread-bg-color:rgb(148, 131, 116) ;
+  /* status */
   --sigma-color: yellow;
   --alpha-color: red;
   --beta-color: skyblue;

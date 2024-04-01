@@ -54,10 +54,13 @@
     background-color: transparent;
     border: none;
     position: relative;
-  
+    border-radius: 100%;
   }
   .main-nav > .secondary > .notification-button .fill  {
     fill: var(  --icon-color);
+  }
+  .main-nav > .secondary > .notification-button.active  {
+   background-color: gray;
   }
   .main-nav > .secondary > .notification-button > .badge {
     border: 1px solid white;
