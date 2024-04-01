@@ -23,6 +23,16 @@
     background-color: transparent;
   }
 
+  .main-nav > .signin-button {
+    background-color: var(--theme-secondary-default);
+    color: white;
+    border-radius: 2vw;
+    padding: 1.5vw 2vw;
+    border: none;
+    font-size: 4vw;
+    font-weight: 600;
+  }
+
    .main-nav > .primary  {
     justify-content: center;
     align-items: center;
@@ -39,8 +49,24 @@
     fill: var(--theme-secondary-default);
    }
 
-  .main-nav > .primary > .app-name{
-   font-size: 5vw;
+  
+  .main-nav > .primary > .site-brand {
+    display: flex;
+    align-items: end;
+    justify-content: center;
+  }
+  .main-nav > .primary > .site-brand > .svgCont {
+    width: 9vw;
+    height: 9vw;
+
+  }
+  .main-nav > .primary > .site-brand > .app-name{
+   font-size: 6vw;
+
+  }
+
+  .main-nav > .primary > .nav-title{
+    font-size: 5vw;
   }
   
   .main-nav > .secondary {

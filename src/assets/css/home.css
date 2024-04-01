@@ -1,0 +1,11 @@
+.home{
+ width: 100%;
+ margin-top: calc(var(--nav-vertical-padding) + var(--nav-height) );
+}
+
+.home > .intro-title{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

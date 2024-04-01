@@ -42,8 +42,12 @@ useEffect(()=>{
 
 <nav className={`main-nav  ${navbarHalfTransparent ? 'half-transparent':''} `} >
       <Primary />
+
      {
-      location.pathname !== '/signin' && location.pathname !== '/signup' 
+      location.pathname === '/' 
+      ? <button className='signin-button'>Sign in</button>
+
+      : location.pathname !== '/signin' && location.pathname !== '/signup' 
         &&
       <Secondary />
       }

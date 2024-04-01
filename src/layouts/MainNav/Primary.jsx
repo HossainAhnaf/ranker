@@ -5,6 +5,7 @@ import { useSelector } from 'react-redux'
 //components
 import Icon from 'react-inlinesvg'
 //svg
+import appLogo from '../../assets/svg/app-logo.svg'
 import backSvg from '../../assets/svg/back.svg'
 
 function Primary() {
@@ -16,8 +17,7 @@ function Primary() {
   const {username} = useSelector(state=>state.userSlice)
 
 
-  const [title,setTitle] = useState('Samer Rank') 
-
+  const [title,setTitle] = useState('')  
   const titles = {
     '/challenges': 'Challenges',
    '/create-new-challenge': 'Create New Challenge',
@@ -29,8 +29,7 @@ function Primary() {
    '/notifications-preference': 'Notifications Preference',
    '/display': 'Display',
    '/signin': 'Signin',
-   '/signup': 'Signup',
-   'default': 'Samer Rank'
+   '/signup': 'Signup'
  }
  const backButtonVisiblePathList = [
    '/name-and-contact-info',
@@ -47,22 +46,35 @@ function Primary() {
  },[params.username,username])
  
  useEffect(() => {
+
    if (location.pathname.startsWith('/profile'))    
      setTitle(params.username)
-   else setTitle(titles[location.pathname] || titles.default)
+   else setTitle(titles[location.pathname])
  }, [location.pathname, params.username])
   
   return (
     <div className="primary flex-rw ">
     { 
-    isBackButtonVisible(location.pathname) &&
-     <button className="back-button button svgCont" onClick={()=>navigate(-1)}>
+    isBackButtonVisible(location.pathname) 
+
+    ? <button className="back-button button svgCont" onClick={()=>navigate(-1)}>
        <Icon src={backSvg}  />
      </button>
+    
+   :<div className="site-brand" onClick={()=>navigate('/')}>
+    <span className="svgCont">
+      <Icon src={appLogo}  />
+    </span>
+   { location.pathname == '/' &&
+    <h1 className="app-name" >
+     <em>{import.meta.env.VITE_APP_NAME}</em>
+    </h1>
     }
-   <h3 className="app-name" >
-       <em>{title}</em>
-     </h3>
+   </div>
+   }
+   <h1 className="nav-title">
+    {title}
+   </h1>
    </div>
   )
 }
