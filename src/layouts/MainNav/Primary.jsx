@@ -67,7 +67,7 @@ function Primary() {
     </span>
    { location.pathname == '/' &&
     <h1 className="app-name" >
-     <em>{import.meta.env.VITE_APP_NAME}</em>
+     <em>{import.meta.env.VITE_APP_NAME.slice(1)}</em>
     </h1>
     }
    </div>

@@ -20,14 +20,10 @@ function MainNav() {
     setNavbarHalfTransparent(false)
  }, 1000)
   
-  const navbarTransparentHandler = useCallback(()=> {
-    if ( navbarHalfTransparent === false) {
+  const navbarTransparentHandler = ()=> {
       setNavbarHalfTransparent(true)
-    }
     removeNavbarHalfTransparent()
-  },[setNavbarHalfTransparent,removeNavbarHalfTransparent])
-
- 
+  }
 
 
 useEffect(()=>{
@@ -36,16 +32,16 @@ useEffect(()=>{
   window.removeEventListener('scroll',navbarTransparentHandler)
  }
 },[])
-
+ 
   return (
    <>
 
-<nav className={`main-nav  ${navbarHalfTransparent ? 'half-transparent':''} `} >
+<nav className={`main-nav  ${(location.pathname ==="/" || navbarHalfTransparent) ? 'half-transparent':''} `} >
       <Primary />
 
      {
       location.pathname === '/' 
-      ? <button className='signin-button'>Sign in</button>
+      ? <button className='signin-button positive button'>Sign in</button>
 
       : location.pathname !== '/signin' && location.pathname !== '/signup' 
         &&

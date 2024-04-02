@@ -1,11 +1,62 @@
 .home{
  width: 100%;
- margin-top: calc(var(--nav-vertical-padding) + var(--nav-height) );
+}
+.home > .bg-image-wrapper{
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: absolute;
+  /* opacity: 0.5; */
+}
+.home > .bg-image-wrapper > img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .home > .intro-title{
-  width: 100%;
+  --padding-top:calc(var(--nav-vertical-padding) + var(--nav-height) + 7vw);
+  width: calc(100% - 10vw);
+  height: calc(100vh - var(--padding-top));
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 5vw;
+  padding: 0 5vw;
+  padding-top: var(--padding-top);
+  z-index: 1;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.5);
+ /* margin-top: calc(var(--nav-vertical-padding) + var(--nav-height) ); */
+
 }
+.home > .intro-title > .title{
+  font-size: 12vw;
+  font-weight: 600;
+  text-align: center;
+  color: white;
+}
+.home > .intro-title > .description{
+  color: lightgray;
+  font-size: 6vw;
+  text-align: center;
+  line-height: 1.3;
+  height: 40%;
+}
+.home > .intro-title > .signup-button{
+  border-radius: 5vw;
+  font-size: 5vw;
+  padding: 2vw 4vw;
+  border: none;
+ font-weight: bold;
+ 
+}
+
+.home > .intro-title > .signup-button > .chevron::after{
+ width: 1.5vw;
+ height: 1.5vw;
+ border-width: .9vw .9vw 0 0;
+ top: 1.9vw;
+ margin-left: 1.5vw;
+}
+

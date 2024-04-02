@@ -15,7 +15,7 @@
     top: 0;
     width: 90vw;
     transition: background-color .4s;
-    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
     background-color: var(--layout-bg-color);
   }
  
@@ -24,8 +24,6 @@
   }
 
   .main-nav > .signin-button {
-    background-color: var(--theme-secondary-default);
-    color: white;
     border-radius: 2vw;
     padding: 1.5vw 2vw;
     border: none;
@@ -35,21 +33,10 @@
 
    .main-nav > .primary  {
     justify-content: center;
-    align-items: center;
+    align-items: end;
     gap: 2vw;
    }
 
-   .main-nav > .primary > .back-button {
-    width: 7vw;
-    height: 7vw;
-    background-color: inherit;
-    border: none;
-   }   
-   .main-nav > .primary > .back-button .fill {
-    fill: var(--theme-secondary-default);
-   }
-
-  
   .main-nav > .primary > .site-brand {
     display: flex;
     align-items: end;
@@ -62,11 +49,23 @@
   }
   .main-nav > .primary > .site-brand > .app-name{
    font-size: 6vw;
-
+   color: orangered;
   }
 
+  .main-nav > .primary > .back-button {
+    width: 7vw;
+    height: 7vw;
+    background-color: inherit;
+    border: none;
+   }   
+   .main-nav > .primary > .back-button .fill {
+    fill: var(--theme-secondary-default);
+   }
+
+  
   .main-nav > .primary > .nav-title{
     font-size: 5vw;
+
   }
   
   .main-nav > .secondary {
@@ -126,5 +125,5 @@
   top: calc(var(--nav-height) + var(--nav-vertical-padding) - 2vw);
   left: 0;
   background-color: var(--layout-bg-color);
-  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
 }

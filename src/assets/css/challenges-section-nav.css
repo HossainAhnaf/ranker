@@ -4,7 +4,7 @@
     margin: 2vw 0;
     background-color: var(--container-bg-color);
     padding: 2vw 4vw ;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.5);
     justify-content: space-between;
     align-items: center;
    }
@@ -20,7 +20,7 @@
     gap: 1vw;
     font-weight: bold;
     font-size: 3vw;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5);
   
   }
   
@@ -33,7 +33,7 @@
   
   .challenges-section-nav > .challenges-search-form {
     gap: 0;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5);
     border-radius: 5vw;
     width: 60%;
     height: 7vw;
