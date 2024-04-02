@@ -36,7 +36,7 @@
 
 }
 .display > .preferences-wrapper > .preference > .indicators > .svgCont .fill{
-fill: var(--paragraph-color-primary);
+fill: var(--icon-color);
 }
 
 .display > .preferences-wrapper > .preference > .indicators > .name{

@@ -45,7 +45,7 @@
  transform: rotate(90deg);
 }
 .notifications-section > nav > .secondary > .more-button > .fill{
-  fill: var(--paragraph-color-primary)
+  fill: var(--icon-color)
 }
 
 .notifications-section > nav > .secondary > .more-button.active > .fill{
@@ -84,7 +84,7 @@
   height: 5vw;
 }
 .notifications-section > nav > .secondary > .more-options-wrapper > .option > .svgCont .fill{
-  fill: var(--paragraph-color-primary);
+  fill: var(--icon-color);
 }
 .notifications-section > nav > .secondary > .see-all-button{
  color: var(--theme-secondary-default); 
@@ -136,7 +136,7 @@ background-color: var(--container-bg-color-secondary);
 }
 
 .notifications-section > .group > .notifications-wrapper > .notification > .icon-wrapper > .svgCont .fill{
-  fill: var(--paragraph-color-primary);
+  fill: var(--icon-color);
 }
 
 .notifications-section > .group > .notifications-wrapper > .notification > .message-wrapper{
@@ -177,7 +177,7 @@ gap: .5vw;
   z-index: 2;
 }
 .notifications-section > .group > .notifications-wrapper > .notification > .more-button > .fill{
- fill: var(--paragraph-color-primary)
+ fill: var(--icon-color)
 }
 .notifications-section > .group > .notifications-wrapper > .notification > .more-button.active > .fill{
   fill: var(--theme-secondary-default)
@@ -211,5 +211,5 @@ display: flex;
   height: 5vw;
 }
 .notifications-section > .group > .notifications-wrapper > .notification > .more-options-wrapper > .option > .svgCont .fill{
-  fill: var(--paragraph-color-primary);
+  fill: var(--icon-color);
 }

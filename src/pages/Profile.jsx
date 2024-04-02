@@ -8,7 +8,7 @@ import { useSelector } from 'react-redux';
 //fake
 import {singleUser} from '../data/usersData.json'
 //components
-import ProfileEditForm from '../components/ProfileEditForm';
+import ProfileEditForm from '../components/ProfileEditForm/ProfileEditForm';
 import UserAvatar from '../components/UserAvatar';
 import ChallengeCardsWrapper from '../components/ChallengeCardsWrapper';
 import Info from '../components/Info';

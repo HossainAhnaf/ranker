@@ -64,7 +64,7 @@ border: none;
 display: none;
 }  
 .name-and-contact-info>.info-wrapper>.info > .value-wrapper > .value-edit-button .fill{
-  fill: var(--paragraph-color-primary);
+  fill: var(--icon-color);
   fill: var(--theme-secondary-default);
 }
 
