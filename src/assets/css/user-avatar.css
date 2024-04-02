@@ -1,35 +1,35 @@
-.user-logo{
+.user-avatar{
    position: relative;
     border-style: solid;
     border-color: var(--status-color);
     
 }   
 
-.user-logo.sigma{
+.user-avatar.sigma{
     --status-color: var(--sigma-color);
 }   
    
-.user-logo.alpha{
+.user-avatar.alpha{
     --status-color: var(--alpha-color);
 }
 
-.user-logo.beta{
+.user-avatar.beta{
     --status-color: var(--beta-color);
 }
 
-.user-logo.gamma{
+.user-avatar.gamma{
     --status-color: var(--gamma-color);
 }
 
-.user-logo.delta{
+.user-avatar.delta{
     --status-color: var(--delta-color);
 }
 
-.user-logo.omega{
+.user-avatar.omega{
     --status-color: var(--omega-color);
 }
 
-.user-logo > .level-badge{
+.user-avatar > .level-badge{
   font-size: var(--level-badge-font-size);  
   background-color: var(--status-color);
   border-radius: 100%;

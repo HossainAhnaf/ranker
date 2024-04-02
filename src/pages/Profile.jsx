@@ -8,7 +8,7 @@ import { useSelector } from 'react-redux';
 //fake
 import {singleUser} from '../data/usersData.json'
 //components
-import UserLogo from '../components/UserLogo';
+import UserLogo from '../components/UserAvatar';
 import ChallengeCardsWrapper from '../components/ChallengeCardsWrapper';
 import Info from '../components/Info';
 import Icon from 'react-inlinesvg';
@@ -19,7 +19,7 @@ import '../assets/css/profile.css';
 
 function Profile() {
    const params = useParams()
-  const {username,name,logoSrc,rank,status,challenges,passed,failed,level,xp} = useSelector(state=>state.userSlice)
+  const {username,name,avatar,rank,status,challenges,passed,failed,level,xp} = useSelector(state=>state.userSlice)
   
   const isAuthor = (username === params.username || params.username === 'me')
 
@@ -27,7 +27,7 @@ function Profile() {
 
   const [authorUsername,setAuthorUsername] = useState(username)
   const [authorName,setAuthorName] = useState(name)
-  const [authorLogoSrc,setAuthorLogoSrc] = useState(logoSrc)
+  const [authoravatar,setAuthoravatar] = useState(avatar)
   const [authorRank,setAuthorRank] = useState(rank)
   const [authorStatus,setAuthorStatus] = useState(status)
   const [authorChallenges,setAuthorChallenges] = useState(challenges)
@@ -58,10 +58,10 @@ function Profile() {
 
   const fetchProfileData = () => {
     if (!isAuthor) {
-     const {username,name,logoSrc,rank,status,challenges,passed,failed,level,xp} = singleUser[params.username]
+     const {username,name,avatar,rank,status,challenges,passed,failed,level,xp} = singleUser[params.username]
      setAuthorUsername(username)
      setAuthorName(name)
-     setAuthorLogoSrc(logoSrc)
+     setAuthoravatar(avatar)
      setAuthorRank(rank)
      setAuthorStatus(status)
      setAuthorChallenges(challenges)
@@ -73,7 +73,7 @@ function Profile() {
     } else{
       setAuthorUsername(username)
       setAuthorName(name)
-      setAuthorLogoSrc(logoSrc)
+      setAuthoravatar(avatar)
       setAuthorRank(rank)
       setAuthorStatus(status)
       setAuthorChallenges(challenges)
@@ -108,7 +108,7 @@ function Profile() {
           </button>
            }
           </div>
-          <UserLogo logoSrc={authorLogoSrc} status={authorStatus} level={authorLevel} />
+          <UserLogo avatar={authoravatar} status={authorStatus} level={authorLevel} />
           <h3 className="name">{authorName}</h3>
         </div>
         <Info name='Rank' value={authorRank} />

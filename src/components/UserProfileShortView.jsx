@@ -3,19 +3,19 @@ import React  from 'react'
 import { useSelector } from 'react-redux'
 
 //components
-import UserLogo from "../components/UserLogo"
+import UserLogo from "../components/UserAvatar"
 import Info from "../components/Info"  
 //css
 import '../assets/css/user-profile-short-view.css'
 function UserProfileShortView() {
 
-  const {name,logoSrc,status,level,xp} = useSelector(state=>state.userSlice)
+  const {name,avatar,status,level,xp} = useSelector(state=>state.userSlice)
 
 
   return (
     <div className="user-profile-short-view flex-cm center tooltip" >
     <div className="primary flex-rw center">
-      <UserLogo logoSrc={logoSrc} status={status} level={level} />
+      <UserLogo avatar={avatar} status={status} level={level} />
       <div className="username-wrapper flex-cm">
         <b className="username">{name}</b>
         <small className={`status ${status}`}>{status}</small>

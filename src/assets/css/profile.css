@@ -45,7 +45,7 @@
   height: 4vw;
 }
 
-.info-section>.primary>.user-logo {
+.info-section>.primary>.user-avatar {
   width: 20vw;
   height: 20vw;
   border-width: .7vw;
@@ -83,6 +83,7 @@
   overflow: hidden;
  font-size: small;
  background-color: var(--info-bg-color);
+ font-size: 4vw;
 }
 .info-section > .info > .name {
   padding: 2vw 4vw;

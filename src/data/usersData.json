@@ -2,7 +2,7 @@
 
  "allUsers":[
   {
-    "logoSrc": "https://i1.sndcdn.com/avatars-DqyGmSE2L9topKbD-nhmyHQ-t240x240.jpg",
+    "avatar": "https://i1.sndcdn.com/avatars-DqyGmSE2L9topKbD-nhmyHQ-t240x240.jpg",
     "username": "MdHossainAhnafOvi",
     "name": "Md Hossain Ahnaf Ovi",
     "rank": "1,000",
@@ -14,7 +14,7 @@
     "xp": 400
   },
    {
-    "logoSrc": "https://t4.ftcdn.net/jpg/05/79/49/39/360_F_579493931_9AJrInxWGhyS4CNfVeVJwsusbN1k3q17.jpg",
+    "avatar": "https://t4.ftcdn.net/jpg/05/79/49/39/360_F_579493931_9AJrInxWGhyS4CNfVeVJwsusbN1k3q17.jpg",
     "username": "MdHasanAhnafOmi",
     "name": "Md Hasan Ahnaf Omi",
 
@@ -27,7 +27,7 @@
     "xp": 30
   },
    {
-    "logoSrc": "https://randomuser.me/api/portraits/men/3.jpg",
+    "avatar": "https://randomuser.me/api/portraits/men/3.jpg",
     "username": "MaxJohnson",
     "name": "Max Johnson",
     "rank": "8,500",
@@ -40,7 +40,7 @@
   },
   
  {
-    "logoSrc": "https://randomuser.me/api/portraits/women/4.jpg",
+    "avatar": "https://randomuser.me/api/portraits/women/4.jpg",
     "username": "EmilyBrown",
     "name": "Emily Brown",
     "rank": "15,000",
@@ -53,7 +53,7 @@
   },
   
    {
-    "logoSrc": "https://randomuser.me/api/portraits/men/5.jpg",
+    "avatar": "https://randomuser.me/api/portraits/men/5.jpg",
     "username": "DavidClark",
     "name": "David Clark",
     "rank": "12,500",
@@ -66,7 +66,7 @@
   },
   
  {
-    "logoSrc": "https://randomuser.me/api/portraits/women/6.jpg",
+    "avatar": "https://randomuser.me/api/portraits/women/6.jpg",
     "username": "SarahMiller",
     "name": "Sarah Miller",
     "rank": "20,000",
@@ -79,7 +79,7 @@
   },
   
   {
-    "logoSrc": "https://randomuser.me/api/portraits/men/7.jpg",
+    "avatar": "https://randomuser.me/api/portraits/men/7.jpg",
     "username": "AlexWilson",
     "name": "Alex Wilson",
     "rank": "30,000",
@@ -94,7 +94,7 @@
  ],
  "singleUser":{ 
   "MdHossainAhnafOvi":{
-    "logoSrc": "https://i1.sndcdn.com/avatars-DqyGmSE2L9topKbD-nhmyHQ-t240x240.jpg",
+    "avatar": "https://i1.sndcdn.com/avatars-DqyGmSE2L9topKbD-nhmyHQ-t240x240.jpg",
     "username": "MdHossainAhnafOvi",
     "name": "Md Hossain Ahnaf Ovi",
     "rank": "1,000",
@@ -106,7 +106,7 @@
     "xp": 500
   },
   "MdHasanAhnafOmi": {
-    "logoSrc": "https://t4.ftcdn.net/jpg/05/79/49/39/360_F_579493931_9AJrInxWGhyS4CNfVeVJwsusbN1k3q17.jpg",
+    "avatar": "https://t4.ftcdn.net/jpg/05/79/49/39/360_F_579493931_9AJrInxWGhyS4CNfVeVJwsusbN1k3q17.jpg",
     "username": "MdHasanAhnafOmi",
     "name": "Md Hasan Ahnaf Omi",
 
@@ -119,7 +119,7 @@
     "xp": 100
   },
   "MaxJohnson": {
-    "logoSrc": "https://randomuser.me/api/portraits/men/3.jpg",
+    "avatar": "https://randomuser.me/api/portraits/men/3.jpg",
     "username": "MaxJohnson",
     "name": "Max Johnson",
     "rank": "8,500",
@@ -132,7 +132,7 @@
   },
   
   "EmilyBrown": {
-    "logoSrc": "https://randomuser.me/api/portraits/women/4.jpg",
+    "avatar": "https://randomuser.me/api/portraits/women/4.jpg",
     "username": "EmilyBrown",
     "name": "Emily Brown",
     "rank": "15,000",
@@ -145,7 +145,7 @@
   },
   
   "DavidClark": {
-    "logoSrc": "https://randomuser.me/api/portraits/men/5.jpg",
+    "avatar": "https://randomuser.me/api/portraits/men/5.jpg",
     "username": "DavidClark",
     "name": "David Clark",
     "rank": "12,500",
@@ -158,7 +158,7 @@
   },
   
   "SarahMiller": {
-    "logoSrc": "https://randomuser.me/api/portraits/women/6.jpg",
+    "avatar": "https://randomuser.me/api/portraits/women/6.jpg",
     "username": "SarahMiller",
     "name": "Sarah Miller",
     "rank": "20,000",
@@ -171,7 +171,7 @@
   },
   
   "AlexWilson": {
-    "logoSrc": "https://randomuser.me/api/portraits/men/7.jpg",
+    "avatar": "https://randomuser.me/api/portraits/men/7.jpg",
     "username": "AlexWilson",
     "name": "Alex Wilson",
     "rank": "30,000",

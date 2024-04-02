@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 //components
-import UserLogo from './UserLogo'
+import UserLogo from './UserAvatar'
 //css
 import '../assets/css/users-short-info-wrapper.css'
 function UsersShortInfoWrapper({userList}) {
@@ -11,7 +11,7 @@ function UsersShortInfoWrapper({userList}) {
       return (
         <Link to={`/profile/${user.username}`} key={index}>
           <div className="user-short-info flex-rw">
-              <UserLogo logoSrc={user.logoSrc} status={user.status} level={user.level} />
+              <UserLogo avatar={user.avatar} status={user.status} level={user.level} />
               <div className="info-wrapper flex-cm">
                 <b className="name">{user.name}</b>
                 <small className="username">@{user.username}</small>

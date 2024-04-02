@@ -7,7 +7,7 @@
   .side-navigation-bar > .primary > .user-profile-short-view > .primary {
     gap: 1vw;
   }
-  .side-navigation-bar > .primary > .user-profile-short-view > .primary > .user-logo {
+  .side-navigation-bar > .primary > .user-profile-short-view > .primary > .user-avatar {
     width: 9vw;
     height: 9vw;
     border-width: .5vw ; 

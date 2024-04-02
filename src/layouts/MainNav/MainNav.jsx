@@ -14,36 +14,26 @@ import ChallengesSectionNav from '../../components/ChallengesSectionNav'
 function MainNav() {
   const location = useLocation()
   const {isChallengesSectionNavInvisible} = useSelector(state => state.challengesSectionNavSlice)
-  var ok = true
   const [navbarHalfTransparent,setNavbarHalfTransparent] = useState(false)
  const removeNavbarHalfTransparent = useDebounce(()=> {
     setNavbarHalfTransparent(false)
  }, 1000)
-  
-  const navbarTransparentHandler = ()=> {
-    console.log(ok);
-   if (ok){ 
+
+  const navbarTransparentHandler = useCallback(()=> {
     setNavbarHalfTransparent(true)
     removeNavbarHalfTransparent()
-   }
-  }
- useEffect(()=>{
-   if (location.pathname === '/challenges'){
-   ok = false
-   console.log("aise"); 
-  }
-  },[location])
+  },[setNavbarHalfTransparent,removeNavbarHalfTransparent])
 
 useEffect(()=>{
+  if (location.pathname !== '/challenges')
   window.addEventListener('scroll', navbarTransparentHandler)
  return ()=>{
   window.removeEventListener('scroll',navbarTransparentHandler)
  }
-},[])
+},[location])
  
   return (
    <>
-
 <nav className={`main-nav  ${(location.pathname ==="/" || navbarHalfTransparent) ? 'half-transparent':''} `} >
       <Primary />
 
