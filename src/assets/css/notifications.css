@@ -17,7 +17,7 @@
 }
 
 .notifications-section > nav > .filter-buttons-wrapper > .button{
-  font-size: 5vw;
+  font-size: 4vw;
   padding: 1.5vw 3vw;
   border-radius: 5vw;
   border: none;
@@ -88,6 +88,7 @@
 }
 .notifications-section > nav > .secondary > .see-all-button{
  color: var(--theme-secondary-default); 
+ font-size: 4vw;
 }
 
 .notifications-section > .group{

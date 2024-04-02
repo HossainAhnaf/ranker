@@ -6,6 +6,8 @@ import { Link } from 'react-router-dom';
 import OutlinedCustomField from '../components/OutlinedCustomField';
 //css
 import '../assets/css/signin.css'
+import '../assets/css/tablet/signin.css'
+
 function Signin() {
   return (
     <form className="signin-form">

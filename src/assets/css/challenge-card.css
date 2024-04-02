@@ -18,6 +18,10 @@
     justify-content: start;
     align-items: center;
     flex-wrap: wrap;
+    font-size: 5vw
+  }
+  .challenge-card> .description {
+    font-size: 4vw 
   }
   .challenge-card> .title  > .pin {
     width: 7vw;
@@ -32,6 +36,7 @@
     padding: 1vw 2vw;
     border-radius: 2vw;
     color: white;
+    font-size: 2vw;
   }
   .challenge-card> .title > .difficulty.hard {
     background-color: red;
@@ -53,12 +58,12 @@
 
   }
   .challenge-card> .button-container > .tick {
-    width: 9vw;
-    height: 9vw;
+    width: 8vw;
+    height: 8vw;
   }
   
   .challenge-card> .button-container > .cross {
-    width: 8vw;
-    height: 8vw;
+    width: 7vw;
+    height: 7vw;
   
   }

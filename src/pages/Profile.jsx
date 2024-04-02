@@ -129,7 +129,7 @@ function Profile() {
      {
     isAuthor &&
       <section className="recent-challenges flex-cm">
-        <h3>Recent Challenges</h3>
+        <h3 className='title'>Recent Challenges</h3>
         <ChallengeCardsWrapper data={challengesData} shortDesc={true} />
         <button className="see-all-button button positive">See all</button>
       </section>

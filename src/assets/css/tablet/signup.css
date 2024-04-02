@@ -1,0 +1,18 @@
+@media screen and (min-width: 768px) {
+ 
+.signup-form {
+  top: 20%;
+  left: 15%;
+  width: 70%;
+}
+
+.signup-form>.heading {
+margin-bottom: 2vw;
+font-size: 5vw;
+}
+
+.signup-form > .message {
+margin-bottom: 3vw;
+}
+
+}

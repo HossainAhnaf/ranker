@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import OutlinedCustomField from "../components/OutlinedCustomField"
 //css
 import '../assets/css/signup.css'
+import '../assets/css/tablet/signup.css'
 
 function Signup() {
   return (

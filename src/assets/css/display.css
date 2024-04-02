@@ -12,7 +12,7 @@
 
 .display > .preferences-wrapper > .preference{
   width: calc(100% - 6vw);
-  background-color: var(--container-bg-color-secondary);
+  background-color: var(--container-bg-color);
   justify-content: space-between;
   align-items: center;
   padding: 4vw 3vw;

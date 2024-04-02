@@ -24,20 +24,21 @@
   .signin-form > .outlined-custom-field {
     width: 90%;
     --input-font-size: 4vw;
-    --label-font-size: 4vw;
+    --label-font-size: 3vw;
    }
 
    
   .signin-form > .message {
   width: 90%;
   color: red;
-  font-size: 1.5vw;
-  margin-bottom: 2vh;
+  font-size: 2.5vw;  
+  margin-top: .3vw;
+  margin-bottom: 2vw;
   }
   
   .signin-form > .have-not-account {
   width: 90%;
-  margin-bottom: 2vh;
+  margin-bottom: 2vw;
   font-size: 4vw;
   }
   .signin-form > .have-not-account a{
@@ -53,9 +54,8 @@
     color: white;
     padding: min(2vw,6px);
     border: none;
-    border-radius: min(2vw,5px);
+    border-radius: 1vw;
     font-size: 3vw;
-
     }
     .signin-form :is(button[type="submit"]:hover,button[type="submit"]:active) {
     background-color: orange;
