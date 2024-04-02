@@ -8,7 +8,8 @@ import { useSelector } from 'react-redux';
 //fake
 import {singleUser} from '../data/usersData.json'
 //components
-import UserLogo from '../components/UserAvatar';
+import ProfileEditForm from '../components/ProfileEditForm';
+import UserAvatar from '../components/UserAvatar';
 import ChallengeCardsWrapper from '../components/ChallengeCardsWrapper';
 import Info from '../components/Info';
 import Icon from 'react-inlinesvg';
@@ -22,20 +23,21 @@ function Profile() {
   const {username,name,avatar,rank,status,challenges,passed,failed,level,xp} = useSelector(state=>state.userSlice)
   
   const isAuthor = (username === params.username || params.username === 'me')
+ 
+   const [isProfileEditFormVisible, setIsProfileEditFormVisible] = useState(false)
 
-  const [challengesData, setChallengesData] = useState(dummyRecentChallengesData)
+  const [challengesData, setChallengesData] = useState(dummyRecentChallengesData) 
 
   const [authorUsername,setAuthorUsername] = useState(username)
   const [authorName,setAuthorName] = useState(name)
-  const [authoravatar,setAuthoravatar] = useState(avatar)
+  const [authorAvatar,setAuthorAvatar] = useState(avatar)
   const [authorRank,setAuthorRank] = useState(rank)
   const [authorStatus,setAuthorStatus] = useState(status)
   const [authorChallenges,setAuthorChallenges] = useState(challenges)
   const [authorPassed,setAuthorPassed] = useState(passed)
   const [authorFailed,setAuthorFailed] = useState(failed)
   const [authorLevel,setAuthorLevel] = useState(level)
-  const [authorXp,setAuthorXp] = useState(xp)
-   
+  const [authorXp,setAuthorXp] = useState(xp)   
   const [progressParcentage, setProgressParcentage] = useState(0)
 
  
@@ -61,7 +63,7 @@ function Profile() {
      const {username,name,avatar,rank,status,challenges,passed,failed,level,xp} = singleUser[params.username]
      setAuthorUsername(username)
      setAuthorName(name)
-     setAuthoravatar(avatar)
+     setAuthorAvatar(avatar)
      setAuthorRank(rank)
      setAuthorStatus(status)
      setAuthorChallenges(challenges)
@@ -73,7 +75,7 @@ function Profile() {
     } else{
       setAuthorUsername(username)
       setAuthorName(name)
-      setAuthoravatar(avatar)
+      setAuthorAvatar(avatar)
       setAuthorRank(rank)
       setAuthorStatus(status)
       setAuthorChallenges(challenges)
@@ -100,7 +102,7 @@ function Profile() {
          <div className="top-items-wrapper flex-rw"> 
           <p className='username'>@{authorUsername}</p>
           {isAuthor &&
-          <button className="profile-edit-button flex-rw center button">
+          <button className="profile-edit-button flex-rw center button" onClick={() => setIsProfileEditFormVisible(true)}>
             <div className="svgCont flex-rw center">
             <Icon src={pencilSvg} />   
             </div> 
@@ -108,7 +110,7 @@ function Profile() {
           </button>
            }
           </div>
-          <UserLogo avatar={authoravatar} status={authorStatus} level={authorLevel} />
+          <UserAvatar avatar={authorAvatar} status={authorStatus} level={authorLevel} />
           <h3 className="name">{authorName}</h3>
         </div>
         <Info name='Rank' value={authorRank} />
@@ -125,7 +127,10 @@ function Profile() {
         <Info name='Level' value={`${authorLevel} / 10`} />
         <Info name='Xp' value={`${authorXp} / 1000`} />
       </section>
-
+     {
+      isProfileEditFormVisible &&
+      <ProfileEditForm />
+     }
      {
     isAuthor &&
       <section className="recent-challenges flex-cm">

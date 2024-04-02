@@ -6,7 +6,7 @@ import { showSideNavigationBar } from '../../store/slices/sideNavigationBarSlice
 //pages
 import Notifications from '../../pages/Notifications'
 //components
-import UserLogo from '../../components/UserAvatar'
+import UserAvatar from '../../components/UserAvatar'
 import Icon from 'react-inlinesvg'
 //svg
 import notificationSvg from '../../assets/svg/notification.svg'
@@ -32,7 +32,7 @@ function Secondary() {
           <small className="badge">4</small>
         </button>
         <button className="profile-button" onClick={()=>dispatch(showSideNavigationBar())}>
-        <UserLogo avatar={avatar} status={status} level={level}/>
+        <UserAvatar avatar={avatar} status={status} level={level}/>
        </button>
         
       </div>
