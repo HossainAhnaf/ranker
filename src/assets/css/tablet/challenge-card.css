@@ -1,0 +1,44 @@
+@media screen and (min-width: 768px) {
+  .challenge-card{
+    padding: 2vw;
+    border-radius: 2vw;
+  }
+  .challenge-card> .title {
+    margin-bottom: 1vh;
+    display: flex;
+    flex-direction: row;
+    gap: .5vw;
+    justify-content: start;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 2.5vw
+  }
+  .challenge-card> .description {
+    font-size: 2vw 
+  }
+  .challenge-card> .title  > .pin {
+    width: 4vw;
+    height: 4vw;
+  }
+  .challenge-card> .title > .difficulty {
+    padding: .5vw 1.5vw;
+    font-size: 1.5vw;
+  }
+
+  .challenge-card> .button-container {
+    gap: 1vw;
+    margin-top: 1vh;
+
+  }
+  .challenge-card> .button-container > .tick {
+    width: 3.5vw;
+    height: 3.5vw;
+  }
+  
+  .challenge-card> .button-container > .cross {
+    width: 3vw;
+    height: 3vw;
+  
+  }
+
+}

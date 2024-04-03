@@ -8,6 +8,8 @@ import tickSvg from '../assets/svg/tick.svg'
 import closeSvg from '../assets/svg/close.svg'
 //css
 import '../assets/css/challenge-card.css'
+import '../assets/css/tablet/challenge-card.css'
+
 function ChallengeCard({title,description, difficulty,pinned,id}) {
     return (
         <div className="challenge-card flex-cm left" datapinned={pinned.toString()}>
