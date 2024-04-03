@@ -9,6 +9,8 @@ import Icon from 'react-inlinesvg'
 import closeSvg from '../../assets/svg/close(1).svg'
 //css
 import '../../assets/css/profile-edit-form.css'
+import '../../assets/css/tablet/profile-edit-form.css'
+
 function ProfileEditForm({setIsProfileEditFormVisible}) {
  
   const ProfileEditFormRef = useRef(null) 
@@ -39,7 +41,7 @@ function ProfileEditForm({setIsProfileEditFormVisible}) {
   }, [isNameFormVisible, isUsernameFormVisible])
   
   useEffect(() => {
-      ProfileEditFormRef.current.focus()
+      // ProfileEditFormRef.current.focus()
       document.body.style.overflow = 'hidden'
       return ()=>{
     document.body.style.overflow = ''

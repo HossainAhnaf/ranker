@@ -1,0 +1,71 @@
+@media screen and (min-width: 768px) {
+.profile-edit-form{
+  width: calc(70% - 8vw);
+  height: calc(50% - 4vw);
+  top: 20%;
+  left: 15%;
+  padding: 2vw 4vw;
+}
+.profile-edit-form > .top-nav > .back-button::after{
+  border-width: .5vw .5vw 0 0;
+  font-size: 2vw;
+} 
+.profile-edit-form > .top-nav > .close-button{
+  width: 4vw;
+  height: 4vw;
+}
+
+.profile-edit-form > .top-nav > .close-button > svg{
+  width: 100%;
+  height: 100%;
+}
+/* primary */
+.profile-edit-form > .primary{
+  gap: 2vw;
+} 
+.profile-edit-form > .primary > .profile-view{
+  margin: 5% 0 5% 0;
+  gap: 1vw;
+}
+.profile-edit-form > .primary > .profile-view > .user-avatar-label > .user-avatar{
+  width: 10vw;
+  height: 10vw;
+ --level-badge-font-size: 1.5vw;
+}
+
+.profile-edit-form > .primary > .profile-view > .name{
+  font-size:3vw;
+}
+.profile-edit-form > .primary > .edit-buttons-wrapper{
+  border-radius: 2vw;
+  gap: .2vw;
+}
+.profile-edit-form > .primary > .edit-buttons-wrapper > .button{
+  width: 100%;
+  padding:2vw;
+ font-size: 2vw;
+}
+/*  form */
+.profile-edit-form > .form{
+  height: 85%;
+}
+.profile-edit-form > .form > .title{
+  font-size: 3vw;
+  margin-bottom: 3vw;
+}
+.profile-edit-form > .form > .outlined-custom-field{
+  --input-font-size: 2vw;
+  --label-font-size: 2vw;
+}
+
+.profile-edit-form > .form > .message{
+  margin-top: 1vw;
+  font-size: 1.5vw;
+}
+.profile-edit-form > .form > .submit-button{
+  padding: 1vw;
+  font-size: 2vw;
+  border-radius: 1vw;
+}
+
+}

@@ -1,37 +1,44 @@
-/* info sections */
-.info-section {
-  margin-top: calc(var(--nav-vertical-padding) + var(--nav-height) + 5vh);
-  margin-bottom: 20vw;
+.profile{
+  margin-top: calc(var(--nav-vertical-padding) + var(--nav-height) + 3vw);
+  margin-bottom: 10vw;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;    
+  gap: 10vw;
+}
+/* info section */
+.profile > .info-section {
   gap: 3vw;
   background-color: var(--container-bg-color);
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
   border-radius: 5vw;
   width: 85%;
-  margin-left: 3.5vw;
   padding: 4vw;
   padding-top: 0;
 }
 
 
-.info-section>hr {
+.profile > .info-section>hr {
   width: 100%
 }
-.info-section>.primary {
-  margin: 2vw 5vw;
+.profile > .info-section>.primary {
+  margin: 2vw 0;
   width: 100%;
   gap: 2vw;
 }
-.info-section>.primary > .top-items-wrapper{
+.profile > .info-section>.primary > .top-items-wrapper{
  justify-content: space-between;
  align-items: center;
  width: 100%;
 }
-.info-section>.primary > .top-items-wrapper > .username{
+.profile > .info-section>.primary > .top-items-wrapper > .username{
   font-size: 4vw;
   color: var(--paragraph-color-secondary);
 }
 
-.info-section>.primary > .top-items-wrapper > .profile-edit-button{
+.profile > .info-section>.primary > .top-items-wrapper > .profile-edit-button{
   font-size: 4vw;
   font-weight: bold;
   border: none;
@@ -40,12 +47,12 @@
   gap: .5vw;
 }
 
-.info-section>.primary > .top-items-wrapper > .profile-edit-button > .svgCont{
+.profile > .info-section>.primary > .top-items-wrapper > .profile-edit-button > .svgCont{
   width: 4vw;
   height: 4vw;
 }
 
-.info-section>.primary>.user-avatar {
+.profile > .info-section>.primary>.user-avatar {
   width: 20vw;
   height: 20vw;
   border-width: .7vw;
@@ -53,81 +60,76 @@
 
 }
 
-.info-section>.primary .name{
+.profile > .info-section>.primary .name{
   font-size: 5vw;
   background-color: var(--info-bg-color);
   padding: 1vw 4vw ;
   border-radius: 3vw
 }
 
-.info-section> div[role="progressbar"] {
+.profile > .info-section> div[role="progressbar"] {
   --size: 60vw;
   --fg: var(--theme-secondary-default);
   --bg: var(--info-bg-color);
   --inner-color:var(--container-bg-color);
  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
 }
-.info-section >.rounded-progress-bar  > .number h3 {
+.profile > .info-section >.rounded-progress-bar  > .number h3 {
   font-weight: 200;
   font-size: 9vw;
 }
 
-.info-section >.rounded-progress-bar > .number h3 span {
+.profile > .info-section >.rounded-progress-bar > .number h3 span {
   font-size: 6vw;
 }
 
-.info-section > .info {
+.profile > .info-section > .info {
   width: 95%;
   justify-content: space-between;
   border-radius: 3vw;
   overflow: hidden;
- font-size: small;
  background-color: var(--info-bg-color);
  font-size: 4vw;
 }
-.info-section > .info > .name {
+.profile > .info-section > .info > .name {
   padding: 2vw 4vw;
   width: 44%
 }
-.info-section > .info > .value {
+.profile > .info-section > .info > .value {
   padding: 2vw 4vw;
   width: 56%
 
 }
 
 /*recent challenges*/
-.recent-challenges { 
-  margin-bottom: 3vw;
+.profile >.recent-challenges { 
   gap: 1vw;
   background-color: var(--container-bg-color);
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
   border-radius: 5vw;
   width: 85%;
-  margin-left: 3.5vw;
   padding: 4vw;
 }
 
-.recent-challenges > .title {
+.profile > .recent-challenges > .title {
   font-size: 4vw;
   color: var(--paragraph-color-secondary);
 }
 
-.recent-challenges > .challenge-cards-wrapper {
+.profile > .recent-challenges > .challenge-cards-wrapper {
   width: 100%;
   height: 90%;
   gap: 4vw;
   align-items: center;
   justify-content: top;
   padding: 1vw 0;
-  border-radius: 3vw;
   margin-top: 2vw;
 
 }
 
-.recent-challenges > .see-all-button {
+.profile > .recent-challenges > .see-all-button {
   border: none;
   font-weight: bold;
-  font-size: normal;
   padding: 1.5vw 3vw;
   align-self: center;
   border-radius: 4vw;

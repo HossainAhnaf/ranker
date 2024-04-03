@@ -17,6 +17,7 @@ import Icon from 'react-inlinesvg';
 import pencilSvg from '../assets/svg/pencil.svg';
 //css
 import '../assets/css/profile.css';
+import '../assets/css/tablet/profile.css';
 
 function Profile() {
    const params = useParams()
@@ -96,7 +97,7 @@ function Profile() {
 
  
   return (
-    <>
+    <div className="profile">
       <section className="info-section flex-cm center">
         <div className="primary flex-cm center">
          <div className="top-items-wrapper flex-rw"> 
@@ -139,7 +140,7 @@ function Profile() {
         <button className="see-all-button button positive">See all</button>
       </section>
      }
-    </>
+    </div>
   )
 }
 
