@@ -3,7 +3,7 @@ import React from 'react'
 //components
 import UserAvatar from '../UserAvatar'
 
-function Primary({name,avatar,level,status}) {
+function Primary({name,avatar,level,status,setIsNameFormVisible,setIsUsernameFormVisible}) {
   return (
     <div className="primary flex-cm">
     <div className="profile-view flex-cm center">
@@ -11,11 +11,11 @@ function Primary({name,avatar,level,status}) {
        <b className="name">{name}</b>
     </div> 
     <div className="edit-buttons-wrapper flex-cm">
-      <button className="button flex-rw">
+      <button className="button flex-rw" onClick={()=>setIsNameFormVisible(true)}>
         <p className="name">Name</p>
         <span className="chevron right"></span>
       </button>
-      <button className="button flex-rw">
+      <button className="button flex-rw" onClick={()=>setIsUsernameFormVisible(true)}>
         <p className="name">Username</p>
         <span className="chevron right"></span>
       </button>
