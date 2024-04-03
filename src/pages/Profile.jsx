@@ -129,7 +129,7 @@ function Profile() {
       </section>
      {
       isProfileEditFormVisible &&
-      <ProfileEditForm />
+      <ProfileEditForm  setIsProfileEditFormVisible={setIsProfileEditFormVisible}/>
      }
      {
     isAuthor &&

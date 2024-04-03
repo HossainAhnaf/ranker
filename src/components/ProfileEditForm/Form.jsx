@@ -10,7 +10,7 @@ function Form({title,value}) {
       <OutlinedCustomField placeholder={title} >
         <input type="text" placeholder=" "  required={true}  onChange={({target})=>setCurrentValue(target.value)} value={currentValue}/>
       </OutlinedCustomField> 
-      <small className="message">&nbsp; loool</small>
+      <small className="message">&nbsp;</small>
       <button className="submit-button button positive">Save</button>
     </div>
   )

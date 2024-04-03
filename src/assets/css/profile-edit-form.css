@@ -20,7 +20,7 @@
 .profile-edit-form > .top-nav > .back-button::after{
   border-width: 1vw 1vw 0 0;
   color: var(--theme-secondary-default);
-  font-size: 4vw;
+  font-size: 3vw;
 } 
 
 
@@ -50,11 +50,12 @@
   margin: 10% 0 5% 0;
   gap: 2vw;
 }
-.profile-edit-form > .primary > .profile-view > .user-avatar{
+.profile-edit-form > .primary > .profile-view > .user-avatar-label > .user-avatar{
   width: 17vw;
   height: 17vw;
   --level-badge-font-size: 2.5vw;
 }
+
 .profile-edit-form > .primary > .profile-view > .name{
   font-size: 6vw;
 }
@@ -93,6 +94,7 @@
   --input-font-size: 5vw;
   --label-font-size: 5vw;
 }
+
 .profile-edit-form > .form > .message{
   width: 100%;
   margin-top: 2vw;
