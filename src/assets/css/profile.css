@@ -10,10 +10,9 @@
 }
 /* info section */
 .profile > .info-section {
-  gap: 3vw;
   background-color: var(--container-bg-color);
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
-  border-radius: 5vw;
+  border-radius: 2vw;
   width: 85%;
   padding: 4vw;
   padding-top: 0;
@@ -22,7 +21,7 @@
 
 
 .profile > .info-section>hr {
-  width: 100%
+  width: 100%;
 }
 /* primary */
 .profile > .info-section>.primary {
@@ -42,7 +41,7 @@
   width: 25vw;
   height: 25vw;
   border-width: .7vw;
-  --level-badge-font-size:3vw;
+  --level-badge-font-size:4vw;
 }
 .profile > .info-section>.primary > .user-primary-info-wrapper > .text-side {
   gap: 1vw;
@@ -91,7 +90,7 @@
   border: none;
   gap: .5vw;
   width: 100%;
-  padding: 2vw 2vw;
+  padding: 2vw;
   border-radius: 2vw;
 }
 
@@ -100,14 +99,13 @@
   height: 4vw;
 }
 .profile > .info-section>.primary > .profile-edit-button  .fill{
-  fill: var(--icon-color);
+  fill: white;
 } 
  
 /* challenges activity */
 
 .profile > .info-section > .challenges-activity {
   width: 100%;
-  gap: 1vw;
   justify-content: center;
   align-items: flex-start;
   gap: 1vw;
@@ -119,59 +117,48 @@
 
 } 
 .profile > .info-section > .challenges-activity > .info{
-  width: 25%;
+  width: 22%;
   justify-content: space-between;
- /* background-color: var(--info-bg-color); */
  font-size: 4vw;
- padding: 2vw 0vw;
+ padding: 2vw 0;
  color: var(--paragraph-color-secondary);
 }
-.profile > .info-section > .challenges-activity > .info:first-of-type{
- border-radius: 4vw 4vw 0 0;
+
+ /* author progress */
+.profile > .info-section > .author-progress {
+  width: 100%;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2vw;
 }
-.profile > .info-section > .challenges-activity > .info:last-of-type{
-  border-radius: 0 0 4vw 4vw ;
- }
-.profile > .info-section> div[role="progressbar"] {
+.profile > .info-section > .author-progress > .title{
+  font-size: 5vw;
+  margin-bottom: 3vw;
+}
+.profile > .info-section > .author-progress > div[role="progressbar"] {
   --size: 60vw;
   --fg: var(--theme-secondary-default);
   --bg: var(--info-bg-color);
   --inner-color:var(--container-bg-color);
  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+ margin:0 auto;
 }
-.profile > .info-section >.rounded-progress-bar  > .number h3 {
-  font-weight: 200;
-  font-size: 9vw;
-}
-
-.profile > .info-section >.rounded-progress-bar > .number h3 span {
-  font-size: 6vw;
-}
-
-.profile > .info-section > .info {
-  width: 95%;
+.profile > .info-section > .author-progress > .info{
+  min-width: max-content;
+  width: 30%;
   justify-content: space-between;
-  border-radius: 3vw;
-  overflow: hidden;
- background-color: var(--info-bg-color);
  font-size: 4vw;
+ padding: 1vw 0vw;
+ color: var(--paragraph-color-secondary);
 }
-.profile > .info-section > .info > .name {
-  padding: 2vw 4vw;
-  width: 44%
-}
-.profile > .info-section > .info > .value {
-  padding: 2vw 4vw;
-  width: 56%
 
-}
 
 /*recent challenges*/
 .profile >.recent-challenges { 
   gap: 1vw;
   background-color: var(--container-bg-color);
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
-  border-radius: 5vw;
+  border-radius: 2vw;
   width: 85%;
   padding: 4vw;
 }

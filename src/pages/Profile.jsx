@@ -18,7 +18,7 @@ import pencilSvg from '../assets/svg/pencil.svg';
 //css
 import '../assets/css/profile.css';
 import '../assets/css/mobile-large/profile.css';
-import '../assets/css/tablet/profile.css';
+// import '../assets/css/tablet/profile.css';
 
 function Profile() {
   const params = useParams()
@@ -130,14 +130,14 @@ function Profile() {
          <Info name='Passed' value={authorPassed} />
          <Info name='Failed' value={authorFailed} />
          </div>
-        <br />
         <hr />
-        <br />
-
+      <div className="author-progress flex-cm">
+        <h3 className="title">Author Progress</h3>
         <div role='progressbar' style={{ "--value": progressParcentage }}></div>
-
         <Info name='Level' value={`${authorLevel} / 10`} />
         <Info name='Xp' value={`${authorXp} / 1000`} />
+      </div>
+       
       </section>
       {
         isProfileEditFormVisible &&
