@@ -21,6 +21,7 @@ import closeSvg from '../assets/svg/close(1).svg'
 
 //css
 import '../assets/css/side-navigation-bar.css'
+import '../assets/css/mobile-large/side-navigation-bar.css'
 
 function SideNavigationBar() {
   

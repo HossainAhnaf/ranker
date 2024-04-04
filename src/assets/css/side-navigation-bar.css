@@ -30,11 +30,9 @@
   
  
   .side-navigation-bar > .primary  > .hide-button {
-    padding: .5vw 1vw;
-    border-radius: 2vw;
     border: none;
-    width: 6vw;
-    height: 6vw;
+    width: 4vw;
+    height: 4vw;
     background-color: transparent;
   }
   
@@ -105,4 +103,5 @@
     font-size: 2vw;
     top: 0;
     right: 0;
+    padding: .5vw 1vw;
   }

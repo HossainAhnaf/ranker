@@ -1,14 +1,15 @@
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 425px) {
 .profile-edit-form{
-  width: calc(70% - 8vw);
-  height: calc(50% - 4vw);
+  width: calc(70% - 30px);
+  height: calc(50% - 16px);
   top: 20%;
   left: 15%;
-  padding: 2vw 4vw;
+  padding: 8px 15px;
 }
+
 .profile-edit-form > .top-nav > .back-button::after{
-  border-width: .5vw .5vw 0 0;
-  font-size: 2vw;
+  border-width: 2px 2px 0 0;
+  font-size: 8px;
 } 
 .profile-edit-form > .top-nav > .close-button{
   width: 4vw;

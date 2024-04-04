@@ -7,6 +7,8 @@ import UserAvatar from "../components/UserAvatar"
 import Info from "../components/Info"  
 //css
 import '../assets/css/user-profile-short-view.css'
+import '../assets/css/mobile-large/user-profile-short-view.css'
+
 function UserProfileShortView() {
 
   const {name,avatar,status,level,xp} = useSelector(state=>state.userSlice)

@@ -1,0 +1,40 @@
+@media screen  and (min-width: 375px) { 
+
+.side-navigation-bar > .primary > .user-profile-short-view {
+  width: 150px;
+    gap: 4px;
+   padding: 4px 0;
+  }
+  .side-navigation-bar > .primary > .user-profile-short-view > .primary {
+    gap: 4px;
+  }
+  .side-navigation-bar > .primary > .user-profile-short-view > .primary > .user-avatar {
+    width: 35px;
+    height: 35px;
+    border-width:1px; 
+    --level-badge-font-size: 5px;
+  }
+  .side-navigation-bar > .primary > .user-profile-short-view > .primary > .username-wrapper > .username {
+    font-size: 11px;
+  }
+  .side-navigation-bar > .primary > .user-profile-short-view > .primary > .username-wrapper> .status {
+   font-size: 10px;
+  }
+  .side-navigation-bar > .primary > .user-profile-short-view > .secondary {
+    height: 4px;
+  }
+
+  .side-navigation-bar > .primary > .user-profile-short-view >  .short-info{
+     font-size: 12px;
+     padding: 4px 8px;
+     gap: 4px;
+  }
+  .side-navigation-bar > .primary > .user-profile-short-view >  .tooltip-bottom::after{
+    margin-left: -10px;
+    border-width: 10px;
+  }
+  .side-navigation-bar > .primary > .user-profile-short-view >  .short-info > .info{
+   gap: 4px; 
+  }
+
+}

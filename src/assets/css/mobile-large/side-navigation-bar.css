@@ -1,0 +1,45 @@
+@media screen and (min-width: 375px) {
+.side-navigation-bar {
+    width: 206.25px;
+  }
+  .side-navigation-bar > .primary {
+    width: calc(100% - 16px);
+    padding: 0 8px;
+  }
+  .side-navigation-bar > .primary  > .hide-button {
+    width: 15px;
+    height: 15px;
+  }
+  .side-navigation-bar > .navigation-button-wrapper {
+    margin-top: 4px;
+  }
+  .side-navigation-bar > .navigation-button-wrapper  button {
+    padding: 8px;
+    gap: 8px;
+  }
+   .side-navigation-bar > .navigation-button-wrapper > a > button > .name {
+    font-size: 15px; 
+  }
+  .side-navigation-bar > .navigation-button-wrapper  button > .svgCont {
+    width: 23px;
+    height: 23px;
+  }
+  .side-navigation-bar>.navigation-button-wrapper>a>button.profile-button>.svgCont {
+    width: 15px;
+    height: 15px;
+  }
+  .side-navigation-bar>.navigation-button-wrapper>a>button.create-new-challenge-button>.svgCont {
+    width: 19px;
+    height: 19px;
+  }
+  
+    .side-navigation-bar>.navigation-button-wrapper>a>.notifications-button > .svgCont {
+    width: 27px;
+    height: 27px;
+  }
+  .side-navigation-bar>.navigation-button-wrapper>a>.notifications-button > .svgCont > .badge {
+    font-size: 8px;
+    padding: .5px 4px;
+  }
+
+}

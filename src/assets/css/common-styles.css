@@ -277,7 +277,6 @@
     background-color: red;
     color: white;
     border-radius: 100%;
-    padding: .2vw 1vw;
     font-weight: 700;
     position: absolute;
     border: min(3px, 1vw) solid white;

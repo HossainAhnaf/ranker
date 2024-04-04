@@ -1,9 +1,6 @@
-
-
 .users-short-info-wrapper {
     gap: 5vw;
-} 
-
+}
 .users-short-info-wrapper > a{
     color: inherit;
     text-decoration: none;
