@@ -1,14 +1,19 @@
+.profile-edit-form-wrapper{
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1002;
+
+}
 .profile-edit-form{
-  width: calc(90% - 8vw);
+  width:calc(90% - 8vw) ;
   height: calc(90% - 10vw);
-  position: absolute;
-  top: 5%;
-  left: 5%;
   box-shadow: 0 0 0 100vh rgba(0, 0, 0, 0.5);
   background-color: var(--container-bg-color);
   padding: 5vw 4vw;
   border-radius: 3vw;
-  z-index: 1000;
   overflow-y: scroll;
 }
 .profile-edit-form > .top-nav{

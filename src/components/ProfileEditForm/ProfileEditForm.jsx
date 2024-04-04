@@ -48,6 +48,7 @@ function ProfileEditForm({setIsProfileEditFormVisible}) {
     }  
   },[ProfileEditFormRef])
   return (
+    <div className="profile-edit-form-wrapper flex-rw center">
     <div className="profile-edit-form " ref={ProfileEditFormRef} tabIndex={0} onBlur={profileEditFormBlurHandler}>
       <div className="top-nav flex-rw">
         {isBackButtonVisible && <div className="back-button button chevron left" onClick={invisibleAllForms} ></div>}
@@ -59,6 +60,7 @@ function ProfileEditForm({setIsProfileEditFormVisible}) {
         isNameFormVisible ? <Form title="Name" value={name} /> : isUsernameFormVisible ? <Form  title="Username" value={username}/>
           : <Primary  name={name} avatar={avatar} level={level} status={status} setIsNameFormVisible={setIsNameFormVisible} setIsUsernameFormVisible={setIsUsernameFormVisible} />
       }
+    </div>
     </div>
   )
 }
