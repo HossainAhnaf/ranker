@@ -132,7 +132,7 @@ function Profile() {
          </div>
         <hr />
       <div className="author-progress flex-cm">
-        <h3 className="title">Author Progress</h3>
+        <h3 className="title">Progress</h3>
         <div role='progressbar' style={{ "--value": progressParcentage }}></div>
         <Info name='Level' value={`${authorLevel} / 10`} />
         <Info name='Xp' value={`${authorXp} / 1000`} />

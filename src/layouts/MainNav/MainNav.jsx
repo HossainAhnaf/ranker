@@ -9,7 +9,8 @@ import Secondary from './Secondary'
 import ChallengesSectionNav from '../../components/ChallengesSectionNav'
 //css
 import '../../assets/css/main-nav.css'
-import '../../assets/css/tablet/main-nav.css'
+import '../../assets/css/mobile-large/main-nav.css'
+// import '../../assets/css/tablet/main-nav.css'
 
 function MainNav() {
   const location = useLocation()

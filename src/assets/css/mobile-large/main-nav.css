@@ -1,0 +1,77 @@
+@media screen and (min-width: 375px) {
+:root {
+    --nav-height: 20px;
+    --nav-vertical-padding: 38px;
+  }
+ 
+  .main-nav {
+    padding-left: 2vw;
+    padding-right: 2vw;
+    width: 96vw;
+  }
+
+  .main-nav > .signin-button {
+    border-radius: 8px;
+    padding: 6px 8px;
+    font-size: 14px;
+  }
+   .main-nav > .primary  {
+    gap: 8px;
+   }
+
+  .main-nav > .primary > .site-brand > .svgCont {
+    width: 35px;
+    height: 35px;
+  }
+  .main-nav > .primary > .site-brand > .app-name{
+   font-size: 22px;
+  }
+  .main-nav > .primary > .back-button {
+    width: 25px;
+    height: 25px;
+   }   
+  .main-nav > .primary > .nav-title{
+    font-size: 19px;
+  }
+  .main-nav > .secondary {
+    gap: 8px;
+  }
+  .main-nav > .secondary > .notification-button {
+    width: 34px;
+    height: 34px;
+  }
+  .main-nav > .secondary > .notification-button > .badge {
+    font-size: 10px;
+    padding: .5px 4px;
+  }
+  .main-nav > .secondary > .profile-button {
+    width: 34px;
+    height: 34px;
+  }
+
+  .main-nav > .secondary > .profile-button .user-avatar {
+   border-width: 1px;
+   --level-badge-font-size: 5px;
+  }
+  .main-nav > .notifications-section {
+    width: 80%;
+    height: 80vh;
+    overflow-y: scroll;
+    position: fixed;
+    top: calc(var(--nav-height) + var(--nav-vertical-padding));
+    left: 15%;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
+    background-color: var(--layout-bg-color);
+    border-radius: 0 0 4vw 4vw;
+  }
+  
+/* challenges section nav */
+.main-nav > .challenges-section-nav {
+  position: fixed;
+  top: calc(var(--nav-height) + var(--nav-vertical-padding) - 2vw);
+  left: 0;
+  background-color: var(--layout-bg-color);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+}
