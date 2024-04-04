@@ -1,3 +1,4 @@
+@media screen and (min-width: 375px) {
 .profile{
   margin-top: calc(var(--nav-vertical-padding) + var(--nav-height) + 3vw);
   margin-bottom: 10vw;
@@ -17,18 +18,16 @@
   width: 85%;
   padding: 4vw;
   padding-top: 0;
-  gap: 6vw;
 }
 
 
 .profile > .info-section>hr {
   width: 100%
 }
-/* primary */
 .profile > .info-section>.primary {
   margin: 2vw 0;
   width: 100%;
-  gap: 3vw;
+  gap: 2vw;
 }
 .profile > .info-section>.primary > .user-primary-info-wrapper{
   gap: 2vw;
@@ -38,9 +37,12 @@
   justify-content: flex-start;
   align-items: center;
 }
+.profile > .info-section>.primary > .user-primary-info-wrapper > .image-side {
+ 
+}
 .profile > .info-section>.primary > .user-primary-info-wrapper > .image-side > .user-avatar {
-  width: 25vw;
-  height: 25vw;
+  width: 20vw;
+  height: 20vw;
   border-width: .7vw;
   --level-badge-font-size:3vw;
 }
@@ -50,88 +52,41 @@
   justify-content: center;
 }
 .profile > .info-section>.primary > .user-primary-info-wrapper > .text-side > .name{
-  font-size: 4vw;
+  font-size: 5vw;
   font-weight: bold;
 }
 .profile > .info-section>.primary > .user-primary-info-wrapper > .text-side > .username{
   font-size: 3vw;
   color: var(--paragraph-color-secondary);
 }
-
-.profile > .info-section>.primary > .user-primary-info-wrapper > .text-side > .status{
-  font-size: 3vw;
+ 
+ 
+.profile > .info-section>.primary > .top-items-wrapper{
+ justify-content: space-between;
+ align-items: center;
+ width: 100%;
+}
+.profile > .info-section>.primary > .top-items-wrapper > .username{
+  font-size: 4vw;
   color: var(--paragraph-color-secondary);
 }
-.profile > .info-section>.primary > .user-primary-info-wrapper > .text-side > .status.sigma{
-  color: var(--sigma-color);
-}
-.profile > .info-section>.primary > .user-primary-info-wrapper > .text-side > .status.alpha{
-  color: var(--alpha-color);
-}
-.profile > .info-section>.primary > .user-primary-info-wrapper > .text-side > .status.beta{
-  color: var(--beta-color);
-}
-.profile > .info-section>.primary > .user-primary-info-wrapper > .text-side > .status.gamma{
-  color: var(--gamma-color);
-}
-.profile > .info-section>.primary > .user-primary-info-wrapper > .text-side > .status.delta{
-  color: var(--delta-color);
-}
-.profile > .info-section>.primary > .user-primary-info-wrapper > .text-side > .status.omega{
-  color: var(--omega-color);
-}
-.profile > .info-section>.primary > .user-primary-info-wrapper > .text-side > .rank{
-  font-size: 4vw;
-  margin-top: 2vw;
-}
 
-.profile > .info-section>.primary > .profile-edit-button{
+.profile > .info-section>.primary > .top-items-wrapper > .profile-edit-button{
   font-size: 4vw;
   font-weight: bold;
   border: none;
+  background-color: transparent;
+  color: var(--theme-secondary-default);
   gap: .5vw;
-  width: 100%;
-  padding: 2vw 2vw;
-  border-radius: 2vw;
 }
 
-.profile > .info-section>.primary > .profile-edit-button > .svgCont{
+.profile > .info-section>.primary > .top-items-wrapper > .profile-edit-button > .svgCont{
   width: 4vw;
   height: 4vw;
 }
-.profile > .info-section>.primary > .profile-edit-button  .fill{
-  fill: var(--icon-color);
-} 
- 
-/* challenges activity */
 
-.profile > .info-section > .challenges-activity {
-  width: 100%;
-  gap: 1vw;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 1vw;
-} 
-.profile > .info-section > .challenges-activity > .title{
-  font-size: 5vw;
-  color: var(--paragraph-color-primary);
-  margin-bottom: 2vw;
 
-} 
-.profile > .info-section > .challenges-activity > .info{
-  width: 25%;
-  justify-content: space-between;
- /* background-color: var(--info-bg-color); */
- font-size: 4vw;
- padding: 2vw 0vw;
- color: var(--paragraph-color-secondary);
-}
-.profile > .info-section > .challenges-activity > .info:first-of-type{
- border-radius: 4vw 4vw 0 0;
-}
-.profile > .info-section > .challenges-activity > .info:last-of-type{
-  border-radius: 0 0 4vw 4vw ;
- }
+
 .profile > .info-section> div[role="progressbar"] {
   --size: 60vw;
   --fg: var(--theme-secondary-default);
@@ -201,4 +156,6 @@
   margin-top: 2vw;
   width: 40%;
   font-size: 4vw
+}
+
 }
