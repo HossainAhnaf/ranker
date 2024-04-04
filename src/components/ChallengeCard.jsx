@@ -8,7 +8,7 @@ import tickSvg from '../assets/svg/tick.svg'
 import closeSvg from '../assets/svg/close.svg'
 //css
 import '../assets/css/challenge-card.css'
-import '../assets/css/tablet/challenge-card.css'
+import '../assets/css/mobile-large/challenge-card.css'
 
 function ChallengeCard({title,description, difficulty,pinned,id}) {
     return (
