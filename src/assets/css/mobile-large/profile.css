@@ -9,12 +9,13 @@
     justify-content: center;    
     gap: 40px;
   }
+  .profile > section{
+    border-radius: 10px;
+    padding: 17px;
+  }
   /* info section */
   .profile > .info-section {
-    padding: 17px;
-    padding-top: 0;
     gap: 22px;
-    border-radius: 10px;
   }
     /* primary */
   .profile > .info-section>.primary {
@@ -94,39 +95,20 @@
   
   /*recent challenges*/
   .profile >.recent-challenges { 
-    gap: 1vw;
-    background-color: var(--container-bg-color);
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
-    border-radius: 5vw;
-    width: 85%;
-    padding: 4vw;
+    gap: 4px;
   }
-  
-  .profile > .recent-challenges > .title {
-    font-size: 4vw;
-    color: var(--paragraph-color-secondary);
+  .profile > .recent-challenges > .top-nav > .title {
+    font-size: 15px;
   }
-  
+  .profile > .recent-challenges >  .top-nav >.see-all-button {
+    font-size: 15px;
+  }
+
   .profile > .recent-challenges > .challenge-cards-wrapper {
-    width: 100%;
-    height: 90%;
-    gap: 4vw;
-    align-items: center;
-    justify-content: top;
-    padding: 1vw 0;
-    margin-top: 2vw;
-  
+    gap: 18px;
+    padding: 4px 0;
+    margin: 8px 0;
   }
   
-  .profile > .recent-challenges > .see-all-button {
-    border: none;
-    font-weight: bold;
-    padding: 1.5vw 3vw;
-    align-self: center;
-    border-radius: 4vw;
-    margin-top: 2vw;
-    width: 40%;
-    font-size: 4vw
-  }
 
 }

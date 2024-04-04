@@ -5,60 +5,35 @@
     border-radius: 10px;
   }
   .challenge-card> .title {
-    margin-bottom: 7px;
-    display: flex;
-    flex-direction: row;
-    gap: 2vw;
-    justify-content: start;
-    align-items: center;
-    flex-wrap: wrap;
-    font-size: 5vw
+    margin-bottom: 6px;
+    gap: 8px;
+    font-size: 18px
   }
   .challenge-card> .description {
-    font-size: 4vw 
+    font-size: 14px 
   }
   .challenge-card> .title  > .pin {
-    width: 7vw;
-    height: 7vw;
-  
+    width: 22px;
+    height: 22px;
+    
   }
-  
-  
   .challenge-card> .title > .difficulty {
-    font-weight: bold;
-    font-size: xx-small;
-    padding: 1vw 2vw;
-    border-radius: 2vw;
-    color: white;
-    font-size: 2vw;
-  }
-  .challenge-card> .title > .difficulty.hard {
-    background-color: red;
-  }
-  .challenge-card> .title > .difficulty.medium {
-    background-color: orange;
-  
-  }
-  .challenge-card> .title > .difficulty.easy {
-    background-color: limegreen;
-  
-  }
-  .challenge-card> .title::before {
-    content: attr(dataindex) ".";
-  }
+    padding: 4px 8px;
+    border-radius: 8px;
+    font-size: 8px;
+  }    
   .challenge-card> .button-container {
-    gap: 1vw;
-    margin-top: 1vh;
-
+    gap: 4px;
+    margin-top: 6px;
   }
   .challenge-card> .button-container > .tick {
-    width: 8vw;
-    height: 8vw;
+    width: 30px;
+    height: 30px;
   }
   
   .challenge-card> .button-container > .cross {
-    width: 7vw;
-    height: 7vw;
+    width: 26px;
+    height: 26px;
   
   }
 

@@ -4,6 +4,7 @@ import dummyRecentChallengesData from '../data/recentChallengesData.json'
 import useSetValueFromStart from '../hooks/useSetValueFromStart'
 import { useParams } from 'react-router';
 import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 //fake
 import { singleUser } from '../data/usersData.json'
@@ -146,9 +147,11 @@ function Profile() {
       {
         isAuthor &&
         <section className="recent-challenges flex-cm">
-          <h3 className='title'>Recent Challenges</h3>
+        <div className="top-nav flex-rw">
+         <h3 className='title'>Recent Challenges</h3>
+         <Link to='/challenges' className="see-all-button button ">See all</Link>
+        </div>
           <ChallengeCardsWrapper data={challengesData} shortDesc={true} />
-          <button className="see-all-button button positive">See all</button>
         </section>
       }
     </div>

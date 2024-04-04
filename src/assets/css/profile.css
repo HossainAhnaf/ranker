@@ -8,13 +8,16 @@
   justify-content: center;    
   gap: 10vw;
 }
-/* info section */
-.profile > .info-section {
+.profile > section{
   background-color: var(--container-bg-color);
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
   border-radius: 2vw;
   width: 85%;
   padding: 4vw;
+}
+/* info section */
+.profile > .info-section {
+
   padding-top: 0;
   gap: 6vw;
 }
@@ -156,16 +159,25 @@
 /*recent challenges*/
 .profile >.recent-challenges { 
   gap: 1vw;
-  background-color: var(--container-bg-color);
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
-  border-radius: 2vw;
-  width: 85%;
-  padding: 4vw;
-}
 
-.profile > .recent-challenges > .title {
+}
+.profile >.recent-challenges > .top-nav {
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+
+} 
+.profile > .recent-challenges > .top-nav >.title {
   font-size: 4vw;
   color: var(--paragraph-color-secondary);
+}
+
+
+.profile > .recent-challenges  > .top-nav > .see-all-button {
+  border: none;
+  font-weight: bold;
+  font-size: 4vw;
+  color: var(--theme-secondary-default); 
 }
 
 .profile > .recent-challenges > .challenge-cards-wrapper {
@@ -175,17 +187,6 @@
   align-items: center;
   justify-content: top;
   padding: 1vw 0;
-  margin-top: 2vw;
+  margin: 2vw 0;
 
-}
-
-.profile > .recent-challenges > .see-all-button {
-  border: none;
-  font-weight: bold;
-  padding: 1.5vw 3vw;
-  align-self: center;
-  border-radius: 4vw;
-  margin-top: 2vw;
-  width: 40%;
-  font-size: 4vw
 }
