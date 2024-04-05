@@ -1,6 +1,6 @@
 @media screen and (min-width: 375px) {
 .side-navigation-bar {
-    width: 206.25px;
+    width: 220px;
   }
   .side-navigation-bar > .primary {
     width: calc(100% - 16px);

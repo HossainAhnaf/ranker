@@ -6,7 +6,7 @@
     justify-content: start;
     align-items: center;
     transition: right .4s;
-    right: -55vw;
+    right: -100vw;
     box-shadow: none;
     top: 0;
     background-color: var(--layout-bg-color);

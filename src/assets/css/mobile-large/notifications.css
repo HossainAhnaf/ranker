@@ -1,0 +1,195 @@
+@media screen and (min-width: 375px) {
+.notifications-section > nav {
+  width:calc(100% - 24px) ;
+  padding: 8px 12px;
+}
+.notifications-section:not(.short-view) > nav{
+  margin-top:  calc(var(--nav-vertical-padding) + var(--nav-height) + 28px);
+} 
+.notifications-section > nav > .filter-buttons-wrapper{
+  gap: 8px;
+}
+.notifications-section > nav > .filter-buttons-wrapper > .button{
+  font-size: 16px;
+  padding: 6px 12px;
+  border-radius: 20px;
+}
+.notifications-section > nav > .secondary > .more-button{
+  width: 28px;
+  height: 28px;
+} 
+
+.notifications-section > nav > .secondary > .more-button > svg{
+ transform: rotate(90deg);
+}
+.notifications-section > nav > .secondary > .more-button > .fill{
+  fill: var(--icon-color)
+}
+
+.notifications-section > nav > .secondary > .more-button.active > .fill{
+  fill: var(--theme-secondary-default)
+}
+.notifications-section > nav > .secondary > .more-button.active + .more-options-wrapper{
+  display: flex;
+}
+
+.notifications-section > nav > .secondary > .more-options-wrapper{
+  position: absolute;
+  display:none;
+  flex-direction: column;
+  background-color: inherit;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+  right: 20%;
+  border-radius: 3vw;
+  z-index: 1;
+  overflow: hidden;
+  width: max-content;
+  background-color: var(--layout-bg-color);
+}
+
+.notifications-section > nav > .secondary > .more-options-wrapper > .option{
+  display: flex;
+  align-items: center;
+  gap: 1.5vw;
+  color: var(--paragraph-color-primary);
+  font-size: 4vw;
+  background-color: inherit;
+  border: none;
+  padding: 2vw 4vw;
+}
+.notifications-section > nav > .secondary > .more-options-wrapper > .option > .svgCont{
+  width: 5vw;
+  height: 5vw;
+}
+.notifications-section > nav > .secondary > .more-options-wrapper > .option > .svgCont .fill{
+  fill: var(--icon-color);
+}
+.notifications-section > nav > .secondary > .see-all-button{
+ color: var(--theme-secondary-default); 
+ font-size: 4vw;
+}
+
+.notifications-section > .group{
+  width: 100%;
+  background-color: var(--layout-bg-color);
+  border-radius: 3vw;
+} 
+.notifications-section > .group > .date{
+  color: var(--paragraph-color-secondary);
+  width: calc(100% - 8vw);
+  padding: 1.5vw 4vw;
+font-size: 5vw;
+background-color: var(--container-bg-color-secondary);
+}
+.notifications-section > .group > .notifications-wrapper{
+  width: 100%;
+}
+
+
+.notifications-section > .group > .notifications-wrapper > .notification{
+  width: calc(100% - 2vw);
+  background-color: var(--layout-bg-color);
+  padding: 3vw 1vw;
+  gap: 1vw;
+  position: relative;
+  text-decoration: none;
+}
+.notifications-section > .group > .notifications-wrapper > .notification:active{
+ filter: contrast(.5);
+}  
+.notifications-section > .group > .notifications-wrapper > .notification.unread{
+  background-color: var(--notification-unread-bg-color);
+}
+
+.notifications-section > .group > .notifications-wrapper > .notification > .icon-wrapper{
+  width: 10%;
+  justify-content: center;
+  align-items: top;
+  display: flex;
+  padding: 1vw;
+}
+.notifications-section > .group > .notifications-wrapper > .notification > .icon-wrapper > .svgCont{
+  width: 6vw;
+  height: 6vw;
+}
+
+.notifications-section > .group > .notifications-wrapper > .notification > .icon-wrapper > .svgCont .fill{
+  fill: var(--icon-color);
+}
+
+.notifications-section > .group > .notifications-wrapper > .notification > .message-wrapper{
+width: 90%;
+gap: .5vw;
+}
+
+.notifications-section > .group > .notifications-wrapper > .notification > .message-wrapper > .title{
+  font-size: 5vw;
+  font-weight: 500;
+  color: var(--paragraph-color-primary);
+}
+
+.notifications-section > .group > .notifications-wrapper > .notification > .message-wrapper > .description{
+  font-size: 4vw;
+  color: var(--paragraph-color-secondary);
+}
+
+.notifications-section > .group > .notifications-wrapper > .notification > .message-wrapper > .links-wrapper{
+  gap: 3vw;
+  margin-top: 1vw;
+  flex-wrap: wrap;
+
+}
+
+.notifications-section > .group > .notifications-wrapper > .notification > .message-wrapper > .links-wrapper > .link{
+  color: var(--theme-secondary-default);
+  text-decoration: none;
+  font-size: 3vw;
+}
+
+
+.notifications-section > .group > .notifications-wrapper > .notification > .more-button{
+  width: 7vw;
+  height: 7vw;
+  background-color: transparent;
+  border: none;
+  z-index: 2;
+}
+.notifications-section > .group > .notifications-wrapper > .notification > .more-button > .fill{
+ fill: var(--icon-color)
+}
+.notifications-section > .group > .notifications-wrapper > .notification > .more-button.active > .fill{
+  fill: var(--theme-secondary-default)
+}
+.notifications-section > .group > .notifications-wrapper > .notification > .more-button.active + .more-options-wrapper{
+display: flex;
+}
+.notifications-section > .group > .notifications-wrapper > .notification > .more-options-wrapper{
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  background-color: var(--layout-bg-color);
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+  right: 10%;
+  border-radius: 3vw;
+  z-index: 1;
+  overflow: hidden;
+}
+.notifications-section > .group > .notifications-wrapper > .notification > .more-options-wrapper > .option{
+  display: flex;
+  align-items: center;
+  gap: 1.5vw;
+  color: var(--paragraph-color-primary);
+  font-size: 4vw;
+  background-color: inherit;
+  border: none;
+  padding: 2vw 4vw;
+}
+.notifications-section > .group > .notifications-wrapper > .notification > .more-options-wrapper > .option > .svgCont{
+  width: 5vw;
+  height: 5vw;
+}
+.notifications-section > .group > .notifications-wrapper > .notification > .more-options-wrapper > .option > .svgCont .fill{
+  fill: var(--icon-color);
+}
+
+}

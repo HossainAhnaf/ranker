@@ -16,6 +16,7 @@ import removeAllSvg from '../assets/svg/remove-all.svg'
 
 //css
 import '../assets/css/notifications.css'
+import '../assets/css/mobile-large/notifications.css'
 function Notifications({shortView}) {
   const navigate = useNavigate()
 
