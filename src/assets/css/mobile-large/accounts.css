@@ -1,35 +1,35 @@
 @media screen  and (min-width: 375px) {
-  .signin-form {
+  .accounts-section > .form {
     /* margin: 0 auto; */
 
   width: 300px;
   padding: 7px 3px;
   border-radius: 8px;  
   }
-  .signin-form>.heading {
+  .accounts-section > .form>.heading {
   font-size: 26px;
   margin-bottom: 12px;
   }
-  .signin-form > .outlined-custom-field {
+  .accounts-section > .form > .outlined-custom-field {
     --input-font-size: 15px;
     --label-font-size: 11px;
    }   
-   .signin-form > .outlined-custom-field > input{
+   .accounts-section > .form > .outlined-custom-field > input{
     padding: 8px;    
     width: calc(100% - 16px);
 
    }
-  .signin-form > .message {
+  .accounts-section > .form > .message {
   font-size: 10px;  
   margin-top: 2px;
   margin-bottom: 8px;
   }
-  .signin-form > .have-not-account {
+  .accounts-section > .form > :is(.have-not-account, .already-have-account) {
   margin-bottom: 8px;
   font-size: 15px;
   }
   
-  .signin-form > button[type="submit"] {
+  .accounts-section > .form > button[type="submit"] {
     padding: 8px;
     border-radius: 4px;
     font-size: 12px;

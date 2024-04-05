@@ -16,7 +16,7 @@ function Primary() {
 
   const {username} = useSelector(state=>state.userSlice)
 
- const validPathsToShowAppName = ['/', '/signin','/signup']
+
 
   const [title,setTitle] = useState('')  
 
@@ -60,13 +60,12 @@ function Primary() {
 
     ? <button className="back-button button svgCont" onClick={()=>navigate(-1)}>
        <Icon src={backSvg}  />
-     </button>
-    
+     </button>   
    :<div className="site-brand" onClick={()=>navigate('/')}>
     <span className="svgCont">
       <Icon src={appLogo}  />
     </span>
-   {validPathsToShowAppName.includes(location.pathname) &&
+   {(location.pathname === '/' || location.pathname.startsWith('/accounts')) &&
     <h1 className="app-name" >
      <em>{import.meta.env.VITE_APP_NAME.slice(1)}</em>
     </h1>

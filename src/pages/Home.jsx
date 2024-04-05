@@ -1,11 +1,13 @@
-//css
-import '../assets/css/home.css'
 //modules & hooks
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { TypeAnimation } from 'react-type-animation'
 //img
 import homeBgImage from '../assets/img/home-bg-image.jpg'
+//css
+import '../assets/css/home.css'
+//css
+import '../assets/css/mobile-large/home.css'
 function Home() {
  
   return (
@@ -13,8 +15,8 @@ function Home() {
       <div className="bg-image-wrapper">
         <img src={homeBgImage} />
       </div>
-
-      <div className="intro-title">
+     <div className="intro-wrapper">
+      <div className="intro">
         <h1 className="title">Achieve Your Goals, Level Up Your Life</h1>
 
         <p className="description">
@@ -36,6 +38,7 @@ function Home() {
           <Link to='/signup'>Start Your Journey</Link>
           <span className="chevron right"></span>
         </button>
+      </div>
       </div>
 
     </div>

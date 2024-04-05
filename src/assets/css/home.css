@@ -12,56 +12,56 @@
   overflow: hidden;
   position: absolute;
   opacity: 0.5;
-  display: none;
+  display: none;  
 }
 .home > .bg-image-wrapper > img{
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-
-.home > .intro-title{
-  --padding-top:calc(var(--nav-vertical-padding) + var(--nav-height) + 7vw);
-  width: calc(100% - 10vw);
-  min-height:calc( 100vh - var(--padding-top) - 5vw);  ;
-  height: 100%;
+.home > .intro-wrapper{
+  --padding-top:calc(var(--nav-height) + var(--nav-vertical-padding) + 10vw) ;
+  width: 100vw;
+  height:calc(100vh - var(--padding-top));
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: var(--padding-top);
+}
+.home > .intro-wrapper > .intro{
+  width: 90%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center;  
   gap: 5vw;
-  padding: var(--padding-top) 5vw 5vw 5vw; 
-  z-index: 1;
-  position: relative;
-  background-color: rgba(0, 0, 0, 0.5);
- /* margin-top: calc(var(--nav-vertical-padding) + var(--nav-height) ); */
-
 }
-.home > .intro-title > .title{
+.home > .intro-wrapper > .intro > .title{
   font-size: 12vw;
   font-weight: 600;
   text-align: center;
   color: white;
 }
-.home > .intro-title > .description{
+.home > .intro-wrapper > .intro > .description{
   color: lightgray;
   font-size: 6vw;
   text-align: center;
   line-height: 1.3;
   height: 40vw;
 }
-.home > .intro-title > .signup-button{
+.home > .intro-wrapper > .intro > .signup-button{
   border-radius: 5vw;
-  font-size: 5vw;
+  font-size: 4vw;
   padding: 2vw 4vw;
   border: none;
  font-weight: bold;
  
 }
 
-.home > .intro-title > .signup-button > .chevron::after{
+.home > .intro-wrapper > .intro > .signup-button > .chevron::after{
  width: 1.5vw;
  height: 1.5vw;
- border-width: .9vw .9vw 0 0;
+ border-width: .7vw .7vw 0 0;
  top: 1.9vw;
  margin-left: 1.5vw;
 }

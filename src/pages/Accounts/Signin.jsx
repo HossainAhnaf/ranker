@@ -19,7 +19,7 @@ function Signin() {
       <input type="password" placeholder=" "  required={true}/>
     </OutlinedCustomField>
     <small className="message">&nbsp;</small>
-    <p className='have-not-account'><small>Haven't any account? <Link to="signup">Sign up</Link></small></p>
+    <p className='have-not-account'><small>Haven't any account? <Link to="../signup">Sign up</Link></small></p>
 
     <button className="button positive" type="submit">Confirm</button>
   </form>

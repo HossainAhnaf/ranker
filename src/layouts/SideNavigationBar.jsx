@@ -94,7 +94,7 @@ useEffect(()=>{
           <NavLink className={useActiveClassName}  to='/notifications'>
             <button className="notifications-button">
               <span className="svgCont badge-wrapper">
-                <Icon src={notificationSvg} onError={console.log}/>
+                <Icon src={notificationSvg} />
                 <small className="badge">4</small>
               </span> 
               <span className="name">Notifications</span>
@@ -115,7 +115,7 @@ useEffect(()=>{
               </span> <span className="name">Settings</span>
             </button>
           </NavLink>
-          <Link to="/signin">
+          <Link to="/accounts/signin">
           <button className="logout-button">
               <span className="svgCont">
                 <Icon src={logoutSvg}/>

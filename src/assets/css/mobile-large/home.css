@@ -1,0 +1,35 @@
+@media screen and (min-width: 375px) {
+  .home>.intro-wrapper{
+    --padding-top: 80px;
+  }
+  .home>.intro-wrapper >.intro {
+    width: 335px;
+    gap: 20px;
+  }
+
+  .home>.intro-wrapper >.intro>.title {
+    font-size: 45px;
+  }
+
+  .home>.intro-wrapper >.intro>.description {
+    font-size: 20px;
+    line-height: 1.3;
+    height:100px;
+  }
+
+  .home>.intro-wrapper >.intro>.signup-button {
+    border-radius: 20px;
+    font-size: 15px;
+    padding: 8px 15px;
+  }
+
+  .home>.intro-wrapper >.intro>.signup-button>.chevron::after {
+    width: 6px;
+    height: 6px;
+    border-width: 2px 2px 0 0;
+    top: 7px;
+    margin-left: 6px;
+  }
+
+
+}

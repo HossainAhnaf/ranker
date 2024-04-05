@@ -1,9 +1,8 @@
-.account-section{
+.accounts-section{
   width: 100vw;
   height: 100vh;
-  
 }
-.form {
+.accounts-section > .form {
   width: 80%;
   display: flex;
   flex-direction: column;
@@ -15,23 +14,23 @@
   
   }
   
-  .form>.heading {
+  .accounts-section > .form>.heading {
   font-style: italic;
   color:var(--paragraph-color-primary);
   font-size: 7vw;
   margin-bottom: 2vh;
   }
   
-  .form > .outlined-custom-field {
+  .accounts-section > .form > .outlined-custom-field {
     width: 90%;
     --input-font-size: 4vw;
     --label-font-size: 3vw;
    }
-   .form > .outlined-custom-field > input{
+   .accounts-section > .form > .outlined-custom-field > input{
      width: calc(100% - 4vw);
   }
    
-  .form > .message {
+  .accounts-section > .form > .message {
   width: 90%;
   color: red;
   font-size: 2.5vw;  
@@ -39,16 +38,16 @@
   margin-bottom: 2vw;
   }
   
-  .form > :is(.have-not-account, .already-have-account) {
+  .accounts-section > .form > :is(.have-not-account, .already-have-account) {
   width: 90%;
   margin-bottom: 2vw;
   font-size: 4vw;
   }
-  .form > .have-not-account a{
+  .accounts-section > .form > :is(.have-not-account, .already-have-account) a{
     color: var(--theme-secondary-default);
   }
   
-  .form > button[type="submit"] {
+  .accounts-section > .form > button[type="submit"] {
     width: 90%;
     font-weight: bold;
     background-color: orangered;
@@ -58,6 +57,6 @@
     border-radius: 1vw;
     font-size: 3vw;
     }
-    .form :is(button[type="submit"]:hover,button[type="submit"]:active) {
+    .accounts-section > .form :is(button[type="submit"]:hover,button[type="submit"]:active) {
     background-color: orange;
     }

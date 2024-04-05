@@ -24,7 +24,7 @@ function Signup() {
       <input type="password" placeholder=" "  required={true}/>
     </OutlinedCustomField>
     <small className="message">&nbsp;</small>
-    <p className='already-have-account'><small>Already have a account? <Link  to="/signin">Sign in</Link></small></p>
+    <p className='already-have-account'><small>Already have a account? <Link  to="../signin">Sign in</Link></small></p>
     <button className="button positive" type="submit">Confirm</button>
   </form>
   )
