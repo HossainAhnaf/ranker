@@ -35,7 +35,7 @@ function Home() {
           />
         </p>
         <button className="signup-button positive button flex-rw center">
-          <Link to='/signup'>Start Your Journey</Link>
+          <Link to='/accounts/signup'>Start Your Journey</Link>
           <span className="chevron right"></span>
         </button>
       </div>

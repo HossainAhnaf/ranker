@@ -14,6 +14,8 @@ import searchSvg from '../assets/svg/search.svg'
 import filterSvg from '../assets/svg/filter.svg'
 //css
 import '../assets/css/challenges-section-nav.css'
+import '../assets/css/mobile-large/challenges-section-nav.css'
+
 
 const ChallengesSectionNav = forwardRef(function ChallengesSectionNav(props,ref) {
   const dispatch = useDispatch()

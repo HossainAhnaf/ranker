@@ -23,13 +23,6 @@
     background-color: transparent;
   }
 
-  .main-nav > .signin-button {
-    border-radius: 2vw;
-    padding: 1.5vw 2vw;
-    border: none;
-    font-size: 4vw;
-    font-weight: 600;
-  }
 
    .main-nav > .primary  {
     justify-content: center;
@@ -72,6 +65,15 @@
     justify-content: end;
     align-items: center;
     gap: 1.5vw;
+  }
+
+  
+  .main-nav > .secondary > .signin-button {
+    border-radius: 2vw;
+    padding: 1.5vw 2vw;
+    border: none;
+    font-size: 4vw;
+    font-weight: 600;
   }
   .main-nav > .secondary > .notification-button {
     width: 9vw;

@@ -10,11 +10,7 @@
     width: 96vw;
   }
 
-  .main-nav > .signin-button {
-    border-radius: 8px;
-    padding: 6px 8px;
-    font-size: 14px;
-  }
+ 
    .main-nav > .primary  {
     gap: 8px;
     z-index: 100;
@@ -37,6 +33,11 @@
   }
   .main-nav > .secondary {
     gap: 8px;
+  }
+  .main-nav > .secondary > .signin-button {
+    border-radius: 8px;
+    padding: 6px 8px;
+    font-size: 14px;
   }
   .main-nav > .secondary > .notification-button {
     width: 34px;
@@ -63,9 +64,11 @@
     border-radius: 15px ;
   }
 /* challenges section nav */
-.main-nav > .challenges-section-nav {
+.main-nav > .challenges-section-nav {    
+  width: calc(100% - 20px);
+  padding: 5px 10px;
   position: fixed;
-  top: calc(var(--nav-height) + var(--nav-vertical-padding) - 2vw);
+  top: 50px;
   left: 0;
   background-color: var(--layout-bg-color);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);

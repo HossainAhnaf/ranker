@@ -39,11 +39,8 @@ useEffect(()=>{
       <Primary />
 
      {
-      location.pathname === '/' 
-      ? <button className='signin-button positive button'><Link to='/signin'  >Sign in</Link></button>
 
-      : location.pathname !== '/signin' && location.pathname !== '/signup' 
-        &&
+       location.pathname !== '/signin' && location.pathname !== '/signup'  &&
       <Secondary />
       }
      {
