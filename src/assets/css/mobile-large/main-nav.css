@@ -57,7 +57,8 @@
   }
   .main-nav > .notifications-section {
     width: 300px;
-    height: 590px;
+    height: 70%;
+    top: 70px;
     right: 15px;
     border-radius: 15px ;
   }

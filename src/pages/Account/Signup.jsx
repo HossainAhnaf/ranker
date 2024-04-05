@@ -3,14 +3,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 //components
-import OutlinedCustomField from "../components/OutlinedCustomField"
-//css
-import '../assets/css/signup.css'
-import '../assets/css/tablet/signup.css'
+import OutlinedCustomField from "../../components/OutlinedCustomField"
 
 function Signup() {
   return (
-    <form className="signup-form">
+    <form className="form signup-form">
     <h2 className="heading">Sign up</h2>
  
     <OutlinedCustomField className="username" placeholder="Username" >

@@ -3,14 +3,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 //components
-import OutlinedCustomField from '../components/OutlinedCustomField';
-//css
-import '../assets/css/signin.css'
-import '../assets/css/tablet/signin.css'
-
+import OutlinedCustomField from '../../components/OutlinedCustomField';
 function Signin() {
   return (
-    <form className="signin-form">
+    <form className="form signin-form">
     <h2 className="heading">Sign in</h2>
   
   
@@ -23,7 +19,7 @@ function Signin() {
       <input type="password" placeholder=" "  required={true}/>
     </OutlinedCustomField>
     <small className="message">&nbsp;</small>
-    <p className='have-not-account'><small>Haven't any account? <Link to="/signup">Sign up</Link></small></p>
+    <p className='have-not-account'><small>Haven't any account? <Link to="signup">Sign up</Link></small></p>
 
     <button className="button positive" type="submit">Confirm</button>
   </form>

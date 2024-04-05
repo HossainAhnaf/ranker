@@ -94,7 +94,6 @@
 .notifications-section > .group{
   width: 100%;
   background-color: var(--layout-bg-color);
-  border-radius: 3vw;
 } 
 .notifications-section > .group > .date{
   color: var(--paragraph-color-secondary);
@@ -153,19 +152,6 @@ gap: .5vw;
 .notifications-section > .group > .notifications-wrapper > .notification > .message-wrapper > .description{
   font-size: 4vw;
   color: var(--paragraph-color-secondary);
-}
-
-.notifications-section > .group > .notifications-wrapper > .notification > .message-wrapper > .links-wrapper{
-  gap: 3vw;
-  margin-top: 1vw;
-  flex-wrap: wrap;
-
-}
-
-.notifications-section > .group > .notifications-wrapper > .notification > .message-wrapper > .links-wrapper > .link{
-  color: var(--theme-secondary-default);
-  text-decoration: none;
-  font-size: 3vw;
 }
 
 

@@ -16,8 +16,10 @@ function Primary() {
 
   const {username} = useSelector(state=>state.userSlice)
 
+ const validPathsToShowAppName = ['/', '/signin','/signup']
 
   const [title,setTitle] = useState('')  
+
   const titles = {
     '/challenges': 'Challenges',
    '/create-new-challenge': 'Create New Challenge',
@@ -28,8 +30,7 @@ function Primary() {
    '/password-and-security': 'Password and Security',
    '/notifications-preference': 'Notifications Preference',
    '/display': 'Display',
-   '/signin': 'Signin',
-   '/signup': 'Signup'
+
  }
  const backButtonVisiblePathList = [
    '/name-and-contact-info',
@@ -65,7 +66,7 @@ function Primary() {
     <span className="svgCont">
       <Icon src={appLogo}  />
     </span>
-   { location.pathname == '/' &&
+   {validPathsToShowAppName.includes(location.pathname) &&
     <h1 className="app-name" >
      <em>{import.meta.env.VITE_APP_NAME.slice(1)}</em>
     </h1>

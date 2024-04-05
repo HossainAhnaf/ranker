@@ -14,8 +14,9 @@ import NameAndContactInfo from "../pages/NameAndContactInfo";
 import PasswordAndSecurity from "../pages/PasswordAndSecurity";
 import NotificationsPreference from "../pages/NotificationsPreference";
 import Display from "../pages/Display";
-import Signin from "../pages/Signin";
-import Signup from "../pages/Signup";
+import Account from "../pages/Account/Account";
+import Signin from "../pages/Account/Signin";
+import Signup from "../pages/Account/Signup";
 export default createBrowserRouter(
   [
     {
@@ -23,7 +24,7 @@ export default createBrowserRouter(
       children: [
         {
           path: '/',
-          element: <Home /> 
+          element: <Home />
         },
         {
           path: '/profile/:username',
@@ -47,7 +48,7 @@ export default createBrowserRouter(
         },
         {
           path: '/settings',
-          element: <Settings />, 
+          element: <Settings />,
         },
         {
           path: '/name-and-contact-info',
@@ -65,20 +66,23 @@ export default createBrowserRouter(
           path: '/display',
           element: <Display />
         },
-
         {
-          path: '/signin',
-          element: <Signin />
-        },
-        {
-          path: '/signup',
-          element: <Signup />
+          path: '/account',
+          element: <Account />,
+          children: [
+            {
+              path: '',
+              element: <Signin />
+            },
+            {
+              path: 'signup',
+              element: <Signup />
+            }
+          ]
         }
-
       ]
     },
-   
+
   ]
 )
 
- 
