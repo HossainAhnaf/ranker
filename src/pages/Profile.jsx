@@ -13,6 +13,7 @@ import ProfileEditForm from '../components/ProfileEditForm/ProfileEditForm';
 import UserAvatar from '../components/UserAvatar';
 import ChallengeCardsWrapper from '../components/ChallengeCardsWrapper';
 import Info from '../components/Info';
+import AuthorProgress from '../components/AuthorProgress';
 import Icon from 'react-inlinesvg';
 //svg
 import pencilSvg from '../assets/svg/pencil.svg';
@@ -132,13 +133,7 @@ function Profile() {
          <Info name='Failed' value={authorFailed} />
          </div>
         <hr />
-      <div className="author-progress flex-cm">
-        <h3 className="title">Progress</h3>
-        <div role='progressbar' style={{ "--value": progressParcentage }}></div>
-        <Info name='Level' value={`${authorLevel} / 10`} />
-        <Info name='Xp' value={`${authorXp} / 1000`} />
-      </div>
-       
+      <AuthorProgress/>
       </section>
       {
         isProfileEditFormVisible &&

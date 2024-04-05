@@ -1,6 +1,6 @@
 //Modules
 import React, { useEffect, useRef, useState,useCallback } from "react";
-import dummyRecentChallengesData from '../data/recentChallengesData.json'
+import dummyRecentChallengesData from '../data/challengesData.json'
 import challengesSectionNavSlice, { showChallengesSectionExtraNav,hideChallengesSectionExtraNav } from '../store/slices/challengesSectionNavSlice'
 import { useDispatch } from "react-redux";
 
@@ -10,7 +10,7 @@ import ChallengeCardsWrapper from "../components/ChallengeCardsWrapper";
 
 //css
 import '../assets/css/challenges.css';
-
+import '../assets/css/laptop/challenges.css';
 function Challenges() {
   const dispatch = useDispatch()  
   const [challengesData, setChallengesData] = useState(dummyRecentChallengesData)
@@ -22,21 +22,24 @@ function Challenges() {
      dispatch(showChallengesSectionExtraNav()) ;
     else dispatch(hideChallengesSectionExtraNav());
   }, [dispatch,ChallengesSectionNavRef]);
-
   useEffect(() => {
-    window.addEventListener('scroll', HandleChallengesSectionNavVisibility)
-    return ()=>{
-     window.removeEventListener('scroll',HandleChallengesSectionNavVisibility)
-     dispatch(hideChallengesSectionExtraNav())
-    }
+    // window.addEventListener('scroll', HandleChallengesSectionNavVisibility)
+    // return ()=>{
+    //  window.removeEventListener('scroll',HandleChallengesSectionNavVisibility)
+    //  dispatch(hideChallengesSectionExtraNav())
+    // }
   },[])
 
   return (
-    <section className="challenges-section flex-cm">
-     
+    <section className="challenges-section flex-rw">
+      <div className="primary">
       <ChallengesSectionNav ref={ChallengesSectionNavRef}/>
-
       <ChallengeCardsWrapper data={challengesData} />
+      </div>
+      
+      <div className="secondary">
+          
+       </div>
 
    
     </section>
