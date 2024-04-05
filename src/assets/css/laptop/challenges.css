@@ -1,23 +1,22 @@
  @media screen and (min-width: 800px) {
 .challenges-section {
-  align-items: top;
-  justify-content: space-between;
+  gap: 10px;
 }
 .challenges-section > .primary {
-  width: 50%;
-}
-.challenges-section > .primary > .challenges-section-nav {
-}
-.challenges-section > .primary >.challenge-cards-wrapper {
- 
-}
-.challenges-section > .secondary{
-  display: block;
-  width: 40%;
-  background-color: darkred;
-  
+  width: 58%;
 }
 
+
+.challenges-section > .secondary {
+  display: block;
+  width: 300px;
+  /* margin-left: auto; */
+}
+.challenges-section > .secondary > .author-progress {
+  background-color: var(--container-bg-color);
+  border-radius: 12px;
+  padding: 10px;
+}
 
   
 }

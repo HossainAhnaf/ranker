@@ -127,34 +127,7 @@
  color: var(--paragraph-color-secondary);
 }
 
- /* author progress */
-.profile > .info-section > .author-progress {
-  width: 100%;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 2vw;
-}
-.profile > .info-section > .author-progress > .title{
-  font-size: 5vw;
-  margin-bottom: 3vw;
-}
-.profile > .info-section > .author-progress > div[role="progressbar"] {
-  --size: 60vw;
-  --fg: var(--theme-secondary-default);
-  --bg: var(--info-bg-color);
-  --inner-color:var(--container-bg-color);
- box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
- margin:0 auto;
-}
-.profile > .info-section > .author-progress > .info{
-  min-width: max-content;
-  width: 30%;
-  justify-content: space-between;
- font-size: 4vw;
- padding: 1vw 0vw;
- color: var(--paragraph-color-secondary);
-}
-
+ 
 
 /*recent challenges*/
 .profile >.recent-challenges { 

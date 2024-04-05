@@ -1,0 +1,25 @@
+@media screen and (min-width: 375px) {
+  
+
+.author-progress {
+  gap: 8px;
+}
+.author-progress > .title{
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.author-progress > div[role="progressbar"] {
+  --size: 220px;
+  --fg: var(--theme-secondary-default);
+  --bg: var(--info-bg-color);
+  --inner-color:var(--container-bg-color);
+ box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+ margin: 0 50px;
+}
+.author-progress > .info{
+  width: 100px;
+ font-size: 15px;
+ padding: 4px 0;
+}
+
+}

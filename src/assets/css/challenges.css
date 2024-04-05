@@ -5,8 +5,6 @@
   background-color: transparent;
   width: calc(100% - 6vw);
   padding: 0 3vw;
-
-  gap: 2vw;
 }
 .challenges-section > .primary {
   width: 100%;
@@ -30,7 +28,6 @@
     margin-top: 70px;
     width: calc(100% - 24px);
     padding: 0 12px;
-    gap: 8px;
   }
   .challenges-section > .primary > .challenges-section-nav {
     border-radius: 12px;

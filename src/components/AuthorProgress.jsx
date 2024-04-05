@@ -1,4 +1,9 @@
 import React from 'react'
+//components
+import Info from './Info';
+//css
+import '../assets/css/author-progress.css'
+import '../assets/css/mobile-large/author-progress.css'
 
 function AuthorProgress({progressParcentage,authorLevel,authorXp}) {
   return (

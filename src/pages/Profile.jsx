@@ -133,7 +133,7 @@ function Profile() {
          <Info name='Failed' value={authorFailed} />
          </div>
         <hr />
-      <AuthorProgress/>
+      <AuthorProgress authorLevel={authorLevel} authorXp={authorXp} progressParcentage={progressParcentage}/>
       </section>
       {
         isProfileEditFormVisible &&

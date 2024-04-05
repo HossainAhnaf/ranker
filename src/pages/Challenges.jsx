@@ -7,6 +7,7 @@ import { useDispatch } from "react-redux";
 //components
 import ChallengesSectionNav from "../components/ChallengesSectionNav";
 import ChallengeCardsWrapper from "../components/ChallengeCardsWrapper";
+import AuthorProgress from "../components/AuthorProgress";
 
 //css
 import '../assets/css/challenges.css';
@@ -38,7 +39,7 @@ function Challenges() {
       </div>
       
       <div className="secondary">
-          
+        <AuthorProgress progressParcentage={50} authorLevel={5} authorXp={1000}/>
        </div>
 
    
