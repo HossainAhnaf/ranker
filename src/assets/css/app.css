@@ -4,7 +4,8 @@
   --theme-secondary-gradient: linear-gradient(to right,red,darkorange);
   --theme-secondary-default: orangered;
   --border-active-color:var(--theme-secondary-default);
-
+ 
+  
 }
 
 @media (prefers-color-scheme: light) {
@@ -100,5 +101,12 @@
 }
 
 
-
-
+.easy{
+  color: green;
+}
+.medium{
+  color: orange;
+}
+.hard{
+  color: red;
+}

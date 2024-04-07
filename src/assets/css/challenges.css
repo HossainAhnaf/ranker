@@ -10,28 +10,75 @@
 
 .challenges-section > .primary > .challenges-section-nav {
   width: calc(100% - 4vw);
-  background-color: var(--container-bg-color);
+  /* background-color: var(--container-bg-color); */
   padding: 2vw;
-  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.5);
+  /* box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.5); */
   flex-wrap: wrap;
   gap: 3vw;
+  margin-bottom: 1vw;
+  border-radius: 1vw;
  }
-
+ .challenges-section > .primary > .challenges-section-nav >.total-challenges-data-wrapper{
+  gap: 3vw;
+  width: 100%;
+ }
+ .challenges-section > .primary > .challenges-section-nav >.total-challenges-data-wrapper > .data{
+  gap: 1vw;  
+ }
+ .challenges-section > .primary > .challenges-section-nav >.total-challenges-data-wrapper > .data > .name{
+ }
  .challenges-section > .primary > .challenges-section-nav  > .menu-button-wrapper{
   --menu-button-bg-color:var(--info-bg-color);
   --menu-button-color:var(--paragraph-color-primary);
   --menu-button-font-size:4vw;
   --menu-padding:1vw 2.5vw;
   --menu-padding-horizontal:2.5vw;
-  --menu-options-wrapper-bg-color:var(--info-bg-color);
+  --menu-options-wrapper-bg-color:var(--container-bg-color);
   --menu-options-wrapper-color:var(--paragraph-color-primary); 
   --menu-options-wrapper-font-size:4vw;
-  --menu-option-checkbox-bg-color: rgb(161, 161, 161);
+  --menu-option-checkbox-bg-color:var(--info-bg-color);
   --menu-option-checkbox-checked-bg-color:var(--theme-secondary-default);
   --menu-option-checkbox-checked-bg:var(--theme-secondary-gradient);
+  --menu-option-checkbox-checked-color:white;
   --menu-options-wrapper-checkbox-font-size:2.5vw;
   --menu-checkbox-padding:1vw 2vw;
 }
+.challenges-section > .primary > .challenges-section-nav >.search-input-wrapper{
+  width: 60%;
+  background-color: var(--info-bg-color);
+  border-radius: 1vw;  
+  gap: 1vw;
+  padding: 1.5vw ;
+}
+.challenges-section > .primary > .challenges-section-nav >.search-input-wrapper > .svgCont{
+ width: 4.5vw;
+ height: 4.5vw; 
+}
+
+.challenges-section > .primary > .challenges-section-nav >.search-input-wrapper > input{
+ background-color: transparent;
+ color: var(--paragraph-color-primary);
+ border: none;
+ outline: none;
+ width: 88%;
+ font-size: 4vw;
+} 
+.challenges-section > .primary > .challenges-section-nav >.search-input-wrapper > input::placeholder{
+ color:  var(--paragraph-color-secondary);
+}
+.challenges-section > .primary > .challenges-section-nav  .create-challenge-button{
+  text-decoration: none;
+  color: white;
+  font-size: 4vw;
+  padding: 1vw 2vw;
+  border-radius: 1vw;
+  gap: 1vw;
+}
+.challenges-section > .primary > .challenges-section-nav  .create-challenge-button > .svgCont{
+ width: 5vw  ;
+ height: 5vw;
+}
+
 /* challenges cards wrapper */
 .challenges-section > .primary >.challenge-cards-wrapper {
   width: 100%;

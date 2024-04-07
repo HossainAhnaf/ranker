@@ -81,5 +81,6 @@
 
  .menu-button-wrapper > .menu-options-wrapper.checkbox-type > .option > input:checked + span{
    background-color: var(--menu-option-checkbox-checked-bg-color);
-   background: var(--menu-option-checkbox-checked-bg)
+   background: var(--menu-option-checkbox-checked-bg);
+  color: var(--menu-option-checkbox-checked-color);
  } 
