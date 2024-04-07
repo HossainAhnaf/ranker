@@ -1,5 +1,5 @@
 //modules
-import React, { forwardRef } from 'react'
+import React from 'react'
 import { useDispatch } from 'react-redux'
 import { showFilterOption } from '../store/slices/challengesSectionNavSlice'
 import { Link } from "react-router-dom";
@@ -7,22 +7,16 @@ import { useSelector } from "react-redux";
 
 //components
 import Icon from 'react-inlinesvg'
-import FilterOption from './FilterOption'
 //svg
 import plusSvg from '../assets/svg/plus(1).svg'
 import searchSvg from '../assets/svg/search.svg'
 import filterSvg from '../assets/svg/filter.svg'
-//css
-import '../assets/css/challenges-section-nav.css'
-import '../assets/css/mobile-large/challenges-section-nav.css'
 
 
-const ChallengesSectionNav = forwardRef(function ChallengesSectionNav(props,ref) {
-  const dispatch = useDispatch()
-  const isFilterOptionActive = useSelector(state => state.challengesSectionNavSlice.isFilterOptionActive)   
+function ChallengesSectionNav() {
 
-  return (
-    <nav className="challenges-section-nav flex-rw" ref={ref}>
+  return (    
+    <nav className="challenges-section-nav flex-rw" >
         <Link to="/create-new-challenge">
       <button className="create-challenge-button button positive flex-rw center button">
         <span className="svgCont">
@@ -43,12 +37,10 @@ const ChallengesSectionNav = forwardRef(function ChallengesSectionNav(props,ref)
                 </button>
             </div>
         </div>
-                    {
-         isFilterOptionActive &&  <FilterOption />
-            }
+     
       </nav>
   )
 }
-)
+
 
 export default ChallengesSectionNav
