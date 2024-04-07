@@ -1,51 +1,85 @@
 
 .menu-button-wrapper{
   position: relative;
+
  }
  .menu-button-wrapper > .menu-button{
    width: max-content;
    gap: 1vw;
-   background-color: var(--info-bg-color);
-   padding: 1vw;
+   background-color: var(--menu-button-bg-color);
+   padding: var(--menu-padding) ;
    border-radius: 1vw;
+   font-size: var(--menu-button-font-size);;
  }
  .menu-button-wrapper > .menu-button > .svgCont{
-   width: 5vw;
-   height: 5vw;
+   width: calc(var(--menu-button-font-size) * 1.2);
+   height: calc(var(--menu-button-font-size) * 1.2);
    transition: transform 0.3s;  
  } 
  .menu-button-wrapper.open > .menu-button > .svgCont{
    transform: rotate(180deg);
  } 
 
- .menu-button-wrapper > .menu-options{
+ .menu-button-wrapper > .menu-options-wrapper{
+  min-width: 100%;
    width: max-content;
    position: absolute;
-   background-color: var(--info-bg-color);
+   background-color: var(--menu-options-wrapper-bg-color);
    z-index: 1;
    margin-top: 1vw;
    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.5);
    display: none;
-   /* outline: none; */
+   outline: none;
+   border-radius: 1vw;
  }
- .menu-button-wrapper.open > .menu-options{
- display: flex;
+ .menu-button-wrapper.open > .menu-options-wrapper{
+ display: flex; 
  } 
-
- .menu-button-wrapper > .menu-options > .option{
-  padding: 1vw 2vw;
+ .menu-button-wrapper.open > .menu-options-wrapper.button-type{
+  flex-direction: column;
+}
+.menu-button-wrapper.open > .menu-options-wrapper.checkbox-type{
+  flex-direction: row;
+}
+ .menu-button-wrapper > .menu-options-wrapper.button-type > .option{
+  padding: var(--menu-padding);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  font-size: var(--menu-options-wrapper-font-size);
   gap: 2vw;
  }
- .menu-button-wrapper > .menu-options > .option > svg{
+ .menu-button-wrapper > .menu-options-wrapper.button-type > .option:active{
+  filter: brightness(50%);  
+ }
+ .menu-button-wrapper > .menu-options-wrapper.button-type > .option > svg{
   visibility: hidden;
-  width: 5vw;
-  height: 5vw;
+  width: calc(var(--menu-options-wrapper-font-size) * 1.2);
+  height: calc(var(--menu-options-wrapper-font-size) * 1.2);;
  }
 
- .menu-button-wrapper > .menu-options > .option.selected > svg{
+ .menu-button-wrapper > .menu-options-wrapper.button-type > .option.selected > svg{
   visibility: visible;  
  }
+ /* checkbox */
+ .menu-button-wrapper > .menu-options-wrapper.checkbox-type{
+  padding: 2vw;
+  gap: 2vw;
+ }
+ .menu-button-wrapper > .menu-options-wrapper.checkbox-type > .option{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+ .menu-button-wrapper > .menu-options-wrapper.checkbox-type > .option > span{
+  padding:var(--menu-checkbox-padding) ;
+  font-size: var(--menu-options-wrapper-checkbox-font-size);
+  border-radius: 5vw; ;
+  background-color: var(--menu-option-checkbox-bg-color);
+ }
+
+ .menu-button-wrapper > .menu-options-wrapper.checkbox-type > .option > input:checked + span{
+   background-color: var(--menu-option-checkbox-checked-bg-color);
+   background: var(--menu-option-checkbox-checked-bg)
+ } 

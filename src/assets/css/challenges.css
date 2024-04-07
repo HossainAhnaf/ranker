@@ -9,14 +9,29 @@
 }
 
 .challenges-section > .primary > .challenges-section-nav {
-  width: calc(100% - 8vw);
-  margin: 2vw 0;
+  width: calc(100% - 4vw);
   background-color: var(--container-bg-color);
-  padding: 2vw 4vw ;
+  padding: 2vw;
   box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.5);
   flex-wrap: wrap;
+  gap: 3vw;
  }
- 
+
+ .challenges-section > .primary > .challenges-section-nav  > .menu-button-wrapper{
+  --menu-button-bg-color:var(--info-bg-color);
+  --menu-button-color:var(--paragraph-color-primary);
+  --menu-button-font-size:4vw;
+  --menu-padding:1vw 2.5vw;
+  --menu-padding-horizontal:2.5vw;
+  --menu-options-wrapper-bg-color:var(--info-bg-color);
+  --menu-options-wrapper-color:var(--paragraph-color-primary); 
+  --menu-options-wrapper-font-size:4vw;
+  --menu-option-checkbox-bg-color: rgb(161, 161, 161);
+  --menu-option-checkbox-checked-bg-color:var(--theme-secondary-default);
+  --menu-option-checkbox-checked-bg:var(--theme-secondary-gradient);
+  --menu-options-wrapper-checkbox-font-size:2.5vw;
+  --menu-checkbox-padding:1vw 2vw;
+}
 /* challenges cards wrapper */
 .challenges-section > .primary >.challenge-cards-wrapper {
   width: 100%;

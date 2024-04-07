@@ -19,8 +19,8 @@ function ChallengesSectionNav() {
 
   return (
     <nav className="challenges-section-nav flex-rw" >
-      <MenuButton  >
-      <span className="option selected">Easy
+      <MenuButton label="Difficulty" optionsType="button-type">
+      <span className="option">Easy
        <Icon src={tickSvg}/>
       </span>
       <span className="option">Medium
@@ -29,6 +29,29 @@ function ChallengesSectionNav() {
       <span className="option">Hard
        <Icon src={tickSvg}/>
       </span>
+     </MenuButton> 
+
+     <MenuButton  label="Sort by" optionsType="button-type">
+      <span className="option selected">
+       Serial
+       <Icon src={tickSvg}/>
+      </span>
+      <span className="option">
+      Difficulty
+       <Icon src={tickSvg}/>
+      </span>      
+     </MenuButton> 
+
+     <MenuButton label="Features" optionsType="checkbox-type">
+      <label className="option ">
+       <input type="checkbox"  hidden />
+       <span>Due Date</span>
+
+      </label>
+      <label className="option">
+       <input type="checkbox"  hidden/>
+       <span>Pinned</span>
+      </label>
      </MenuButton> 
     </nav>
   )
