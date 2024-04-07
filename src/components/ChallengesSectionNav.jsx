@@ -13,13 +13,22 @@ import Icon from 'react-inlinesvg'
 import dropDownSvg from '../assets/svg/drop-down.svg'
 import tickSvg from '../assets/svg/tick(1).svg'
 import plusSvg from '../assets/svg/plus(1).svg'
+import closeSvg from '../assets/svg/close(1).svg'
 import searchSvg from '../assets/svg/search.svg'
 import filterSvg from '../assets/svg/filter.svg'
 function ChallengesSectionNav() {
 
   const activeFiltersListRef = useRef(null)
+
   const addFilter = (type,value)=>{
-   alert(value)
+    let button = activeFiltersListRef.current.querySelector(`.filter.${type}`) 
+    const dataPoint = button.querySelector('span:first-of-type')
+    dataPoint.textContent = value     
+    if (type === 'difficulty') dataPoint.className = value.toLowerCase() 
+    if (!button.classList.contains('active')) button.classList.add('active')
+  }
+  const removeFilter = (type)=>{
+    activeFiltersListRef.current.querySelector(`.filter.${type}`)?.classList.remove('active') 
   }
   return (
     <nav className="challenges-section-nav flex-rw" >
@@ -53,24 +62,24 @@ function ChallengesSectionNav() {
         </span>
       </MenuButton>
 
-      <MenuButton label="Sort by" optionsType="button-type">
-        <span datavalue="serial" className="option selected">
-          Serial
+      <MenuButton label="Sort by" optionsType="button-type" onChange={(value)=>addFilter('sort-by',value)}>
+        <span datavalue="Ordered" className="option selected">
+          Ordered
           <Icon src={tickSvg} />
         </span>
-        <span datavalue="difficulty" className="option">
+        <span datavalue="Difficulty" className="option">
           Difficulty
           <Icon src={tickSvg} />
         </span>
       </MenuButton>
 
-      <MenuButton label="Features" optionsType="checkbox-type">
-        <label datavalue="due-date" className="option ">
+      <MenuButton label="Features" optionsType="checkbox-type" onChange={(type,value)=>addFilter(type,value)}>
+        <label datavalue='Due Date' datatype="due-date" className="option ">
           <input type="checkbox" hidden />
           <span>Due Date</span>
 
         </label>
-        <label datavalue="pinned" className="option">
+        <label datavalue='Pinned' datatype="pinned" className="option">
           <input type="checkbox" hidden />
           <span>Pinned</span>
         </label>
@@ -88,8 +97,35 @@ function ChallengesSectionNav() {
           </span>
           <b>Create new</b>
         </Link>
-        <div className="active-filters-list" ref={activeFiltersListRef}>
-          
+        <div className="active-filters-list flex-rw" ref={activeFiltersListRef}>
+           <span className="filter sort-by active">
+            <span>Ordered</span>
+           </span>
+           <span className="filter difficulty flex-rw center">
+            <span>Easy</span>
+            <span className="svgCont" onClick={()=>removeFilter("difficulty")}>
+            <Icon src={closeSvg} />
+            </span>
+           </span>
+           <span className="filter search flex-rw center">
+            <span>no fap</span>
+            <span className="svgCont" onClick={()=>removeFilter('search')}>
+            <Icon src={closeSvg} />
+            </span>
+           </span>
+           <span className="filter pinned flex-rw center">
+            <span>Pinned</span>
+            <span className="svgCont" onClick={()=>removeFilter('pinned')}>
+            <Icon src={closeSvg} />
+            </span>
+           </span>
+           <span className="filter due-date flex-rw center">
+            <span>Due date</span>
+            <span className="svgCont" onClick={()=>removeFilter('due-date')}>
+            <Icon src={closeSvg} />
+            </span>
+           </span>
+           
         </div>
     </nav>
   )

@@ -22,6 +22,7 @@
   gap: 3vw;
   width: 100%;
   flex-wrap: wrap;
+  margin-bottom: 3vw;
  }
  .challenges-section > .primary > .challenges-section-nav >.total-challenges-data-wrapper > .data{
   gap: 1vw;  
@@ -75,7 +76,7 @@
 .challenges-section > .primary > .challenges-section-nav >.search-input-wrapper > input::placeholder{
  color:  var(--paragraph-color-secondary);
 }
-.challenges-section > .primary > .challenges-section-nav  .create-challenge-button{
+.challenges-section > .primary > .challenges-section-nav > .create-challenge-button{
   text-decoration: none;
   color: white;
   font-size: 4vw;
@@ -83,9 +84,34 @@
   border-radius: 1vw;
   gap: 1vw;
 }
-.challenges-section > .primary > .challenges-section-nav  .create-challenge-button > .svgCont{
+.challenges-section > .primary > .challenges-section-nav > .create-challenge-button > .svgCont{
  width: 5vw  ;
  height: 5vw;
+}
+
+.challenges-section > .primary > .challenges-section-nav >.active-filters-list{
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2vw;
+  flex-wrap: wrap;
+}
+.challenges-section > .primary > .challenges-section-nav >.active-filters-list > .filter{
+ background-color: var(--info-bg-color);
+ color: var(--paragraph-color-primary);
+ border: none;
+ border-radius: 4vw;
+ padding: 1vw 2vw;
+ font-size: 3.5vw;
+ gap: 2vw;
+ display: none;
+}
+.challenges-section > .primary > .challenges-section-nav >.active-filters-list > .filter.active{
+display: flex;
+}
+.challenges-section > .primary > .challenges-section-nav >.active-filters-list > .filter > .svgCont{
+  width: 4vw;
+  height: 4vw;
 }
 
 /* challenges cards wrapper */

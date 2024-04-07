@@ -25,9 +25,13 @@ function MenuButton({children,label,optionsType,onChange}) {
    menuOptionsWrapperRef.current.querySelector('.selected')?.classList.remove('selected')
    currentTarget.classList.add('selected')
    setOpen(false)  
-  }
-  if (onChange)
+   if (onChange)
    onChange(currentTarget.getAttribute('datavalue'))
+  }else{
+    if (onChange)
+    onChange(currentTarget.getAttribute('datatype'),currentTarget.getAttribute('datavalue'))
+  }
+
   } 
 
   useEffect(() => {
