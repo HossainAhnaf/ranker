@@ -26,6 +26,8 @@ function MenuButton({children,label,optionsType,onChange}) {
    currentTarget.classList.add('selected')
    setOpen(false)  
   }
+  if (onChange)
+   onChange(currentTarget.getAttribute('datavalue'))
   } 
 
   useEffect(() => {

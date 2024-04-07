@@ -21,11 +21,20 @@
  .challenges-section > .primary > .challenges-section-nav >.total-challenges-data-wrapper{
   gap: 3vw;
   width: 100%;
+  flex-wrap: wrap;
  }
  .challenges-section > .primary > .challenges-section-nav >.total-challenges-data-wrapper > .data{
   gap: 1vw;  
  }
  .challenges-section > .primary > .challenges-section-nav >.total-challenges-data-wrapper > .data > .name{
+  background-color: var(--info-bg-color);
+  padding: 1vw 2vw;
+  border-radius: 5vw;
+  font-size: 3.5vw;
+ }
+ 
+ .challenges-section > .primary > .challenges-section-nav >.total-challenges-data-wrapper > .data > .value{
+  font-size: 4vw;
  }
  .challenges-section > .primary > .challenges-section-nav  > .menu-button-wrapper{
   --menu-button-bg-color:var(--info-bg-color);

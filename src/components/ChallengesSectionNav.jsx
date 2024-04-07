@@ -1,5 +1,5 @@
 //modules
-import React from 'react'
+import React ,{useEffect, useRef} from 'react'
 import { useDispatch } from 'react-redux'
 import { showFilterOption } from '../store/slices/challengesSectionNavSlice'
 import { Link } from "react-router-dom";
@@ -17,56 +17,60 @@ import searchSvg from '../assets/svg/search.svg'
 import filterSvg from '../assets/svg/filter.svg'
 function ChallengesSectionNav() {
 
+  const activeFiltersListRef = useRef(null)
+  const addFilter = (type,value)=>{
+   alert(value)
+  }
   return (
     <nav className="challenges-section-nav flex-rw" >
       <div className="total-challenges-data-wrapper flex-rw">
         <span className="data flex-rw center">
-          <b className="name">Total</b>
-          <span className="value">10</span>
+          <span className="name">Total</span>
+          <span className="value">x10</span>
         </span>
         <span className="data flex-rw center">
-          <b className="name easy">Easy</b>
-          <span className="value">500</span>
+          <span className="name easy">Easy</span>
+          <span className="value">x5</span>
         </span>
         <span className="data flex-rw center">
-          <b className="name medium">Medium</b>
-          <span className="value">4</span>
+          <span className="name medium">Medium</span>
+          <span className="value">x4</span>
         </span>
         <span className="data flex-rw center">
-          <b className="name hard">Hard</b>
-          <span className="value">1</span>
+          <span className="name hard">Hard</span>
+          <span className="value">x1</span>
         </span>
       </div>
-      <MenuButton label="Difficulty" optionsType="button-type">
-        <span className="option easy">Easy
+      <MenuButton label="Difficulty" optionsType="button-type" onChange={(value)=>addFilter('difficulty',value)}>
+        <span datavalue="easy" className="option easy">Easy
           <Icon src={tickSvg} />
         </span>
-        <span className="option medium">Medium
+        <span datavalue="medium" className="option medium">Medium
           <Icon src={tickSvg} />
         </span>
-        <span className="option hard">Hard
+        <span datavalue="hard" className="option hard">Hard
           <Icon src={tickSvg} />
         </span>
       </MenuButton>
 
       <MenuButton label="Sort by" optionsType="button-type">
-        <span className="option selected">
+        <span datavalue="serial" className="option selected">
           Serial
           <Icon src={tickSvg} />
         </span>
-        <span className="option">
+        <span datavalue="difficulty" className="option">
           Difficulty
           <Icon src={tickSvg} />
         </span>
       </MenuButton>
 
       <MenuButton label="Features" optionsType="checkbox-type">
-        <label className="option ">
+        <label datavalue="due-date" className="option ">
           <input type="checkbox" hidden />
           <span>Due Date</span>
 
         </label>
-        <label className="option">
+        <label datavalue="pinned" className="option">
           <input type="checkbox" hidden />
           <span>Pinned</span>
         </label>
@@ -84,6 +88,9 @@ function ChallengesSectionNav() {
           </span>
           <b>Create new</b>
         </Link>
+        <div className="active-filters-list" ref={activeFiltersListRef}>
+          
+        </div>
     </nav>
   )
 }
