@@ -19,6 +19,8 @@
   gap: 4vw;
   padding: 3vw 0;
   border-radius: 3vw;
+  /* margin-top: 10vw; */
+
 }
 .challenges-section > .secondary{
   display: none;

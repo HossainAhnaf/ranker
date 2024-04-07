@@ -1,21 +1,23 @@
  @media screen and (min-width: 800px) {
 .challenges-section {
   gap: 10px;
+justify-content: space-between;
 }
 .challenges-section > .primary {
-  width: 58%;
+  width: 60%;
 }
 
 
 .challenges-section > .secondary {
   display: block;
   width: 300px;
-  /* margin-left: auto; */
+  padding: 10px 0;
 }
 .challenges-section > .secondary > .author-progress {
   background-color: var(--container-bg-color);
   border-radius: 12px;
   padding: 10px;
+  width: 280px;
 }
 
   
