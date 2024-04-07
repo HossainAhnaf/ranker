@@ -1,0 +1,51 @@
+
+.menu-button-wrapper{
+  position: relative;
+ }
+ .menu-button-wrapper > .menu-button{
+   width: max-content;
+   gap: 1vw;
+   background-color: var(--info-bg-color);
+   padding: 1vw;
+   border-radius: 1vw;
+ }
+ .menu-button-wrapper > .menu-button > .svgCont{
+   width: 5vw;
+   height: 5vw;
+   transition: transform 0.3s;  
+ } 
+ .menu-button-wrapper.open > .menu-button > .svgCont{
+   transform: rotate(180deg);
+ } 
+
+ .menu-button-wrapper > .menu-options{
+   width: max-content;
+   position: absolute;
+   background-color: var(--info-bg-color);
+   z-index: 1;
+   margin-top: 1vw;
+   box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.5);
+   display: none;
+   /* outline: none; */
+ }
+ .menu-button-wrapper.open > .menu-options{
+ display: flex;
+ } 
+
+ .menu-button-wrapper > .menu-options > .option{
+  padding: 1vw 2vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2vw;
+ }
+ .menu-button-wrapper > .menu-options > .option > svg{
+  visibility: hidden;
+  width: 5vw;
+  height: 5vw;
+ }
+
+ .menu-button-wrapper > .menu-options > .option.selected > svg{
+  visibility: visible;  
+ }

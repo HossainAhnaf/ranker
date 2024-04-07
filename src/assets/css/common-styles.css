@@ -188,8 +188,7 @@
     initial-value: 0;
   }
   
-  div[role="progressbar"] {
- 
+  div[role="progressbar"] { 
     --pgPercentage: var(--value);
     animation: growProgressBar 3s 1 forwards;
     width: var(--size);
