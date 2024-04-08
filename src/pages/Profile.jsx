@@ -22,6 +22,7 @@ import pencilSvg from '../assets/svg/pencil.svg';
 import '../assets/css/profile.css';
 import '../assets/css/mobile-large/profile.css';
 import '../assets/css/tablet/profile.css';
+import '../assets/css/laptop-large/profile.css';
 
 function Profile() {
   const params = useParams()
