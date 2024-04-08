@@ -10,6 +10,9 @@
   width: 100%; 
   position: relative;  
   padding: 7vw 0;
+  background-color: white;
+  z-index: -1;
+
 }
 .settings-section > .header > .background{
   width: 100%;
@@ -29,7 +32,7 @@
 .settings-section > .header > .user-primary-info-wrapper > .user-avatar{
   width: 30vw;
   height: 30vw;  
-  --badge-border-color: rgb(165, 28, 28);
+  --badge-border-color: rgb(255, 139, 139);
   --level-badge-font-size: 5vw;
 }
 .settings-section > .header > .user-primary-info-wrapper > .text-wrapper> .name{
@@ -37,7 +40,7 @@
   font-size: 7vw;
 }
 .settings-section > .header > .user-primary-info-wrapper > .text-wrapper> .username{
-  color: lightgray;
+  color: gray;
   font-size: 4vw;
 }
 
@@ -60,13 +63,16 @@
  border-radius: 2vw;
 }
 .settings-section > .navigation-buttons-wrapper > a.active{
- /* background-color: orangered;
- background: var(--theme-secondary-gradient); */
  background-color:  rgba(255, 68, 0, 0.548);
+ background: linear-gradient(-150deg, rgba(255, 0, 0, 0.534) 15%, rgba(255, 68, 0, 0.548) 70%, rgba(255, 166, 0, 0.534) 94%);
+ color: white;
 }
 
 .settings-section > .navigation-buttons-wrapper > a > svg{
-  width: 7vw;
-  height: 7vw;
+  width: 5vw;
+  height: 5vw;
+}
+.settings-section > .navigation-buttons-wrapper > a[datalarge="true"] > svg{
+scale: 1.4;
 }
 

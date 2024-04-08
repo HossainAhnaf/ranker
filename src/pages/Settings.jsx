@@ -43,11 +43,16 @@ function Settings() {
           <Icon src={securityShieldSvg} />
           Privacy
           </NavLink>
-        <NavLink to='notifications' className={useActiveClassName}>
+        <NavLink to='notifications' className={useActiveClassName} datalarge='true'>
           <Icon src={notificationSvg} />
           Notifications
           </NavLink>
     </div>
+    <div className="outlet-wrapper">
+       <div className="header">
+       </div>
+    </div>    
+
     </section>
   )
 }

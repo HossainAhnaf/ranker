@@ -22,8 +22,8 @@
   }
 
   .positive {
-    background-color: var(--theme-secondary-default);
-    background-image: var(--theme-secondary-gradient);
+    background-color: var(--theme-secondary-default) ;
+    background: var(--theme-secondary-gradient);
     color: white;
   }
 

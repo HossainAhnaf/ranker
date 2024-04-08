@@ -1,10 +1,9 @@
 
 :root {
   --theme-primary: rgba(0,0,0,0.5);
-  --theme-secondary-gradient: linear-gradient(to right,red,darkorange);
-  --theme-secondary-default: orangered;
+  --theme-secondary-gradient: linear-gradient(-150deg, rgba(255, 0, 0, 0.534) 15%, rgba(255, 68, 0, 0.548) 70%, rgba(255, 166, 0, 0.534) 94%);
+  --theme-secondary-default: rgba(255, 68, 0, 0.548);
   --border-active-color:var(--theme-secondary-default);
- 
   
 }
 

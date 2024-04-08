@@ -81,17 +81,18 @@ width: calc(100% - 5vw);
 }
 .challenges-section > .primary > .challenges-section-nav > .create-challenge-button{
   text-decoration: none;
-  color: white;
   font-size: 3.5vw;
   padding: 1vw 3vw;
   border-radius: 5vw;
   gap: 1vw;
+  color: white;
 }
 .challenges-section > .primary > .challenges-section-nav > .create-challenge-button > .svgCont{
  width: 3.5vw  ;
  height: 3.5vw;
 }
-
+.challenges-section > .primary > .challenges-section-nav > .create-challenge-button  .fill {
+}
 .challenges-section > .primary > .challenges-section-nav >.active-filters-list{
   width: 100%;
   justify-content: flex-start;
