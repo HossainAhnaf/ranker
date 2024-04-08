@@ -10,21 +10,29 @@ justify-content: space-between;
 
 .challenges-section > .secondary {
   display: flex;
-  width: 250px;
-  height: 100%;
-  justify-content: center;
-  align-items: start;
+  flex-direction: column;
+  width: 230px;
+  height: max-content;
+  justify-content: start;
+  align-items: center;
   background-color: var(--container-bg-color);
   border-radius: 12px;
-
-
+  padding: 10px 20px;
+  gap: 50px;
 }
-.challenges-section > .secondary > .author-progress {
-  padding: 10px;
-  width: calc(100% - 20px);
+.challenges-section > .secondary > hr {
+ width: 100%;
 }
+
 .challenges-section > .secondary > .author-progress > div[role="progressbar"] {
 --size: 160px;
 }
 
+.challenges-section > .secondary > .view-profile-button{
+  width: 100%;
+  text-decoration: none;
+  text-align: center;
+  padding: 4px 8px;
+  border-radius: 8px;
+}
  }

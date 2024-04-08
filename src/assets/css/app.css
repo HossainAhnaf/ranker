@@ -75,7 +75,8 @@
   --gamma-color: brown;
   --delta-color: lime;
   --omega-color: grey;
-
+/* difficulty */
+--easy-color: green;
 }  
 
 .theme-dark{
@@ -97,16 +98,20 @@
   --gamma-color: brown;
   --delta-color: lime;
   --omega-color: grey;
-  
+  /* difficulty */
+--easy-color: limegreen;
 }
 
 
 .easy{
-  color: green;
+  color: var(--easy-color);
 }
 .medium{
   color: orange;
 }
 .hard{
   color: red;
+}
+.crazy{
+  color: purple;
 }

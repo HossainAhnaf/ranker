@@ -57,20 +57,7 @@
     height: 15px;
   }
 
-  /* challenges activity */
-  .profile > .info-section > .challenges-activity {
-    gap: 3px;
-  } 
-  .profile > .info-section > .challenges-activity > .title{
-    font-size: 19px;
-    margin-bottom: 8px;
-  } 
-  .profile > .info-section > .challenges-activity > .info{
-    width: 70px;
-   font-size: 15px;
-   padding: 8px 0;
-  }
-
+  
   
   /*recent challenges*/
   .profile >.recent-challenges { 

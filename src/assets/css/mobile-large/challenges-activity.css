@@ -1,0 +1,27 @@
+@media screen and (min-width: 375px) {
+   .challenges-activity {
+    gap: 15px;
+  } 
+   .challenges-activity > .title{
+    font-size: 19px;
+    margin-bottom: 8px;
+  
+  } 
+  
+   .challenges-activity > .activity-row{
+    gap: 4px 12px;
+  }
+   .challenges-activity > .activity-row > .head-activity{
+    font-size: 17px;
+     gap: 4px;
+     margin: 12px 0 4px 0 ;
+    }
+   .challenges-activity > .activity-row > .activity{
+   font-size: 15px;
+   gap: 4px;
+  }
+   .challenges-activity > .activity-row > .activity > .name{
+   padding: 4px 8px;
+   border-radius: 20px;
+  }
+}

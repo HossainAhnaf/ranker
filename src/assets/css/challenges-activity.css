@@ -1,0 +1,44 @@
+
+/* challenges activity */
+
+.challenges-activity {
+  width: 100%;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 4vw;
+} 
+.challenges-activity > .title{
+  font-size: 5vw;
+  color: var(--paragraph-color-primary);
+  margin-bottom: 2vw;
+
+} 
+
+.challenges-activity > .activity-row{
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  gap: 1vw 3vw;
+  flex-wrap: wrap;
+}
+.challenges-activity > .activity-row > .head-activity{
+  font-size: 4.5vw;
+   gap: 1vw;
+ color: var(--paragraph-color-secondary);
+ width: 100%;
+ text-align: left;
+ justify-content: flex-start;
+ align-items: center; 
+ margin: 3vw 0 1vw 0 ;
+}
+
+.challenges-activity > .activity-row > .activity{
+ font-size: 4vw;
+ gap: 1vw;
+}
+.challenges-activity > .activity-row > .activity > .name{
+ background-color: var(--info-bg-color);
+ padding: 1vw 2vw;
+ border-radius: 5vw;
+}
+

@@ -11,9 +11,10 @@ import { singleUser } from '../data/usersData.json'
 //components
 import ProfileEditForm from '../components/ProfileEditForm/ProfileEditForm';
 import UserAvatar from '../components/UserAvatar';
+import ChallengesActivity from '../components/ChallengesActivity/ChallengesActivity';
+import AuthorProgress from '../components/AuthorProgress';
 import ChallengeCardsWrapper from '../components/ChallengeCardsWrapper';
 import Info from '../components/Info';
-import AuthorProgress from '../components/AuthorProgress';
 import Icon from 'react-inlinesvg';
 //svg
 import pencilSvg from '../assets/svg/pencil.svg';
@@ -126,12 +127,7 @@ function Profile() {
            }
         </div>
         <hr />
-        <div className="challenges-activity flex-cm">
-          <h3 className="title">Challenges Activity</h3>
-         <Info name='Total' value={authorChallenges} />
-         <Info name='Passed' value={authorPassed} />
-         <Info name='Failed' value={authorFailed} />
-         </div>
+       <ChallengesActivity/>
         <hr />
       <AuthorProgress authorLevel={authorLevel} authorXp={authorXp} progressParcentage={progressParcentage}/>
       </section>
