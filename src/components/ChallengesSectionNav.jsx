@@ -86,7 +86,7 @@ function ChallengesSectionNav() {
           <span>Pinned</span>
         </label>
       </MenuButton>
-      <div className="search-input-wrapper flex-rw center">
+      <div className="search-input-wrapper flex-rw ">
         <span className="svgCont">
           <Icon src={searchSvg} />
         </span>
@@ -108,13 +108,7 @@ function ChallengesSectionNav() {
             <span className="svgCont" onClick={()=>removeFilter("difficulty")}>
             <Icon src={closeSvg} />
             </span>
-           </span>
-           <span className="filter search flex-rw center">
-            <span></span>
-            <span className="svgCont" onClick={()=>removeFilter('search')}>
-            <Icon src={closeSvg} />
-            </span>
-           </span>
+           </span>      
            <span className="filter pinned flex-rw center">
             <span>Pinned</span>
             <span className="svgCont" onClick={()=>removeFilter('pinned')}>
@@ -124,6 +118,12 @@ function ChallengesSectionNav() {
            <span className="filter due-date flex-rw center">
             <span>Due date</span>
             <span className="svgCont" onClick={()=>removeFilter('due-date')}>
+            <Icon src={closeSvg} />
+            </span>
+           </span>
+           <span className="filter search flex-rw center">
+            <span></span>
+            <span className="svgCont" onClick={()=>removeFilter('search')}>
             <Icon src={closeSvg} />
             </span>
            </span>

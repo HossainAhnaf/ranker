@@ -11,7 +11,7 @@ import AuthorProgress from "../components/AuthorProgress";
 //css
 import '../assets/css/challenges.css';
 import '../assets/css/mobile-large/challenges.css';
-import '../assets/css/laptop/challenges.css';
+import '../assets/css/tablet/challenges.css';
 function Challenges() {
   
   const {level,xp} = useSelector(state=>state.userSlice)

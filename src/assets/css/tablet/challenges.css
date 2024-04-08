@@ -1,0 +1,30 @@
+ @media screen and (min-width: 700px) {
+.challenges-section {
+  gap: 10px;
+justify-content: space-between;
+}
+.challenges-section > .primary {
+  width: 55%;
+}
+
+
+.challenges-section > .secondary {
+  display: flex;
+  width: 250px;
+  height: 100%;
+  justify-content: center;
+  align-items: start;
+  background-color: var(--container-bg-color);
+  border-radius: 12px;
+
+
+}
+.challenges-section > .secondary > .author-progress {
+  padding: 10px;
+  width: calc(100% - 20px);
+}
+.challenges-section > .secondary > .author-progress > div[role="progressbar"] {
+--size: 160px;
+}
+
+ }

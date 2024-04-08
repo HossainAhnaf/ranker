@@ -4,55 +4,86 @@
     width: calc(100% - 24px);
     padding: 0 12px;
   }
-  .challenges-section > .primary > .challenges-section-nav {
-    border-radius: 12px;
-  }
-  .challenges-section >.primary > .challenge-cards-wrapper {
-    gap: 15px;
-    padding: 12px 0;
-    border-radius:  12px;
-  }
-  .challenges-section >.primary > .challenges-section-nav {
-    width: calc(98% - 30px);
-    margin: 8px 0;
-    padding: 8px 15px;
-   }
+  
 
-    .challenges-section >.primary > .challenges-section-nav > a > .create-challenge-button {
-    border-radius: 11px;
-    padding: 6px 8px;
+
+  .challenges-section > .primary > .challenges-section-nav {
+    width: calc(100% - 16px);
+    padding: 8px;
+    gap: 12px;
+   }
+   .challenges-section > .primary > .challenges-section-nav >.total-challenges-data-wrapper{
+    gap: 11px;
+    margin-bottom: 11px;
+   }
+   .challenges-section > .primary > .challenges-section-nav >.total-challenges-data-wrapper > .data{
+    gap: 4px;  
+   }
+   .challenges-section > .primary > .challenges-section-nav >.total-challenges-data-wrapper > .data > .name{
+    padding: 4px 8px;
+    border-radius: 20px;
+    font-size: 13px;
+   }
+   .challenges-section > .primary > .challenges-section-nav >.total-challenges-data-wrapper > .data > .value{
+    font-size: 15px;
+   }
+   .challenges-section > .primary > .challenges-section-nav  > .menu-button-wrapper{
+    --menu-button-font-size:15px;
+    --menu-options-wrapper-font-size:15px;
+    --menu-options-wrapper-checkbox-font-size:10px;
+    --menu-checkbox-padding:4px 8px;
+    --menu-padding:4px 10px;
+
+  }
+  .challenges-section > .primary > .challenges-section-nav  > .menu-button-wrapper > :is(.menu-button,.menu-options-wrapper){
+   border-radius: 6px;
+   width: calc(100% - 20px);
+  }
+   .challenges-section > .primary > .challenges-section-nav >.search-input-wrapper{
+    border-radius: 4px;  
     gap: 4px;
-    font-size: 11px;
+    padding: 6px ;
+  }
+
+  .challenges-section > .primary > .challenges-section-nav >.search-input-wrapper > .svgCont{
+   width: 17px;
+   height: 17px; 
   }
   
-    .challenges-section >.primary > .challenges-section-nav .create-challenge-button .svgCont {
+  .challenges-section > .primary > .challenges-section-nav >.search-input-wrapper > input{
+   width: 88%;
+   font-size: 15px;
+  } 
+  .challenges-section > .primary > .challenges-section-nav > .create-challenge-button{
+    font-size: 13px;
+    padding: 4px 8px;
+    border-radius: 20px;
+    gap: 4px;
+  }
+  .challenges-section > .primary > .challenges-section-nav > .create-challenge-button > .svgCont{
+   width: 13px;
+   height: 13px;
+  }
+    .challenges-section > .primary > .challenges-section-nav >.active-filters-list{
+    gap: 8px;
+    margin-top: 12px;
+  }
+  .challenges-section > .primary > .challenges-section-nav >.active-filters-list > .filter{
+   border-radius: 8px;
+   padding: 4px 8px;
+   font-size: 13px;
+   gap: 7px;
+  }
+
+  .challenges-section > .primary > .challenges-section-nav >.active-filters-list > .filter > .svgCont{
     width: 15px;
     height: 15px;
   }
-    
-  /* challenges search form */
-    .challenges-section >.primary > .challenges-section-nav > .challenges-search-form {
-    width: 200px;
-    border-radius: 20px;
-    height: 25px;
-    }
-      .challenges-section >.primary > .challenges-section-nav >    .challenges-search-form > input {
-      font-size: 13px;
-      padding: 0 0 0 15px;
-      border-radius: 20px 0 0 20px; 
-    }
-
-    .challenges-section >.primary > .challenges-section-nav >  .challenges-search-form > .button-container > .search-button {
-      padding: 4px 6px;
-    }
-    
-    .challenges-section >.primary > .challenges-section-nav >  .challenges-search-form > .button-container > .filter-button {
-      padding: 4px 6px;
-      border-radius: 0 20px 20px 0;
-    }
-    .challenges-section >.primary > .challenges-section-nav >  .challenges-search-form > .button-container button svg{
-      width: 15px;
-      height: 15px;
-    }
+  
+  .challenges-section >.primary > .challenge-cards-wrapper {
+    gap: 15px;
+    padding: 12px 0;
+  }
+  
 
 }

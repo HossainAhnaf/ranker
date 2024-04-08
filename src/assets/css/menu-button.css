@@ -10,6 +10,8 @@
    padding: var(--menu-padding) ;
    border-radius: 1vw;
    font-size: var(--menu-button-font-size);;
+   justify-content: space-between;
+   align-items: center;
  }
  .menu-button-wrapper > .menu-button > .svgCont{
    width: calc(var(--menu-button-font-size) * 1.2);

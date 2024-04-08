@@ -45,7 +45,7 @@ function MenuButton({children,label,optionsType,onChange}) {
   },[open])
   return (
     <div className={`menu-button-wrapper ${open ? 'open' : ''}`}>
-    <div className="menu-button flex-rw center" onClick={menuButtonClickHandler}>
+    <div className="menu-button flex-rw" onClick={menuButtonClickHandler}>
       <span>{label}</span>
       <span className="svgCont">
         <Icon src={dropDownSvg} />
