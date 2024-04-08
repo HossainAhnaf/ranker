@@ -14,12 +14,12 @@ function useDebounce(fn, delay) {
    * When called, it will clear the previous timeout and
    * set a new one.
    */
-  return () => {
+  return (...args) => {
     // If there is a previous timeout, clear it.
     if (timeout) clearTimeout(timeout);
 
     // Set a new timeout that will call the function after the delay.
-    timeout = setTimeout(fn, delay);
+    timeout = setTimeout(()=>fn(...args), delay);
   };
 }
 

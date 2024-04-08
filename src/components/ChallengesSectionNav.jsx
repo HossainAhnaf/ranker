@@ -1,10 +1,9 @@
 //modules
-import React ,{useEffect, useRef} from 'react'
+import React ,{useRef} from 'react'
 import { useDispatch } from 'react-redux'
-import { showFilterOption } from '../store/slices/challengesSectionNavSlice'
+import useDebounce from '../hooks/useDebounce'
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
-
 //components
 import MenuButton from './MenuButton';
 import Icon from 'react-inlinesvg'
@@ -30,6 +29,9 @@ function ChallengesSectionNav() {
   const removeFilter = (type)=>{
     activeFiltersListRef.current.querySelector(`.filter.${type}`)?.classList.remove('active') 
   }
+  const searchInputHandler = useDebounce(({target}) => {
+    addFilter('search',target.value)
+  },600)
   return (
     <nav className="challenges-section-nav flex-rw" >
       <div className="total-challenges-data-wrapper flex-rw">
@@ -88,7 +90,7 @@ function ChallengesSectionNav() {
         <span className="svgCont">
           <Icon src={searchSvg} />
         </span>
-        <input type="text" placeholder="Search challenges.." />
+        <input type="text" placeholder="Search challenges.." onInput={searchInputHandler}/>
       </div>
      
         <Link to="/create-new-challenge" className="create-challenge-button button positive flex-rw center">
@@ -108,7 +110,7 @@ function ChallengesSectionNav() {
             </span>
            </span>
            <span className="filter search flex-rw center">
-            <span>no fap</span>
+            <span></span>
             <span className="svgCont" onClick={()=>removeFilter('search')}>
             <Icon src={closeSvg} />
             </span>

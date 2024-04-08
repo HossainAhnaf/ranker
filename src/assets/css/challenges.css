@@ -79,14 +79,14 @@
 .challenges-section > .primary > .challenges-section-nav > .create-challenge-button{
   text-decoration: none;
   color: white;
-  font-size: 4vw;
+  font-size: 3.5vw;
   padding: 1vw 2vw;
-  border-radius: 1vw;
+  border-radius: 5vw;
   gap: 1vw;
 }
 .challenges-section > .primary > .challenges-section-nav > .create-challenge-button > .svgCont{
- width: 5vw  ;
- height: 5vw;
+ width: 3.5vw  ;
+ height: 3.5vw;
 }
 
 .challenges-section > .primary > .challenges-section-nav >.active-filters-list{
