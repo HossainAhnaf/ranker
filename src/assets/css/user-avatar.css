@@ -2,7 +2,6 @@
    position: relative;
     border-style: solid;
     border-color: var(--status-color);
-    
 }   
 
 .user-avatar.sigma{
@@ -39,5 +38,5 @@
   right: 0;
   color: black;
   font-weight: bold;
-  border: calc(var(--level-badge-font-size) / 5) solid var(--layout-bg-color);
+  border: calc(var(--level-badge-font-size) / 5) solid var(--badge-border-color);
 }

@@ -1,72 +1,53 @@
 //modules
 import React from 'react'
-import { Link,Outlet } from 'react-router-dom'
-
+import { useSelector } from 'react-redux'
+import { NavLink, Outlet } from 'react-router-dom'
+import useActiveClassName from '../hooks/useActiveClassName'
 //components
+import UserAvatar from '../components/UserAvatar'
 import Icon from 'react-inlinesvg'
 //svg
 import profileSvg from '../assets/svg/profile.svg'
-import passwordSvg from '../assets/svg/password.svg'
+import settingsSvg from '../assets/svg/settings.svg'
 import notificationSvg from '../assets/svg/notification.svg'
-import monitorSvg from '../assets/svg/monitor.svg'
+import securityShieldSvg from '../assets/svg/security-shield.svg'
 //css
 import '../assets/css/settings.css'
-import '../assets/css/mobile-large/settings.css'
+// import '../assets/css/mobile-large/settings.css'
 function Settings() {
+  const {avatar,name,username,status,level} = useSelector(state=>state.userSlice)
+  
   return (
-    <section className='settings-section flex-cm center'>
-      <div className="settings-group">
-       <div className="heading flex-cm">
-       <h1 className="title">Account</h1>
-        <small className="description">Update your info to keep your account secure</small>
-        </div> 
-        <div className="settings-wrapper">
-         <Link to="/name-and-contact-info" >    
-          <div className="setting flex-rw">
-            <div className="svgCont">
-              <Icon src={profileSvg} />
-            </div>
-            <b>Name and contact information</b>
+    <section className='settings-section'>
+      <div className="header">
+        <div className="background"></div>
+
+        <div className="user-primary-info-wrapper flex-cm center">
+          <UserAvatar avatar={avatar} status={status} level={level} />
+          <div className="text-wrapper flex-cm center">
+          <p className="name">{name}</p>
+          <small className="username">@{username}</small>
           </div>
-          </Link>
-         <Link to="/password-and-security" >
-          <div className="setting flex-rw">
-            <div className="svgCont">
-              <Icon src={passwordSvg} />
-            </div>
-            <b>Password and security</b>
-          </div>
-          </Link>
         </div>
       </div>
-
-      <div className="settings-group">
-       <div className="heading flex-cm">
-       <h1 className="title">Preferences</h1>
-        <small className="description">Customize your experience</small>
-        </div> 
-
-        <div className="settings-wrapper">       
-         <Link to="/notifications-preference" >  
-          <div className="setting flex-rw">
-            <div className="svgCont">
-              <Icon src={notificationSvg} />
-            </div>
-            <b>Notifications</b>
-          </div>
-          </Link>
-          <Link to="/display" >
-          <div className="setting flex-rw">
-            <div className="svgCont">
-              <Icon src={monitorSvg} />
-            </div>
-            <b>Display</b>
-          </div>
-          </Link>
-
-        </div>
-      </div>
-
+      <div className="navigation-buttons-wrapper flex-cm center">
+        <NavLink to='' className={useActiveClassName}>
+          <Icon src={profileSvg} />
+          Basic info
+          </NavLink>
+        <NavLink to='account' className={useActiveClassName}>
+          <Icon src={settingsSvg} />
+          Account
+          </NavLink>
+        <NavLink to='privacy' className={useActiveClassName}>
+          <Icon src={securityShieldSvg} />
+          Privacy
+          </NavLink>
+        <NavLink to='notifications' className={useActiveClassName}>
+          <Icon src={notificationSvg} />
+          Notifications
+          </NavLink>
+    </div>
     </section>
   )
 }
