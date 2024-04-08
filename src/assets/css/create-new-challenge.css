@@ -1,13 +1,12 @@
 
 .create-new-challenge-section {
-  margin-top: calc(var(--nav-vertical-padding) + var(--nav-height) + 10vh);
-
+  width: 100vw;
+  height: 100vh;
 }
 
 .create-new-challenge-section > form {
   width: 80%;
-  height: 100vw;
-  margin: 0 auto;
+  height: 60%;
   padding: 2vw 0;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5); 
   background-color: var(--container-bg-color-secondary);
@@ -15,7 +14,6 @@
 .create-new-challenge-section > form > .step-indicator-wrapper {
   width: 90%;
   margin: 0 auto;
-  font-size: 4vw;
   gap: 3vw;
   margin-bottom: 5vw;
 }
@@ -76,8 +74,6 @@ transition: left .5s;
   color: var(--theme-secondary-default);
   font-size: 4vw;
   margin-top: 1vw;
-  padding: 1vw ;
-  border-radius: 3vw;
 }
 
 .create-new-challenge-section > form > .tabs-wrapper > .tab > .outlined-custom-field {
@@ -133,11 +129,11 @@ width: 40%;
  font-size: 4vw;
 }
   .create-new-challenge-section > form > .button-wrapper {
-  width: 90%;
+  width: calc(100% - 2vw);
   align-items: center;
   justify-content: end;
-  margin: 0 auto;
   gap: 3vw;
+  padding-right: 2vw;
 }
 .create-new-challenge-section > form > .button-wrapper > button{
  padding: 2vw 3.5vw;

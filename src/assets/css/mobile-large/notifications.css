@@ -3,9 +3,7 @@
   width:calc(100% - 24px) ;
   padding: 8px 12px;
 }
-.notifications-section:not(.short-view) > nav{
-  margin-top:  calc(var(--nav-vertical-padding) + var(--nav-height) + 28px);
-} 
+
 .notifications-section > nav > .filter-buttons-wrapper{
   gap: 8px;
 }

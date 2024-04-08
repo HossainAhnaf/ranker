@@ -1,0 +1,65 @@
+@media screen and (min-width: 375px) {
+  .create-new-challenge-section > form {
+  width: 300px;
+  height: 420px;
+  padding: 8px 0;
+}
+.create-new-challenge-section > form > .step-indicator-wrapper {
+  gap: 12px;
+  margin-bottom: 20px;
+}
+.create-new-challenge-section > form > .step-indicator-wrapper > .step {
+  height: 4px;
+  content: ' ';
+  border-radius: 20px;
+}
+.create-new-challenge-section > form > .tabs-wrapper {
+  height: 75%;
+  padding: 20px 0;
+}
+
+.create-new-challenge-section > form > .tabs-wrapper > .tab > .add-remove-button {
+  font-size: 15px;
+  margin-top: 4px;
+}
+.create-new-challenge-section > form > .tabs-wrapper > .tab > .outlined-custom-field {
+  --input-font-size: 20px;
+  --label-font-size: 12px;  
+}
+.create-new-challenge-section > form > .tabs-wrapper > .tab > .outlined-custom-field > :is(input,textarea){
+  padding: 8px;
+  width: calc(100% - 16px);
+ }
+.create-new-challenge-section > form > .tabs-wrapper > .tab > .title-field {
+margin-bottom: 15px;
+}
+.create-new-challenge-section > form > .tabs-wrapper > .tab >  .difficulty-label{
+  gap: 12px;
+  font-size: 20px;
+  margin-top: 35px;
+}
+.create-new-challenge-section > form > .tabs-wrapper > .tab > .pinned-field {
+  gap: 12px;
+  font-size: 19px;
+  margin-top: 24px;
+
+}
+.create-new-challenge-section > form > .tabs-wrapper > .tab > .result{
+  gap: 12px;
+}
+.create-new-challenge-section > form > .tabs-wrapper > .tab > .result > .title{
+ font-size: 14px;
+}
+
+  .create-new-challenge-section > form > .button-wrapper {
+  width: calc(100% - 8px);
+  gap: 12px;
+  padding-right: 8px;
+}
+.create-new-challenge-section > form > .button-wrapper > button{
+ padding: 8px 13px;
+ border-radius: 12px;
+ font-size: 15px;
+}
+
+}

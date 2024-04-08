@@ -78,7 +78,7 @@
   justify-content: space-between;
   align-items: center;
   border: none;
-  background-color: var(--info-bg-color);
+  background-color: var(--item-bg-color);
  font-size: 4vw;
 }
 /* name form */

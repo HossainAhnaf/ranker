@@ -26,7 +26,7 @@
   gap: 1vw;  
  }
  .challenges-section > .primary > .challenges-section-nav >.total-challenges-data-wrapper > .data > .name{
-  background-color: var(--info-bg-color);
+  background-color: var(--item-bg-color);
   padding: 1vw 2vw;
   border-radius: 5vw;
   font-size: 3.5vw;
@@ -36,14 +36,14 @@
   font-size: 4vw;
  }
  .challenges-section > .primary > .challenges-section-nav  > .menu-button-wrapper{
-  --menu-button-bg-color:var(--info-bg-color);
+  --menu-button-bg-color:var(--item-bg-color);
   --menu-button-color:var(--paragraph-color-primary);
   --menu-button-font-size:4vw;
   --menu-padding:1vw 2.5vw;
   --menu-options-wrapper-bg-color:var(--container-bg-color);
   --menu-options-wrapper-color:var(--paragraph-color-primary); 
   --menu-options-wrapper-font-size:4vw;
-  --menu-option-checkbox-bg-color:var(--info-bg-color);
+  --menu-option-checkbox-bg-color:var(--item-bg-color);
   --menu-option-checkbox-checked-bg-color:var(--theme-secondary-default);
   --menu-option-checkbox-checked-bg:var(--theme-secondary-gradient);
   --menu-option-checkbox-checked-color:white;
@@ -56,7 +56,7 @@ width: calc(100% - 5vw);
 } 
 .challenges-section > .primary > .challenges-section-nav >.search-input-wrapper{
   width: 90%;
-  background-color: var(--info-bg-color);
+  background-color: var(--item-bg-color);
   border-radius: 1vw;  
   gap: 1vw;
   padding: 1.5vw ;
@@ -101,7 +101,7 @@ width: calc(100% - 5vw);
   margin-top: 4vw;
 }
 .challenges-section > .primary > .challenges-section-nav >.active-filters-list > .filter{
- background-color: var(--info-bg-color);
+ background-color: var(--item-bg-color);
  color: var(--paragraph-color-primary);
  border: none;
  border-radius: 4vw;

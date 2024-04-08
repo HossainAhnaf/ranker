@@ -1,8 +1,7 @@
+@media screen and (min-width: 375px) {
 .peoples-section{
-    margin-top: calc(var(--nav-vertical-padding) + var(--nav-height) + 5vh);
-    width: 100%;
+    margin-top: calc(var(--nav-vertical-padding) + var(--nav-height) + 40px);
 }
-
 .peoples-section > .search-bar-wrapper {
     width: 85%;
     margin: 7vw auto;
@@ -62,4 +61,5 @@
 .peoples-section > .recent-searches > .users-short-info-wrapper{
     width: 90%;
    margin: 0 auto
+}
 }

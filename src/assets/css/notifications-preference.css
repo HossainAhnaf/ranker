@@ -15,7 +15,7 @@
 
 
 .notifications-preference > table > tbody > tr:first-child > th{
- background-color: var(--info-bg-color);
+ background-color: var(--item-bg-color);
 padding: 1vw;
 font-size: 5vw;
 }

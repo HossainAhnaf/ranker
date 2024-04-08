@@ -12,7 +12,7 @@
 .author-progress > div[role="progressbar"] {
   --size: 60vw;
   --fg: var(--theme-secondary-default);
-  --bg: var(--info-bg-color);
+  --bg: white;
   --inner-color:var(--container-bg-color);
  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
  margin:0 auto;

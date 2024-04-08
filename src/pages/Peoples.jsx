@@ -10,6 +10,7 @@ import UsersShortInfoWrapper from '../components/UsersShortInfoWrapper'
 import Icon from 'react-inlinesvg'
 //css
 import '../assets/css/peoples.css'
+import '../assets/css/mobile-large/peoples.css'
 
 function Peoples() {
   const [userList, setUserList] = useState(allUsers)

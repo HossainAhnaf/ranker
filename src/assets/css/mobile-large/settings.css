@@ -1,0 +1,64 @@
+@media screen and (min-width: 375px) {
+.settings-section{
+    width: 100%;
+    margin-top: calc(var(--nav-vertical-padding) + var(--nav-height) + 3vw);
+ 
+}
+.settings-section > .settings-group{
+    width: 90%;
+    margin: 3vw 0;
+    gap: 5vw;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 1vw;
+}
+
+.settings-section > .settings-group > .heading{    
+ justify-content: center;
+ align-items: start;
+ margin-bottom: 3vw;
+gap: 1vw;
+
+}    
+
+.settings-section > .settings-group > .heading > .title{
+    font-size: 5vw;
+    font-weight: 500;
+}    
+
+.settings-section > .settings-group > .heading > .description{
+   color: var(--paragraph-color-secondary);
+    font-size: 3vw;
+}
+
+ .settings-section > .settings-group > .settings-wrapper{
+    width: 100%;
+    gap: 3vw;
+    justify-content: center;
+    align-items: center;
+} 
+.settings-section > .settings-group > .settings-wrapper > a{
+ text-decoration: none;
+ color: inherit;
+}
+.settings-section > .settings-group > .settings-wrapper  .setting{
+    gap: 2vw;
+    justify-content: start;
+    align-items: center;
+    font-size: 5vw;
+    padding: 3vw 1vw;
+    background-color: var(--layout-bg-color);
+}
+.settings-section > .settings-group > .settings-wrapper  .setting:active{
+ filter:  brightness(70%);
+}
+
+.settings-section > .settings-group > .settings-wrapper  .setting > .svgCont{
+    width: 5vw;
+    height: 5vw;
+}
+
+.settings-section > .settings-group > .settings-wrapper  .setting > .svgCont .fill{
+    fill: var(--icon-color);
+
+}
+}

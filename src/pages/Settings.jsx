@@ -11,6 +11,7 @@ import notificationSvg from '../assets/svg/notification.svg'
 import monitorSvg from '../assets/svg/monitor.svg'
 //css
 import '../assets/css/settings.css'
+import '../assets/css/mobile-large/settings.css'
 function Settings() {
   return (
     <section className='settings-section flex-cm center'>

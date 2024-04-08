@@ -8,6 +8,7 @@ import Select from '../components/Select'
 
 //css
 import '../assets/css/create-new-challenge.css'
+import '../assets/css/mobile-large/create-new-challenge.css'
 
 function CreateNewChallenge() {
   const stepIndicatorWrapperRef = useRef(null)
@@ -66,8 +67,8 @@ function CreateNewChallenge() {
 
 
   return (
-    <section className="create-new-challenge-section">
-      <form >
+    <section className="create-new-challenge-section flex-rw center">
+      <form  >
         <div className="step-indicator-wrapper flex-rw center" ref={stepIndicatorWrapperRef}>
           <div className="step current"></div>
           <div className="step next"></div>

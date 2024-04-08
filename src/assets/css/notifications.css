@@ -1,12 +1,16 @@
 .notifications-section{
   width: 100%;
+  justify-content: center;
+  align-items: center;    
 }
 .notifications-section > nav {
   width:calc(100% - 6vw) ;
   padding: 2vw 3vw;
+  max-width: 676px;
+  background-color: var(--container-bg-color-secondary);
 }
 .notifications-section:not(.short-view) > nav{
-  margin-top:  calc(var(--nav-vertical-padding) + var(--nav-height) + 7vw);
+  margin-top:  calc(var(--nav-vertical-padding) + var(--nav-height));
  
 } 
 .notifications-section > nav > .filter-buttons-wrapper{
@@ -61,6 +65,7 @@
   flex-direction: column;
   background-color: inherit;
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+  top: 0;
   right: 20%;
   border-radius: 3vw;
   z-index: 1;
@@ -93,6 +98,7 @@
 
 .notifications-section > .group{
   width: 100%;
+  max-width: 700px;
   background-color: var(--layout-bg-color);
 } 
 .notifications-section > .group > .date{
@@ -100,7 +106,7 @@
   width: calc(100% - 8vw);
   padding: 1.5vw 4vw;
 font-size: 5vw;
-background-color: var(--container-bg-color-secondary);
+background-color:var(--container-bg-color-secondary);
 }
 .notifications-section > .group > .notifications-wrapper{
   width: 100%;
@@ -109,7 +115,7 @@ background-color: var(--container-bg-color-secondary);
 
 .notifications-section > .group > .notifications-wrapper > .notification{
   width: calc(100% - 2vw);
-  background-color: var(--layout-bg-color);
+  background-color: var(--container-bg-color-secondary);
   padding: 3vw 1vw;
   gap: 1vw;
   position: relative;
