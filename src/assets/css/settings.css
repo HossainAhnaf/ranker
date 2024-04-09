@@ -170,6 +170,9 @@ margin-left: 2vw;
 }
 .settings-section > .main-content > .content.active >  .outlet-wrapper > .basic-info > .info-group > .info-wrapper > .info{
 width: 100%;
+gap: 4vw;
+border-bottom: 1px solid var(--border-color);
+padding: 2vw 0;
 }  
 
 .settings-section > .main-content > .content.active >  .outlet-wrapper > .basic-info > .info-group > .info-wrapper > .info > .name-wrapper{
@@ -177,11 +180,53 @@ width: 100%;
 justify-content: space-between;
 align-items: center;
 font-size: 5vw;
+color: var(--paragraph-color-secondary);
 }
 .settings-section > .main-content > .content.active >  .outlet-wrapper > .basic-info > .info-group > .info-wrapper > .info > .name-wrapper > .edit-button{
   background-color: transparent;
   color: royalblue;
   border: none;
-  font-size: 4vw;
+  font-size: 4.5vw;
+}
+.settings-section > .main-content > .content.active >  .outlet-wrapper > .basic-info > .info-group > .info-wrapper > .info.editable > .name-wrapper > .edit-button{
+ display: none;
+}
+.settings-section > .main-content > .content.active >  .outlet-wrapper > .basic-info > .info-group > .info-wrapper > .info > .value{
+width: 100%;
+color: var(--paragraph-color-secondary);
+font-size: 5vw;
+}
+.settings-section > .main-content > .content.active >  .outlet-wrapper > .basic-info > .info-group > .info-wrapper > .info.editable > .value{
+display: none;
+}
+.settings-section > .main-content > .content.active >  .outlet-wrapper > .basic-info > .info-group > .info-wrapper > .info > .value-field{
+  display: none; 
+  width: 70%;
+  border: 1px solid;
+  border-color: var(--border-color);
+  outline: none;
+  padding: 2vw ;
+  border-radius: 1vw;
+  align-self: flex-start;
+ font-size: 4vw;
+}
+.settings-section > .main-content > .content.active >  .outlet-wrapper > .basic-info > .info-group > .info-wrapper > .info.editable > .value-field{
+ display: block;
+}
+.settings-section > .main-content > .content.active >  .outlet-wrapper > .basic-info > .info-group > .info-wrapper > .info > .buttons-wrapper{
+ display: none; 
+ align-self: flex-start;
+ gap: 3vw;
+}
 
+.settings-section > .main-content > .content.active >  .outlet-wrapper > .basic-info > .info-group > .info-wrapper > .info.editable > .buttons-wrapper{
+  display: flex;
+}
+
+.settings-section > .main-content > .content.active >  .outlet-wrapper > .basic-info > .info-group > .info-wrapper > .info > .buttons-wrapper > button{
+ padding:  2vw;
+ border-radius: 2vw;
+ font-size: 4vw;
+ font-weight: bold;
+ border: none;
 }
