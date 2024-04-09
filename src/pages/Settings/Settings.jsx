@@ -1,5 +1,5 @@
 //modules
-import React ,{useState} from 'react'
+import React ,{useEffect, useState} from 'react'
 import { useSelector } from 'react-redux'
 import { NavLink, Outlet, useLocation } from 'react-router-dom'
 import useActiveClassName from '../../hooks/useActiveClassName'
@@ -19,7 +19,16 @@ import '../../assets/css/settings.css'
 function Settings() {
   const {pathname} = useLocation()
   const {avatar,name,username,status,level} = useSelector(state=>state.userSlice)
-  const [isContentActive, setIsContentActive] = useState(false)
+  const [isContentActive, setIsContentActive] = useState(true)
+  const headerTitles = {
+    '/settings/': 'Basic info',
+    '/settings/account': 'Account',
+    '/settings/privacy': 'Privacy',
+    '/settings/notification-settings': 'Notification settings',
+  }
+  useEffect(() => {
+    setIsContentActive(true)
+  },[pathname])
   return (
     <section className='settings-section'>
       <div className="header">
@@ -34,8 +43,8 @@ function Settings() {
         </div>
       </div>
      <div className="main-content">
-      <div className="navigation-buttons-wrapper flex-cm center">
-        <NavLink to='' className={useActiveClassName}>
+      <div className="navigation-buttons-wrapper flex-cm ">
+        <NavLink to='/settings/' end={true} className={useActiveClassName}>
           <Icon src={profileSvg} />
           Basic info
           </NavLink>
@@ -47,23 +56,23 @@ function Settings() {
           <Icon src={securityShieldSvg} />
           Privacy
           </NavLink>
-        <NavLink to='notifications' className={useActiveClassName} datalarge='true'>
+        <NavLink to='notification-settings' className={useActiveClassName} datalarge='true'>
           <Icon src={notificationSvg} />
           Notifications
           </NavLink>
     </div>
     <div className={`content ${isContentActive ? 'active' : ''}`}>
-       <button className="content-show-button flex-rw center">
+       <button className="content-show-button flex-rw center" onClick={()=>setIsContentActive(true)}>
          <Icon src={dropDownSvg} />
        </button>
        <div className="header flex-rw">
-          <button className="hamburger button svgCont">
+          <button className="hamburger button svgCont" onClick={()=>setIsContentActive(false)}>
             <Icon src={hamburgerSvg} />
           </button>
           <div className="drop-down-icon svgCont">
             <Icon src={dropDownSvg} />
           </div>
-          <h2 className="heading">{pathname}</h2>
+          <h2 className="heading">{headerTitles[pathname]}</h2>
        </div>
        <div className="outlet-wrapper">
         <Outlet/>
