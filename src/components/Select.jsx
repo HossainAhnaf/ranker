@@ -46,14 +46,15 @@ export default function Select({className,onChange, children }) {
   }, [isActive])
  
   return (
+    <div className="select-wrapper">
     <div className={`select ${isActive ? 'active' : ''} ${className}`} >
       <span className="selected-option" onClick={showSelectOptions}>{selectedOptionText}</span>
       <div className="options-wrapper" ref={optionsWrapperRef} tabIndex="0" onBlur={hideSelectOptions}>
-        {Children.map(children, (child) => {
-          return child
-        })}
+        {children}
       </div>
     </div>
+    </div>
+
   )
 }
 
