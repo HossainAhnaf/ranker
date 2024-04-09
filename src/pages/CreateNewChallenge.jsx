@@ -1,5 +1,5 @@
 //modules
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 
 //components
 import ChallengeCard from '../components/ChallengeCard'
@@ -64,7 +64,18 @@ function CreateNewChallenge() {
     e.preventDefault()
     alert('data posted')
   }
+  useEffect(() => {
+    const currentStep = stepIndicatorWrapperRef.current.querySelector('.step.current')
+    const nextStep = currentStep.nextElementSibling
+    currentStep.className = currentStep.className.replace('current', 'previous')
+    nextStep.className = nextStep.className.replace('next', 'current')
 
+    const currentTab = tabsWrapperRef.current.querySelector('.tab.current')
+    const nextTab = currentTab.nextElementSibling
+    currentTab.className = currentTab.className.replace('current', 'previous')
+    nextTab.className = nextTab.className.replace('next', 'current')
+    setStep(step + 1)
+  }, [])
 
   return (
     <section className="create-new-challenge-section flex-rw center">

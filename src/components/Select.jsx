@@ -1,5 +1,8 @@
-import React, { Children, useEffect, useRef, useState } from 'react'
-
+import React, {useEffect, useRef, useState } from 'react'
+//components
+import Icon from 'react-inlinesvg'
+//svg
+import dropDownSvg from '../assets/svg/drop-down.svg'
 //css
 import '../assets/css/select.css'
 export default function Select({className,onChange, children }) {
@@ -46,13 +49,16 @@ export default function Select({className,onChange, children }) {
   }, [isActive])
  
   return (
-    <div className="select-wrapper">
-    <div className={`select ${isActive ? 'active' : ''} ${className}`} >
-      <span className="selected-option" onClick={showSelectOptions}>{selectedOptionText}</span>
+    <div className={`select ${isActive ? 'active' : ''} ${className ? className : ''}`} >
+      <span className="selected-option flex-rw center" onClick={showSelectOptions}>
+        <span>{selectedOptionText}</span>
+         <span className="svgCont">
+          <Icon src={dropDownSvg}/>
+          </span>
+        </span>
       <div className="options-wrapper" ref={optionsWrapperRef} tabIndex="0" onBlur={hideSelectOptions}>
         {children}
       </div>
-    </div>
     </div>
 
   )

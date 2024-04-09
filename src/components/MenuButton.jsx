@@ -15,10 +15,16 @@ function MenuButton({children,label,optionsType,onChange}) {
 
   const menuButtonClickHandler = useCallback(()=>{  
     setOpen(true)
+    menuOptionsWrapperRef.current.addEventListener('blur',menuOptionsBlurHandler)
+    menuButtonRef.current.removeEventListener('click',menuButtonClickHandler)     
   },[])
   const menuOptionsBlurHandler = useCallback(({relatedTarget})=>{
     if(relatedTarget === null){
-    setTimeout(()=>setOpen(false))
+    setOpen(false)
+    setTimeout(() => {
+    menuButtonRef.current.addEventListener('click',menuButtonClickHandler)
+    }, 500);
+    
     }
   },[])
   const optionClickHandler = ({currentTarget})=>{
@@ -36,21 +42,20 @@ function MenuButton({children,label,optionsType,onChange}) {
   } 
 
   useEffect(() => {
+    menuButtonRef.current.addEventListener('click',menuButtonClickHandler)
+},[menuButtonRef])
+
+  useEffect(() => {
     menuOptionsWrapperRef.current.querySelectorAll('.option').forEach(option=>{
        option.addEventListener('click',optionClickHandler)
      })
+    
   },[menuOptionsWrapperRef])
-  useEffect(() => {
-    if (open){
-      menuOptionsWrapperRef.current.addEventListener('blur',menuOptionsBlurHandler)
-      menuButtonRef.current.removeEventListener('click',menuButtonClickHandler)
-     
-     menuOptionsWrapperRef.current.focus()
-    }else{
-     menuButtonRef.current.addEventListener('click',menuButtonClickHandler)
-    }
-  },[open])
 
+  useEffect(() => {
+    if (open)
+    menuOptionsWrapperRef.current.focus()
+  },[open])
   return (
     <div className={`menu-button-wrapper ${open ? 'open' : ''}`}>
     <div className="menu-button flex-rw" ref={menuButtonRef} >

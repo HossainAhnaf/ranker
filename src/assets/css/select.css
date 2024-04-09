@@ -4,24 +4,16 @@
   }
   
   .select > .selected-option {
+    width: max-content;
     padding: .5vw 2vw;
     border: 0.1vw solid var(--border-color);
+    gap: 2vw;
   }
-  .select > .selected-option:after {
-    border-style: solid;
-    border-width: 0.10em 0.10em 0 0;
-    content: '';
-    display: inline-block;
-    left: 0.15em;
-    position: relative;
-    top: 1vw;
-    transform: rotate(135deg);
-    vertical-align: top;
-    width: 0.45em;
-    height: 0.45em;
-    color: var(--chevron-color);
-    margin-left: 2vw;
+  .select > .selected-option > .svgCont{
+  width: 5vw;
+  height: 5vw;
   }
+
   .select > .options-wrapper {
     display: none;
     flex-direction: column;
@@ -32,6 +24,7 @@
     left: 0;
     outline: none;
     z-index: 100;
+    width: max-content;
   }
   .select > .options-wrapper > .option {
     padding: 2vw 3vw;
@@ -53,8 +46,4 @@
   }
   .select.active > .options-wrapper {
     display: flex;
-  }
-  .select.active > .selected-option:after {
-    top: 2vw;
-    transform: rotate(-45deg);
   }
