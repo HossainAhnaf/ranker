@@ -1,8 +1,10 @@
 .settings-section{
+
+  --margin-top:calc(var(--nav-vertical-padding) + var(--nav-height) );
     width: 100%;
-    min-height: 100vh;
+    min-height: calc(100vh - var(--margin-top) );
     height: max-content;
-    margin-top: calc(var(--nav-vertical-padding) + var(--nav-height) );
+    margin-top: var(--margin-top);
  
 }
 /* header */
@@ -43,14 +45,17 @@
   color: gray;
   font-size: 4vw;
 }
-
+.settings-section > .main-content {
+  position: relative;
+  overflow: hidden;
+}
 /* navigation buttons wrapper */
-.settings-section > .navigation-buttons-wrapper{
+.settings-section > .main-content > .navigation-buttons-wrapper{
   width: 100%;
   gap: 2vw;
   padding-top: 5vw;
 }
-.settings-section > .navigation-buttons-wrapper > a{
+.settings-section > .main-content > .navigation-buttons-wrapper > a{
   width: calc(90% - 10vw);
  color: var(--paragraph-color-primary);
  display: flex;
@@ -62,17 +67,65 @@
  background-color: inherit;
  border-radius: 2vw;
 }
-.settings-section > .navigation-buttons-wrapper > a.active{
+.settings-section > .main-content > .navigation-buttons-wrapper > a.active{
  background-color:  rgba(255, 68, 0, 0.548);
  background: linear-gradient(-150deg, rgba(255, 0, 0, 0.534) 15%, rgba(255, 68, 0, 0.548) 70%, rgba(255, 166, 0, 0.534) 94%);
  color: white;
 }
 
-.settings-section > .navigation-buttons-wrapper > a > svg{
+.settings-section > .main-content > .navigation-buttons-wrapper > a > svg{
   width: 5vw;
   height: 5vw;
 }
-.settings-section > .navigation-buttons-wrapper > a[datalarge="true"] > svg{
+.settings-section > .main-content > .navigation-buttons-wrapper > a[datalarge="true"] > svg{
 scale: 1.4;
 }
 
+/* outlet wrapper */
+.settings-section > .main-content > .content{
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left:80%;
+}
+.settings-section > .main-content > .content > .content-show-button{
+ padding: 2vw 4vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotate(90deg);
+  z-index: 2;
+}
+.settings-section > .main-content > .content > .content-show-button > svg{
+  width: 6vw;
+  height: 6vw;
+}
+
+.settings-section > .main-content > .content > .header {
+width:calc(100% - 6vw);
+justify-content: start;
+align-items: center;
+padding: 3vw;
+ background-color: var(--container-bg-color-secondary);
+ gap: 1vw;
+}
+.settings-section > .main-content > .content > .header .heading{
+font-size: 7vw;
+margin-left: 2vw;
+}
+.settings-section > .main-content > .content > .header > .hamburger{
+ width: 9vw;
+ height: 9vw;
+ background-color: inherit;
+ border: .5px solid var(--border-color);
+ border-radius: 1vw;
+}
+.settings-section > .main-content > .content > .header > .drop-down-icon{
+  width: 5vw;
+  height: 5vw;
+  transform: rotate(270deg);
+}
+.settings-section > .main-content > .content >  .outlet-wrapper{
+  background-color: var(--container-bg-color);
+  min-height: 50vh;
+}
