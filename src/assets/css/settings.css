@@ -29,13 +29,30 @@
   width: 100%;
   height: 100%;
   gap: 2vw;
+  position: relative;
 }
-.settings-section > .header > .user-primary-info-wrapper > .user-avatar{
+
+.settings-section > .header > .user-primary-info-wrapper > .user-avatar-label >  .user-avatar{
   width: 30vw;
   height: 30vw;  
   --badge-border-color: rgb(255, 139, 139);
   --level-badge-font-size: 5vw;
+  transition: filter .2s;
 }
+.settings-section > .header > .user-primary-info-wrapper > .user-avatar-label > svg {
+  width: 20vw;
+  height: 20vw;
+  display: none;
+  position: absolute;
+  top: 15%;
+  left: 40%;
+} 
+.settings-section > .header > .user-primary-info-wrapper > .user-avatar-label:active >  .user-avatar{
+   filter: brightness(50%);
+}
+.settings-section > .header > .user-primary-info-wrapper > .user-avatar-label:active >  svg{
+ display: block;
+} 
 .settings-section > .header > .user-primary-info-wrapper > .text-wrapper> .name{
   color: white;
   font-size: 7vw;
@@ -140,8 +157,8 @@ margin-left: 2vw;
 }
 .settings-section > .main-content > .content >  .outlet-wrapper{
   background-color: var(--layout-bg-color);
-  width: var(100% - 14vw);
-   padding: 5vw 7vw;
+  width: 100%;
+   padding: 5vw 0;
    min-height: 50vh;
    height: 50vh;
    overflow: hidden;
@@ -152,6 +169,23 @@ margin-left: 2vw;
 }
 
 
+.settings-section > .main-content > .content >  .outlet-wrapper > .outlet{
+  width:var(100% - 12vw);
+  gap: 7vw;
+ display: flex;
+ flex-direction: column;
+ padding: 0 6vw;
+ }
+
+ .settings-section > .main-content > .content >  .outlet-wrapper > .account > .delete-account-button{
+   width: max-content;
+   padding: 2vw 4vw;
+   background-color: transparent;
+   border: 1px solid red;
+   color: red;
+   border-radius: 2vw;
+   font-size: 4.5vw;
+ }
 .settings-section > .main-content > .content >  .outlet-wrapper section{
   width: 100%;
 }
@@ -262,29 +296,18 @@ display: none;
  font-weight: bold;
  border: none;
 }
-.settings-section > .main-content > .content >  .outlet-wrapper > .outlet{
-  width: 100%;
-  gap: 7vw;
- display: flex;
- flex-direction: column
- }
-
- .settings-section > .main-content > .content >  .outlet-wrapper > .account > .delete-account-button{
-   width: max-content;
-   padding: 2vw 4vw;
-   background-color: transparent;
-   border: 1px solid red;
-   color: red;
-   border-radius: 2vw;
-   font-size: 4.5vw;
-
- }
-
 /* notifications settings */
+.settings-section > .main-content > .content >  .outlet-wrapper >  .notification-settings{
+  gap: 0;
+ padding: 0;
+}
+
+
 .settings-section > .main-content > .content >  .outlet-wrapper >  .notification-settings > .header{
-padding: 3vw 0;
+padding: 3vw 9vw;
 justify-content: space-between;
 align-items: center;
+
 }
 .settings-section > .main-content > .content >  .outlet-wrapper >  .notification-settings > .header .name{
  font-size: 6vw;
@@ -297,5 +320,35 @@ align-items: center;
 }  
 
 .settings-section > .main-content > .content >  .outlet-wrapper >  .notification-settings > .notification-category{
-  
+  background-color: var(--container-bg-color-secondary);
+  color: var(--paragraph-color-secondary);
+  padding: 3vw 9vw;
 }
+
+.settings-section > .main-content > .content >  .outlet-wrapper >  .notification-settings > .notification-type-container > .notification-type{
+  padding: 3vw 6vw;
+  justify-content: space-between;
+  align-items: center;
+  width: calc(95% - 12vw);  
+}
+.settings-section > .main-content > .content >  .outlet-wrapper >  .notification-settings > .notification-type-container > .notification-type:not(:last-child){
+  border-bottom: .5px solid lightgray;
+}
+
+.settings-section > .main-content > .content >  .outlet-wrapper >  .notification-settings > .notification-type-container > .notification-type > .name{
+  font-size: 5vw;
+  width: 50%;
+}
+.settings-section > .main-content > .content >  .outlet-wrapper >  .notification-settings > .notification-type-container > .notification-type > .right {
+  justify-content: space-between;
+  align-items: center;
+  width: 40%;
+} 
+
+.settings-section > .main-content > .content >  .outlet-wrapper >  .notification-settings > .notification-type-container > .notification-type > .right > .checkbox-wrapper{
+  width: 40%; 
+}
+.settings-section > .main-content > .content >  .outlet-wrapper >  .notification-settings > .notification-type-container > .notification-type > .right > .checkbox-wrapper > input{
+width: 5vw;
+height: 5vw;
+} 

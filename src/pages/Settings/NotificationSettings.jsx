@@ -11,12 +11,33 @@ function NotificationSettings() {
         </div>
       </div>
       <div className="notification-category">
-       Anouncement
+        Anouncement
       </div>
-      <div className="notification-type-container">
-      <div className="notification-type">
- 
-      </div>
+      <div className="notification-type-container flex-cm center">
+        <div className="notification-type flex-rw">
+          <p className='name'>Important Announcements</p>
+          <div className="right flex-rw">
+            <label className="checkbox-wrapper flex-rw center">
+              <input type="checkbox" />
+            </label>
+            <label className="checkbox-wrapper flex-rw center">
+              <input type="checkbox" />
+            </label>
+          </div>
+
+        </div>
+        <div className="notification-type flex-rw">
+          <p className='name'>Feature  Announcements</p>
+          <div className="right flex-rw">
+            <label className="checkbox-wrapper flex-rw center">
+              <input type="checkbox" />
+            </label>
+            <label className="checkbox-wrapper flex-rw center">
+              <input type="checkbox" />
+            </label>
+          </div>
+
+        </div>
       </div>
     </div>
   )

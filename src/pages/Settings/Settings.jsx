@@ -7,6 +7,7 @@ import useActiveClassName from '../../hooks/useActiveClassName'
 import UserAvatar from '../../components/UserAvatar'
 import Icon from 'react-inlinesvg'
 //svg
+import cameraSvg from '../../assets/svg/camera.svg'
 import profileSvg from '../../assets/svg/profile.svg'
 import settingsSvg from '../../assets/svg/settings.svg'
 import notificationSvg from '../../assets/svg/notification.svg'
@@ -19,28 +20,40 @@ import '../../assets/css/settings.css'
 function Settings() {
   const {pathname} = useLocation()
   const {avatar,name,username,status,level} = useSelector(state=>state.userSlice)
-  const [isContentActive, setIsContentActive] = useState(true)
   const headerTitles = {
     '/settings': 'Basic info',
     '/settings/': 'Basic info',
     '/settings/account': 'Account',
     '/settings/privacy': 'Privacy',
-    '/settings/notification-settings': 'Notification settings',
+    '/settings/notifications': 'Notifications',
   }
+  const [isContentActive, setIsContentActive] = useState(true)
 
-
+ const [currentAvatar, setCurrentAvatar] = useState(avatar)
 const editButtonClickHandler = ({currentTarget}) => {
    const info = currentTarget.parentElement.parentElement
     info.classList.add('editable')
     info.querySelector('.value-field').focus() 
  }
+ const updateUserAvatar = (e) => {
+  const file = e.target.files[0]
+  const reader = new FileReader()
+  reader.readAsDataURL(file)
+ reader.onload = () => {
+    setCurrentAvatar(reader.result)
+ }
+}
   return (
     <section className='settings-section'>
       <div className="header">
         <div className="background"></div>
 
-        <div className="user-primary-info-wrapper flex-cm center">
-          <UserAvatar avatar={avatar} status={status} level={level} />
+        <div className="user-primary-info-wrapper flex-cm center">   
+         <label  className="user-avatar-label">
+         <UserAvatar avatar={currentAvatar} status={status} level={level} />
+          <Icon src={cameraSvg} />
+          <input type="file" hidden={true} onChange={updateUserAvatar}/>
+          </label>      
           <div className="text-wrapper flex-cm center">
           <p className="name">{name}</p>
           <small className="username">@{username}</small>
@@ -61,7 +74,7 @@ const editButtonClickHandler = ({currentTarget}) => {
           <Icon src={securityShieldSvg} />
           Privacy
           </NavLink>
-        <NavLink to='notification-settings' className={useActiveClassName} onClick={()=>setIsContentActive(true)} datalarge='true'>
+        <NavLink to='notifications' className={useActiveClassName} onClick={()=>setIsContentActive(true)} datalarge='true'>
           <Icon src={notificationSvg} />
           Notifications
           </NavLink>

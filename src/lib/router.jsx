@@ -67,7 +67,7 @@ export default createBrowserRouter(
               element: <Privacy />
             },
             {
-              path: 'notification-settings',
+              path: 'notifications',
               element: <NotificationSettings />
             }
           ]
