@@ -16,7 +16,7 @@ import hamburgerSvg from '../../assets/svg/hamburger.svg'
 import dropDownSvg from '../../assets/svg/drop-down.svg'
 //css
 import '../../assets/css/settings.css'
-// import '../assets/css/mobile-large/settings.css'
+import '../../assets/css/mobile-large/settings.css'
 function Settings() {
   const {pathname} = useLocation()
   const {avatar,name,username,status,level} = useSelector(state=>state.userSlice)

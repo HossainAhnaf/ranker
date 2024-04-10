@@ -1,64 +1,225 @@
 @media screen and (min-width: 375px) {
-.settings-section{
-    width: 100%;
-    margin-top: calc(var(--nav-vertical-padding) + var(--nav-height) + 3vw);
+  .settings-section{
+  }
+  /* header */
+  .settings-section > .header{
+    padding: 38px 0 76px  0;
+  }
  
-}
-.settings-section > .settings-group{
-    width: 90%;
-    margin: 3vw 0;
-    gap: 5vw;
-    border-bottom: 1px solid var(--border-color);
-    padding-bottom: 1vw;
-}
+  .settings-section > .header > .user-primary-info-wrapper{
+    gap: 7px;
+  }
+  .settings-section > .header > .user-primary-info-wrapper > .user-avatar-label >  .user-avatar{
+    width: 110px;
+    height: 110px;  
+    --level-badge-font-size: 18px;
+  }
+  .settings-section > .header > .user-primary-info-wrapper > .user-avatar-label > svg {
+    width: 76px;
+    height: 76px;
+    top: 20px;
+    left: 20px;
+  } 
+ 
+  .settings-section > .header > .user-primary-info-wrapper > .text-wrapper> .name{
+    font-size: 26px;
+  }
+  .settings-section > .header > .user-primary-info-wrapper > .text-wrapper> .username{
+    font-size: 15px;
+  }
 
-.settings-section > .settings-group > .heading{    
- justify-content: center;
- align-items: start;
- margin-bottom: 3vw;
-gap: 1vw;
+  /* navigation buttons wrapper */
+  .settings-section > .main-content > .navigation-buttons-wrapper{
+    gap: 8px;
+    padding-top: 20px;
+  }
+  .settings-section > .main-content > .navigation-buttons-wrapper > a{
+    width: calc(85% - 40px);
+   gap: 8px;
+   padding: 12px 20px;
+   border-radius: 8px;
+  } 
+  .settings-section > .main-content > .navigation-buttons-wrapper > a > svg{
+    width: 19px;
+    height: 19px;
+  }
+  
+  /* outlet wrapper */
+  .settings-section > .main-content > .content{
+    top: -40px;
+  }
 
-}    
+  .settings-section > .main-content > .content > .content-show-button{
+   padding: 8px 15px ;
+    top: 19px;
+    left: -38px;
+    border-radius: 0 0 8px  8px;
+  }
+  .settings-section > .main-content > .content > .content-show-button > svg{
+    width: 15px;
+    height: 15px;
+  }
+  
+  .settings-section > .main-content > .content > .header {
+  width:calc(100% - 24px);
+  padding: 12px;
+   gap: 4px;
+  }
+  .settings-section > .main-content > .content > .header .heading{
+  font-size: 26px;
+  margin-left: 8px;
+  }
+  .settings-section > .main-content > .content > .header > .hamburger{
+   width: 33px;
+   height: 33px;
+   border-radius: 4px;
+  }
+  .settings-section > .main-content > .content > .header > .drop-down-icon{
+    width: 20px;
+    height: 20px;
+  }
+  .settings-section > .main-content > .content >  .outlet-wrapper{
+     padding: 19px 0;
+  }
+  .settings-section > .main-content > .content >  .outlet-wrapper > .outlet{
+    width:var(100% - 44px);
+    gap: 26px;
+   padding: 0 22px;
+   }
+  
+   .settings-section > .main-content > .content >  .outlet-wrapper > .account > .delete-account-button{
+     padding: 8px 15px;
+     border-radius: 8px;
+     font-size: 17px;
+   }
 
-.settings-section > .settings-group > .heading > .title{
+  .settings-section > .main-content > .content >  .outlet-wrapper section > .section-name{
+    font-size: 22px;
+  }
+  
+  .settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper{
+   gap: 12px;
+   margin-top: 7px;
+  }
+  .settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content{
+  gap: 15px;
+  padding: 8px 0;
+  }  
+  
+
+  .settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content > .content-header > .title{
+    font-size: 20px;
+  } 
+  .settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content > .description{
+    font-size: 17px;
+  }
+  
+  .settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content > .content-header > .platform{
+   gap: 12px;
+  }
+  .settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content > .content-header > .platform > .logo{
+   width: 26px;
+   height: 26px;
+  }
+  
+  .settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content > .content-header >:is(.edit-button,.connect-disconnect-button){
+    font-size:17px;
+  }
+ 
+  .settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content > .value{
+  font-size: 20px;
+  }
+  .settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content:not(.connect-type) > .value-field{
+   font-size: 15px;
+  }
+  .settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content.privacy-type > .value-field{
+   width: 30%;
+  }
+  
+  .settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content:not(.connect-type) > .value-field:not(.select){
+    border: 1px solid var(--border-color);
+    border-radius: 1vw;
+    outline: none;
+    padding: 2vw ;
+  
+  }
+  
+  .settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content:not(.connect-type).editable > .value-field{
+   display: block;
+  }
+  .settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content:not(.connect-type) > .buttons-wrapper{
+   display: none; 
+   align-self: flex-start;
+   gap: 3vw;
+  }
+  
+  .settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content:not(.connect-type).editable > .buttons-wrapper{
+    display: flex;
+  }
+  
+  .settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content:not(.connect-type) > .buttons-wrapper > button{
+   padding:  2vw;
+   border-radius: 2vw;
+   font-size: 4vw;
+   font-weight: bold;
+   border: none;
+  }
+  /* notifications settings */
+  .settings-section > .main-content > .content >  .outlet-wrapper >  .notification-settings{
+    gap: 0;
+   padding: 0;
+  }
+  
+  
+  .settings-section > .main-content > .content >  .outlet-wrapper >  .notification-settings > .header{
+  padding: 3vw 9vw;
+  justify-content: space-between;
+  align-items: center;
+  
+  }
+  .settings-section > .main-content > .content >  .outlet-wrapper >  .notification-settings > .header .name{
+   font-size: 6vw;
+  } 
+  .settings-section > .main-content > .content >  .outlet-wrapper >  .notification-settings > .header .right{
+   justify-content: space-between;
+   align-items: center;
+   width: 40%;
+   font-size: 5vw;
+  }  
+  
+  .settings-section > .main-content > .content >  .outlet-wrapper >  .notification-settings > .notification-category{
+    background-color: var(--container-bg-color-secondary);
+    color: var(--paragraph-color-secondary);
+    padding: 3vw 9vw;
     font-size: 5vw;
-    font-weight: 500;
-}    
-
-.settings-section > .settings-group > .heading > .description{
-   color: var(--paragraph-color-secondary);
-    font-size: 3vw;
-}
-
- .settings-section > .settings-group > .settings-wrapper{
-    width: 100%;
-    gap: 3vw;
-    justify-content: center;
+  }
+  
+  .settings-section > .main-content > .content >  .outlet-wrapper >  .notification-settings > .notification-type-container > .notification-type{
+    padding: 3vw 6vw;
+    justify-content: space-between;
     align-items: center;
-} 
-.settings-section > .settings-group > .settings-wrapper > a{
- text-decoration: none;
- color: inherit;
-}
-.settings-section > .settings-group > .settings-wrapper  .setting{
-    gap: 2vw;
-    justify-content: start;
-    align-items: center;
+    width: calc(95% - 12vw);  
+  }
+  .settings-section > .main-content > .content >  .outlet-wrapper >  .notification-settings > .notification-type-container > .notification-type:not(:last-child){
+    border-bottom: .5px solid lightgray;
+  }
+  
+  .settings-section > .main-content > .content >  .outlet-wrapper >  .notification-settings > .notification-type-container > .notification-type > .name{
     font-size: 5vw;
-    padding: 3vw 1vw;
-    background-color: var(--layout-bg-color);
-}
-.settings-section > .settings-group > .settings-wrapper  .setting:active{
- filter:  brightness(70%);
-}
-
-.settings-section > .settings-group > .settings-wrapper  .setting > .svgCont{
-    width: 5vw;
-    height: 5vw;
-}
-
-.settings-section > .settings-group > .settings-wrapper  .setting > .svgCont .fill{
-    fill: var(--icon-color);
-
-}
+    width: 50%;
+  }
+  .settings-section > .main-content > .content >  .outlet-wrapper >  .notification-settings > .notification-type-container > .notification-type > .right {
+    justify-content: space-between;
+    align-items: center;
+    width: 40%;
+  } 
+  
+  .settings-section > .main-content > .content >  .outlet-wrapper >  .notification-settings > .notification-type-container > .notification-type > .right > .checkbox-wrapper{
+    width: 40%; 
+  }
+  .settings-section > .main-content > .content >  .outlet-wrapper >  .notification-settings > .notification-type-container > .notification-type > .right > .checkbox-wrapper > input{
+  width: 5vw;
+  height: 5vw;
+  } 
+  
 }
