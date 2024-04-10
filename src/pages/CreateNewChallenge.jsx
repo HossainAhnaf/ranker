@@ -118,10 +118,10 @@ function CreateNewChallenge() {
             <div className="difficulty-label flex-rw ">
               <span className="name">Difficulty</span>
               <Select onChange={setDifficulty}>
-                <span dataselectedclassnames="easy" className="option selected easy">Easy</span>
-                <span dataselectedclassnames="medium" className="option medium">Medium</span>
-                <span dataselectedclassnames="hard" className="option hard">Hard</span>
-                <span dataselectedclassnames="crazy" className="option crazy">Crazy</span>
+                <span datavalue="easy" dataselectedclassnames="easy" className="option selected easy">Easy</span>
+                <span datavalue="medium" dataselectedclassnames="medium" className="option medium">Medium</span>
+                <span datavalue="hard" dataselectedclassnames="hard" className="option hard">Hard</span>
+                <span datavalue="crazy" dataselectedclassnames="crazy" className="option crazy">Crazy</span>
               </Select>
             </div>
 

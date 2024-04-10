@@ -20,7 +20,9 @@ export default function Select({ className, onChange, children }) {
     optionsWrapperRef.current.querySelector('.selected').classList.remove('selected')
     currentTarget.classList.add('selected')
     setSelectedOptionText(currentTarget.textContent)
-    setSelectedClassNames(currentTarget.getAttribute('dataselectedclassnames'))
+    if (currentTarget.getAttribute('dataselectedclassnames')) 
+      setSelectedClassNames(currentTarget.getAttribute('dataselectedclassnames'))
+    if (onChange) onChange(currentTarget.getAttribute('datavalue'))
   }
 
   useEffect(() => {
@@ -36,6 +38,7 @@ export default function Select({ className, onChange, children }) {
 
   return (
     <>
+    
       <details className={`select ${className ? className : ''}`} ref={selectRef}>
         <summary className={`${selectedClassNames ? selectedClassNames : ''} flex-rw`} >
           {selectedOptionText}

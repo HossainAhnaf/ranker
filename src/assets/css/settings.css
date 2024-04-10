@@ -202,14 +202,17 @@ display: none;
 .settings-section > .main-content > .content.active >  .outlet-wrapper > .basic-info > .info-group > .info-wrapper > .info > .value-field{
   display: none; 
   width: 70%;
-  border: 1px solid;
-  border-color: var(--border-color);
+ font-size: 4vw;
+ align-self: flex-start;
+}
+.settings-section > .main-content > .content.active >  .outlet-wrapper > .basic-info > .info-group > .info-wrapper > .info > .value-field:not(.select){
+  border: 1px solid var(--border-color);
+  border-radius: 1vw;
   outline: none;
   padding: 2vw ;
-  border-radius: 1vw;
-  align-self: flex-start;
- font-size: 4vw;
+
 }
+
 .settings-section > .main-content > .content.active >  .outlet-wrapper > .basic-info > .info-group > .info-wrapper > .info.editable > .value-field{
  display: block;
 }
