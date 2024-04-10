@@ -2,8 +2,8 @@ import React from 'react'
 
 function Privacy() {
   return (
-    <div>
-      
+    <div className="outlet privacy">
+       
     </div>
   )
 }

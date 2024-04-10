@@ -54,14 +54,26 @@ function Account() {
               </div>
               <p className="name">Google</p>
             </div> 
-            <button className="connect-button">Connect</button>
+            <button className="connect-disconnect-button">Connect</button>
             </div> 
             <p className="value">Not connected</p>
           </div>
-    
+
+          <div className="info connection-type flex-cm center">
+           <div className="name-wrapper flex-rw">
+           <div className="platform flex-rw center">
+              <div className="logo svgCont">
+                <Icon src={facebookSvg} />
+              </div>
+              <p className="name">Facebook</p>
+            </div> 
+            <button className="connect-disconnect-button">Connect</button>
+            </div> 
+            <p className="value">Not connected</p>
+          </div>
         </div>
       </div>
-
+      <button className="delete-account-button">Delete Account</button>
     </div>
   )
 }
