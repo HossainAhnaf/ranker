@@ -21,14 +21,19 @@ function Settings() {
   const {avatar,name,username,status,level} = useSelector(state=>state.userSlice)
   const [isContentActive, setIsContentActive] = useState(true)
   const headerTitles = {
+    '/settings': 'Basic info',
     '/settings/': 'Basic info',
     '/settings/account': 'Account',
     '/settings/privacy': 'Privacy',
     '/settings/notification-settings': 'Notification settings',
   }
-  useEffect(() => {
-    setIsContentActive(true)
-  },[pathname])
+
+
+const editButtonClickHandler = ({currentTarget}) => {
+   const info = currentTarget.parentElement.parentElement
+    info.classList.add('editable')
+    info.querySelector('.value-field').focus() 
+ }
   return (
     <section className='settings-section'>
       <div className="header">
@@ -44,19 +49,19 @@ function Settings() {
       </div>
      <div className="main-content">
       <div className="navigation-buttons-wrapper flex-cm ">
-        <NavLink to='/settings/' end={true} className={useActiveClassName}>
+        <NavLink to='/settings' end={true} className={useActiveClassName} onClick={()=>setIsContentActive(true)} >
           <Icon src={profileSvg} />
           Basic info
           </NavLink>
-        <NavLink to='account' className={useActiveClassName}>
+        <NavLink to='account' className={useActiveClassName} onClick={()=>setIsContentActive(true)}>
           <Icon src={settingsSvg} />
           Account
           </NavLink>
-        <NavLink to='privacy' className={useActiveClassName}>
+        <NavLink to='privacy' className={useActiveClassName} onClick={()=>setIsContentActive(true)}>
           <Icon src={securityShieldSvg} />
           Privacy
           </NavLink>
-        <NavLink to='notification-settings' className={useActiveClassName} datalarge='true'>
+        <NavLink to='notification-settings' className={useActiveClassName} onClick={()=>setIsContentActive(true)} datalarge='true'>
           <Icon src={notificationSvg} />
           Notifications
           </NavLink>
@@ -75,7 +80,7 @@ function Settings() {
           <h2 className="heading">{headerTitles[pathname]}</h2>
        </div>
        <div className="outlet-wrapper">
-        <Outlet/>
+        <Outlet context={[editButtonClickHandler]}/>
        </div>
     </div>    
     </div> 

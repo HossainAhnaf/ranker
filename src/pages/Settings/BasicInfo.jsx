@@ -1,18 +1,16 @@
 import React , {useState} from 'react'
 import { useSelector } from 'react-redux'
+import {useOutletContext} from 'react-router-dom'
 //components
 import Select from '../../components/Select'
 function BasicInfo() {
+  const [editButtonClickHandler] = useOutletContext()
  const {name,username,gender} = useSelector(state=>state.userSlice)
  const [currentName, setCurrentName] = useState(name)
  const [currentUsername, setCurrentUsername] = useState(username)
  const [currentGender, setCurrentGender] = useState(gender)
   
- const editButtonClickHandler = ({currentTarget}) => {
-   const info = currentTarget.parentElement.parentElement
-    info.classList.add('editable')
-    info.querySelector('.value-field').focus() 
- }
+ 
  const cancleButtonClickHandler = ({currentTarget},type) => {
    const info = currentTarget.parentElement.parentElement
     info.classList.remove('editable')
@@ -22,7 +20,7 @@ function BasicInfo() {
       setCurrentUsername(username)
  }
   return (
-    <div className="basic-info flex-cm center">
+    <div className="outlet basic-info">
       <div className="info-group">
         <b className="group-name">Basic Info</b>
         <div className="info-wrapper flex-cm center">
@@ -38,7 +36,6 @@ function BasicInfo() {
               <button className="cancel-button negitive" onClick={(e)=>cancleButtonClickHandler(e,'name')} >Cancel</button>
             </div>
           </div>
-
           <div className="info flex-cm center">
             <div className="name-wrapper flex-rw">
               <p className="name">Username</p>
