@@ -279,3 +279,23 @@ display: none;
    font-size: 4.5vw;
 
  }
+
+/* notifications settings */
+.settings-section > .main-content > .content >  .outlet-wrapper >  .notification-settings > .header{
+padding: 3vw 0;
+justify-content: space-between;
+align-items: center;
+}
+.settings-section > .main-content > .content >  .outlet-wrapper >  .notification-settings > .header .name{
+ font-size: 6vw;
+} 
+.settings-section > .main-content > .content >  .outlet-wrapper >  .notification-settings > .header .right{
+ justify-content: space-between;
+ align-items: center;
+ width: 40%;
+ font-size: 5vw;
+}  
+
+.settings-section > .main-content > .content >  .outlet-wrapper >  .notification-settings > .notification-category{
+  
+}
