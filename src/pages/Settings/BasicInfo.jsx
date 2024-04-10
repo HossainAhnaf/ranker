@@ -4,16 +4,15 @@ import {useOutletContext} from 'react-router-dom'
 //components
 import Select from '../../components/Select'
 function BasicInfo() {
-  const [editButtonClickHandler] = useOutletContext()
  const {name,username,gender} = useSelector(state=>state.userSlice)
  const [currentName, setCurrentName] = useState(name)
  const [currentUsername, setCurrentUsername] = useState(username)
  const [currentGender, setCurrentGender] = useState(gender)
   
- 
+ const [editButtonClickHandler] = useOutletContext()
  const cancleButtonClickHandler = ({currentTarget},type) => {
-   const info = currentTarget.parentElement.parentElement
-    info.classList.remove('editable')
+   const content = currentTarget.parentElement.parentElement
+    content.classList.remove('editable')
     if (type === 'name')
       setCurrentName(name)
     else if (type === 'username')
@@ -21,12 +20,12 @@ function BasicInfo() {
  }
   return (
     <div className="outlet basic-info">
-      <div className="info-group">
-        <b className="group-name">Basic Info</b>
-        <div className="info-wrapper flex-cm center">
-          <div className="info flex-cm center">
-            <div className="name-wrapper flex-rw">
-              <p className="name">Name</p>
+      <section>
+        <b className="section-name">Basic Info</b>
+        <div className="content-wrapper flex-cm center">
+          <div className="content flex-cm center">
+            <div className="content-header flex-rw">
+              <p className="title">Name</p>
               <button className="edit-button"  onClick={editButtonClickHandler}>Edit</button>
             </div>
             <p className="value">{currentName}</p>
@@ -36,9 +35,9 @@ function BasicInfo() {
               <button className="cancel-button negitive" onClick={(e)=>cancleButtonClickHandler(e,'name')} >Cancel</button>
             </div>
           </div>
-          <div className="info flex-cm center">
-            <div className="name-wrapper flex-rw">
-              <p className="name">Username</p>
+          <div className="content flex-cm center">
+            <div className="content-header flex-rw">
+              <p className="title">Username</p>
               <button className="edit-button"  onClick={editButtonClickHandler}>Edit</button>
             </div>
             <p className="value">{currentUsername}</p>
@@ -49,9 +48,9 @@ function BasicInfo() {
             </div>
           </div>
 
-          <div className="info flex-cm center">
-            <div className="name-wrapper flex-rw">
-              <p className="name">Gender</p>
+          <div className="content flex-cm center">
+            <div className="content-header flex-rw">
+              <p className="title">Gender</p>
               <button className="edit-button"  onClick={editButtonClickHandler}>Edit</button>
             </div>
             <p className="value">{currentGender}</p>
@@ -68,7 +67,7 @@ function BasicInfo() {
 
 
         </div>
-      </div>
+      </section>
 
     </div>
   )

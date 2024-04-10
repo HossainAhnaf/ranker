@@ -11,20 +11,20 @@ function Account() {
 
   const [editButtonClickHandler] = useOutletContext()
   const cancleButtonClickHandler = ({currentTarget},type) => {
-    const info = currentTarget.parentElement.parentElement
-     info.classList.remove('editable')
+    const content = currentTarget.parentElement.parentElement
+     content.classList.remove('editable')
      if (type === 'email')
        setCurrentEmail(email)
 
   }
   return (
     <div className='outlet account'>
-        <div className="info-group">
-        <b className="group-name">Account Information</b>
-        <div className="info-wrapper flex-cm center">
-          <div className="info flex-cm center">
-            <div className="name-wrapper flex-rw">
-              <p className="name">Email</p>
+        <section>
+        <b className="section-name">Account Information</b>
+        <div className="content-wrapper flex-cm center">
+          <div className="content flex-cm center">
+            <div className="content-header flex-rw">
+              <p className="title">Email</p>
               <button className="edit-button"  onClick={editButtonClickHandler}>Edit</button>
             </div>
             <p className="value">{currentEmail}</p>
@@ -34,45 +34,45 @@ function Account() {
               <button className="cancel-button negitive" onClick={(e)=>cancleButtonClickHandler(e,'email')} >Cancel</button>
             </div>
           </div>
-          <div className="info flex-cm center">
-            <div className="name-wrapper flex-rw">
-              <p className="name">Password</p>
+          <div className="content flex-cm center">
+            <div className="content-header flex-rw">
+              <p className="title">Password</p>
             </div>
             <Link className="link-button">Change Password</Link>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div className="info-group ">
-        <b className="group-name">Social Account</b>
-        <div className="info-wrapper flex-cm center">
-          <div className="info connection-type flex-cm center">
-           <div className="name-wrapper flex-rw">
+      <section>
+        <b className="section-name">Social Account</b>
+        <div className="content-wrapper flex-cm center">
+          <div className="content connection-type flex-cm center">
+           <div className="content-header flex-rw">
            <div className="platform flex-rw center">
               <div className="logo svgCont">
                 <Icon src={googleSvg} />
               </div>
-              <p className="name">Google</p>
+              <p className="title">Google</p>
             </div> 
             <button className="connect-disconnect-button">Connect</button>
             </div> 
             <p className="value">Not connected</p>
           </div>
 
-          <div className="info connection-type flex-cm center">
-           <div className="name-wrapper flex-rw">
+          <div className="content connection-type flex-cm center">
+           <div className="content-header flex-rw">
            <div className="platform flex-rw center">
               <div className="logo svgCont">
                 <Icon src={facebookSvg} />
               </div>
-              <p className="name">Facebook</p>
+              <p className="title">Facebook</p>
             </div> 
             <button className="connect-disconnect-button">Connect</button>
             </div> 
             <p className="value">Not connected</p>
           </div>
         </div>
-      </div>
+      </section>
       <button className="delete-account-button">Delete Account</button>
     </div>
   )

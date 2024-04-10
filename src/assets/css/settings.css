@@ -152,70 +152,89 @@ margin-left: 2vw;
 }
 
 
-.settings-section > .main-content > .content >  .outlet-wrapper .info-group{
+.settings-section > .main-content > .content >  .outlet-wrapper section{
   width: 100%;
 }
-.settings-section > .main-content > .content >  .outlet-wrapper .info-group > .group-name{
+.settings-section > .main-content > .content >  .outlet-wrapper section > .section-name{
   font-size: 6vw;
   font-weight: 500;
 }
 
-.settings-section > .main-content > .content >  .outlet-wrapper .info-group > .info-wrapper{
+.settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper{
  width: 100%;
  gap: 3vw;
  margin-top: 2vw;
 }
-.settings-section > .main-content > .content >  .outlet-wrapper .info-group > .info-wrapper > .info{
+.settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content{
 width: 100%;
 gap: 4vw;
 border-bottom: 1px solid lightgray;
 padding: 2vw 0;
 }  
 
-.settings-section > .main-content > .content >  .outlet-wrapper .info-group > .info-wrapper > .info > .name-wrapper{
+.settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content > .content-header{
 width: 100%;
 justify-content: space-between;
 align-items: center;
-font-size: 5vw;
-color: var(--paragraph-color-secondary);
 }
-.settings-section > .main-content > .content >  .outlet-wrapper .info-group > .info-wrapper > .info > .name-wrapper > .platform{
+.settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content > .content-header > .title{
+  font-size: 5vw;
+  color: var(--paragraph-color-secondary);
+ max-width: 70%;
+} 
+.settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content > .description{
+  font-size: 4.5vw;
+  color: var(--paragraph-color-secondary);
+ 
+}
+
+.settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content > .content-header > .platform{
  gap: 3vw;
 }
-.settings-section > .main-content > .content >  .outlet-wrapper .info-group > .info-wrapper > .info > .name-wrapper > .platform > .logo{
+.settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content > .content-header > .platform > .logo{
  width: 7vw;
  height: 7vw;
 }
 
-.settings-section > .main-content > .content >  .outlet-wrapper .info-group > .info-wrapper > .info > .name-wrapper >:is(.edit-button,.connect-disconnect-button){
+.settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content > .content-header >:is(.edit-button,.connect-disconnect-button){
   background-color: transparent;
   color: royalblue;
   border: none;
   font-size: 4.5vw;
 }
-.settings-section > .main-content > .content >  .outlet-wrapper .info-group > .info-wrapper > .info:not(.connect-type).editable > .name-wrapper > .edit-button{
+.settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content:not(.connect-type).editable > .content-header > .edit-button{
  display: none;
 }
-.settings-section > .main-content > .content >  .outlet-wrapper .info-group > .info-wrapper > .info > .value{
+.settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content > .value{
 width: 100%;
 color: var(--paragraph-color-secondary);
 font-size: 5vw;
 }
-.settings-section > .main-content > .content >  .outlet-wrapper .info-group > .info-wrapper > .info:not(.connect-type).editable > .value{
+
+.settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content.privacy-type > .value{
+  color: var(--paragraph-color-primary);
+   font-weight: 600;
+  }
+  
+.settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content:not(.connect-type).editable > .value{
 display: none;
 }
-.settings-section > .main-content > .content >  .outlet-wrapper .info-group > .info-wrapper > .info:not(.connect-type) > .link-button{
+.settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content:not(.connect-type) > .link-button{
   text-decoration: none;
   width: 100%;
   color: royalblue;
 }
-.settings-section > .main-content > .content >  .outlet-wrapper .info-group > .info-wrapper > .info:not(.connect-type) > .value-field{
+.settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content:not(.connect-type) > .value-field{
   display: none; 
   width: 70%;
  font-size: 4vw;
  align-self: flex-start;
 }
-.settings-section > .main-content > .content >  .outlet-wrapper .info-group > .info-wrapper > .info:not(.connect-type) > .value-field:not(.select){
+.settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content.privacy-type > .value-field{
+ width: 30%;
+}
+
+.settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content:not(.connect-type) > .value-field:not(.select){
   border: 1px solid var(--border-color);
   border-radius: 1vw;
   outline: none;
@@ -223,20 +242,20 @@ display: none;
 
 }
 
-.settings-section > .main-content > .content >  .outlet-wrapper .info-group > .info-wrapper > .info:not(.connect-type).editable > .value-field{
+.settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content:not(.connect-type).editable > .value-field{
  display: block;
 }
-.settings-section > .main-content > .content >  .outlet-wrapper .info-group > .info-wrapper > .info:not(.connect-type) > .buttons-wrapper{
+.settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content:not(.connect-type) > .buttons-wrapper{
  display: none; 
  align-self: flex-start;
  gap: 3vw;
 }
 
-.settings-section > .main-content > .content >  .outlet-wrapper .info-group > .info-wrapper > .info:not(.connect-type).editable > .buttons-wrapper{
+.settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content:not(.connect-type).editable > .buttons-wrapper{
   display: flex;
 }
 
-.settings-section > .main-content > .content >  .outlet-wrapper .info-group > .info-wrapper > .info:not(.connect-type) > .buttons-wrapper > button{
+.settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content:not(.connect-type) > .buttons-wrapper > button{
  padding:  2vw;
  border-radius: 2vw;
  font-size: 4vw;
