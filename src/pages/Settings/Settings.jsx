@@ -46,7 +46,7 @@ const editButtonClickHandler = ({currentTarget}) => {
 }
   return (
     <section className='settings-section'>
-      <div className="header">
+      <div className="header flex-rw center">
         <div className="background"></div>
 
         <div className="user-primary-info-wrapper center">   
@@ -61,7 +61,7 @@ const editButtonClickHandler = ({currentTarget}) => {
           </div>
         </div>
       </div>
-     <div className="main-content">
+     <div className="main-content flex-rw center">
       <div className="navigation-buttons-wrapper flex-cm ">
         <NavLink to='/settings' end={true} className={useActiveClassName} onClick={()=>setIsContentActive(true)} >
           <Icon src={profileSvg} />

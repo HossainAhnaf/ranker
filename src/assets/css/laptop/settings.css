@@ -4,12 +4,14 @@
   }
   .settings-section > .header {
     padding: 50px 0 106px  0;
+    
   }
   
   .settings-section > .header > .user-primary-info-wrapper {
     flex-direction: row;
     gap: 15px;
     width: 450px;
+    margin-right: 350px;
   }
   
   .settings-section > .header > .user-primary-info-wrapper > .user-avatar-label {
@@ -33,6 +35,8 @@
   
   .settings-section > .main-content > .navigation-buttons-wrapper {
     width: 200px;
+    margin-right: 550px;
+
   }
   
   .settings-section > .main-content > .navigation-buttons-wrapper > a {
@@ -52,12 +56,12 @@
     border-radius: 1vw;
   overflow: hidden;
   transition: box-shadow 0.2s;
-  left: 220px !important;
+  left: 230px !important;
   box-shadow: 0 0px 10px 0 rgba(0, 0, 0, 0.5) !important;
  }
 
   .settings-section > .main-content > .content:hover {
-    box-shadow: 0 0px 20px 0 rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0px 20px 0 rgba(0, 0, 0, 0.5) !important;
   } 
   .settings-section > .main-content > .content > .content-show-button {
     display: none;
@@ -84,11 +88,7 @@
   
   .settings-section > .main-content > .content > .outlet-wrapper > .account > .delete-account-button {
   }
-/*  
-  .settings-section > .main-content > .content > .outlet-wrapper{
-    border-radius: 2vw;
-  }  */
- 
+
   .settings-section > .main-content > .content > .outlet-wrapper section > .section-name {
   }
   
