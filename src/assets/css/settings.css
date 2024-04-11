@@ -213,11 +213,15 @@ margin-left: 2vw;
  margin-top : 2vw;
 }
 /* content */
+
 .settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content{
+position: relative;
 width: 100%;
 gap: 4vw;
 border-bottom: 1px solid lightgray;
 padding: 2vw 0;
+display: flex;
+ flex-direction: column;
 justify-content: flex-start;
 }  
 .settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content  > .title{
@@ -225,7 +229,11 @@ justify-content: flex-start;
   color: var(--paragraph-color-secondary);
  max-width: 70%;
 } 
-
+.settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content > .value-wrapper{
+  display: flex;
+  flex-direction: column;
+  gap: 2vw;
+}
 .settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content > .value-wrapper > .value{
   width: 100%;
   color: var(--paragraph-color-secondary);
@@ -233,13 +241,11 @@ justify-content: flex-start;
   }
   .settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content > .value-wrapper.editable > .value{
     display: none;
-   
-     }
+ }
    
   
 .settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content > .value-wrapper > .value-field{
   display: none; 
-  width: 70%;
  font-size: 4vw;
  align-self: flex-start;
 }
@@ -248,8 +254,11 @@ justify-content: flex-start;
   border-radius: 1vw;
   outline: none;
   padding: 2vw ;
-
+  width: 70%;
 }
+.settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content > .value-wrapper > .value-field.select{  
+  width: 30%;
+ }
 .settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content > .value-wrapper.editable > .value-field{
   display: block;
  }
@@ -276,6 +285,8 @@ justify-content: flex-start;
   color: royalblue;
   border: none;
   font-size: 4.5vw;
+  position: absolute;
+  right: 0;
 }
  .settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content > .value-wrapper.editable + .edit-button{
   display: none;
@@ -289,25 +300,31 @@ justify-content: flex-start;
   align-self: flex-start;
   color: royalblue;
 }
-.settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content.privacy-type > .value{
+.settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content.privacy-type > .value-wrapper > .value{
   color: var(--paragraph-color-primary);
-   font-weight: 600;
+   font-weight: bold;
   }
   
-.settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content.privacy-type > .value-field{
- width: 30%;
-}
+
 .settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content.privacy-type > .description{
   font-size: 4.5vw;
   color: var(--paragraph-color-secondary);
 }
 
-.settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content.connect-type > .content-header > .platform{
+.settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content.connect-type  > .platform{
  gap: 3vw;
+ width: max-content;
+ color: var(--paragraph-color-secondary);
 }
-.settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content.connect-type > .content-header > .platform > .logo{
+.settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content.connect-type > .platform > .logo{
  width: 7vw;
  height: 7vw;
+}
+.settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content.connect-type  > .value-wrapper > .value.connected{
+  color: var(--paragraph-color-primary);
+}  
+.settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content.connect-type  > .value-wrapper > .value.not-connected{
+  color: var(--paragraph-color-secondary);
 }
 
 

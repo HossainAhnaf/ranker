@@ -16,14 +16,12 @@ function Privacy() {
       <section>
         <b className="section-name">Privacy</b>
         <div className="content-wrapper flex-cm center">
-          <div className="content privacy-type flex-cm center">
-            <div className="content-header flex-rw">
-              <p className="title">Display my recent challenges</p>
-              <button className="edit-button" onClick={editButtonClickHandler}>Edit</button>
-            </div>
+          <div className="content privacy-type">
+          <p className="title">Display my recent challenges</p>
             <div className="description">
             After closing, your Recent Challenges data will not be displayed on your profile page to others.
             </div>
+           <div className="value-wrapper">
             <p className="value">Yes</p>
             <Select className="value-field ">
               <span  className={`option selected`} datavalue="Yes">Yes</span>
@@ -33,6 +31,8 @@ function Privacy() {
               <button className="save-button positive">Save</button>
               <button className="cancel-button negitive" onClick={(e)=>cancleButtonClickHandler(e,'username')}>Cancel</button>
             </div>
+           </div>
+            <button className="edit-button" onClick={editButtonClickHandler}>Edit</button>
           </div>
         </div>
         

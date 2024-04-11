@@ -32,9 +32,9 @@ function Settings() {
 
  const [currentAvatar, setCurrentAvatar] = useState(avatar)
 const editButtonClickHandler = ({currentTarget}) => {
-   const info = currentTarget.parentElement.parentElement
-    info.classList.add('editable')
-    info.querySelector('.value-field').focus() 
+   const valueWrapper = currentTarget.previousElementSibling
+    valueWrapper.classList.add('editable')
+    valueWrapper.querySelector('.value-field').focus() 
  }
  const updateUserAvatar = (e) => {
   const file = e.target.files[0]

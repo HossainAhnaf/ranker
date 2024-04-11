@@ -23,7 +23,7 @@ function BasicInfo() {
       <section>
         <b className="section-name">Basic Info</b>
         <div className="content-wrapper flex-cm center">
-          <div className="content flex-cm ">
+          <div className="content ">
             <p className="title">Name</p>
             <div className="value-wrapper">
               <p className="value">{currentName}</p>
@@ -35,36 +35,35 @@ function BasicInfo() {
             </div>
             <button className="edit-button" onClick={editButtonClickHandler}>Edit</button>
           </div>
-          <div className="content flex-cm center">
-            <div className="content-header flex-rw">
-              <p className="title">Username</p>
-              <button className="edit-button" onClick={editButtonClickHandler}>Edit</button>
+
+          <div className="content">
+            <p className="title">Username</p>
+            <div className="value-wrapper">
+              <p className="value">{currentUsername}</p>
+              <input className='value-field' type="text" placeholder='username'  onChange={({ target }) => setCurrentUsername(target.value)} value={currentUsername}  />
+              <div className="buttons-wrapper flex-rw center">
+                <button className="save-button positive">Save</button>
+                <button className="cancel-button negitive" onClick={(e) => cancleButtonClickHandler(e, 'username')} >Cancel</button>
+              </div>
             </div>
-            <p className="value">{currentUsername}</p>
-            <input className='value-field' type="text" placeholder='username' onChange={({ target }) => setCurrentUsername(target.value)} value={currentUsername} />
-            <div className="buttons-wrapper flex-rw center">
-              <button className="save-button positive">Save</button>
-              <button className="cancel-button negitive" onClick={(e) => cancleButtonClickHandler(e, 'username')}>Cancel</button>
-            </div>
+            <button className="edit-button" onClick={editButtonClickHandler}>Edit</button>
           </div>
 
-          <div className="content flex-cm center">
-            <div className="content-header flex-rw">
-              <p className="title">Gender</p>
-              <button className="edit-button" onClick={editButtonClickHandler}>Edit</button>
-            </div>
-            <p className="value">{currentGender}</p>
-            <Select className="value-field ">
-              <span className={`option ${currentGender === 'Male' ? "selected" : ""}`} datavalue="Male">Male</span>
+          <div className="content">
+            <p className="title">Gender</p>
+            <div className="value-wrapper">
+              <p className="value">{currentGender}</p>
+              <Select className="value-field">
+               <span className={`option ${currentGender === 'Male' ? "selected" : ""}`} datavalue="Male">Male</span>
               <span className={`option ${currentGender === 'Female' ? "selected" : ""}`} datavalue="Female">Female</span>
               <span className={`option ${currentGender === 'Other' ? "selected" : ""}`} datavalue="Other">Other</span>
-            </Select>
-            <div className="buttons-wrapper flex-rw center">
-              <button className="save-button positive">Save</button>
-              <button className="cancel-button negitive" onClick={(e) => cancleButtonClickHandler(e, 'username')}>Cancel</button>
+            </Select>              <div className="buttons-wrapper flex-rw center">
+                <button className="save-button positive">Save</button>
+                <button className="cancel-button negitive" >Cancel</button>
+              </div>
             </div>
+            <button className="edit-button" onClick={editButtonClickHandler}>Edit</button>
           </div>
-
 
         </div>
       </section>
