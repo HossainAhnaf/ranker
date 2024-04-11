@@ -16,26 +16,13 @@
     width: 450px;
     margin-right: 350px;
   }
-  
-  .settings-section > .header > .user-primary-info-wrapper > .user-avatar-label {
-  }
-  
-  .settings-section > .header > .user-primary-info-wrapper > .user-avatar-label > .user-avatar {
-  }
-  
-  .settings-section > .header > .user-primary-info-wrapper > .user-avatar-label > svg {
-  }
-  
-  .settings-section > .header > .user-primary-info-wrapper > .text-wrapper  {
-    align-items: flex-start;
-  }
-  
-  .settings-section > .header > .user-primary-info-wrapper > .text-wrapper > .username {
-  }
-  
-  .settings-section > .main-content {
-    
-  }
+  .settings-section > .header > .user-primary-info-wrapper > .user-avatar-label:hover >  .user-avatar{
+    filter: brightness(50%);
+ }
+ .settings-section > .header > .user-primary-info-wrapper > .user-avatar-label:hover >  svg{
+  display: block;
+ }
+ 
   
   .settings-section > .main-content > .navigation-buttons-wrapper {
     width: 200px;
@@ -181,5 +168,8 @@
   
   .settings-section > .main-content > .content > .outlet-wrapper > .notification-settings > .notification-type-container > .notification-type > .right > .checkbox-wrapper > input {
   }
+  
+}
+@media screen and (min-width: 992px) {
   
 }

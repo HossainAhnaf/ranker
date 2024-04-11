@@ -34,7 +34,7 @@
 }
 .settings-section > .header > .user-primary-info-wrapper > .user-avatar-label{
   position: relative;
-
+ cursor: pointer;
 } 
 
 .settings-section > .header > .user-primary-info-wrapper > .user-avatar-label >  .user-avatar{
@@ -198,6 +198,7 @@ margin-left: 2vw;
    border-radius: 2vw;
    font-size: 4.5vw;
  }
+ /* sections  */
 .settings-section > .main-content > .content >  .outlet-wrapper section{
   width: 100%;
 }
@@ -209,106 +210,107 @@ margin-left: 2vw;
 .settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper{
  width: 100%;
  gap: 3vw;
- margin-top: 2vw;
+ margin-top : 2vw;
 }
+/* content */
 .settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content{
 width: 100%;
 gap: 4vw;
 border-bottom: 1px solid lightgray;
 padding: 2vw 0;
+justify-content: flex-start;
 }  
-
-.settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content > .content-header{
-width: 100%;
-justify-content: space-between;
-align-items: center;
-}
-.settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content > .content-header > .title{
+.settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content  > .title{
   font-size: 5vw;
   color: var(--paragraph-color-secondary);
  max-width: 70%;
 } 
-.settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content > .description{
-  font-size: 4.5vw;
+
+.settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content > .value-wrapper > .value{
+  width: 100%;
   color: var(--paragraph-color-secondary);
- 
-}
-
-.settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content > .content-header > .platform{
- gap: 3vw;
-}
-.settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content > .content-header > .platform > .logo{
- width: 7vw;
- height: 7vw;
-}
-
-.settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content > .content-header >:is(.edit-button,.connect-disconnect-button){
-  background-color: transparent;
-  color: royalblue;
-  border: none;
-  font-size: 4.5vw;
-}
-.settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content:not(.connect-type).editable > .content-header > .edit-button{
- display: none;
-}
-.settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content > .value{
-width: 100%;
-color: var(--paragraph-color-secondary);
-font-size: 5vw;
-}
-
-.settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content.privacy-type > .value{
-  color: var(--paragraph-color-primary);
-   font-weight: 600;
+  font-size: 5vw;
   }
+  .settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content > .value-wrapper.editable > .value{
+    display: none;
+   
+     }
+   
   
-.settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content:not(.connect-type).editable > .value{
-display: none;
-}
-.settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content:not(.connect-type) > .link-button{
-  text-decoration: none;
-  width: max-content;
-  align-self: flex-start;
-  color: royalblue;
-}
-.settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content:not(.connect-type) > .value-field{
+.settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content > .value-wrapper > .value-field{
   display: none; 
   width: 70%;
  font-size: 4vw;
  align-self: flex-start;
 }
-.settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content.privacy-type > .value-field{
- width: 30%;
-}
-
-.settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content:not(.connect-type) > .value-field:not(.select){
+.settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content > .value-wrapper > .value-field:not(.select){
   border: 1px solid var(--border-color);
   border-radius: 1vw;
   outline: none;
   padding: 2vw ;
 
 }
+.settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content > .value-wrapper.editable > .value-field{
+  display: block;
+ }
 
-.settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content:not(.connect-type).editable > .value-field{
- display: block;
+ .settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content > .value-wrapper > .buttons-wrapper{
+  display: none; 
+  align-self: flex-start;
+  gap: 3vw;
+ }
+ 
+ .settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content > .value-wrapper.editable > .buttons-wrapper{
+   display: flex;
+ }
+ 
+ .settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content > .value-wrapper > .buttons-wrapper > button{
+  padding:  2vw;
+  border-radius: 2vw;
+  font-size: 4vw;
+  font-weight: bold;
+  border: none;
+ }
+ .settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content > :is(.edit-button,.connect-disconnect-button){
+  background-color: transparent;
+  color: royalblue;
+  border: none;
+  font-size: 4.5vw;
 }
-.settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content:not(.connect-type) > .buttons-wrapper{
- display: none; 
- align-self: flex-start;
+ .settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content > .value-wrapper.editable + .edit-button{
+  display: none;
+ }
+ 
+ 
+
+.settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content > .link-button{
+  text-decoration: none;
+  width: max-content;
+  align-self: flex-start;
+  color: royalblue;
+}
+.settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content.privacy-type > .value{
+  color: var(--paragraph-color-primary);
+   font-weight: 600;
+  }
+  
+.settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content.privacy-type > .value-field{
+ width: 30%;
+}
+.settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content.privacy-type > .description{
+  font-size: 4.5vw;
+  color: var(--paragraph-color-secondary);
+}
+
+.settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content.connect-type > .content-header > .platform{
  gap: 3vw;
 }
-
-.settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content:not(.connect-type).editable > .buttons-wrapper{
-  display: flex;
+.settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content.connect-type > .content-header > .platform > .logo{
+ width: 7vw;
+ height: 7vw;
 }
 
-.settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content:not(.connect-type) > .buttons-wrapper > button{
- padding:  2vw;
- border-radius: 2vw;
- font-size: 4vw;
- font-weight: bold;
- border: none;
-}
+
 /* notifications settings */
 .settings-section > .main-content > .content >  .outlet-wrapper >  .notification-settings{
   gap: 0;
