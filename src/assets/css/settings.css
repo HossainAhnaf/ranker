@@ -75,7 +75,8 @@
 
 .settings-section > .main-content {
   position: relative;
-
+  justify-content: center;
+  align-items: flex-start;
 }
 /* navigation buttons wrapper */
 .settings-section > .main-content > .navigation-buttons-wrapper{

@@ -3,10 +3,13 @@
     
   }
   .settings-section > .header {
-    padding: 50px 0 106px  0;
+    padding: 50px 0 60px  0;
     
   }
-  
+  .settings-section > .header > .background{
+    height: calc(100% + 70px);
+  }
+
   .settings-section > .header > .user-primary-info-wrapper {
     flex-direction: row;
     gap: 15px;
@@ -31,12 +34,13 @@
   }
   
   .settings-section > .main-content {
+    
   }
   
   .settings-section > .main-content > .navigation-buttons-wrapper {
     width: 200px;
-    margin-right: 550px;
-
+    margin-top: 60px;
+    margin-right: 60px;
   }
   
   .settings-section > .main-content > .navigation-buttons-wrapper > a {
@@ -51,13 +55,12 @@
   .settings-section > .main-content > .navigation-buttons-wrapper > a[datalarge="true"] > svg {
   }
   .settings-section > .main-content > .content {
-    top: -60px;
     width: 500px;
     border-radius: 1vw;
   overflow: hidden;
   transition: box-shadow 0.2s;
-  left: 230px !important;
   box-shadow: 0 0px 10px 0 rgba(0, 0, 0, 0.5) !important;
+  position: initial;
  }
 
   .settings-section > .main-content > .content:hover {

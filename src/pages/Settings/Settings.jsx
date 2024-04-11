@@ -61,7 +61,7 @@ const editButtonClickHandler = ({currentTarget}) => {
           </div>
         </div>
       </div>
-     <div className="main-content flex-rw center">
+     <div className="main-content flex-rw">
       <div className="navigation-buttons-wrapper flex-cm ">
         <NavLink to='/settings' end={true} className={useActiveClassName} onClick={()=>setIsContentActive(true)} >
           <Icon src={profileSvg} />
