@@ -17,6 +17,7 @@ import dropDownSvg from '../../assets/svg/drop-down.svg'
 //css
 import '../../assets/css/settings.css'
 import '../../assets/css/mobile-large/settings.css'
+import '../../assets/css/laptop/settings.css'
 function Settings() {
   const {pathname} = useLocation()
   const {avatar,name,username,status,level} = useSelector(state=>state.userSlice)
@@ -48,13 +49,13 @@ const editButtonClickHandler = ({currentTarget}) => {
       <div className="header">
         <div className="background"></div>
 
-        <div className="user-primary-info-wrapper flex-cm center">   
+        <div className="user-primary-info-wrapper center">   
          <label  className="user-avatar-label">
          <UserAvatar avatar={currentAvatar} status={status} level={level} />
           <Icon src={cameraSvg} />
           <input type="file" hidden={true} onChange={updateUserAvatar}/>
           </label>      
-          <div className="text-wrapper flex-cm center">
+          <div className="text-wrapper flex-cm">
           <p className="name">{name}</p>
           <small className="username">@{username}</small>
           </div>

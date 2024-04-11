@@ -1,6 +1,5 @@
 @media screen and (min-width: 375px) {
-  .settings-section{
-  }
+ 
   /* header */
   .settings-section > .header{
     padding: 38px 0 76px  0;
@@ -131,38 +130,22 @@
   }
   .settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content:not(.connect-type) > .value-field{
    font-size: 15px;
+   width: 240px;
   }
   .settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content.privacy-type > .value-field{
-   width: 30%;
+   width: 100px;
   }
-  
   .settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content:not(.connect-type) > .value-field:not(.select){
-    border: 1px solid var(--border-color);
-    border-radius: 1vw;
-    outline: none;
-    padding: 2vw ;
-  
-  }
-  
-  .settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content:not(.connect-type).editable > .value-field{
-   display: block;
+    border-radius: 4px;
+    padding: 8px ;
   }
   .settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content:not(.connect-type) > .buttons-wrapper{
-   display: none; 
-   align-self: flex-start;
-   gap: 3vw;
-  }
-  
-  .settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content:not(.connect-type).editable > .buttons-wrapper{
-    display: flex;
-  }
-  
+   gap: 11px;
+  }  
   .settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content:not(.connect-type) > .buttons-wrapper > button{
-   padding:  2vw;
-   border-radius: 2vw;
-   font-size: 4vw;
-   font-weight: bold;
-   border: none;
+   padding:  8px;
+   border-radius: 8px;
+   font-size: 15px;
   }
   /* notifications settings */
   .settings-section > .main-content > .content >  .outlet-wrapper >  .notification-settings{
@@ -170,56 +153,41 @@
    padding: 0;
   }
   
-  
   .settings-section > .main-content > .content >  .outlet-wrapper >  .notification-settings > .header{
-  padding: 3vw 9vw;
-  justify-content: space-between;
-  align-items: center;
-  
+  padding: 12px 33px;
   }
-  .settings-section > .main-content > .content >  .outlet-wrapper >  .notification-settings > .header .name{
-   font-size: 6vw;
+  .settings-section > .main-content > .content >  .outlet-wrapper >  .notification-settings > .header > .name{
+   font-size: 22px;
   } 
-  .settings-section > .main-content > .content >  .outlet-wrapper >  .notification-settings > .header .right{
-   justify-content: space-between;
-   align-items: center;
-   width: 40%;
-   font-size: 5vw;
+  .settings-section > .main-content > .content >  .outlet-wrapper >  .notification-settings > .header > .right{
+   width: 120px;
+   font-size: 19px;
   }  
   
   .settings-section > .main-content > .content >  .outlet-wrapper >  .notification-settings > .notification-category{
-    background-color: var(--container-bg-color-secondary);
-    color: var(--paragraph-color-secondary);
-    padding: 3vw 9vw;
-    font-size: 5vw;
+    padding: 12px 33px;
+    font-size: 19px;
   }
   
   .settings-section > .main-content > .content >  .outlet-wrapper >  .notification-settings > .notification-type-container > .notification-type{
-    padding: 3vw 6vw;
-    justify-content: space-between;
-    align-items: center;
-    width: calc(95% - 12vw);  
+    padding: 12px 24px;
+    width: calc(95% - 48px);  
   }
-  .settings-section > .main-content > .content >  .outlet-wrapper >  .notification-settings > .notification-type-container > .notification-type:not(:last-child){
-    border-bottom: .5px solid lightgray;
-  }
-  
+ 
   .settings-section > .main-content > .content >  .outlet-wrapper >  .notification-settings > .notification-type-container > .notification-type > .name{
-    font-size: 5vw;
-    width: 50%;
+    font-size: 19px;
+    width: 154px;
   }
   .settings-section > .main-content > .content >  .outlet-wrapper >  .notification-settings > .notification-type-container > .notification-type > .right {
-    justify-content: space-between;
-    align-items: center;
-    width: 40%;
+    width: 110px;
   } 
   
   .settings-section > .main-content > .content >  .outlet-wrapper >  .notification-settings > .notification-type-container > .notification-type > .right > .checkbox-wrapper{
-    width: 40%; 
+    width: 30px; 
   }
   .settings-section > .main-content > .content >  .outlet-wrapper >  .notification-settings > .notification-type-container > .notification-type > .right > .checkbox-wrapper > input{
-  width: 5vw;
-  height: 5vw;
+  width:19px;
+  height:19px;
   } 
   
 }
