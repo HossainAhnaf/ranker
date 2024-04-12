@@ -66,6 +66,13 @@
 .settings-section > .header > .user-primary-info-wrapper > .text-wrapper> .name{
   color: white;
   font-size: 7vw;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2vw;
+}
+.settings-section > .header > .user-primary-info-wrapper > .text-wrapper> .name > .svgCont{
+width: 5vw;
+height: 5vw;
 }
 .settings-section > .header > .user-primary-info-wrapper > .text-wrapper> .username{
   color: gray;
@@ -280,26 +287,21 @@ justify-content: flex-start;
   font-weight: bold;
   border: none;
  }
- .settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content > :is(.edit-button,.connect-disconnect-button){
+ .settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content > :is(.edit-button,.connect-disconnect-button,.link-button){
   background-color: transparent;
   color: royalblue;
   border: none;
   font-size: 4.5vw;
   position: absolute;
   right: 0;
+  text-decoration: none;
+
 }
  .settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content > .value-wrapper.editable + .edit-button{
   display: none;
  }
  
- 
 
-.settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content > .link-button{
-  text-decoration: none;
-  width: max-content;
-  align-self: flex-start;
-  color: royalblue;
-}
 .settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content.privacy-type > .value-wrapper > .value{
   color: var(--paragraph-color-primary);
    font-weight: bold;

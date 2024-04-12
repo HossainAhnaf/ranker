@@ -1,9 +1,7 @@
  @media screen and (min-width: 768px) {
-  .settings-section {
-    
-  }
+
   .settings-section > .header {
-    padding: 50px 0 30px  0;
+    padding: 50px 0 70px  0;
     
   }
   .settings-section > .header > .background{
@@ -24,7 +22,10 @@
   .settings-section > .header > .user-primary-info-wrapper > .user-avatar-label:hover >  .user-avatar{
     filter: brightness(50%);
  }
-
+ .settings-section > .header > .user-primary-info-wrapper > .user-avatar-label >  svg{
+  top: 29px;
+  left: 29px;
+}
  .settings-section > .header > .user-primary-info-wrapper > .user-avatar-label:hover >  svg{
   display: block;
  }
@@ -62,6 +63,7 @@
    }
    
 }
+
 @media screen and (min-width: 992px) {
     
   .settings-section > .header > .user-primary-info-wrapper {
@@ -92,122 +94,37 @@
  .settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content  > .value-wrapper{
   width: 50%;
  }
+}
 
- /* .settings-section > .main-content > .content > .outlet-wrapper section > .content-wrapper > .content  { */
-
-  /* .settings-section > .main-content > .navigation-buttons-wrapper > a {
+@media screen and (min-width: 1200px) {
+    
+  .settings-section > .header > .user-primary-info-wrapper {
+    margin-right: 600px;
+  }
+  .settings-section > .main-content > .navigation-buttons-wrapper {
+    width: 300px;
   }
   
-  .settings-section > .main-content > .navigation-buttons-wrapper > a.active {
+  .settings-section > .main-content > .content {
+    width: 850px;
   }
-  
-  .settings-section > .main-content > .navigation-buttons-wrapper > a > svg {
-  }
-  
-  .settings-section > .main-content > .navigation-buttons-wrapper > a[datalarge="true"] > svg {
-  }
-  .settings-section > .main-content > .content > .header .heading {
-
-  }  
-  .settings-section > .main-content > .content > .header > .hamburger {
-  
-  }
-  
-  .settings-section > .main-content > .content > .header > .drop-down-icon {
-  }
-  
-  .settings-section > .main-content > .content > .outlet-wrapper {
-  }
+  .settings-section > .main-content > .content > .outlet-wrapper section > .content-wrapper > .content   {
+    flex-direction: row;
+ }  
+ .settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content.connect-type > .platform{
+  width: 30%;
+  justify-content: flex-start;
+}
+ .settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content  > .title{
+  width: 30%;
+ }
  
-  .settings-section > .main-content > .content > .outlet-wrapper > .account > .delete-account-button {
-  }
+ .settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content.privacy-type  > .title{
+  font-size: 17px;
+ 
+} 
+ .settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content  > .value-wrapper{
+  width: 50%;
+ }
 
-  .settings-section > .main-content > .content > .outlet-wrapper section > .section-name {
-  }
-  
-  .settings-section > .main-content > .content > .outlet-wrapper section > .content-wrapper {
-  }
-  
-  .settings-section > .main-content > .content > .outlet-wrapper section > .content-wrapper > .content {
-  }
-  
-  .settings-section > .main-content > .content > .outlet-wrapper section > .content-wrapper > .content > .content-header {
-  } */
-
-  /*  
-  .settings-section > .main-content > .content > .outlet-wrapper section > .content-wrapper > .content > .description {
-  }
-  
-  .settings-section > .main-content > .content > .outlet-wrapper section > .content-wrapper > .content > .content-header > .platform {
-  }
-  
-  .settings-section > .main-content > .content > .outlet-wrapper section > .content-wrapper > .content > .content-header > :is(.edit-button, .connect-disconnect-button) {
-  }
-  
-  .settings-section > .main-content > .content > .outlet-wrapper section > .content-wrapper > .content:not(.connect-type).editable > .content-header > .edit-button {
-  }
-  
-  .settings-section > .main-content > .content > .outlet-wrapper section > .content-wrapper > .content > .value {
-  }
-  
-  .settings-section > .main-content > .content > .outlet-wrapper section > .content-wrapper > .content.privacy-type > .value {
-  }
-  
-  .settings-section > .main-content > .content > .outlet-wrapper section > .content-wrapper > .content:not(.connect-type).editable > .value {
-  }
-  
-  .settings-section > .main-content > .content > .outlet-wrapper section > .content-wrapper > .content:not(.connect-type) > .link-button {
-  }
-  
-  .settings-section > .main-content > .content > .outlet-wrapper section > .content-wrapper > .content:not(.connect-type) > .value-field {
-  }
-  
-  .settings-section > .main-content > .content > .outlet-wrapper section > .content-wrapper > .content.privacy-type > .value-field {
-  }
-  
-  .settings-section > .main-content > .content > .outlet-wrapper section > .content-wrapper > .content:not(.connect-type) > .value-field:not(.select) {
-  }
-  
-  .settings-section > .main-content > .content > .outlet-wrapper section > .content-wrapper > .content:not(.connect-type).editable > .value-field {
-  }
-  
-  .settings-section > .main-content > .content > .outlet-wrapper section > .content-wrapper > .content:not(.connect-type) > .buttons-wrapper {
-  }
-  
-  .settings-section > .main-content > .content > .outlet-wrapper section > .content-wrapper > .content:not(.connect-type).editable > .buttons-wrapper {
-  }
-  
-  .settings-section > .main-content > .content > .outlet-wrapper > .notification-settings {
-  }
-  
-  .settings-section > .main-content > .content > .outlet-wrapper > .notification-settings > .header {
-  }
-  
-  .settings-section > .main-content > .content > .outlet-wrapper > .notification-settings > .header .name {
-  }
-  
-  .settings-section > .main-content > .content > .outlet-wrapper > .notification-settings > .header .right {
-  }
-  
-  .settings-section > .main-content > .content > .outlet-wrapper > .notification-settings > .notification-category {
-  }
-  
-  .settings-section > .main-content > .content > .outlet-wrapper > .notification-settings > .notification-type-container > .notification-type {
-  }
-  
-  .settings-section > .main-content > .content > .outlet-wrapper > .notification-settings > .notification-type-container > .notification-type:not(:last-child) {
-  }
-  
-  .settings-section > .main-content > .content > .outlet-wrapper > .notification-settings > .notification-type-container > .notification-type > .name {
-  }
-  
-  .settings-section > .main-content > .content > .outlet-wrapper > .notification-settings > .notification-type-container > .notification-type > .right {
-  }
-  
-  .settings-section > .main-content > .content > .outlet-wrapper > .notification-settings > .notification-type-container > .notification-type > .right > .checkbox-wrapper {
-  }
-  
-  .settings-section > .main-content > .content > .outlet-wrapper > .notification-settings > .notification-type-container > .notification-type > .right > .checkbox-wrapper > input {
-  } */
-  
 }

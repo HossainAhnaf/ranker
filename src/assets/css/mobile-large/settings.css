@@ -22,6 +22,13 @@
  
   .settings-section > .header > .user-primary-info-wrapper > .text-wrapper> .name{
     font-size: 26px;
+    gap: 8px;
+
+  }
+
+  .settings-section > .header > .user-primary-info-wrapper > .text-wrapper> .name > .svgCont{
+  width: 19px;
+  height: 19px;
   }
   .settings-section > .header > .user-primary-info-wrapper > .text-wrapper> .username{
     font-size: 15px;
@@ -111,7 +118,7 @@
    
   } 
   .settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content > .value-wrapper{
-    gap: 2vw;
+    gap: 8px;
   }
   .settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content > .value-wrapper > .value{
     font-size: 20px;
@@ -130,9 +137,23 @@
    .settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content > .value-wrapper > .value-field.select > summary{  
     font-size: 20px;
     padding: 4px 8px;
-
+    border-radius: 4px;
    }
-  
+   .settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content > .value-wrapper > .value-field.select > summary > .svgCont{  
+    width: 20px;
+    height: 20px;
+    }
+    .settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content > .value-wrapper > .value-field.select > .options-wrapper{
+    border-radius: 4px;
+    margin-top: 4px;
+    }
+
+    .settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content > .value-wrapper > .value-field.select > .options-wrapper > .option{
+      font-size: 20px;
+      padding: 4px 8px;
+      width: calc(100% - 16px);
+    }
+
    .settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content > .value-wrapper > .buttons-wrapper{
     gap: 11px;
   }   
@@ -141,7 +162,7 @@
     border-radius: 8px;
     font-size: 15px;
    }
-   .settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content > :is(.edit-button,.connect-disconnect-button){
+   .settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content > :is(.edit-button,.connect-disconnect-button,.link-button){
     font-size:17px;
   }     
   

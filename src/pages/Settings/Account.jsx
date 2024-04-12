@@ -37,7 +37,10 @@ function Account() {
 
           <div className="content">
               <p className="title">Password</p>
-            <Link className="link-button">Change Password</Link>
+              <div className="value-wrapper">
+                <p className="value">********</p>
+              </div>
+            <Link className="edit-button">Change Password</Link>
           </div>
 
         </div>

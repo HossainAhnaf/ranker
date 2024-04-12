@@ -1,13 +1,14 @@
 //modules
 import React ,{useEffect, useState} from 'react'
 import { useSelector } from 'react-redux'
-import { NavLink, Outlet, useLocation } from 'react-router-dom'
+import {Link, NavLink, Outlet, useLocation } from 'react-router-dom'
 import useActiveClassName from '../../hooks/useActiveClassName'
 //components
 import UserAvatar from '../../components/UserAvatar'
 import Icon from 'react-inlinesvg'
 //svg
 import cameraSvg from '../../assets/svg/camera.svg'
+import externalLinkSvg from '../../assets/svg/external-link.svg'
 import profileSvg from '../../assets/svg/profile.svg'
 import settingsSvg from '../../assets/svg/settings.svg'
 import notificationSvg from '../../assets/svg/notification.svg'
@@ -56,7 +57,12 @@ const editButtonClickHandler = ({currentTarget}) => {
           <input type="file" hidden={true} onChange={updateUserAvatar}/>
           </label>      
           <div className="text-wrapper flex-cm">
-          <p className="name">{name}</p>
+          <p className="name flex-rw">
+            <span>{name}</span>
+            <Link to={`/profile/${username}`} className="svgCont flex-rw center">
+              <Icon src={externalLinkSvg} />
+            </Link>
+            </p>
           <small className="username">@{username}</small>
           </div>
         </div>
