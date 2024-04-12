@@ -10,7 +10,6 @@ function index() {
   
    <header>
    <MainNav /> 
-   <SideNavigationBar />
    </header>
    <main>
     <Outlet />

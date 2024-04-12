@@ -30,18 +30,17 @@
 
    .main-nav > .content-wrapper > .primary  {
     justify-content: center;
-    align-items: end;
+    align-items: center;
    }
 
   .main-nav > .content-wrapper > .primary > .site-brand {
     display: flex;
-    align-items: end;
+    align-items: center;
     justify-content: center;
   }
   .main-nav > .content-wrapper > .primary > .site-brand > .svgCont {
     width: 9vw;
     height: 9vw;
-
   }
   .main-nav > .content-wrapper > .primary > .site-brand > .app-name{
    font-size: 6vw;
@@ -86,14 +85,18 @@
     right: 0;
     padding: .2vw 1vw;
   }
-  .main-nav > .content-wrapper > .secondary > .profile-button {
+  .main-nav > .content-wrapper > .secondary > .profile-button-wrapper {
+   position: relative;
+  }
+
+  .main-nav > .content-wrapper > .secondary >.profile-button-wrapper> .profile-button {
     width: 9vw;
     height: 9vw;
     border: none;
     background-color: transparent;
   }
 
-  .main-nav > .content-wrapper > .secondary > .profile-button .user-avatar {
+  .main-nav > .content-wrapper > .secondary > .profile-button-wrapper > .profile-button .user-avatar {
    border-width: .5vw ;
    width: 100%;
    height: 100%;

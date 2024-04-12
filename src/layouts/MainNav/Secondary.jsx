@@ -35,10 +35,15 @@ function Secondary() {
             <Icon src={notificationSvg} />
             <small className="badge">4</small>
           </button>
-        
+        <div className="profile-button-wrapper">
         <button className="profile-button" onClick={() => dispatch(showSideNavigationBar())}>
           <UserAvatar avatar={avatar} status={status} level={level} />
         </button>
+        <div className="profile-menu">
+          
+        </div>
+        </div>
+        
         </>
           : <button className='signin-button positive button'><Link to='/signin'  >Sign in</Link></button>
 
