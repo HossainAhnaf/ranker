@@ -3,7 +3,7 @@
     
   }
   .settings-section > .header {
-    padding: 50px 0 60px  0;
+    padding: 50px 0 30px  0;
     
   }
   .settings-section > .header > .background{
@@ -14,36 +14,33 @@
     flex-direction: row;
     gap: 15px;
     width: 450px;
-    margin-right: 350px;
+    margin-right: 250px;
+  }
+
+  .settings-section > .header > .user-primary-info-wrapper > .user-avatar-label >  .user-avatar{
+    width: 130px;
+    height: 130px;
   }
   .settings-section > .header > .user-primary-info-wrapper > .user-avatar-label:hover >  .user-avatar{
     filter: brightness(50%);
  }
+
  .settings-section > .header > .user-primary-info-wrapper > .user-avatar-label:hover >  svg{
   display: block;
  }
  
-  
+ .settings-section > .header > .user-primary-info-wrapper > .text-wrapper{
+  align-items: flex-start;
+}
   .settings-section > .main-content > .navigation-buttons-wrapper {
-    width: 200px;
+    width: 250px;
     margin-top: 60px;
-    margin-right: 60px;
+    margin-right: 30px;
   }
   
-  .settings-section > .main-content > .navigation-buttons-wrapper > a {
-  }
-  
-  .settings-section > .main-content > .navigation-buttons-wrapper > a.active {
-  }
-  
-  .settings-section > .main-content > .navigation-buttons-wrapper > a > svg {
-  }
-  
-  .settings-section > .main-content > .navigation-buttons-wrapper > a[datalarge="true"] > svg {
-  }
   .settings-section > .main-content > .content {
-    width: 500px;
-    border-radius: 1vw;
+    width: 450px;
+    border-radius: 4px;
   overflow: hidden;
   transition: box-shadow 0.2s;
   box-shadow: 0 0px 10px 0 rgba(0, 0, 0, 0.5) !important;
@@ -59,6 +56,56 @@
   .settings-section > .main-content > .content > .header {
     display: none;
   }  
+ 
+  .settings-section > .main-content > .content > .outlet-wrapper > .outlet {
+    height: max-content;
+   }
+   
+}
+@media screen and (min-width: 992px) {
+    
+  .settings-section > .header > .user-primary-info-wrapper {
+    margin-right: 450px;
+  }
+  .settings-section > .main-content > .navigation-buttons-wrapper {
+    margin-right: 10px;
+  }
+  
+  .settings-section > .main-content > .content {
+    width: 680px;
+  }
+  .settings-section > .main-content > .content > .outlet-wrapper section > .content-wrapper > .content   {
+    flex-direction: row;
+ }  
+ .settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content.connect-type > .platform{
+  width: 30%;
+  justify-content: flex-start;
+}
+ .settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content  > .title{
+  width: 30%;
+ }
+ 
+ .settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content.privacy-type  > .title{
+  font-size: 17px;
+ 
+} 
+ .settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content  > .value-wrapper{
+  width: 50%;
+ }
+
+ /* .settings-section > .main-content > .content > .outlet-wrapper section > .content-wrapper > .content  { */
+
+  /* .settings-section > .main-content > .navigation-buttons-wrapper > a {
+  }
+  
+  .settings-section > .main-content > .navigation-buttons-wrapper > a.active {
+  }
+  
+  .settings-section > .main-content > .navigation-buttons-wrapper > a > svg {
+  }
+  
+  .settings-section > .main-content > .navigation-buttons-wrapper > a[datalarge="true"] > svg {
+  }
   .settings-section > .main-content > .content > .header .heading {
 
   }  
@@ -71,11 +118,7 @@
   
   .settings-section > .main-content > .content > .outlet-wrapper {
   }
-  
-  .settings-section > .main-content > .content > .outlet-wrapper > .outlet {
-   height: max-content;
-  }
-  
+ 
   .settings-section > .main-content > .content > .outlet-wrapper > .account > .delete-account-button {
   }
 
@@ -89,11 +132,9 @@
   }
   
   .settings-section > .main-content > .content > .outlet-wrapper section > .content-wrapper > .content > .content-header {
-  }
-  
-  .settings-section > .main-content > .content > .outlet-wrapper section > .content-wrapper > .content > .content-header > .title {
-  }
-  
+  } */
+
+  /*  
   .settings-section > .main-content > .content > .outlet-wrapper section > .content-wrapper > .content > .description {
   }
   
@@ -167,9 +208,6 @@
   }
   
   .settings-section > .main-content > .content > .outlet-wrapper > .notification-settings > .notification-type-container > .notification-type > .right > .checkbox-wrapper > input {
-  }
-  
-}
-@media screen and (min-width: 992px) {
+  } */
   
 }

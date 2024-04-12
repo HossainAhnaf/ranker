@@ -145,7 +145,7 @@
     font-size:17px;
   }     
   
-  .settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content.privacy-type > .description{
+  .settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content.privacy-type > .value-wrapper > .description{
     font-size: 17px;
   }
   .settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content.connect-type  > .platform{

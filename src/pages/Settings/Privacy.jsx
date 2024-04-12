@@ -18,10 +18,11 @@ function Privacy() {
         <div className="content-wrapper flex-cm center">
           <div className="content privacy-type">
           <p className="title">Display my recent challenges</p>
-            <div className="description">
+
+           <div className="value-wrapper">
+           <div className="description">
             After closing, your Recent Challenges data will not be displayed on your profile page to others.
             </div>
-           <div className="value-wrapper">
             <p className="value">Yes</p>
             <Select className="value-field ">
               <span  className={`option selected`} datavalue="Yes">Yes</span>
