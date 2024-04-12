@@ -8,6 +8,7 @@
 }
 .challenges-section > .primary {
   width: 100%;
+  max-width: 700px;
 }
 
 .challenges-section > .primary > .challenges-section-nav {
@@ -123,12 +124,13 @@ display: flex;
 .challenges-section > .primary >.challenge-cards-wrapper {
   width: 100%;
   height: 70%;
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
   gap: 4vw;
   padding: 3vw 0;
 
 }
 .challenges-section > .secondary{
   display: none;
+  max-width: 500px;
 }
 

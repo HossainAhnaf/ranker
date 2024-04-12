@@ -1,6 +1,6 @@
 .profile{
-  margin-top: calc(var(--nav-vertical-padding) + var(--nav-height) + 3vw);
-  margin-bottom: 10vw;
+  margin-top: calc(var(--nav-vertical-padding) + var(--nav-height) );
+  padding: 5vw 0;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -17,7 +17,7 @@
 }
 /* info section */
 .profile > .info-section {
-
+ max-width: 500px;
   padding-top: 0;
   gap: 6vw;
 }
@@ -45,6 +45,7 @@
   height: 25vw;
   border-width: .7vw;
   --level-badge-font-size:4vw;
+  --badge-border-color: var(--container-bg-color);
 }
 .profile > .info-section>.primary > .user-primary-info-wrapper > .text-side {
   gap: 1vw;
@@ -111,7 +112,7 @@
 /*recent challenges*/
 .profile >.recent-challenges { 
   gap: 1vw;
-
+ max-width: 600px;
 }
 .profile >.recent-challenges > .top-nav {
   width: 100%;

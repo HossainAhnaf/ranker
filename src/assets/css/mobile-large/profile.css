@@ -1,7 +1,6 @@
 @media screen and (min-width: 375px) {
   .profile{
-    margin-top:70px;
-    margin-bottom: 50px;
+    padding: 20px 0;
     gap: 40px;
   }
   .profile > section{

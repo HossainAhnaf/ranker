@@ -12,7 +12,6 @@
   width: 100%; 
   position: relative;  
   padding: 10vw 0 20vw 0;
-  background-color: white;
   z-index: 0;
 }
 .settings-section > .header > .background{
@@ -40,9 +39,14 @@
 .settings-section > .header > .user-primary-info-wrapper > .user-avatar-label >  .user-avatar{
   width: 30vw;
   height: 30vw;  
-  --badge-border-color: rgb(255, 139, 139);
+  --badge-border-color: #FE9573;
   --level-badge-font-size: 5vw;
   transition: filter .2s;
+}
+
+.theme-dark  .settings-section > .header > .user-primary-info-wrapper > .user-avatar-label >  .user-avatar{
+  --badge-border-color: rgb(179, 57, 57);
+ 
 }
 .settings-section > .header > .user-primary-info-wrapper > .user-avatar-label > svg {
   width: 20vw;
@@ -75,7 +79,7 @@ width: 5vw;
 height: 5vw;
 }
 .settings-section > .header > .user-primary-info-wrapper > .text-wrapper> .username{
-  color: gray;
+  color: var(--paragraph-color-secondary);
   font-size: 4vw;
   
 }

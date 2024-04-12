@@ -36,16 +36,13 @@ useEffect(()=>{
   return (
    <>
 <nav className={`main-nav  ${(location.pathname ==="/" || navbarHalfTransparent) ? 'half-transparent':''} `} >
+     <div className="content-wrapper flex-rw">
       <Primary />
-
-     {
-
+      {
        location.pathname !== '/signin' && location.pathname !== '/signup'  &&
       <Secondary />
       }
-     {
-      isChallengesSectionNavInvisible &&  <ChallengesSectionNav />
-     }
+     </div>
     
     </nav>
    </>

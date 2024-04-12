@@ -18,6 +18,7 @@
   .settings-section > .header > .user-primary-info-wrapper > .user-avatar-label >  .user-avatar{
     width: 130px;
     height: 130px;
+    --level-badge-font-size: 22px;
   }
   .settings-section > .header > .user-primary-info-wrapper > .user-avatar-label:hover >  .user-avatar{
     filter: brightness(50%);

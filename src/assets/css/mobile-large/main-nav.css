@@ -11,52 +11,52 @@
   }
 
  
-   .main-nav > .primary  {
+   .main-nav > .content-wrapper > .primary  {
     gap: 8px;
     z-index: 100;
 
    }
 
-  .main-nav > .primary > .site-brand > .svgCont {
+  .main-nav > .content-wrapper > .primary > .site-brand > .svgCont {
     width: 35px;
     height: 35px;
   }
-  .main-nav > .primary > .site-brand > .app-name{
+  .main-nav > .content-wrapper > .primary > .site-brand > .app-name{
    font-size: 22px;
   }
-  .main-nav > .primary > .back-button {
+  .main-nav > .content-wrapper > .primary > .back-button {
     width: 25px;
     height: 25px;
    }   
-  .main-nav > .primary > .nav-title{
+  .main-nav > .content-wrapper > .primary > .nav-title{
     font-size: 19px;
   }
-  .main-nav > .secondary {
+  .main-nav > .content-wrapper > .secondary {
     gap: 8px;
   }
-  .main-nav > .secondary > .signin-button {
+  .main-nav > .content-wrapper > .secondary > .signin-button {
     border-radius: 8px;
     padding: 6px 8px;
     font-size: 14px;
   }
-  .main-nav > .secondary > .notification-button {
+  .main-nav > .content-wrapper > .secondary > .notification-button {
     width: 34px;
     height: 34px;
   }
-  .main-nav > .secondary > .notification-button > .badge {
+  .main-nav > .content-wrapper > .secondary > .notification-button > .badge {
     font-size: 10px;
     padding: .5px 4px;
   }
-  .main-nav > .secondary > .profile-button {
+  .main-nav > .content-wrapper > .secondary > .profile-button {
     width: 34px;
     height: 34px;
   }
 
-  .main-nav > .secondary > .profile-button .user-avatar {
+  .main-nav > .content-wrapper > .secondary > .profile-button .user-avatar {
    border-width: 1px;
    --level-badge-font-size: 5px;
   }
-  .main-nav > .notifications-section {
+  .main-nav > .content-wrapper > .notifications-section {
     width: 300px;
     height: 70%;
     top: 70px;

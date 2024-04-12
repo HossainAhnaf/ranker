@@ -2,21 +2,20 @@
 .challenges-section {
   gap: 10px;
 justify-content: center;
-gap: 40px;
+gap: 70px;
 }
 .challenges-section > .primary {
-  width: 55%;
 }
 
 
 .challenges-section > .secondary {
   display: flex;
   flex-direction: column;
-  width: 230px;
+  width: 400px;
   height: max-content;
   justify-content: start;
   align-items: center;
-  background-color: var(--container-bg-color);
+  background-color: var(--container-bg-color-secondary);
   border-radius: 12px;
   padding: 10px 20px;
   gap: 50px;

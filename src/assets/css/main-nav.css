@@ -5,10 +5,9 @@
  
   .main-nav {
     display: flex;
-    flex-direction: row;
     padding: calc(var(--nav-vertical-padding)/2)  3vw;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     height: var(--nav-height);
     z-index: 1000;
     position: fixed;
@@ -22,60 +21,65 @@
   .main-nav.half-transparent {
     background-color: transparent;
   }
+  .main-nav > .content-wrapper{
+    width: 100%;
+    max-width: 1200px;
+    align-items: center;
+    justify-content: space-between;
+  }
 
-
-   .main-nav > .primary  {
+   .main-nav > .content-wrapper > .primary  {
     justify-content: center;
     align-items: end;
     gap: 2vw;
    }
 
-  .main-nav > .primary > .site-brand {
+  .main-nav > .content-wrapper > .primary > .site-brand {
     display: flex;
     align-items: end;
     justify-content: center;
   }
-  .main-nav > .primary > .site-brand > .svgCont {
+  .main-nav > .content-wrapper > .primary > .site-brand > .svgCont {
     width: 9vw;
     height: 9vw;
 
   }
-  .main-nav > .primary > .site-brand > .app-name{
+  .main-nav > .content-wrapper > .primary > .site-brand > .app-name{
    font-size: 6vw;
    color: orangered;
   }
 
-  .main-nav > .primary > .back-button {
+  .main-nav > .content-wrapper > .primary > .back-button {
     width: 7vw;
     height: 7vw;
     background-color: inherit;
     border: none;
    }   
-   .main-nav > .primary > .back-button .fill {
+   .main-nav > .content-wrapper > .primary > .back-button .fill {
     fill: var(--theme-secondary-default);
    }
 
   
-  .main-nav > .primary > .nav-title{
+  .main-nav > .content-wrapper > .primary > .nav-title{
     font-size: 5vw;
 
   }
   
-  .main-nav > .secondary {
+  .main-nav > .content-wrapper > .secondary {
     justify-content: end;
     align-items: center;
     gap: 1.5vw;
   }
 
   
-  .main-nav > .secondary > .signin-button {
+  .main-nav > .content-wrapper > .secondary > .signin-button {
     border-radius: 2vw;
     padding: 1.5vw 2vw;
     border: none;
     font-size: 4vw;
     font-weight: 600;
   }
-  .main-nav > .secondary > .notification-button {
+  .main-nav > .content-wrapper > .secondary > .notification-button {
     width: 9vw;
     height: 9vw;
     background-color: transparent;
@@ -83,34 +87,36 @@
     position: relative;
     border-radius: 100%;
   }
-  .main-nav > .secondary > .notification-button.active  {
+  .main-nav > .content-wrapper > .secondary > .notification-button.active  {
     background-color: gray;
    }
-  .main-nav > .secondary > .notification-button .fill  {
+  .main-nav > .content-wrapper > .secondary > .notification-button .fill  {
     fill: var(  --icon-color);
   }
  
-  .main-nav > .secondary > .notification-button > .badge {
+  .main-nav > .content-wrapper > .secondary > .notification-button > .badge {
     border: 1px solid white;
     font-size: 2.5vw;
     top: 0;
     right: 0;
     padding: .2vw 1vw;
   }
-  .main-nav > .secondary > .profile-button {
+  .main-nav > .content-wrapper > .secondary > .profile-button {
     width: 9vw;
     height: 9vw;
     border: none;
     background-color: transparent;
   }
 
-  .main-nav > .secondary > .profile-button .user-avatar {
+  .main-nav > .content-wrapper > .secondary > .profile-button .user-avatar {
    border-width: .5vw ;
    width: 100%;
    height: 100%;
    --level-badge-font-size: 1.3vw;
+   --badge-border-color: var(--container-bg-color);
+
   }
-  .main-nav > .notifications-section {
+  .main-nav > .content-wrapper > .notifications-section {
     width: 80%;
     height: 80vh;
     overflow-y: scroll;
