@@ -31,7 +31,6 @@
    .main-nav > .content-wrapper > .primary  {
     justify-content: center;
     align-items: end;
-    gap: 2vw;
    }
 
   .main-nav > .content-wrapper > .primary > .site-brand {
@@ -48,23 +47,9 @@
    font-size: 6vw;
    color: orangered;
   }
-
-  .main-nav > .content-wrapper > .primary > .back-button {
-    width: 7vw;
-    height: 7vw;
-    background-color: inherit;
-    border: none;
-   }   
-   .main-nav > .content-wrapper > .primary > .back-button .fill {
-    fill: var(--theme-secondary-default);
-   }
-
-  
-  .main-nav > .content-wrapper > .primary > .nav-title{
-    font-size: 5vw;
-
+  .main-nav > .content-wrapper > .primary > .navigation-buttons-wrapper{
+   display: none;   
   }
-  
   .main-nav > .content-wrapper > .secondary {
     justify-content: end;
     align-items: center;

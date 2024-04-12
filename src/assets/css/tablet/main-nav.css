@@ -1,0 +1,69 @@
+@media screen  and (min-width: 700px) {
+  :root {
+  }
+  
+  .main-nav {
+  }
+  
+  .main-nav.half-transparent {
+  }
+  
+  .main-nav > .content-wrapper{
+  }
+  
+  .main-nav > .content-wrapper > .primary  {
+    gap: 30px;
+  }
+  
+  .main-nav > .content-wrapper > .primary > .site-brand {
+  }
+  
+  .main-nav > .content-wrapper > .primary > .site-brand > .svgCont {
+  }
+  
+  .main-nav > .content-wrapper > .primary > .site-brand > .app-name{
+  }
+  
+  .main-nav > .content-wrapper > .primary >  .navigation-buttons-wrapper{
+    display: flex;
+    gap: 40px;
+  }
+  .main-nav > .content-wrapper > .primary >  .navigation-buttons-wrapper > a {
+    font-size: 17px;
+    background-color: transparent;
+    border: none;
+    color: var(--paragraph-color-primary);
+    text-decoration: none;
+  }
+  .main-nav > .content-wrapper > .primary >  .navigation-buttons-wrapper > a.active {
+    color: var(--theme-secondary-default);
+  }
+  .main-nav > .content-wrapper > .secondary {
+  }
+  
+  .main-nav > .content-wrapper > .secondary > .signin-button {
+  }
+  
+  .main-nav > .content-wrapper > .secondary > .notification-button {
+  }
+  
+  .main-nav > .content-wrapper > .secondary > .notification-button.active  {
+  }
+  
+  .main-nav > .content-wrapper > .secondary > .notification-button .fill  {
+  }
+  
+  .main-nav > .content-wrapper > .secondary > .notification-button > .badge {
+  }
+  
+  .main-nav > .content-wrapper > .secondary > .profile-button {
+  }
+  
+  .main-nav > .content-wrapper > .secondary > .profile-button .user-avatar {
+  }
+  
+  .main-nav > .content-wrapper > .notifications-section {
+  }
+ 
+  
+}

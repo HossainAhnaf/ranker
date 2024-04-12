@@ -1,7 +1,8 @@
 //modules
 import React , {useCallback, useEffect, useState} from 'react'
-import { useLocation, useNavigate, useParams } from 'react-router'
+import {NavLink, Link, useLocation, useNavigate, useParams } from 'react-router-dom'
 import { useSelector } from 'react-redux'
+import useActiveClassName from '../../hooks/useActiveClassName'
 //components
 import Icon from 'react-inlinesvg'
 //svg
@@ -55,13 +56,8 @@ function Primary() {
   
   return (
     <div className="primary flex-rw ">
-    { 
-    isBackButtonVisible(location.pathname) 
-
-    ? <button className="back-button button svgCont" onClick={()=>navigate(-1)}>
-       <Icon src={backSvg}  />
-     </button>   
-   :<div className="site-brand" onClick={()=>navigate('/')}>
+   
+   <div className="site-brand" onClick={()=>navigate('/')}>
     <span className="svgCont">
       <Icon src={appLogo}  />
     </span>
@@ -71,10 +67,24 @@ function Primary() {
     </h1>
     }
    </div>
-   }
-   <h1 className="nav-title">
-    {title}
-   </h1>
+     <div className="navigation-buttons-wrapper flex-rw center">
+          <NavLink className={useActiveClassName}  to={`/profile/${username}`}>
+              Profile
+          </NavLink>
+          <NavLink className={useActiveClassName}  to='/challenges'>
+                Challenges
+          </NavLink>         
+          <NavLink className={useActiveClassName}  to='/peoples'>
+               Peoples
+          </NavLink>     
+
+          {/* <Link to="/accounts/signin">
+          <button className="logout-button">
+            
+              <span className="name">Log out</span>
+            </button>
+          </Link> */}
+     </div>
    </div>
   )
 }
