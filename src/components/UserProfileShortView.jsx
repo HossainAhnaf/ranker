@@ -11,15 +11,16 @@ import '../assets/css/mobile-large/user-profile-short-view.css'
 
 function UserProfileShortView() {
 
-  const {name,avatar,status,level,xp} = useSelector(state=>state.userSlice)
+  const {name,username,avatar,status,level,xp} = useSelector(state=>state.userSlice)
 
 
   return (
-    <div className="user-profile-short-view flex-cm center tooltip" >
+    <div className="user-profile-short-view flex-cm  tooltip" >
     <div className="primary flex-rw center">
       <UserAvatar avatar={avatar} status={status} level={level} />
       <div className="username-wrapper flex-cm">
-        <b className="username">{name}</b>
+        <b className="name">{name}</b>
+   <p className="username">@{username}</p>
         <small className={`status ${status}`}>{status}</small>
       </div>
     </div>

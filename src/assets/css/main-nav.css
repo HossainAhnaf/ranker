@@ -85,9 +85,6 @@
     right: 0;
     padding: .2vw 1vw;
   }
-  .main-nav > .content-wrapper > .secondary > .profile-button-wrapper {
-   position: relative;
-  }
 
   .main-nav > .content-wrapper > .secondary >.profile-button-wrapper> .profile-button {
     width: 9vw;
@@ -96,14 +93,51 @@
     background-color: transparent;
   }
 
-  .main-nav > .content-wrapper > .secondary > .profile-button-wrapper > .profile-button .user-avatar {
+  .main-nav > .content-wrapper > .secondary > .profile-button-wrapper > .profile-button > .user-avatar {
    border-width: .5vw ;
    width: 100%;
    height: 100%;
    --level-badge-font-size: 1.3vw;
    --badge-border-color: var(--container-bg-color);
-
   }
+  /* menu */
+  .main-nav > .content-wrapper > .secondary > .profile-button-wrapper > .menu {
+    width: 100vw;
+  height: 0;
+  background-color: var(--layout-bg-color);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: height .3s;
+  overflow: hidden;
+  }
+  .main-nav > .content-wrapper > .secondary > .profile-button-wrapper > .menu.open {
+    height: 100vh;
+  }
+
+  .main-nav > .content-wrapper > .secondary > .profile-button-wrapper > .menu >  .primary {
+    height: calc(var(--nav-height) + var(--nav-vertical-padding));
+    justify-content: space-between;
+    align-items: center;
+    width: calc(100% - 10vw);
+    padding: 7vw 5vw;
+    z-index: 1;
+  }
+  
+  /* .main-nav > .content-wrapper > .secondary > .profile-button-wrapper > .menu >  .primary > .user-profile-short-view >  .user-avatar{
+    width: 20vw;
+    height: 20vw; 
+  }
+  */
+  .main-nav > .content-wrapper > .secondary > .profile-button-wrapper > .menu >  .primary  > .hide-button {
+    border: none;
+    width: 4vw;
+    height: 4vw;
+    background-color: transparent;
+    color: var(--paragraph-color-primary);
+  }
+  
+ 
   .main-nav > .content-wrapper > .notifications-section {
     width: 80%;
     height: 80vh;

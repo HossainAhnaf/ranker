@@ -1,46 +1,54 @@
-.side-navigation-bar > .primary > .user-profile-short-view {
-  width: 80%;
+.user-profile-short-view {
+  width: 70%;
     gap: 1vw;
-    height: 100%;
+    height: max-content;
    padding: 1vw 0;
+   justify-content: center;
+   align-items: flex-start;
   }
-  .side-navigation-bar > .primary > .user-profile-short-view > .primary {
+  .user-profile-short-view > .primary {
+    gap: 2vw;
+  }
+  .user-profile-short-view > .primary > .user-avatar {
+    width: 20vw;
+    height: 20vw;
+    border-width: .5vw ; 
+    --level-badge-font-size: 4vw;
+  }
+  .user-profile-short-view > .primary > .username-wrapper{
     gap: 1vw;
   }
-  .side-navigation-bar > .primary > .user-profile-short-view > .primary > .user-avatar {
-    width: 9vw;
-    height: 9vw;
-    border-width: .5vw ; 
-    --level-badge-font-size: 1.3vw;
+  .user-profile-short-view > .primary > .username-wrapper > .name {
+    font-size: 4vw;
   }
-  
-  .side-navigation-bar > .primary > .user-profile-short-view > .primary > .username-wrapper > .username {
-    font-size: 3vw;
+  .user-profile-short-view > .primary > .username-wrapper > .username {
+    font-size: 3.5vw;
+    color: var(--paragraph-color-secondary);
   }
-  .side-navigation-bar > .primary > .user-profile-short-view > .primary > .username-wrapper> .status {
-   font-size: 2.5vw;
+  .user-profile-short-view > .primary > .username-wrapper> .status {
+   font-size: 3vw;
    -webkit-text-stroke-width: .2px;
    -webkit-text-stroke-color: black;
     }
   
-  .side-navigation-bar > .primary > .user-profile-short-view > .primary > .username-wrapper> .status.Sigma {
+  .user-profile-short-view > .primary > .username-wrapper> .status.Sigma {
   color: var(--sigma-color);
 }
 
-.side-navigation-bar > .primary > .user-profile-short-view > .primary > .username-wrapper> .status.Alpha {
+.user-profile-short-view > .primary > .username-wrapper> .status.Alpha {
     color: var(--alpha-color);
 }
-.side-navigation-bar > .primary > .user-profile-short-view > .primary > .username-wrapper> .status.Beta {
+.user-profile-short-view > .primary > .username-wrapper> .status.Beta {
     color: var(--beta-color);
 }
-.side-navigation-bar > .primary > .user-profile-short-view > .primary > .username-wrapper> .status.Gamma {
+.user-profile-short-view > .primary > .username-wrapper> .status.Gamma {
     color: var(--gamma-color);
 }
-.side-navigation-bar > .primary > .user-profile-short-view > .primary > .username-wrapper> .status.Delta {
+.user-profile-short-view > .primary > .username-wrapper> .status.Delta {
     color: var(--delta-color);
 
 }
-.side-navigation-bar > .primary > .user-profile-short-view > .primary > .username-wrapper> .status.Omega {
+.user-profile-short-view > .primary > .username-wrapper> .status.Omega {
     color: var(--omega-color);
 }
 
@@ -50,15 +58,15 @@
 
 
 
-  .side-navigation-bar > .primary > .user-profile-short-view > .secondary {
+  .user-profile-short-view > .secondary {
     width: 100%;
     height: 1vw;
     align-items: left;
     justify-content: left;
     align-self: start;
   }
-  .side-navigation-bar > .primary > .user-profile-short-view > .secondary> .progress-bar {
-    width: 50%;
+  .user-profile-short-view > .secondary> .progress-bar {
+    width: 100%;
     height: 100%;
     background-color: white;
     position: relative;
@@ -66,7 +74,7 @@
     border-radius: 5px;
     overflow: hidden;
   }
-  .side-navigation-bar > .primary > .user-profile-short-view > .secondary> .progress-bar > .progress {
+  .user-profile-short-view > .secondary> .progress-bar > .progress {
     background-color: var(--theme-secondary-default);
     background: var(--theme-secondary-gradient);
     width: var(--progress);
@@ -83,7 +91,7 @@
     }
   }
 
-  .side-navigation-bar > .primary > .user-profile-short-view >  .short-info{
+  .user-profile-short-view >  .short-info{
      --bg-color: var(--layout-bg-color);
      font-size: 3vw;
      font-weight: bold;
@@ -93,13 +101,13 @@
      gap: 1vw;
      border-radius: 5px;
   }
-  .side-navigation-bar > .primary > .user-profile-short-view >  .tooltip-bottom::after{
+  .user-profile-short-view >  .tooltip-bottom::after{
     bottom: 100%;
     left: 50%;
     margin-left: -2.5vw;
     border-width: 2.5vw;
   }
 
-  .side-navigation-bar > .primary > .user-profile-short-view >  .short-info > .info{
+  .user-profile-short-view >  .short-info > .info{
    gap: 1vw; 
   }
