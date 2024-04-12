@@ -7,7 +7,7 @@ import useActiveClassName from "../hooks/useActiveClassName"
 
 //components
 import Icon from 'react-inlinesvg'
-import UserProfileShortView from "../components/UserProfileShortView"
+// import UserProfileShortView from "../components/UserProfileShortView"
 
 //svg
 import profileSvg from '../assets/svg/profile.svg'

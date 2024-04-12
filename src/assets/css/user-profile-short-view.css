@@ -1,10 +1,12 @@
 .user-profile-short-view {
-  width: 70%;
+  width: 80%;
     gap: 1vw;
     height: max-content;
    padding: 1vw 0;
    justify-content: center;
    align-items: flex-start;
+   text-decoration: none;
+   color: unset;
   }
   .user-profile-short-view > .primary {
     gap: 2vw;
@@ -13,7 +15,8 @@
     width: 20vw;
     height: 20vw;
     border-width: .5vw ; 
-    --level-badge-font-size: 4vw;
+    --level-badge-font-size: 3.5vw;
+    --badge-border-color: var(--layout-bg-color);
   }
   .user-profile-short-view > .primary > .username-wrapper{
     gap: 1vw;
@@ -51,63 +54,3 @@
 .user-profile-short-view > .primary > .username-wrapper> .status.Omega {
     color: var(--omega-color);
 }
-
-
-
-
-
-
-
-  .user-profile-short-view > .secondary {
-    width: 100%;
-    height: 1vw;
-    align-items: left;
-    justify-content: left;
-    align-self: start;
-  }
-  .user-profile-short-view > .secondary> .progress-bar {
-    width: 100%;
-    height: 100%;
-    background-color: white;
-    position: relative;
-    border: 1px solid black;
-    border-radius: 5px;
-    overflow: hidden;
-  }
-  .user-profile-short-view > .secondary> .progress-bar > .progress {
-    background-color: var(--theme-secondary-default);
-    background: var(--theme-secondary-gradient);
-    width: var(--progress);
-    height: 100%;
-  
-    animation: progress-animation 1s;
-  }
-  @keyframes progress-animation {
-    0% {
-      width: 0%;
-    }
-    100% {
-      width: var(--progress);
-    }
-  }
-
-  .user-profile-short-view >  .short-info{
-     --bg-color: var(--layout-bg-color);
-     font-size: 3vw;
-     font-weight: bold;
-     padding: 1vw 2vw;
-     width: max-content;
-     box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.5);
-     gap: 1vw;
-     border-radius: 5px;
-  }
-  .user-profile-short-view >  .tooltip-bottom::after{
-    bottom: 100%;
-    left: 50%;
-    margin-left: -2.5vw;
-    border-width: 2.5vw;
-  }
-
-  .user-profile-short-view >  .short-info > .info{
-   gap: 1vw; 
-  }
