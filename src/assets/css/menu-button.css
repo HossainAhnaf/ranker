@@ -1,20 +1,21 @@
 
 .menu-button-wrapper{
   position: relative;
+  --bg-color:white;
  }
  .menu-button-wrapper > .menu-button{
    width: max-content;
-   gap: 1vw;
-   background-color: var(--menu-button-bg-color);
-   padding: var(--menu-padding) ;
+   background-color: var(--bg-color);
+   color: var(--color);
+   padding: 1vw 2.5vw ;
    border-radius: 1vw;
-   font-size: var(--menu-button-font-size);;
+   font-size: 4vw;
    justify-content: space-between;
    align-items: center;
  }
  .menu-button-wrapper > .menu-button > .svgCont{
-   width: calc(var(--menu-button-font-size) * 1.2);
-   height: calc(var(--menu-button-font-size) * 1.2);
+   width: 4vw;
+   height: 4vw;
    transition: transform 0.3s;  
  } 
  .menu-button-wrapper.open > .menu-button > .svgCont{
@@ -25,7 +26,8 @@
   min-width: 100%;
    width: max-content !important;
    position: absolute;
-   background-color: var(--menu-options-wrapper-bg-color);
+   background-color: var(--bg-color);
+   color: var(--color);
    z-index: 1;
    margin-top: 1vw;
    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.5);
@@ -43,12 +45,12 @@
   flex-direction: row;
 }
  .menu-button-wrapper > .menu-options-wrapper.button-type > .option{
-  padding: var(--menu-padding);
+  padding: 1vw 2.5vw;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  font-size: var(--menu-options-wrapper-font-size);
+  font-size: 4vw;
   gap: 2vw;
  }
  .menu-button-wrapper > .menu-options-wrapper.button-type > .option:active{
@@ -56,8 +58,8 @@
  }
  .menu-button-wrapper > .menu-options-wrapper.button-type > .option > svg{
   visibility: hidden;
-  width: calc(var(--menu-options-wrapper-font-size) * 1.2);
-  height: calc(var(--menu-options-wrapper-font-size) * 1.2);;
+  width: 4vw; 
+   height: 4vw;
  }
 
  .menu-button-wrapper > .menu-options-wrapper.button-type > .option.selected > svg{
@@ -66,7 +68,8 @@
  /* checkbox */
  .menu-button-wrapper > .menu-options-wrapper.checkbox-type{
   gap: 2vw;
-  padding: var(--menu-padding);
+  padding: 1vw 2.5vw;
+  left: -5vw;
 }
  .menu-button-wrapper > .menu-options-wrapper.checkbox-type > .option{
   display: flex;
@@ -74,14 +77,14 @@
   align-items: center;
  }
  .menu-button-wrapper > .menu-options-wrapper.checkbox-type > .option > span{
-  padding:var(--menu-checkbox-padding) ;
-  font-size: var(--menu-options-wrapper-checkbox-font-size);
-  border-radius: 5vw; ;
-  background-color: var(--menu-option-checkbox-bg-color);
+  padding: 1vw 2.5vw;
+  font-size: 3vw;
+  border-radius: 5vw; 
+  background-color: var(--checkbox-bg-color);
  }
 
  .menu-button-wrapper > .menu-options-wrapper.checkbox-type > .option > input:checked + span{
-   background-color: var(--menu-option-checkbox-checked-bg-color);
-   background: var(--menu-option-checkbox-checked-bg);
-  color: var(--menu-option-checkbox-checked-color);
+   background-color: var(--checkbox-checked-bg-color);
+   background: var(--checkbox-checked-bg);
+  color: var(--checkbox-checked-color);
  } 
