@@ -61,7 +61,7 @@
   /* profile menu */
   .main-nav > .content-wrapper > .secondary > .profile-button-wrapper > .profile-menu {
    width: 260px;
-   top: calc(var(--nav-height) + var(--nav-vertical-padding) + 2px);
+   top: calc(var(--nav-height) + var(--nav-vertical-padding) - 3px);
    right: 0;
    left: unset;
    border-radius: 10px;
@@ -69,6 +69,7 @@
   }
   .main-nav > .content-wrapper > .secondary > .profile-button-wrapper > .profile-menu.open {
     height:max-content;
+ overflow: hidden;
   }
  
   .main-nav > .content-wrapper > .secondary > .profile-button-wrapper > .profile-menu >  .primary > .user-profile-short-view {

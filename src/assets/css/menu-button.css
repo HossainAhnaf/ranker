@@ -1,11 +1,12 @@
 
 .menu-button-wrapper{
   position: relative;
-  --bg-color:white;
+  --button-bg-color:white;
+  --options-wrapper-bg-color:white;
  }
  .menu-button-wrapper > .menu-button{
    width: max-content;
-   background-color: var(--bg-color);
+   background-color: var(--button-bg-color);
    color: var(--color);
    padding: 1vw 2.5vw ;
    border-radius: 1vw;
@@ -24,9 +25,9 @@
 
  .menu-button-wrapper > .menu-options-wrapper{
   min-width: 100%;
-   width: max-content !important;
+   width: max-content ;
    position: absolute;
-   background-color: var(--bg-color);
+   background-color: var(--options-wrapper-bg-color);
    color: var(--color);
    z-index: 1;
    margin-top: 1vw;
@@ -34,6 +35,7 @@
    display: none;
    outline: none;
    border-radius: 1vw;
+   overflow: hidden;
  }
  .menu-button-wrapper.open > .menu-options-wrapper{
  display: flex; 
@@ -52,6 +54,7 @@
   align-items: center;
   font-size: 4vw;
   gap: 2vw;
+  background-color: inherit;
  }
  .menu-button-wrapper > .menu-options-wrapper.button-type > .option:active{
   filter: brightness(50%);  
@@ -68,8 +71,10 @@
  /* checkbox */
  .menu-button-wrapper > .menu-options-wrapper.checkbox-type{
   gap: 2vw;
-  padding: 1vw 2.5vw;
   left: -5vw;
+  flex-wrap: wrap;
+  padding: 1vw 2.5vw;
+
 }
  .menu-button-wrapper > .menu-options-wrapper.checkbox-type > .option{
   display: flex;

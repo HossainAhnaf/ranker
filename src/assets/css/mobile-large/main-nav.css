@@ -5,12 +5,10 @@
   }
  
   .main-nav {
-    padding-left: 2vw;
-    padding-right: 2vw;
-    width: 96vw;
+    padding-left: 12px; 
+   padding-right: 23px;
+    width: calc(100vw - 35px);
   }
-
-
 
   .main-nav > .content-wrapper > .primary > .site-brand > .svgCont {
     width: 35px;
@@ -133,19 +131,10 @@
   .main-nav > .content-wrapper > .notifications-section {
     width: 300px;
     height: 70%;
-    top: 70px;
+    top: 63px;
     right: 15px;
-    border-radius: 15px ;
+    border-radius: 4px ;
+    scrollbar-width: thin;
   }
-/* challenges section nav */
-.main-nav > .challenges-section-nav {    
-  width: calc(100% - 20px);
-  padding: 5px 10px;
-  position: fixed;
-  top: 50px;
-  left: 0;
-  background-color: var(--layout-bg-color);
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
-}
 
 }

@@ -37,9 +37,10 @@
   font-size: 4vw;
  }
  .challenges-section > .primary > .challenges-section-nav  > .menu-button-wrapper{
-  --bg-color:var(--item-bg-color);
+  --button-bg-color:var(--container-bg-color-secondary);
+  --options-wrapper-bg-color:var(--container-bg-color);
   --color:var(--paragraph-color-primary);
-  --checkbox-bg-color:var(--item-bg-color);
+  --checkbox-bg-color:var(--container-bg-color-secondary);
   --checkbox-checked-bg-color:var(--theme-secondary-default);
   --checkbox-checked-bg:var(--theme-secondary-gradient);
   --checkbox-checked-color:white;

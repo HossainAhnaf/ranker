@@ -1,6 +1,5 @@
 .notifications-section{
   width: 100%;
-  justify-content: center;
   align-items: center;    
 }
 .notifications-section > nav {
@@ -11,6 +10,7 @@
 }
 .notifications-section:not(.short-view) > nav{
   margin-top:  calc(var(--nav-vertical-padding) + var(--nav-height));
+  justify-content: center;
  
 } 
 .notifications-section > nav > .filter-buttons-wrapper{

@@ -11,6 +11,8 @@
 :root{
   --body-bg-color:white;
   --icon-color:black;
+  --header-bg-color:rgb(233, 233, 233);
+
   --container-bg-color: white;
   --container-bg-color-secondary: whitesmoke;
 
@@ -36,6 +38,8 @@
   :root{
     --body-bg-color:#333;
     --icon-color:white;
+    --header-bg-color:#6e6e6e;
+
     --container-bg-color: #515151;
     --container-bg-color-secondary: #515151;
     --paragraph-color-primary:white; 

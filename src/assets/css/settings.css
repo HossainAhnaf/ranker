@@ -5,7 +5,7 @@
     height: max-content;
     margin-top: var(--margin-top);
   overflow-x: hidden;  
-  background-color: var(--container-bg-color);
+  background-color: var(--layout-bg-color);
 }
 /* header */
 .settings-section > .header{
@@ -259,6 +259,9 @@ justify-content: flex-start;
   display: none; 
  font-size: 4vw;
  align-self: flex-start;
+ background-color: transparent ;
+ color: var(--paragraph-color-primary);
+
 }
 .settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content > .value-wrapper > .value-field:not(.select){
   border: 1px solid var(--border-color);
@@ -268,7 +271,14 @@ justify-content: flex-start;
   width: 70%;
 }
 .settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content > .value-wrapper > .value-field.select{  
-  width: 30%;
+  width: 30%;  
+ }
+ .settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content > .value-wrapper > .value-field.select > summary{
+   background-color: transparent;
+ }
+ .settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content > .value-wrapper > .value-field.select > .options-wrapper{
+  background-color: var(--container-bg-color);
+  
  }
 .settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content > .value-wrapper.editable > .value-field{
   display: block;

@@ -13,7 +13,7 @@
   --size: 60vw;
   --fg: var(--theme-secondary-default);
   --bg: white;
-  --inner-color:var(--container-bg-color);
+  --inner-color:var(--container-bg-color-secondary);
  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
  margin:0 auto;
 }
