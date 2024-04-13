@@ -46,7 +46,7 @@ function ProfileMenu({ isMenuOpen, setIsMenuOpen }) {
       <div className="secondary">     
         <div className="navigation-buttons-wrapper flex-cm center">
         <NavLink  className={useActiveClassName} to={`/profile/${username}`}>
-          <span className="svgCont" style={{transform:"scale(.9)"}}>
+          <span className="svgCont" style={{transform:"scale(.7)"}}>
             <Icon src={profileSvg} />
           </span>
           <span className="name">Profile</span>
@@ -75,17 +75,12 @@ function ProfileMenu({ isMenuOpen, setIsMenuOpen }) {
         <div className="primary-buttons-wrapper flex-cm center">
         <NavLink className={useActiveClassName} to='/create-new-challenge'>
           <span className="svgCont">
-            <Icon src={plusSvg} />
+            <Icon src={plusSvg}  style={{transform:"scale(.9)"}}/>
           </span> <span className="name">Create new challenge</span>
-        </NavLink>
-        <NavLink className={useActiveClassName} to='/settings'>
-          <span className="svgCont">
-            <Icon src={settingsSvg} />
-          </span> <span className="name">Settings</span>
         </NavLink>
 
         <details className="appearance-menu-button">
-          <summary className='flex-rw'>
+          <summary className='flex-rw button'>
             <span className="svgCont appearance-icon">
               <Icon src={moonSvg} />
             </span>
@@ -94,19 +89,25 @@ function ProfileMenu({ isMenuOpen, setIsMenuOpen }) {
             <Icon src={dropDownSvg}/>
             </span>
            </summary>
-        <span className={`option ${theme === '' ? 'selected' :''}`} onClick={()=>dispatch(setTheme(''))}>
+        <span className={`option button ${theme === '' ? 'selected' :''}`} onClick={()=>dispatch(setTheme(''))}>
             System Default
               <Icon src={tickSvg}/>
           </span>
-          <span className={`option ${theme === 'theme-light' ? 'selected' :''}`} onClick={()=>dispatch(setTheme('theme-light'))}>
+          <span className={`option button ${theme === 'theme-light' ? 'selected' :''}`} onClick={()=>dispatch(setTheme('theme-light'))}>
             Light
               <Icon src={tickSvg}/>
           </span>
-          <span className={`option ${theme === 'theme-dark' ? 'selected' :''}`} onClick={()=>dispatch(setTheme("theme-dark"))}>
+          <span className={`option button ${theme === 'theme-dark' ? 'selected' :''}`} onClick={()=>dispatch(setTheme("theme-dark"))}>
             Dark
               <Icon src={tickSvg}/>
           </span>
         </details>
+        <NavLink className={useActiveClassName} to='/settings'>
+          <span className="svgCont">
+            <Icon src={settingsSvg} />
+          </span> <span className="name">Settings</span>
+        </NavLink>
+
         <Link to="/accounts/signin" className="logout-button" >
             <span className="svgCont">
               <Icon src={logoutSvg} />

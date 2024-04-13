@@ -104,7 +104,7 @@
   .main-nav > .content-wrapper > .secondary > .profile-button-wrapper > .profile-menu {
     width: 100vw;
   height: 0;
-  background-color: var(--layout-bg-color);
+  background-color: var(--container-bg-color);
   position: absolute;
   top: 0;
   left: 0;
@@ -143,7 +143,7 @@
       height: 20vw;
       border-width: .5vw ; 
       --level-badge-font-size: 3.5vw;
-      --badge-border-color: var(--layout-bg-color);
+      --badge-border-color: var(--container-bg-color);
     }
     .main-nav > .content-wrapper > .secondary > .profile-button-wrapper > .profile-menu >  .primary > .user-profile-short-view > .primary > .username-wrapper{
       gap: 1vw;
@@ -245,14 +245,11 @@
   gap: 5vw;
   justify-content: flex-start;
   align-items: center;
- background-color: var(--layout-bg-color);
+ background-color: var(--container-bg-color);
  width: calc(90% - 6vw) ;
  padding: 3vw;
  margin: 0 auto;
  border-radius: 1vw;
- }
- .main-nav > .content-wrapper > .secondary > .profile-button-wrapper > .profile-menu >  .secondary > .primary-buttons-wrapper > .appearance-menu-button > summary:active{
-  background-color: var(--container-bg-color-secondary) ;
  }
 
    .main-nav > .content-wrapper > .secondary > .profile-button-wrapper > .profile-menu >  .secondary > .primary-buttons-wrapper > .appearance-menu-button > summary::marker{
@@ -277,15 +274,13 @@
     justify-content: space-between;
     align-items: center;
     margin-left: auto;
-    margin-right: 8vw;
-    width: calc(75% - 6vw);
+    width: calc(70% - 6vw);
     padding:3vw ;
-    background-color: var(--layout-bg-color);
+    background-color: var(--container-bg-color);
     border-radius: 1vw;
+    margin: 0 auto;
   }
-  .main-nav > .content-wrapper > .secondary > .profile-button-wrapper > .profile-menu >  .secondary > .primary-buttons-wrapper > .appearance-menu-button > .option:active{
-    background-color: var(--container-bg-color-secondary);
-  }
+ 
   .main-nav > .content-wrapper > .secondary > .profile-button-wrapper > .profile-menu >  .secondary > .primary-buttons-wrapper > .appearance-menu-button > .option > svg{
     width: 5vw;
     height: 5vw;
