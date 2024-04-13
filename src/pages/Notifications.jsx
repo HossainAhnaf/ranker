@@ -21,16 +21,17 @@ function Notifications({shortView}) {
   const navigate = useNavigate()
 
   const [notificationsData, setNotificationsData] = useState(fakeNotificationsData)
-  const moreButtonClickHandler = ({ currentTarget }) => {
-    currentTarget.classList.toggle('active')
+  const moreButtonClickHandler = (e) => {
+    e.stopPropagation()
+    e.currentTarget.classList.toggle('active')
   }
 
   const notificationClickHandler = ({target,currentTarget},url) => {
-    const moreButton = currentTarget.querySelector('.more-button')
-     const moreOptionsWrapper = currentTarget.querySelector('.more-options-wrapper') 
-    if(target !==  moreButton && target !== moreOptionsWrapper && !moreOptionsWrapper.contains(target) && !moreButton.contains(target)){
-    navigate(url)
-    }
+    // const moreButton = currentTarget.querySelector('.more-button')
+    //  const moreOptionsWrapper = currentTarget.querySelector('.more-options-wrapper') 
+    // if(target !==  moreButton && target !== moreOptionsWrapper && !moreOptionsWrapper.contains(target) && !moreButton.contains(target)){
+    // navigate(url)
+    // }
   }
   return (
     <section className={`notifications-section ${shortView ? 'short-view' : ''} flex-cm`}>
@@ -66,35 +67,24 @@ function Notifications({shortView}) {
         }
         </div>
       </nav>
-
-
-      {
-        Object.keys(notificationsData).map((key, groupIndex) => {
-          return (
-            <div className="group flex-cm center" key={groupIndex}>
-              <b className="date">{key}</b>
-              <div className="notifications-wrapper flex-cm center">
-                {
-                  notificationsData[key].map(({ title, description, type, url,isReaded }, index) => {
-                    return (
-                      <div className={`notification ${type} ${isReaded ? '' : 'unread'} flex-rw `}   onClick={(e)=>notificationClickHandler(e,url)} key={index} >
+        
+             <div className="notifications-wrapper flex-cm center">        
+                      <div className={`notification announcement  flex-rw `}  >
                         <div className="icon-wrapper">
                           <div className="svgCont">
-                            {type === 'progress' && <Icon src={growthSvg} />}
-                            {type === 'security' && <Icon src={securitySvg} />}
-                            {type === 'announcement' && <Icon src={handMikeSvg} />}
+                          <Icon src={handMikeSvg} />
                           </div>
                         </div>
                         <div className="message-wrapper flex-cm">
-                          <b className="title">{title}</b>
-                          <small className="description">{description}</small>
-                          
+                          <b className="type">Announcement</b>
+                          <small className="message">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam quos quia repudiandae voluptates nihil ipsam sunt in esse nostrum assumenda!</small>
+                          <small className='date'>April 10, 2024 4:03 PM</small> 
                         </div>
-                        <button className="more-button button svgCont" onClick={moreButtonClickHandler}>
+                        <button className="more-button button " onClick={moreButtonClickHandler}>
                           <Icon src={moreSvg} />
                         </button>
                         <div className="more-options-wrapper">
-                          <button className="option button">
+                          <button className="option mark-as-read-button button ">
                             <div className="svgCont">
                               <Icon src={tickSvg} />
                             </div>
@@ -114,17 +104,10 @@ function Notifications({shortView}) {
                           </button>
                         </div>
                       </div>
-                    )
-                  })
+                 
 
-                }
               </div>
-            </div>
-          )
-        })
-
-
-      }
+     
     </section>
   )
 }
