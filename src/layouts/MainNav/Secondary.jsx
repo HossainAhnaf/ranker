@@ -39,7 +39,7 @@ function Secondary() {
             <small className="badge">4</small>
           </button>
         <div className="profile-button-wrapper">
-        <button className="profile-button" onClick={() => setIsMenuOpen(true) }>
+        <button className="profile-button" onClick={() => setIsMenuOpen(!isMenuOpen)}>
           <UserAvatar avatar={avatar} status={status} level={level} />
         </button>
 

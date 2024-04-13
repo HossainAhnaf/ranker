@@ -55,11 +55,14 @@
   
   .main-nav > .content-wrapper > .secondary > .notification-button > .badge {
   }
+  .main-nav > .content-wrapper > .secondary > .profile-button-wrapper{
+    position: relative;
+  }
   /* profile menu */
   .main-nav > .content-wrapper > .secondary > .profile-button-wrapper > .profile-menu {
    width: 260px;
-   top: calc(var(--nav-height) + var(--nav-vertical-padding) + 10px);
-   right: 20px;
+   top: calc(var(--nav-height) + var(--nav-vertical-padding) + 2px);
+   right: 0;
    left: unset;
    border-radius: 10px;
    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
@@ -67,16 +70,7 @@
   .main-nav > .content-wrapper > .secondary > .profile-button-wrapper > .profile-menu.open {
     height:max-content;
   }
-  .main-nav > .content-wrapper > .secondary > .profile-button-wrapper > .profile-menu.open::after {
-   content: "";
-   width: 100vw;
-   height: 100vh;
-   position: fixed;
-   background-color: darkred;
-   top: 0;
-   left: 0;
-   z-index: -1;
-  }
+ 
   .main-nav > .content-wrapper > .secondary > .profile-button-wrapper > .profile-menu >  .primary > .user-profile-short-view {
    width: 100%;
   }

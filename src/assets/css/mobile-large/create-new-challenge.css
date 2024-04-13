@@ -38,6 +38,26 @@ margin-bottom: 15px;
   font-size: 20px;
   margin-top: 35px;
 }
+.create-new-challenge-section > form > .tabs-wrapper > .tab >  .difficulty-label > .select > summary{
+ padding: 4px 8px;
+ font-size: 19px;
+ border-radius: 4px
+}
+.create-new-challenge-section > form > .tabs-wrapper > .tab >  .difficulty-label > .select > summary > .svgCont{
+  width: 20px;
+  height: 20px; 
+
+}
+.create-new-challenge-section > form > .tabs-wrapper > .tab >  .difficulty-label > .select > .options-wrapper {
+  border-radius: 4px;
+  margin-top: 4px;
+}
+.create-new-challenge-section > form > .tabs-wrapper > .tab >  .difficulty-label > .select > .options-wrapper > .option{
+  padding: 4px 8px;
+  font-size: 19px; 
+  width: calc(100% - 16px);
+}
+
 .create-new-challenge-section > form > .tabs-wrapper > .tab > .pinned-field {
   gap: 12px;
   font-size: 19px;

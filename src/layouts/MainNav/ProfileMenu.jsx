@@ -1,5 +1,5 @@
 //modules
-import React  from 'react'
+import React ,{useEffect,useRef} from 'react'
 import { useSelector,useDispatch } from 'react-redux'
 import { NavLink, Link } from 'react-router-dom'
 import { setTheme } from '../../store/slices/themeSlice'
@@ -26,8 +26,20 @@ function ProfileMenu({ isMenuOpen, setIsMenuOpen }) {
   const { name, username, avatar, status, level, xp } = useSelector(state => state.userSlice)
   const {theme} = useSelector(state => state.themeSlice) 
   const dispatch = useDispatch()
+
+  const profileMenuRef = useRef(null)
+   const ProfileMenuBlurHandler = (e) => {
+    if (e.relatedTarget === null)
+      setIsMenuOpen(false)
+   }
+   useEffect(() => {
+     if (isMenuOpen){
+       profileMenuRef.current.focus()
+     }
+   },[isMenuOpen])
+
   return (
-    <div className={`profile-menu ${isMenuOpen ? 'open' : ''}`}>
+    <div className={`profile-menu ${isMenuOpen ? 'open' : ''}`} tabIndex='0' ref={profileMenuRef} onBlur={ProfileMenuBlurHandler} >
       <div className="primary flex-rw">
         <Link to={`/profile/${username}`} className="user-profile-short-view flex-cm" >
           <div className="primary flex-rw center">
