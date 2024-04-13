@@ -85,7 +85,7 @@
     right: 0;
     padding: .2vw 1vw;
   }
-
+/* profile button wrapper */
   .main-nav > .content-wrapper > .secondary >.profile-button-wrapper> .profile-button {
     width: 9vw;
     height: 9vw;
@@ -110,13 +110,13 @@
   left: 0;
   transition: height .3s;
   overflow: hidden;
+  z-index: 1;
   }
   .main-nav > .content-wrapper > .secondary > .profile-button-wrapper > .profile-menu.open {
     height: 100vh;
   }
 
   .main-nav > .content-wrapper > .secondary > .profile-button-wrapper > .profile-menu >  .primary {
-    height: calc(var(--nav-height) + var(--nav-vertical-padding));
     justify-content: space-between;
     width: calc(100% - 6vw);
     height: max-content;
@@ -184,42 +184,27 @@
   
   .main-nav > .content-wrapper > .secondary > .profile-button-wrapper > .profile-menu >  .primary  > .hide-button {
     border: none;
-    width: 8vw;
-    height: 8vw;
+    width: 7vw;
+    height: 7vw;
     background-color: transparent;
     color: var(--paragraph-color-primary);
   }
   .main-nav > .content-wrapper > .secondary > .profile-button-wrapper > .profile-menu >  .secondary{
     width: 100%;
   }
-
+  .main-nav > .content-wrapper > .secondary > .profile-button-wrapper > .profile-menu >  .secondary > hr{
+    width: 90%;
+    margin: 3vw auto;
+  } 
   .main-nav > .content-wrapper > .secondary > .profile-button-wrapper > .profile-menu >  .secondary > .primary-buttons-wrapper{
     width: 100%;
   }
-  .main-nav > .content-wrapper > .secondary > .profile-button-wrapper > .profile-menu >  .secondary > .primary-buttons-wrapper > a.logout-button{
-    color: red;
-   }
-   .main-nav > .content-wrapper > .secondary > .profile-button-wrapper > .profile-menu >  .secondary > .primary-buttons-wrapper > a.logout-button  .fill{
-     fill: red;
-   }
- 
+
   .main-nav > .content-wrapper > .secondary > .profile-button-wrapper > .profile-menu >  .secondary > .navigation-buttons-wrapper{
     width: 100%;
-    border-top: 1px solid var(--border-color);
-    padding-top: 5vw;
-    margin-top: 7vw;
+
   }
-  .main-nav > .content-wrapper > .secondary > .profile-button-wrapper > .profile-menu >  .secondary > .primary-buttons-wrapper > a{
-    width: calc(90% - 6vw);
-    text-decoration: none;
-    color: var(--paragraph-color-primary);
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 3vw;
-    gap: 5vw;
-    border-radius: 1vw;
-  }
+
 
   .main-nav > .content-wrapper > .secondary > .profile-button-wrapper > .profile-menu >  .secondary > :is(.primary-buttons-wrapper,.navigation-buttons-wrapper) > a{
    width: calc(90% - 6vw);
@@ -231,6 +216,7 @@
    padding: 3vw;
    gap: 5vw;
    border-radius: 1vw;
+   font-size: 5vw;
   } 
   .main-nav > .content-wrapper > .secondary > .profile-button-wrapper > .profile-menu >  .secondary > :is(.primary-buttons-wrapper,.navigation-buttons-wrapper) > a > .svgCont{
     width: 6vw;
@@ -244,8 +230,71 @@
     color: white; 
    } 
 
+   .main-nav > .content-wrapper > .secondary > .profile-button-wrapper > .profile-menu >  .secondary > .primary-buttons-wrapper > a.logout-button{
+    color: red;
+   }
+   .main-nav > .content-wrapper > .secondary > .profile-button-wrapper > .profile-menu >  .secondary > .primary-buttons-wrapper > a.logout-button  .fill{
+     fill: red;
+   }
+   .main-nav > .content-wrapper > .secondary > .profile-button-wrapper > .profile-menu >  .secondary > .primary-buttons-wrapper > .appearance-menu-button{
+   width: 100%;
+   font-size: 5vw;
+   }
+   .main-nav > .content-wrapper > .secondary > .profile-button-wrapper > .profile-menu >  .secondary > .primary-buttons-wrapper > .appearance-menu-button > summary{
+  list-style: none;
+  gap: 5vw;
+  justify-content: flex-start;
+  align-items: center;
+ background-color: var(--layout-bg-color);
+ width: calc(90% - 6vw) ;
+ padding: 3vw;
+ margin: 0 auto;
+ border-radius: 1vw;
+ }
+ .main-nav > .content-wrapper > .secondary > .profile-button-wrapper > .profile-menu >  .secondary > .primary-buttons-wrapper > .appearance-menu-button > summary:active{
+  background-color: var(--container-bg-color-secondary) ;
+ }
 
- /* notifications */
+   .main-nav > .content-wrapper > .secondary > .profile-button-wrapper > .profile-menu >  .secondary > .primary-buttons-wrapper > .appearance-menu-button > summary::marker{
+   display: none;
+   }
+   .main-nav > .content-wrapper > .secondary > .profile-button-wrapper > .profile-menu >  .secondary > .primary-buttons-wrapper > .appearance-menu-button > summary > .appearance-icon{
+   width: 6vw;
+   height: 6vw;
+  }
+   .main-nav > .content-wrapper > .secondary > .profile-button-wrapper > .profile-menu >  .secondary > .primary-buttons-wrapper > .appearance-menu-button > summary > .drop-down-icon{
+    width: 5vw;
+    height: 5vw;
+    margin-left: auto;
+    transition: transform 0.3s;
+   }
+
+   .main-nav > .content-wrapper > .secondary > .profile-button-wrapper > .profile-menu >  .secondary > .primary-buttons-wrapper > .appearance-menu-button[open] > summary > .drop-down-icon{
+    transform: rotate(180deg);
+   }
+   .main-nav > .content-wrapper > .secondary > .profile-button-wrapper > .profile-menu >  .secondary > .primary-buttons-wrapper > .appearance-menu-button > .option{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 8vw;
+    width: calc(75% - 6vw);
+    padding:3vw ;
+    background-color: var(--layout-bg-color);
+    border-radius: 1vw;
+  }
+  .main-nav > .content-wrapper > .secondary > .profile-button-wrapper > .profile-menu >  .secondary > .primary-buttons-wrapper > .appearance-menu-button > .option:active{
+    background-color: var(--container-bg-color-secondary);
+  }
+  .main-nav > .content-wrapper > .secondary > .profile-button-wrapper > .profile-menu >  .secondary > .primary-buttons-wrapper > .appearance-menu-button > .option > svg{
+    width: 5vw;
+    height: 5vw;
+    display: none;
+  }
+  .main-nav > .content-wrapper > .secondary > .profile-button-wrapper > .profile-menu >  .secondary > .primary-buttons-wrapper > .appearance-menu-button > .option.selected > svg{
+  display: block;
+  }
+
   .main-nav > .content-wrapper > .notifications-section {
     width: 80%;
     height: 80vh;

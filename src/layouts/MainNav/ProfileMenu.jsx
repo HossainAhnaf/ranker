@@ -1,10 +1,13 @@
 //modules
-import React from 'react'
-import { useSelector } from 'react-redux'
+import React  from 'react'
+import { useSelector,useDispatch } from 'react-redux'
 import { NavLink, Link } from 'react-router-dom'
+import { setTheme } from '../../store/slices/themeSlice'
 import useActiveClassName from '../../hooks/useActiveClassName'
+
 //components
 import UserAvatar from "../../components/UserAvatar"
+import MenuButton from "../../components/MenuButton"
 import Icon from "react-inlinesvg"
 //svg
 import profileSvg from '../../assets/svg/profile.svg'
@@ -14,10 +17,15 @@ import notificationSvg from '../../assets/svg/notification.svg'
 import peopleSvg from '../../assets/svg/people.svg'
 import settingsSvg from '../../assets/svg/settings.svg'
 import logoutSvg from '../../assets/svg/logout.svg'
+import moonSvg from '../../assets/svg/moon.svg'
+import dropDownSvg from '../../assets/svg/drop-down.svg'
+import tickSvg from "../../assets/svg/tick(1).svg"
 import closeSvg from "../../assets/svg/close(1).svg"
+
 function ProfileMenu({ isMenuOpen, setIsMenuOpen }) {
   const { name, username, avatar, status, level, xp } = useSelector(state => state.userSlice)
-
+  const {theme} = useSelector(state => state.themeSlice) 
+  const dispatch = useDispatch()
   return (
     <div className={`profile-menu ${isMenuOpen ? 'open' : ''}`}>
       <div className="primary flex-rw">
@@ -31,32 +39,14 @@ function ProfileMenu({ isMenuOpen, setIsMenuOpen }) {
             </div>
           </div>
         </Link>
-        <button className="hide-button svgCont" onClick={() => dispatch(hideSideNavigationBar())}>
+        <button className="hide-button svgCont" onClick={() => setIsMenuOpen(false)}>
           <Icon src={closeSvg} />
         </button>
       </div>
-      <div className="secondary">
-        <div className="primary-buttons-wrapper flex-cm center">
-        <NavLink className={useActiveClassName} to='/create-new-challenge'>
-          <span className="svgCont">
-            <Icon src={plusSvg} />
-          </span> <span className="name">Create new challenge</span>
-        </NavLink>
-        <NavLink className={useActiveClassName} to='/settings'>
-          <span className="svgCont">
-            <Icon src={settingsSvg} />
-          </span> <span className="name">Settings</span>
-        </NavLink>
-        <Link to="/accounts/signin" className="logout-button" >
-            <span className="svgCont">
-              <Icon src={logoutSvg} />
-            </span>
-            <span className="name">Log out</span>
-        </Link>
-        </div>
+      <div className="secondary">     
         <div className="navigation-buttons-wrapper flex-cm center">
-        <NavLink className={useActiveClassName} to={`/profile/${username}`}>
-          <span className="svgCont">
+        <NavLink  className={useActiveClassName} to={`/profile/${username}`}>
+          <span className="svgCont" style={{transform:"scale(.9)"}}>
             <Icon src={profileSvg} />
           </span>
           <span className="name">Profile</span>
@@ -68,9 +58,9 @@ function ProfileMenu({ isMenuOpen, setIsMenuOpen }) {
           <span className="name">Challenges</span>
         </NavLink>
        
-        <NavLink className={useActiveClassName} to='/notifications'>
+        <NavLink className={useActiveClassName} to='/notifications' >
           <span className="svgCont badge-wrapper">
-            <Icon src={notificationSvg} />
+            <Icon src={notificationSvg}  style={{transform:"scale(1.2)"}}/>
             <small className="badge">4</small>
           </span>
           <span className="name">Notifications</span>
@@ -80,6 +70,49 @@ function ProfileMenu({ isMenuOpen, setIsMenuOpen }) {
             <Icon src={peopleSvg} />
           </span> <span className="name">Peoples</span>
         </NavLink>
+        </div>
+        <hr />
+        <div className="primary-buttons-wrapper flex-cm center">
+        <NavLink className={useActiveClassName} to='/create-new-challenge'>
+          <span className="svgCont">
+            <Icon src={plusSvg} />
+          </span> <span className="name">Create new challenge</span>
+        </NavLink>
+        <NavLink className={useActiveClassName} to='/settings'>
+          <span className="svgCont">
+            <Icon src={settingsSvg} />
+          </span> <span className="name">Settings</span>
+        </NavLink>
+
+        <details className="appearance-menu-button">
+          <summary className='flex-rw'>
+            <span className="svgCont appearance-icon">
+              <Icon src={moonSvg} />
+            </span>
+            <span>Appearance</span>
+            <span className='svgCont drop-down-icon'>
+            <Icon src={dropDownSvg}/>
+            </span>
+           </summary>
+        <span className={`option ${theme === '' ? 'selected' :''}`} onClick={()=>dispatch(setTheme(''))}>
+            System Default
+              <Icon src={tickSvg}/>
+          </span>
+          <span className={`option ${theme === 'theme-light' ? 'selected' :''}`} onClick={()=>dispatch(setTheme('theme-light'))}>
+            Light
+              <Icon src={tickSvg}/>
+          </span>
+          <span className={`option ${theme === 'theme-dark' ? 'selected' :''}`} onClick={()=>dispatch(setTheme("theme-dark"))}>
+            Dark
+              <Icon src={tickSvg}/>
+          </span>
+        </details>
+        <Link to="/accounts/signin" className="logout-button" >
+            <span className="svgCont">
+              <Icon src={logoutSvg} />
+            </span>
+            <span className="name">Log out</span>
+        </Link>
         </div>
       </div>
     </div>

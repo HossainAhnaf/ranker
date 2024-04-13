@@ -26,6 +26,8 @@ function Secondary() {
   useEffect(() => {
     if (location.pathname === '/notifications')
       setIsNotificationsShortViewVisible(false)
+     if (isMenuOpen)
+      setIsMenuOpen(false)
   }, [location])
   return (
     <>

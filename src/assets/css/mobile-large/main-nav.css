@@ -10,11 +10,7 @@
     width: 96vw;
   }
 
- 
-   .main-nav > .content-wrapper > .primary  {
-    z-index: 100;
 
-   }
 
   .main-nav > .content-wrapper > .primary > .site-brand > .svgCont {
     width: 35px;
@@ -46,15 +42,98 @@
     font-size: 10px;
     padding: .5px 4px;
   }
-  .main-nav > .content-wrapper > .secondary > .profile-button {
+  /* profile button wrapper */
+  .main-nav > .content-wrapper > .secondary >.profile-button-wrapper> .profile-button {
     width: 34px;
     height: 34px;
   }
+  .main-nav > .content-wrapper > .secondary > .profile-button-wrapper> .profile-button >.user-avatar {
+    border-width: 1px;
+    --level-badge-font-size: 5px;
+   }
 
-  .main-nav > .content-wrapper > .secondary > .profile-button .user-avatar {
-   border-width: 1px;
-   --level-badge-font-size: 5px;
+  /* profile menu */
+
+  .main-nav > .content-wrapper > .secondary > .profile-button-wrapper > .profile-menu >  .primary {
+    width: calc(100% - 24px);
+    padding: 12px;
+  }  
+
+  .main-nav > .content-wrapper > .secondary > .profile-button-wrapper > .profile-menu >  .primary > .user-profile-short-view {
+      gap: 4px;
+     padding: 4px 0;
+    }
+    .main-nav > .content-wrapper > .secondary > .profile-button-wrapper > .profile-menu >  .primary > .user-profile-short-view > .primary {
+      gap: 8px;
+    }
+    .main-nav > .content-wrapper > .secondary > .profile-button-wrapper > .profile-menu >  .primary > .user-profile-short-view > .primary > .user-avatar {
+      width: 80px;
+      height: 80px;
+      border-width: 2px ; 
+      --level-badge-font-size: 13px;
+    }
+    .main-nav > .content-wrapper > .secondary > .profile-button-wrapper > .profile-menu >  .primary > .user-profile-short-view > .primary > .username-wrapper{
+      gap: 4px;
+    }
+    .main-nav > .content-wrapper > .secondary > .profile-button-wrapper > .profile-menu >  .primary > .user-profile-short-view > .primary > .username-wrapper > .name {
+      font-size: 15px;
+    }
+    .main-nav > .content-wrapper > .secondary > .profile-button-wrapper > .profile-menu >  .primary > .user-profile-short-view > .primary > .username-wrapper > .username {
+      font-size: 13px;
+    }
+    .main-nav > .content-wrapper > .secondary > .profile-button-wrapper > .profile-menu >  .primary > .user-profile-short-view > .primary > .username-wrapper> .status {
+     font-size: 11px;
+      }
+  .main-nav > .content-wrapper > .secondary > .profile-button-wrapper > .profile-menu >  .primary  > .hide-button {
+    width: 25px;
+    height: 25px;
   }
+
+  .main-nav > .content-wrapper > .secondary > .profile-button-wrapper > .profile-menu >  .secondary > hr{
+    margin: 11px auto;
+  } 
+  .main-nav > .content-wrapper > .secondary > .profile-button-wrapper > .profile-menu >  .secondary > :is(.primary-buttons-wrapper,.navigation-buttons-wrapper) > a{
+   width: calc(90% - 24px);
+   padding: 12px;
+   gap: 20px;
+   border-radius: 4px;
+   font-size: 19px;
+  } 
+  .main-nav > .content-wrapper > .secondary > .profile-button-wrapper > .profile-menu >  .secondary > :is(.primary-buttons-wrapper,.navigation-buttons-wrapper) > a > .svgCont{
+    width: 6vw;
+    height: 6vw;    
+  }
+   .main-nav > .content-wrapper > .secondary > .profile-button-wrapper > .profile-menu >  .secondary > .primary-buttons-wrapper > .appearance-menu-button{
+   font-size: 5vw;
+   }
+   .main-nav > .content-wrapper > .secondary > .profile-button-wrapper > .profile-menu >  .secondary > .primary-buttons-wrapper > .appearance-menu-button > summary{
+  gap: 5vw;
+ width: calc(90% - 6vw) ;
+ padding: 3vw;
+ margin: 0 auto;
+ border-radius: 1vw;
+ }
+
+   .main-nav > .content-wrapper > .secondary > .profile-button-wrapper > .profile-menu >  .secondary > .primary-buttons-wrapper > .appearance-menu-button > summary > .appearance-icon{
+   width: 6vw;
+   height: 6vw;
+  }
+   .main-nav > .content-wrapper > .secondary > .profile-button-wrapper > .profile-menu >  .secondary > .primary-buttons-wrapper > .appearance-menu-button > summary > .drop-down-icon{
+    width: 5vw;
+    height: 5vw;
+   }
+   .main-nav > .content-wrapper > .secondary > .profile-button-wrapper > .profile-menu >  .secondary > .primary-buttons-wrapper > .appearance-menu-button > .option{
+    margin-right: 8vw;
+    width: calc(75% - 6vw);
+    padding:3vw ;
+    border-radius: 1vw;
+  }
+
+  .main-nav > .content-wrapper > .secondary > .profile-button-wrapper > .profile-menu >  .secondary > .primary-buttons-wrapper > .appearance-menu-button > .option > svg{
+    width: 5vw;
+    height: 5vw;
+  }
+
   .main-nav > .content-wrapper > .notifications-section {
     width: 300px;
     height: 70%;
