@@ -79,15 +79,15 @@ gap: 2px;
   width: 40px;
   height: 40px;
 }
-.notifications-section > .notifications-wrapper >  .notification-more-options-wrapper{
+  .notification-more-options-wrapper{
   border-radius: 12px;
 }
-.notifications-section > .notifications-wrapper >  .notification-more-options-wrapper > .option{
+  .notification-more-options-wrapper > .option{
   gap: 6px;
   font-size: 15px;
   padding: 8px 15px;
 }
-.notifications-section > .notifications-wrapper >  .notification-more-options-wrapper > .option > .svgCont{
+  .notification-more-options-wrapper > .option > .svgCont{
   width: 19px;
   height: 19px;
 }

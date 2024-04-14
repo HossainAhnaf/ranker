@@ -112,7 +112,6 @@
 .notifications-section .notifications-wrapper{
   width: 100%;
   max-width: 700px;
-
 }
 
 
@@ -123,6 +122,7 @@
   gap: 1vw;
   position: relative;
   text-decoration: none;
+  cursor: pointer;
 }
 .notifications-section > .notifications-wrapper > .notification.active{
  filter: contrast(.5);
@@ -149,14 +149,13 @@
 }
 
 .notifications-section > .notifications-wrapper > .notification > .message-wrapper{
-width: 85%;
+width: 75%;
 gap: 1vw;
 }
 
 .notifications-section > .notifications-wrapper > .notification > .message-wrapper > .type{
   font-size: 5vw;
   font-weight: 500;
-  width: 90%;
  color: var(--paragraph-color-secondary);
 
 }
@@ -179,7 +178,6 @@ margin-top: 1vw;
   border: none;
   position: absolute;
   right: 0;
-  top: 0;
 }
 
 
@@ -194,7 +192,7 @@ margin-top: 1vw;
   fill: var(--theme-secondary-default)
 }
 
-.notifications-section > .notifications-wrapper > .notification-more-options-wrapper{
+ .notification-more-options-wrapper{
   position: absolute;
   display: none;
   flex-direction: column;
@@ -203,12 +201,14 @@ margin-top: 1vw;
   border-radius: 3vw;
   z-index: 1;
   overflow: hidden;
+  width: max-content;
+  
 }
-.notifications-section > .notifications-wrapper > .notification-more-options-wrapper.active{
+ .notification-more-options-wrapper.active{
   display: flex;
 }
 
-.notifications-section > .notifications-wrapper > .notification-more-options-wrapper > .option{
+ .notification-more-options-wrapper > .option{
   display: flex;
   align-items: center;
   gap: 1.5vw;
@@ -217,14 +217,35 @@ margin-top: 1vw;
   background-color: inherit;
   border: none;
   padding: 2vw 4vw;
+  width: 100%;
+  
 }
-.notifications-section > .notifications-wrapper > .notification-more-options-wrapper:not(.unread) > .option.mark-as-read-button{
+ .notification-more-options-wrapper:not(.unread) > .option.mark-as-read-button{
  display: none;
 }
-.notifications-section > .notifications-wrapper > .notification-more-options-wrapper > .option > .svgCont{
+ .notification-more-options-wrapper > .option > .svgCont{
   width: 5vw;
   height: 5vw;
 }
-.notifications-section > .notifications-wrapper > .notification-more-options-wrapper > .option > .svgCont .fill{
+ .notification-more-options-wrapper > .option > .svgCont .fill{
   fill: var(--icon-color);
+}
+
+
+@media screen and (min-width: 700px) {
+ .notifications-section > .notifications-wrapper > .notification:hover{
+    background-color: var(--container-bg-color-secondary);
+   }  
+   .notifications-section > .notifications-wrapper > .notification:not(:hover) > .more-button:not(.active){
+    display: none;
+   }
+   .notifications-section > .notifications-wrapper > .notification > .more-button{
+    background-color: white;
+    top: 29px;
+    right: 10px;
+    border-radius: 100%;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+   transform: rotate(90deg);
+  }
+
 }

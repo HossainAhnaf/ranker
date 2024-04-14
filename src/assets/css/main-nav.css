@@ -294,6 +294,7 @@
   .main-nav > .content-wrapper > .notifications-section {
     width: 80%;
     height: 80vh;
+    overflow-x: visible;
     overflow-y: scroll;
     position: fixed;
     top: calc(var(--nav-height) + var(--nav-vertical-padding) + 2vw);
