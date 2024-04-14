@@ -1,38 +1,43 @@
 @media screen and (min-width: 375px) {
 .notifications-section > nav {
   width:calc(100% - 24px) ;
-  padding: 8px 12px;
+  padding:  12px;
 }
 
-.notifications-section > nav > .filter-buttons-wrapper{
-  gap: 8px;
+.notifications-section > nav > .heading{
+  font-size: 19px;
+
 }
-.notifications-section > nav > .filter-buttons-wrapper > .button{
-  font-size: 16px;
+.notifications-section > nav > .right  {
+  gap: 15px;
+
+}
+
+.notifications-section > nav > .right > .filter-buttons-wrapper > .button{
+  font-size: 15px;
   padding: 6px 12px;
   border-radius: 20px;
+
 }
-.notifications-section > nav > .secondary > .more-button{
+.notifications-section > nav > .right > .more-button{
   width: 28px;
   height: 28px;
 } 
-
-
-.notifications-section > nav > .secondary > .more-options-wrapper{
+.notifications-section > nav > .right > .more-options-wrapper{
   right: 33px;
   border-radius: 12px;
 }
 
-.notifications-section > nav > .secondary > .more-options-wrapper > .option{
+.notifications-section > nav > .right > .more-options-wrapper > .option{
   gap: 6px;
   font-size: 15px;
   padding: 8px 15px;
 }
-.notifications-section > nav > .secondary > .more-options-wrapper > .option > .svgCont{
+.notifications-section > nav > .right > .more-options-wrapper > .option > .svgCont{
   width:20px;
   height:20px;
 }
-.notifications-section > nav > .secondary > .see-all-button{
+.notifications-section > nav > .right > .see-all-button{
  font-size:15px;
 }
 .notifications-section > .group > .date{
@@ -40,46 +45,47 @@
   padding: 6px 15px;
 font-size: 19px;
 }
-.notifications-section > .group > .notifications-wrapper > .notification{
+.notifications-section > .notifications-wrapper > .notification{
   width: calc(100% - 8px);
   padding: 12px 4px;
   gap: 4px;
 }
 
-.notifications-section > .group > .notifications-wrapper > .notification > .icon-wrapper{
-  width: 10%;
+.notifications-section > .notifications-wrapper > .notification > .icon-wrapper{
   padding: 4px;
 }
-.notifications-section > .group > .notifications-wrapper > .notification > .icon-wrapper > .svgCont{
-  width: 23px;
-  height: 23px;
+.notifications-section > .notifications-wrapper > .notification > .icon-wrapper > .svgCont{
+  width: 32px;
+  height: 32px;
 }
-.notifications-section > .group > .notifications-wrapper > .notification > .message-wrapper{
-width: 90%;
+.notifications-section > .notifications-wrapper > .notification > .message-wrapper{
 gap: 2px;
 }
 
-.notifications-section > .group > .notifications-wrapper > .notification > .message-wrapper > .title{
+.notifications-section > .notifications-wrapper > .notification > .message-wrapper > .type{
   font-size: 19px;
 }
-.notifications-section > .group > .notifications-wrapper > .notification > .message-wrapper > .description{
+.notifications-section > .notifications-wrapper > .notification > .message-wrapper > .message{
   font-size: 15px;
 }
-
-.notifications-section > .group > .notifications-wrapper > .notification > .more-button{
-  width: 26px;
-  height: 26px;
+.notifications-section > .notifications-wrapper > .notification > .message-wrapper > .date{
+  font-size: 13px;
+  margin-top: 4px;
 }
-.notifications-section > .group > .notifications-wrapper > .notification > .more-options-wrapper{
-  right: 33px;
+
+.notifications-section > .notifications-wrapper > .notification > .more-button{
+  width: 40px;
+  height: 40px;
+}
+.notifications-section > .notifications-wrapper >  .notification-more-options-wrapper{
   border-radius: 12px;
 }
-.notifications-section > .group > .notifications-wrapper > .notification > .more-options-wrapper > .option{
+.notifications-section > .notifications-wrapper >  .notification-more-options-wrapper > .option{
   gap: 6px;
   font-size: 15px;
   padding: 8px 15px;
 }
-.notifications-section > .group > .notifications-wrapper > .notification > .more-options-wrapper > .option > .svgCont{
+.notifications-section > .notifications-wrapper >  .notification-more-options-wrapper > .option > .svgCont{
   width: 19px;
   height: 19px;
 }

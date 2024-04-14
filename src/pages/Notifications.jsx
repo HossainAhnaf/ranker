@@ -30,12 +30,15 @@ function Notifications({shortView}) {
       notificationMoreOptionsWrapperRef.current.classList.remove('unread')
     } else{
     currentTarget.classList.add('active')
-    const {bottom} = currentTarget.getBoundingClientRect()
+    const {bottom,left,width} = currentTarget.getBoundingClientRect()
+    // console.log(currentTarget.parentElement.getBoundingClientRect());
+    console.log(bottom,left,width);
     notificationMoreOptionsWrapperRef.current.classList.add('active')
     notificationMoreOptionsWrapperRef.current.focus()
     if(isUnread)
     notificationMoreOptionsWrapperRef.current.classList.add('unread')
     notificationMoreOptionsWrapperRef.current.style.top = `${bottom}px`
+    notificationMoreOptionsWrapperRef.current.style.left = `${0}px`
     notificationMoreOptionsWrapperRef.current.addEventListener('blur',({relatedTarget})=>{
       if (relatedTarget === null){
       currentTarget.classList.remove('active')
@@ -151,7 +154,22 @@ function Notifications({shortView}) {
                         </button>
                      
                       </div>
-                 
+                      <div className={`notification announcement  flex-rw `} onClick={(e)=>notificationClickHandler(e,'/')} onTouchStart={notificationTouchStartHandler} onTouchEnd={(e)=>e.currentTarget.classList.remove('active')}>
+                        <div className="icon-wrapper">
+                          <div className="svgCont">
+                          <Icon src={handMikeSvg} />
+                          </div>
+                        </div>
+                        <div className="message-wrapper flex-cm">
+                          <b className="type">Announcement</b>
+                          <small className="message">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam quos quia repudiandae voluptates nihil ipsam sunt in esse nostrum assumenda!</small>
+                          <small className='date'>April 10, 2024 4:03 PM</small> 
+                        </div>
+                        <button className="more-button button svgCont" onClick={notificationMoreButtonClickHandler}>
+                          <Icon src={moreSvg} />
+                        </button>
+                     
+                      </div>
 
               </div>
      
