@@ -4,7 +4,7 @@ import { useLocation } from 'react-router'
 import { useSelector, useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom'
 //pages
-import Notifications from '../../pages/Notifications'
+import Notifications from '../../pages/Notifications/Notifications'
 //components
 import ProfileMenu from './ProfileMenu'
 import UserAvatar from '../../components/UserAvatar'

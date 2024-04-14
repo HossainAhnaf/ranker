@@ -194,7 +194,7 @@ margin-top: 1vw;
 
  .notification-more-options-wrapper{
   position: absolute;
-  display: none;
+  display: flex;
   flex-direction: column;
   background-color: var(--layout-bg-color);
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
@@ -202,10 +202,6 @@ margin-top: 1vw;
   z-index: 1;
   overflow: hidden;
   width: max-content;
-  
-}
- .notification-more-options-wrapper.active{
-  display: flex;
 }
 
  .notification-more-options-wrapper > .option{

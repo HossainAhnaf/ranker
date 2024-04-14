@@ -7,7 +7,7 @@ import Home from "../pages/Home";
 import Profile from "../pages/Profile";
 import Challenges from "../pages/Challenges";
 import CreateNewChallenge from "../pages/CreateNewChallenge";
-import Notifications from "../pages/Notifications";
+import Notifications from "../pages/Notifications/Notifications";
 import Peoples from "../pages/Peoples";
 import Settings from "../pages/Settings/Settings";
 import BasicInfo from "../pages/Settings/BasicInfo";
@@ -16,8 +16,6 @@ import Privacy from "../pages/Settings/Privacy";
 import NotificationSettings from "../pages/Settings/NotificationSettings";
 import NameAndContactInfo from "../pages/NameAndContactInfo";
 import PasswordAndSecurity from "../pages/PasswordAndSecurity";
-import NotificationsPreference from "../pages/NotificationsPreference";
-import Display from "../pages/Display";
 import Accounts from "../pages/Accounts/Accounts";
 import Signin from "../pages/Accounts/Signin";
 import Signup from "../pages/Accounts/Signup";
@@ -80,14 +78,7 @@ export default createBrowserRouter(
           path: '/password-and-security',
           element: <PasswordAndSecurity />
         },
-        {
-          path: '/notifications-preference',
-          element: <NotificationsPreference />
-        },
-        {
-          path: '/display',
-          element: <Display />
-        },
+
         {
           path: '/accounts',
           element: <Accounts />,

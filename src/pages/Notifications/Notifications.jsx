@@ -1,58 +1,48 @@
 //modules
-import React, { useState, useRef } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import fakeNotificationsData from '../data/notificationsData.json'
 //components
+import NotificationMoreOptionsWrapper from './NotificationMoreOptionsWrapper'
 import Icon from 'react-inlinesvg'
 //svg
-import settingsSvg from '../assets/svg/settings.svg'
-import growthSvg from '../assets/svg/growth.svg'
-import securitySvg from '../assets/svg/security-shield.svg'
-import handMikeSvg from '../assets/svg/hand-mike.svg'
-import moreSvg from '../assets/svg/more.svg'
-import tickSvg from '../assets/svg/tick(1).svg'
-import removeSvg from '../assets/svg/remove.svg'
-import removeAllSvg from '../assets/svg/remove-all.svg'
+import settingsSvg from '../../assets/svg/settings.svg'
+import growthSvg from '../../assets/svg/growth.svg'
+import securitySvg from '../../assets/svg/security-shield.svg'
+import handMikeSvg from '../../assets/svg/hand-mike.svg'
+import moreSvg from '../../assets/svg/more.svg'
+import tickSvg from '../../assets/svg/tick(1).svg'
+import removeSvg from '../../assets/svg/remove.svg'
+import removeAllSvg from '../../assets/svg/remove-all.svg'
 
 //css
-import '../assets/css/notifications.css'
-import '../assets/css/mobile-large/notifications.css'
+import '../../assets/css/notifications.css'
+import '../../assets/css/mobile-large/notifications.css'
 function Notifications({ shortView }) {
   const navigate = useNavigate()
 
   const notificationsSectionRef = useRef(null)
-  const notificationMoreOptionsWrapperRef = useRef(null)
 
-
-  const [notificationsData, setNotificationsData] = useState(fakeNotificationsData)
+  const [isNotificationMoreOptionsWrapperActive, setIsNotificationMoreOptionsWrapperActive] = useState(false)
+  const currentActiveNotificationMoreButtonRef = useRef(null)
+  const [notificationMoreOptionsWrapperOffset, setNotificationMoreOptionsWrapperOffset] = useState({
+  top: 0,
+  left: 0
+ })
 
   const notificationMoreButtonClickHandler = ({ currentTarget }, isUnread) => {
-    document.querySelectorAll('.notifications-wrapper > .notification > .more-button.active').forEach(el => { el.classList.remove('active') })
+    const moreButtons = document.querySelectorAll('.notifications-wrapper > .notification > .more-button.active')
+    moreButtons.forEach(el => el.classList.remove('active'))
+
     if (currentTarget.classList.contains('active')) {
       currentTarget.classList.remove('active')
-      notificationMoreOptionsWrapperRef.current.classList.remove('active')
-      notificationMoreOptionsWrapperRef.current.classList.remove('unread')
+      setIsNotificationMoreOptionsWrapperActive(false)
+      currentActiveNotificationMoreButtonRef.current = null
     } else {
       currentTarget.classList.add('active')
-      notificationMoreOptionsWrapperRef.current.classList.add('active')
-      if (isUnread) {
-        notificationMoreOptionsWrapperRef.current.classList.add('unread')
-      }
-      notificationMoreOptionsWrapperRef.current.focus()
-
-
+      setIsNotificationMoreOptionsWrapperActive(true)
+      currentActiveNotificationMoreButtonRef.current = currentTarget
       const { top, left } = currentTarget.getBoundingClientRect()
-      const { width } = notificationMoreOptionsWrapperRef.current.getBoundingClientRect()
-      notificationMoreOptionsWrapperRef.current.style.top = `${top}px`
-      notificationMoreOptionsWrapperRef.current.style.left = `${left -  width}px`
-      notificationMoreOptionsWrapperRef.current.addEventListener('blur', ({ relatedTarget }) => {
-        if (relatedTarget === null) {
-          currentTarget.classList.remove('active')
-          notificationMoreOptionsWrapperRef.current.classList.remove('active')
-          notificationMoreOptionsWrapperRef.current.classList.remove('unread')
-        } else
-          notificationMoreOptionsWrapperRef.current.focus()
-      })
+      setNotificationMoreOptionsWrapperOffset({top,left})
     }
   }
 
@@ -71,6 +61,8 @@ function Notifications({ shortView }) {
     if (isValidClick(e))
       e.currentTarget.classList.add('active')
   }
+
+
   const navMoreButtonClickHandler = ({ currentTarget }) => {
     if (currentTarget.classList.contains('active'))
       currentTarget.classList.remove('active')
@@ -85,28 +77,29 @@ function Notifications({ shortView }) {
       })
     }
   }
+
+  const notificationsSectionScrollHandler = (e) => {
+    const { top, left } = currentActiveNotificationMoreButtonRef.current.getBoundingClientRect()
+    const {height} = document.querySelector('.notification-more-options-wrapper').getBoundingClientRect()
+    setNotificationMoreOptionsWrapperOffset({top,left})
+    console.log(top - height,e.currentTarget);
+    if (top - height > -5) {
+      hide kor upor nich  
+    }
+  } 
+
+  useEffect(() => {
+    if (shortView){
+      if (isNotificationMoreOptionsWrapperActive)
+      notificationsSectionRef.current.addEventListener('scroll', notificationsSectionScrollHandler)
+       else 
+      notificationsSectionRef.current.removeEventListener('scroll', notificationsSectionScrollHandler)
+    }
+
+  },[isNotificationMoreOptionsWrapperActive])
   return (
     <>
-      <div className="notification-more-options-wrapper" ref={notificationMoreOptionsWrapperRef} tabIndex='0' >
-        <button className="option mark-as-read-button button ">
-          <div className="svgCont">
-            <Icon src={tickSvg} />
-          </div>
-          <p> Mark as read </p>
-        </button>
-        <button className="option button">
-          <div className="svgCont">
-            <Icon src={removeSvg} />
-          </div>
-          <p>Remove this notification</p>
-        </button>
-        <button className="option button">
-          <div className="svgCont">
-            <Icon src={removeAllSvg} />
-          </div>
-          <p>Turn of these notifications</p>
-        </button>
-      </div>
+     
       <section className={`notifications-section ${shortView ? 'short-view' : ''} flex-cm`} ref={notificationsSectionRef}>
 
         <nav className="flex-rw">
@@ -181,6 +174,9 @@ function Notifications({ shortView }) {
         </div>
 
       </section>
+      { isNotificationMoreOptionsWrapperActive &&
+      <NotificationMoreOptionsWrapper currentActiveNotificationMoreButtonRef={currentActiveNotificationMoreButtonRef} setIsNotificationMoreOptionsWrapperActive={setIsNotificationMoreOptionsWrapperActive}  offset={notificationMoreOptionsWrapperOffset} />
+      }
     </>
   )
 }
