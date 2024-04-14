@@ -32,12 +32,15 @@ function Notifications({ shortView }) {
   const notificationMoreButtonClickHandler = ({ currentTarget }, isUnread) => {
     const moreButtons = document.querySelectorAll('.notifications-wrapper > .notification > .more-button.active')
     moreButtons.forEach(el => el.classList.remove('active'))
-
-    if (currentTarget.classList.contains('active')) {
+   const notificationMoreOptionsWrapperRef = document.querySelector('.notification-more-options-wrapper')
+    console.log(notificationMoreOptionsWrapperRef);
+   // notificationMoreOptionsWrapperRef.onblur = null
+   if (currentTarget.classList.contains('active')) {
       currentTarget.classList.remove('active')
       setIsNotificationMoreOptionsWrapperActive(false)
       currentActiveNotificationMoreButtonRef.current = null
     } else {
+
       currentTarget.classList.add('active')
       setIsNotificationMoreOptionsWrapperActive(true)
       currentActiveNotificationMoreButtonRef.current = currentTarget
@@ -79,22 +82,24 @@ function Notifications({ shortView }) {
   }
 
   const notificationsSectionScrollHandler = (e) => {
-    const { top, left } = currentActiveNotificationMoreButtonRef.current.getBoundingClientRect()
-    const {height} = document.querySelector('.notification-more-options-wrapper').getBoundingClientRect()
+    const { top,left } = currentActiveNotificationMoreButtonRef.current.getBoundingClientRect()
+    const {bottom,height} = document.querySelector('.notification-more-options-wrapper').getBoundingClientRect()
     setNotificationMoreOptionsWrapperOffset({top,left})
-    console.log(top - height,e.currentTarget);
-    if (top - height > -5) {
-      hide kor upor nich  
-    }
+    
+    if (top - height <= -5 || bottom >= e.currentTarget.getBoundingClientRect().bottom) {
+      currentActiveNotificationMoreButtonRef.current.classList.remove('active')
+      setIsNotificationMoreOptionsWrapperActive(false)
+      currentActiveNotificationMoreButtonRef.current = null
+    } 
   } 
 
   useEffect(() => {
     if (shortView){
       if (isNotificationMoreOptionsWrapperActive)
-      notificationsSectionRef.current.addEventListener('scroll', notificationsSectionScrollHandler)
+      notificationsSectionRef.current.onscroll = notificationsSectionScrollHandler
        else 
-      notificationsSectionRef.current.removeEventListener('scroll', notificationsSectionScrollHandler)
-    }
+       notificationsSectionRef.current.onscroll = null
+         }
 
   },[isNotificationMoreOptionsWrapperActive])
   return (

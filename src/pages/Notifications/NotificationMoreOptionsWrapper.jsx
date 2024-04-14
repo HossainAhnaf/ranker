@@ -10,6 +10,7 @@ function NotificationMoreOptionsWrapper({currentActiveNotificationMoreButtonRef,
   const notificationMoreOptionsWrapperRef = useRef(null)
   const [width,setWidth] = useState(0)
   const blurHandler = ({ relatedTarget }) => {
+    console.log("loool");
     if (relatedTarget === null) {
       currentActiveNotificationMoreButtonRef.current.classList.remove('active')
       setIsNotificationMoreOptionsWrapperActive(false)
@@ -19,7 +20,6 @@ function NotificationMoreOptionsWrapper({currentActiveNotificationMoreButtonRef,
   useEffect(() => {
     notificationMoreOptionsWrapperRef.current.focus()
     setWidth(notificationMoreOptionsWrapperRef.current.getBoundingClientRect().width)
-   
   },[])
 
   return (
