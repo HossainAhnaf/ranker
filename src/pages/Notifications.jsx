@@ -30,15 +30,17 @@ function Notifications({shortView}) {
       notificationMoreOptionsWrapperRef.current.classList.remove('unread')
     } else{
     currentTarget.classList.add('active')
-    const {bottom,left,width} = currentTarget.getBoundingClientRect()
-    // console.log(currentTarget.parentElement.getBoundingClientRect());
-    console.log(bottom,left,width);
     notificationMoreOptionsWrapperRef.current.classList.add('active')
-    notificationMoreOptionsWrapperRef.current.focus()
-    if(isUnread)
+    if(isUnread){
     notificationMoreOptionsWrapperRef.current.classList.add('unread')
+    }
+    notificationMoreOptionsWrapperRef.current.focus()
+  
+
+    const {bottom,left} = currentTarget.getBoundingClientRect()
+    const {width} = notificationMoreOptionsWrapperRef.current.getBoundingClientRect()
     notificationMoreOptionsWrapperRef.current.style.top = `${bottom}px`
-    notificationMoreOptionsWrapperRef.current.style.left = `${0}px`
+    notificationMoreOptionsWrapperRef.current.style.left = `${left - width}px`
     notificationMoreOptionsWrapperRef.current.addEventListener('blur',({relatedTarget})=>{
       if (relatedTarget === null){
       currentTarget.classList.remove('active')

@@ -2,10 +2,12 @@
 .notifications-section > nav {
   width:calc(100% - 24px) ;
   padding:  12px;
+  margin-bottom: 20px;
+
 }
 
 .notifications-section > nav > .heading{
-  font-size: 19px;
+  font-size: 24px;
 
 }
 .notifications-section > nav > .right  {
