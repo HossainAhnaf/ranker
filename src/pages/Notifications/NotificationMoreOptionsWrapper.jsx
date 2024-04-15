@@ -1,4 +1,4 @@
-import React, { useRef ,useEffect,useState } from 'react'
+import React, { useRef ,useEffect,useState,forwardRef} from 'react'
 //components
 import Icon from 'react-inlinesvg'
 //svg
@@ -6,28 +6,27 @@ import tickSvg from '../../assets/svg/tick(1).svg'
 import removeSvg from '../../assets/svg/remove.svg'
 import removeAllSvg from '../../assets/svg/remove-all.svg'
 
-function NotificationMoreOptionsWrapper({currentActiveNotificationMoreButtonRef, setIsNotificationMoreOptionsWrapperActive,offset}) {
-  const notificationMoreOptionsWrapperRef = useRef(null)
+const NotificationMoreOptionsWrapper = forwardRef(function NotificationMoreOptionsWrapper({isActive,currentActiveNotificationMoreButtonRef, setIsNotificationMoreOptionsWrapperActive,offset},ref) {
   const [width,setWidth] = useState(0)
-  const blurHandler = ({ relatedTarget }) => {
-    console.log("loool");
-    if (relatedTarget === null) {
-      currentActiveNotificationMoreButtonRef.current.classList.remove('active')
-      setIsNotificationMoreOptionsWrapperActive(false)
-    } else notificationMoreOptionsWrapperRef.current.focus()
-  }
+  // const blurHandler = ({ relatedTarget }) => {
+  //   console.log("loool");
+  //   if (relatedTarget === null) {
+  //     currentActiveNotificationMoreButtonRef.current.classList.remove('active')
+  //     setIsNotificationMoreOptionsWrapperActive(false)
+  //   } else ref.current.focus()
+  // }
 
   useEffect(() => {
-    notificationMoreOptionsWrapperRef.current.focus()
-    setWidth(notificationMoreOptionsWrapperRef.current.getBoundingClientRect().width)
-  },[])
+    ref.current.focus()
+    setWidth(ref.current.getBoundingClientRect().width)
+  },[isActive])
 
   return (
-    <div className={`notification-more-options-wrapper ${currentActiveNotificationMoreButtonRef.current.classList.contains('unread') ? 'unread' : ''} `} 
-    ref={notificationMoreOptionsWrapperRef} 
+    <div className={`notification-more-options-wrapper ${currentActiveNotificationMoreButtonRef.current?.classList.contains('unread') ? 'unread' : ''} ${isActive ? 'active' : ''}`} 
+    ref={ref} 
     tabIndex='0' 
     style={{top: `${offset.top}px`,left:`${offset.left - width}px`}} 
-    onBlur={blurHandler}>
+    >
     <button className="option mark-as-read-button button ">
       <div className="svgCont">
         <Icon src={tickSvg} />
@@ -48,6 +47,5 @@ function NotificationMoreOptionsWrapper({currentActiveNotificationMoreButtonRef,
     </button>
   </div>
   )
-}
-
+})
 export default NotificationMoreOptionsWrapper

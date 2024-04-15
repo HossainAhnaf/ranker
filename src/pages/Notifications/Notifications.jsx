@@ -22,6 +22,7 @@ function Notifications({ shortView }) {
 
   const notificationsSectionRef = useRef(null)
 
+  const notificationMoreOptionsWrapperRef = useRef(null)
   const [isNotificationMoreOptionsWrapperActive, setIsNotificationMoreOptionsWrapperActive] = useState(false)
   const currentActiveNotificationMoreButtonRef = useRef(null)
   const [notificationMoreOptionsWrapperOffset, setNotificationMoreOptionsWrapperOffset] = useState({
@@ -29,23 +30,38 @@ function Notifications({ shortView }) {
   left: 0
  })
 
-  const notificationMoreButtonClickHandler = ({ currentTarget }, isUnread) => {
-    const moreButtons = document.querySelectorAll('.notifications-wrapper > .notification > .more-button.active')
-    moreButtons.forEach(el => el.classList.remove('active'))
-   const notificationMoreOptionsWrapperRef = document.querySelector('.notification-more-options-wrapper')
-    console.log(notificationMoreOptionsWrapperRef);
-   // notificationMoreOptionsWrapperRef.onblur = null
-   if (currentTarget.classList.contains('active')) {
-      currentTarget.classList.remove('active')
+  const notificationMoreButtonClickHandler = ({ currentTarget:currentActiveMoreButton }, isUnread) => {
+    // const moreButtons = document.querySelectorAll('.notifications-wrapper > .notification > .more-button.active')
+    // moreButtons.forEach(el => el.classList.remove('active'))
+   
+
+   if (currentActiveMoreButton.classList.contains('active')) {
+    console.log('two');
+
+      currentActiveMoreButton.classList.remove('active')
       setIsNotificationMoreOptionsWrapperActive(false)
       currentActiveNotificationMoreButtonRef.current = null
     } else {
+      console.log('three');
 
-      currentTarget.classList.add('active')
+      currentActiveMoreButton.classList.add('active')
       setIsNotificationMoreOptionsWrapperActive(true)
-      currentActiveNotificationMoreButtonRef.current = currentTarget
-      const { top, left } = currentTarget.getBoundingClientRect()
+      currentActiveNotificationMoreButtonRef.current = currentActiveMoreButton
+      const { top, left } = currentActiveMoreButton.getBoundingClientRect()
       setNotificationMoreOptionsWrapperOffset({top,left})
+      notificationMoreOptionsWrapperRef.current.onblur = ({ relatedTarget }) => {
+       
+        if (relatedTarget === null) {
+        console.log('one');
+
+        //   || relatedTarget === currentActiveMoreButton
+          currentActiveMoreButton.classList.remove('active')
+          setIsNotificationMoreOptionsWrapperActive(false)
+          currentActiveNotificationMoreButtonRef.current = null
+          console.log(currentActiveMoreButton);
+
+        } else notificationMoreOptionsWrapperRef.current.focus()
+      }
     }
   }
 
@@ -85,7 +101,6 @@ function Notifications({ shortView }) {
     const { top,left } = currentActiveNotificationMoreButtonRef.current.getBoundingClientRect()
     const {bottom,height} = document.querySelector('.notification-more-options-wrapper').getBoundingClientRect()
     setNotificationMoreOptionsWrapperOffset({top,left})
-    
     if (top - height <= -5 || bottom >= e.currentTarget.getBoundingClientRect().bottom) {
       currentActiveNotificationMoreButtonRef.current.classList.remove('active')
       setIsNotificationMoreOptionsWrapperActive(false)
@@ -179,9 +194,9 @@ function Notifications({ shortView }) {
         </div>
 
       </section>
-      { isNotificationMoreOptionsWrapperActive &&
-      <NotificationMoreOptionsWrapper currentActiveNotificationMoreButtonRef={currentActiveNotificationMoreButtonRef} setIsNotificationMoreOptionsWrapperActive={setIsNotificationMoreOptionsWrapperActive}  offset={notificationMoreOptionsWrapperOffset} />
-      }
+      
+      <NotificationMoreOptionsWrapper isActive={isNotificationMoreOptionsWrapperActive} ref={notificationMoreOptionsWrapperRef} currentActiveNotificationMoreButtonRef={currentActiveNotificationMoreButtonRef} setIsNotificationMoreOptionsWrapperActive={setIsNotificationMoreOptionsWrapperActive}  offset={notificationMoreOptionsWrapperOffset} />
+     
     </>
   )
 }
