@@ -63,7 +63,12 @@
     font-size: 4vw;
     font-weight: 600;
   }
-  .main-nav > .content-wrapper > .secondary > .notification-button {
+  /* notification button wrapper */
+  .main-nav > .content-wrapper > .secondary >.notification-button-wrapper{
+    position: relative;
+  }
+
+  .main-nav > .content-wrapper > .secondary >.notification-button-wrapper >  .notification-button {
     width: 9vw;
     height: 9vw;
     background-color: transparent;
@@ -71,14 +76,14 @@
     position: relative;
     border-radius: 100%;
   }
-  .main-nav > .content-wrapper > .secondary > .notification-button.active  {
+  .main-nav > .content-wrapper > .secondary >.notification-button-wrapper >  .notification-button.active  {
     background-color: gray;
    }
-  .main-nav > .content-wrapper > .secondary > .notification-button .fill  {
+  .main-nav > .content-wrapper > .secondary >.notification-button-wrapper >  .notification-button .fill  {
     fill: var(  --icon-color);
   }
  
-  .main-nav > .content-wrapper > .secondary > .notification-button > .badge {
+  .main-nav > .content-wrapper > .secondary >.notification-button-wrapper >  .notification-button > .badge {
     border: 1px solid white;
     font-size: 2.5vw;
     top: 0;

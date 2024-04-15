@@ -3,6 +3,9 @@
   align-items: center;   
   background-color: var(--layout-bg-color);
 }
+.notifications-section:not(.active){
+ display: none;
+}
 .notifications-section.short-view {
   width: 90%;
   height: 60vh;
@@ -10,16 +13,12 @@
   max-height: 400px;
   position: fixed;
   top: calc(var(--nav-height) + var(--nav-vertical-padding) + 2vw);
-  right: 5%;
+  right: 10px;
   box-shadow: 0 0 2px 1px  rgba(0, 0, 0, 0.5);
   border-radius: 1vw;
   overflow: hidden;
 }
-@media  screen and (min-width: 1200px) {
-  .notifications-section.short-view {
-    left: 950px !important;
-  }
-}
+
 .notifications-section > nav {
   width:calc(100% - 6vw) ;
   padding: 2vw 3vw;

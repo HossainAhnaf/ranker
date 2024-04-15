@@ -16,33 +16,37 @@ function Secondary() {
   const location = useLocation()
   const isLoggedIn = true
   const { avatar, status, level } = useSelector(state => state.userSlice)
-  const [isNotificationsShortViewVisible, setIsNotificationsShortViewVisible] = useState(false)
+  const [isNotificationOpen, setIsNotificationOpen] = useState(false)
  const [isMenuOpen,setIsMenuOpen] = useState(false)
 
   const showNotificationsShortView = () => {
     if (location.pathname !== '/notifications')
-      setIsNotificationsShortViewVisible(!isNotificationsShortViewVisible)
+      setIsNotificationOpen(!isNotificationOpen)
   }
   useEffect(() => {
     if (location.pathname === '/notifications')
-      setIsNotificationsShortViewVisible(false)
+      setIsNotificationOpen(false)
      if (isMenuOpen)
       setIsMenuOpen(false)
   }, [location])
+  
   return (
     <>
       <div className="secondary flex-rw" >
         {isLoggedIn
          ? <>
-           <button className={`notification-button ${(isNotificationsShortViewVisible || location.pathname === '/notifications') ? 'active' : ''} badge-wrapper svgCont`} onClick={showNotificationsShortView}>
+          <div className="notification-button-wrapper">
+          <button className={`notification-button ${(isNotificationOpen || location.pathname === '/notifications') ? 'active' : ''} badge-wrapper svgCont`} onClick={showNotificationsShortView}>
             <Icon src={notificationSvg} />
             <small className="badge">4</small>
           </button>
+           <Notifications isNotificationOpen={isNotificationOpen} shortView={true} />
+          </div>
+           
         <div className="profile-button-wrapper">
         <button className="profile-button" onClick={() => setIsMenuOpen(!isMenuOpen)}>
           <UserAvatar avatar={avatar} status={status} level={level} />
         </button>
-
           <ProfileMenu isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen}/>        
         </div>
         
@@ -51,9 +55,7 @@ function Secondary() {
 
         }
       </div>
-      {isNotificationsShortViewVisible &&
-        <Notifications shortView={true} />
-      }
+    
     </>
   )
 }

@@ -17,7 +17,7 @@ import removeAllSvg from '../../assets/svg/remove-all.svg'
 //css
 import '../../assets/css/notifications.css'
 import '../../assets/css/mobile-large/notifications.css'
-function Notifications({ shortView }) {
+function Notifications({ shortView,isNotificationOpen }) {
   const navigate = useNavigate()
 
   const notificationsWrapperRef = useRef(null)
@@ -108,7 +108,7 @@ function Notifications({ shortView }) {
   return (
     <>
      
-      <section className={`notifications-section ${shortView ? 'short-view' : ''} flex-cm`} >
+      <section className={`notifications-section ${shortView ? 'short-view' : ''} ${isNotificationOpen ? 'active' : ''} flex-cm`} >
 
         <nav className="flex-rw">
           <h1 className="heading">Notifications</h1>

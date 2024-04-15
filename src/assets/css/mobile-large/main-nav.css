@@ -32,18 +32,19 @@
     padding: 6px 8px;
     font-size: 14px;
   }
-  .main-nav > .content-wrapper > .secondary > .notification-button {
+  /* notification button wrapper */
+  .main-nav > .content-wrapper > .secondary >.notification-button-wrapper > .notification-button {
     width: 34px;
     height: 34px;
   }
-  .main-nav > .content-wrapper > .secondary > .notification-button > .badge {
+  .main-nav > .content-wrapper > .secondary >.notification-button-wrapper > .notification-button > .badge {
     font-size: 10px;
     padding: .5px 4px;
   }
   /* profile button wrapper */
-  .main-nav > .content-wrapper > .secondary >.profile-button-wrapper> .profile-button {
-    width: 34px;
-    height: 34px;
+  .main-nav > .content-wrapper > .secondary >.profile-button-wrapper >.profile-button {
+    width: 34px !important;
+    height: 34px !important;
   }
   .main-nav > .content-wrapper > .secondary > .profile-button-wrapper> .profile-button >.user-avatar {
     border-width: 1px;
