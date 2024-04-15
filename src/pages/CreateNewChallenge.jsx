@@ -18,7 +18,7 @@ function CreateNewChallenge() {
 
   const [addDiscription, setAddDiscription] = useState(false)
   const [addDueDate, setAddDueDate] = useState(false)
-  
+
 
   //data
   const [title, setTitle] = useState('')
@@ -28,7 +28,7 @@ function CreateNewChallenge() {
 
   const previous = (e) => {
     e.preventDefault()
-  
+
 
     const currentStep = stepIndicatorWrapperRef.current.querySelector('.step.current')
     const previousStep = currentStep.previousElementSibling
@@ -57,7 +57,7 @@ function CreateNewChallenge() {
     currentTab.className = currentTab.className.replace('current', 'previous')
     nextTab.className = nextTab.className.replace('next', 'current')
     setStep(step + 1)
-   
+
   }
 
   const postChallengeData = (e) => {
@@ -65,16 +65,7 @@ function CreateNewChallenge() {
     alert('data posted')
   }
   useEffect(() => {
-    const currentStep = stepIndicatorWrapperRef.current.querySelector('.step.current')
-    const nextStep = currentStep.nextElementSibling
-    currentStep.className = currentStep.className.replace('current', 'previous')
-    nextStep.className = nextStep.className.replace('next', 'current')
 
-    const currentTab = tabsWrapperRef.current.querySelector('.tab.current')
-    const nextTab = currentTab.nextElementSibling
-    currentTab.className = currentTab.className.replace('current', 'previous')
-    nextTab.className = nextTab.className.replace('next', 'current')
-    setStep(step + 1)
   }, [])
 
   return (
@@ -88,9 +79,8 @@ function CreateNewChallenge() {
 
         <div className="tabs-wrapper" ref={tabsWrapperRef}>
           <div className="tab current">
-
             <OutlinedCustomField className="title-field" placeholder="Title">
-              <input type="text" placeholder=" " maxLength={20}  onChange={(e) => setTitle(e.target.value)}  />
+              <input type="text" placeholder=" " maxLength={20} onChange={(e) => setTitle(e.target.value)} />
             </OutlinedCustomField>
             {
               addDiscription
@@ -100,20 +90,22 @@ function CreateNewChallenge() {
                   </OutlinedCustomField>
                   <button className="add-remove-button" onClick={() => setAddDiscription(false)}>Remove -</button>
                 </>
-                : <button className="add-remove-button" onClick={() =>{setAddDiscription(true);setDescription('')}}>Add description +</button>
+                : <button className="add-remove-button" onClick={() => { setAddDiscription(true); setDescription('') }}>Add description +</button>
             }
-
+            <div className="button-wrapper flex-rw">
+             <button className="button positive" onClick={next}>Next</button>
+            </div>
           </div>
           <div className="tab next">
-          {
-              addDueDate 
-             ? <>
-              <OutlinedCustomField className="title" placeholder="date" >
-                <input type="date" placeholder=" "  />
-              </OutlinedCustomField>
-              <button className="add-remove-button" onClick={() => setAddDueDate(false)}>Remove -</button>
-              </>
-              : <button className="add-remove-button" onClick={() => setAddDueDate(true)}>Add due date +</button>
+            {
+              addDueDate
+                ? <>
+                  <OutlinedCustomField className="title" placeholder="date" >
+                    <input type="date" placeholder=" " />
+                  </OutlinedCustomField>
+                  <button className="add-remove-button" onClick={() => setAddDueDate(false)}>Remove -</button>
+                </>
+                : <button className="add-remove-button" onClick={() => setAddDueDate(true)}>Add due date +</button>
             }
             <div className="difficulty-label flex-rw ">
               <span className="name">Difficulty</span>
@@ -134,21 +126,31 @@ function CreateNewChallenge() {
                 </label>
               </div>
             </div>
+            <div className="button-wrapper flex-rw">
+              {step > 0 && <button className="button negitive" onClick={previous}>Previous</button>}
+              {step < 2 && <button className="button positive" onClick={next}>Next</button>}
+              {step === 2 && <button className="button positive" type="submit" onClick={postChallengeData} >Create</button>}
+            </div>
           </div>
           <div className="tab next">
-           <div className="result flex-cm center ">
-            <small className="title">By pressing 'Create' your challenge will be ready </small>
-             <ChallengeCard title={title} description={description} difficulty={difficulty} pinned={pinned} id={5}/>
-             </div> 
+            <div className="result flex-cm center ">
+              <small className="title">By pressing 'Create' your challenge will be ready </small>
+              <ChallengeCard title={title} description={description} difficulty={difficulty} pinned={pinned} id={5} />
+            </div>
+            <div className="button-wrapper flex-rw">
+              {step > 0 && <button className="button negitive" onClick={previous}>Previous</button>}
+              {step < 2 && <button className="button positive" onClick={next}>Next</button>}
+              {step === 2 && <button className="button positive" type="submit" onClick={postChallengeData} >Create</button>}
+            </div>
           </div>
         </div>
 
-        <div className="button-wrapper flex-rw">
+        {/* <div className="button-wrapper flex-rw">
 
           {step > 0 && <button className="button negitive" onClick={previous}>Previous</button>}
           {step < 2 && <button className="button positive" onClick={next}>Next</button>}
           {step === 2 && <button className="button positive" type="submit" onClick={postChallengeData} >Create</button>}
-        </div>
+        </div> */}
       </form>
 
     </section>
