@@ -1,19 +1,40 @@
 .notifications-section{
   width: 100%;
-  align-items: center;    
+  align-items: center;   
+   
 }
 .notifications-section > nav {
   width:calc(100% - 6vw) ;
   padding: 2vw 3vw;
   max-width: 676px;
   background-color: var(--layout-bg-color);
-  margin-bottom: 5vw;
 }
 .notifications-section:not(.short-view) > nav{
   margin-top:  calc(var(--nav-vertical-padding) + var(--nav-height));
   justify-content: center;
+  margin-bottom: 5vw;
  
 }
+
+.main-nav > .content-wrapper > .notifications-section {
+  width: 90%;
+  height: 60vh;
+  max-height: 400px;
+
+  position: fixed;
+  top: calc(var(--nav-height) + var(--nav-vertical-padding) + 2vw);
+  right: 5%;
+  box-shadow: 0 0 2px 1px  rgba(0, 0, 0, 0.5);
+  background-color: var(--layout-bg-color);
+  border-radius: 1vw;
+  overflow: hidden;
+}
+
+.main-nav > .content-wrapper > .notifications-section > .notifications-wrapper{
+  overflow-y: scroll;
+  /* padding: 2vh 0; */
+}
+
 .notifications-section > nav {
  gap: 3vw;
  align-items: center;
@@ -79,7 +100,7 @@
   background-color: inherit;
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
   top: 0;
-  right: 10%;
+  right: 20%;
   border-radius: 3vw;
   z-index: 1;
   overflow: hidden;
@@ -103,10 +124,6 @@
 }
 .notifications-section > nav > .right > .more-options-wrapper > .option > .svgCont .fill{
   fill: var(--icon-color);
-}
-.notifications-section > nav > .right > .see-all-button{
- color: var(--theme-secondary-default); 
- font-size: 4vw;
 }
 
 .notifications-section .notifications-wrapper{
@@ -191,6 +208,26 @@ margin-top: 1vw;
 .notifications-section > .notifications-wrapper > .notification > .more-button.active > .fill{
   fill: var(--theme-secondary-default)
 }
+.notifications-section > .bottom-buttons-container {
+  width: calc(100% - 6vw);
+  background-color: var(--container-bg-color-secondary);
+  padding: 3vw;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+}
+.notifications-section > .bottom-buttons-container .settings-button{
+  width: 7vw;
+  height: 7vw;
+  color: var(--paragraph-color-primary);  
+}
+
+.notifications-section > .bottom-buttons-container > .see-all-button{
+  color: var(--theme-secondary-default); 
+  font-size: 4vw;
+ }
+ 
 
  .notification-more-options-wrapper{
   position: absolute;

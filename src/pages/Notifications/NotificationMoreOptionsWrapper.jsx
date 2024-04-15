@@ -6,23 +6,18 @@ import tickSvg from '../../assets/svg/tick(1).svg'
 import removeSvg from '../../assets/svg/remove.svg'
 import removeAllSvg from '../../assets/svg/remove-all.svg'
 
-const NotificationMoreOptionsWrapper = forwardRef(function NotificationMoreOptionsWrapper({isActive,currentActiveNotificationMoreButtonRef, setIsNotificationMoreOptionsWrapperActive,offset},ref) {
+const NotificationMoreOptionsWrapper = forwardRef(function NotificationMoreOptionsWrapper({classList,offset},ref) {
   const [width,setWidth] = useState(0)
-  // const blurHandler = ({ relatedTarget }) => {
-  //   console.log("loool");
-  //   if (relatedTarget === null) {
-  //     currentActiveNotificationMoreButtonRef.current.classList.remove('active')
-  //     setIsNotificationMoreOptionsWrapperActive(false)
-  //   } else ref.current.focus()
-  // }
-
+  
   useEffect(() => {
+    if (classList.includes('active')){
     ref.current.focus()
     setWidth(ref.current.getBoundingClientRect().width)
-  },[isActive])
+    }
+  },[classList])
 
   return (
-    <div className={`notification-more-options-wrapper ${currentActiveNotificationMoreButtonRef.current?.classList.contains('unread') ? 'unread' : ''} ${isActive ? 'active' : ''}`} 
+    <div className={`notification-more-options-wrapper ${classList.map(c => c).join(' ')}`} 
     ref={ref} 
     tabIndex='0' 
     style={{top: `${offset.top}px`,left:`${offset.left - width}px`}} 

@@ -290,17 +290,3 @@
   .main-nav > .content-wrapper > .secondary > .profile-button-wrapper > .profile-menu >  .secondary > .primary-buttons-wrapper > .appearance-menu-button > .option.selected > svg{
   display: block;
   }
-
-  .main-nav > .content-wrapper > .notifications-section {
-    width: 80%;
-    height: 80vh;
-    overflow-x: visible;
-    overflow-y: scroll;
-    position: fixed;
-    top: calc(var(--nav-height) + var(--nav-vertical-padding) + 2vw);
-    right: 5%;
-    box-shadow: 0 0 2px 1px  rgba(0, 0, 0, 0.5);
-    background-color: var(--layout-bg-color);
-    border-radius: 1vw;
-  }
-  

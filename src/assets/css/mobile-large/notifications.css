@@ -8,7 +8,6 @@
 
 .notifications-section > nav > .heading{
   font-size: 24px;
-
 }
 .notifications-section > nav > .right  {
   gap: 15px;
@@ -39,9 +38,7 @@
   width:20px;
   height:20px;
 }
-.notifications-section > nav > .right > .see-all-button{
- font-size:15px;
-}
+
 .notifications-section > .group > .date{
   width: calc(100% - 30px);
   padding: 6px 15px;
@@ -79,6 +76,18 @@ gap: 2px;
   width: 40px;
   height: 40px;
 }
+
+.notifications-section > .bottom-buttons-container {
+  width:calc(100% - 24px);
+  padding: 12px;
+}
+.notifications-section > .bottom-buttons-container .settings-button{
+  width: 24px;
+  height: 24px;
+}
+.notifications-section > .bottom-buttons-container > .see-all-button{
+  font-size: 15px;
+ }
   .notification-more-options-wrapper{
   border-radius: 12px;
 }
