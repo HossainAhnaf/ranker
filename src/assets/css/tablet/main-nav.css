@@ -61,15 +61,19 @@
   /* profile menu */
   .main-nav > .content-wrapper > .secondary > .profile-button-wrapper > .profile-menu {
    width: 260px;
-   top: calc(var(--nav-height) + var(--nav-vertical-padding) - 3px);
    right: 0;
+   top: calc(var(--nav-height) + var(--nav-vertical-padding) - 3px);
+
    left: unset;
    border-radius: 10px;
    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+   opacity: 0;
+   transition: opacity .4s;
   }
   .main-nav > .content-wrapper > .secondary > .profile-button-wrapper > .profile-menu.open {
     height:max-content;
- overflow: hidden;
+   overflow: hidden;
+   opacity: 1;
   }
  
   .main-nav > .content-wrapper > .secondary > .profile-button-wrapper > .profile-menu >  .primary > .user-profile-short-view {

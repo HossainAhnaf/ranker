@@ -5,8 +5,7 @@
 
 }
 .notifications-section.short-view {
-  top: 63px;
-  /* right: 5px; */
+  right: -30px;
   border-radius: 4px ;
 }
 

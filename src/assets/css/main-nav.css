@@ -116,6 +116,7 @@
   transition: height .3s;
   overflow: hidden;
   z-index: 1;
+  
   }
   .main-nav > .content-wrapper > .secondary > .profile-button-wrapper > .profile-menu.open {
     height: 100vh;

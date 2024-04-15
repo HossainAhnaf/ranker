@@ -42,11 +42,12 @@ function Notifications({ shortView,isNotificationOpen }) {
       currentActiveMoreButton.classList.add('active')
       setIsNotificationMoreOptionsWrapperClassList(['active', isUnread ? 'unread' : ''])
       const { top, left } = currentActiveMoreButton.getBoundingClientRect()
-      setNotificationMoreOptionsWrapperOffset({top,left})
+      setNotificationMoreOptionsWrapperOffset({top, left})
       currentActiveNotificationMoreButtonRef.current = currentActiveMoreButton
-
+ 
       notificationMoreOptionsWrapperRef.current.onblur = ({ relatedTarget }) => {
-        if (relatedTarget === null || relatedTarget !== currentActiveMoreButton) 
+       
+        if (!notificationMoreOptionsWrapperRef.current.contains(relatedTarget) && (relatedTarget?.classList.contains('more-button') && relatedTarget !== currentActiveMoreButton) ) 
           hide()
          else notificationMoreOptionsWrapperRef.current.focus()
       }
