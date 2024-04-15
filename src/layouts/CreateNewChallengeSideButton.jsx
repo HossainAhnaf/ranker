@@ -16,10 +16,10 @@ function CreateNewChallengeSideButton() {
   const createNewChallengeSideButtonRef = useRef(null)
  
   const showFullButton = useDebounce((currentTarget,type) => {
-    if (type === 'mouseenter')
+    if (type === 'mouseenter'){
     createNewChallengeSideButtonRef.current.onmouseenter = null
-
-
+    createNewChallengeSideButtonRef.current.focus()
+     }
      if (currentTarget.classList.contains('active'))
       navigate('/create-new-challenge')
     else 
@@ -29,11 +29,9 @@ function CreateNewChallengeSideButton() {
     createNewChallengeSideButtonRef.current.classList.remove('active')
     if (!createNewChallengeSideButtonRef.current.onmouseenter) 
     createNewChallengeSideButtonRef.current.onmouseenter = ({currentTarget,type}) => showFullButton(currentTarget,type)
-   
-    
   }
   useEffect(() => {
-    if (location.pathname === '/create-new-challenge')
+    if (location.pathname.startsWith('/create-new-challenge') || location.pathname === '/')
       setHidden(true)
     else
       setHidden(false)

@@ -20,12 +20,13 @@
   .challenge-card> .title > .difficulty {
     padding: 4px 8px;
     border-radius: 8px;
-    font-size: 8px;
+    font-size: 12px;
   }    
   .challenge-card> .button-container {
     gap: 4px;
     margin-top: 6px;
   }
+
   .challenge-card> .button-container > .tick {
     width: 30px;
     height: 30px;
