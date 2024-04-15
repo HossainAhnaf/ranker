@@ -17,9 +17,10 @@ import removeAllSvg from '../../assets/svg/remove-all.svg'
 //css
 import '../../assets/css/notifications.css'
 import '../../assets/css/mobile-large/notifications.css'
-function Notifications({ shortView,isNotificationOpen }) {
+function Notifications({ shortView,isNotificationOpen,setIsNotificationOpen }) {
   const navigate = useNavigate()
 
+  const notificationsSectionRef = useRef(null)
   const notificationsWrapperRef = useRef(null)
 
   const notificationMoreOptionsWrapperRef = useRef(null)
@@ -29,16 +30,15 @@ function Notifications({ shortView,isNotificationOpen }) {
   top: 0,
   left: 0
  })
-
-  const notificationMoreButtonClickHandler = ({ currentTarget:currentActiveMoreButton }, isUnread) => {
-   function hide(){
-    currentActiveMoreButton.classList.remove('active')
-    setIsNotificationMoreOptionsWrapperClassList([])
-    currentActiveNotificationMoreButtonRef.current = null
-   } 
+ const hideNotificationMoreOptionsWrapper = ()=>{
+  currentActiveNotificationMoreButtonRef.current?.classList.remove('active')
+  setIsNotificationMoreOptionsWrapperClassList([])
+  currentActiveNotificationMoreButtonRef.current = null
+ }
+  const notificationMoreButtonClickHandler = ({ currentTarget:currentActiveMoreButton }, isUnread) => {  
     if (currentActiveMoreButton.classList.contains('active')) 
-      hide()
-     else {
+    hideNotificationMoreOptionsWrapper()
+    else {
       currentActiveMoreButton.classList.add('active')
       setIsNotificationMoreOptionsWrapperClassList(['active', isUnread ? 'unread' : ''])
       const { top, left } = currentActiveMoreButton.getBoundingClientRect()
@@ -48,7 +48,7 @@ function Notifications({ shortView,isNotificationOpen }) {
       notificationMoreOptionsWrapperRef.current.onblur = ({ relatedTarget }) => {
        
         if (!notificationMoreOptionsWrapperRef.current.contains(relatedTarget) && (relatedTarget?.classList.contains('more-button') && relatedTarget !== currentActiveMoreButton) ) 
-          hide()
+        hideNotificationMoreOptionsWrapper()
          else notificationMoreOptionsWrapperRef.current.focus()
       }
     }
@@ -86,7 +86,7 @@ function Notifications({ shortView,isNotificationOpen }) {
     }
   }
 
-  const notificationsSectionScrollHandler = (e) => {
+  const notificationsWrapperScrollHandler = (e) => {
     const { top,left } = currentActiveNotificationMoreButtonRef.current.getBoundingClientRect()
     const {bottom,height} = notificationMoreOptionsWrapperRef.current.getBoundingClientRect()
     setNotificationMoreOptionsWrapperOffset({top,left})
@@ -96,20 +96,30 @@ function Notifications({ shortView,isNotificationOpen }) {
       currentActiveNotificationMoreButtonRef.current = null
     } 
   } 
-
+  const notificationsSectionBlurHandler = ({ relatedTarget }) => {
+    if (relatedTarget === null)
+      setIsNotificationOpen(false)
+    else
+      notificationsSectionRef.current.focus()
+  }
   useEffect(() => {
     if (shortView){
-      if (isNotificationMoreOptionsWrapperClassList.includes('active'))
-      notificationsWrapperRef.current.onscroll = notificationsSectionScrollHandler
-       else 
-       notificationsWrapperRef.current.onscroll = null
-         }
+      if (isNotificationMoreOptionsWrapperClassList.includes('active')){
+      notificationsWrapperRef.current.onscroll = notificationsWrapperScrollHandler
+    }else 
+     notificationsWrapperRef.current.onscroll = null
+     
+     if (isNotificationOpen)
+     notificationsSectionRef.current.focus()
+     else 
+     hideNotificationMoreOptionsWrapper()
+     }
 
-  },[isNotificationMoreOptionsWrapperClassList])
+  },[isNotificationOpen,isNotificationMoreOptionsWrapperClassList])
   return (
     <>
      
-      <section className={`notifications-section ${shortView ? 'short-view' : ''} ${isNotificationOpen ? 'active' : ''} flex-cm`} >
+      <section className={`notifications-section ${shortView ? 'short-view' : ''} ${isNotificationOpen ? 'active' : ''} flex-cm`} ref={notificationsSectionRef} tabIndex='0' onBlur={notificationsSectionBlurHandler}>
 
         <nav className="flex-rw">
           <h1 className="heading">Notifications</h1>

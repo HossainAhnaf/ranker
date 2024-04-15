@@ -144,7 +144,7 @@
 
 .notifications-section > .notifications-wrapper > .notification{
   width: calc(100% - 2vw);
-  background-color: var(--container-bg-color);
+  background-color: var(--layout-bg-color);
   padding: 3vw 1vw;
   gap: 1vw;
   position: relative;
@@ -242,7 +242,7 @@ margin-top: 1vw;
   position: fixed;
   display: none;
   flex-direction: column;
-  background-color: var(--layout-bg-color);
+  background-color: var(--container-bg-color);
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
   border-radius: 3vw;
   z-index: 1000;
@@ -285,7 +285,7 @@ margin-top: 1vw;
     display: none;
    }
    .notifications-section > .notifications-wrapper > .notification > .more-button{
-    background-color: white;
+    background-color: var(--header-bg-color);
     top: 29px;
     right: 10px;
     border-radius: 100%;

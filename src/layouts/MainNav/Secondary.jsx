@@ -40,7 +40,7 @@ function Secondary() {
             <Icon src={notificationSvg} />
             <small className="badge">4</small>
           </button>
-           <Notifications isNotificationOpen={isNotificationOpen} shortView={true} />
+           <Notifications isNotificationOpen={isNotificationOpen} setIsNotificationOpen={setIsNotificationOpen} shortView={true} />
           </div>
            
         <div className="profile-button-wrapper">

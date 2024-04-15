@@ -31,6 +31,9 @@ function ProfileMenu({ isMenuOpen, setIsMenuOpen }) {
    const ProfileMenuBlurHandler = (e) => {
     if (e.relatedTarget === null)
       setIsMenuOpen(false)
+    else{
+      profileMenuRef.current.focus()
+    }
    }
    useEffect(() => {
      if (isMenuOpen){
