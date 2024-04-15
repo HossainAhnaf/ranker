@@ -1,7 +1,24 @@
 .notifications-section{
   width: 100%;
   align-items: center;   
-   
+  background-color: var(--layout-bg-color);
+}
+.notifications-section.short-view {
+  width: 90%;
+  height: 60vh;
+  max-width: 350px;
+  max-height: 400px;
+  position: fixed;
+  top: calc(var(--nav-height) + var(--nav-vertical-padding) + 2vw);
+  right: 5%;
+  box-shadow: 0 0 2px 1px  rgba(0, 0, 0, 0.5);
+  border-radius: 1vw;
+  overflow: hidden;
+}
+@media  screen and (min-width: 1200px) {
+  .notifications-section.short-view {
+    left: 950px !important;
+  }
 }
 .notifications-section > nav {
   width:calc(100% - 6vw) ;
@@ -16,24 +33,7 @@
  
 }
 
-.main-nav > .content-wrapper > .notifications-section {
-  width: 90%;
-  height: 60vh;
-  max-height: 400px;
 
-  position: fixed;
-  top: calc(var(--nav-height) + var(--nav-vertical-padding) + 2vw);
-  right: 5%;
-  box-shadow: 0 0 2px 1px  rgba(0, 0, 0, 0.5);
-  background-color: var(--layout-bg-color);
-  border-radius: 1vw;
-  overflow: hidden;
-}
-
-.main-nav > .content-wrapper > .notifications-section > .notifications-wrapper{
-  overflow-y: scroll;
-  /* padding: 2vh 0; */
-}
 
 .notifications-section > nav {
  gap: 3vw;
@@ -129,6 +129,12 @@
 .notifications-section .notifications-wrapper{
   width: 100%;
   max-width: 700px;
+  justify-content: flex-start;
+  align-self: center;
+}
+.notifications-section.short-view  > .notifications-wrapper{
+  overflow-y: scroll;
+  scrollbar-width: thin;
 }
 
 
@@ -214,8 +220,7 @@ margin-top: 1vw;
   padding: 3vw;
   justify-content: space-between;
   align-items: center;
-  position: absolute;
-  bottom: 0;
+  margin-top: auto;
 }
 .notifications-section > .bottom-buttons-container .settings-button{
   width: 7vw;

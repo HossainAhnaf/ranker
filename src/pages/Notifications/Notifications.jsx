@@ -20,7 +20,7 @@ import '../../assets/css/mobile-large/notifications.css'
 function Notifications({ shortView }) {
   const navigate = useNavigate()
 
-  const notificationsSectionRef = useRef(null)
+  const notificationsWrapperRef = useRef(null)
 
   const notificationMoreOptionsWrapperRef = useRef(null)
   const [isNotificationMoreOptionsWrapperClassList, setIsNotificationMoreOptionsWrapperClassList] = useState([])
@@ -99,16 +99,16 @@ function Notifications({ shortView }) {
   useEffect(() => {
     if (shortView){
       if (isNotificationMoreOptionsWrapperClassList.includes('active'))
-      notificationsSectionRef.current.onscroll = notificationsSectionScrollHandler
+      notificationsWrapperRef.current.onscroll = notificationsSectionScrollHandler
        else 
-       notificationsSectionRef.current.onscroll = null
+       notificationsWrapperRef.current.onscroll = null
          }
 
   },[isNotificationMoreOptionsWrapperClassList])
   return (
     <>
      
-      <section className={`notifications-section ${shortView ? 'short-view' : ''} flex-cm`} ref={notificationsSectionRef}>
+      <section className={`notifications-section ${shortView ? 'short-view' : ''} flex-cm`} >
 
         <nav className="flex-rw">
           <h1 className="heading">Notifications</h1>
@@ -142,7 +142,7 @@ function Notifications({ shortView }) {
           </div>
         </nav>
 
-        <div className="notifications-wrapper flex-cm center">
+        <div className="notifications-wrapper flex-cm " ref={notificationsWrapperRef}>
 
           <div className={`notification announcement  flex-rw `} onClick={(e) => notificationClickHandler(e, '/')} onTouchStart={notificationTouchStartHandler} onTouchEnd={(e) => e.currentTarget.classList.remove('active')}>
             <div className="icon-wrapper">

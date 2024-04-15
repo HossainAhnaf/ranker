@@ -128,12 +128,5 @@
     width: 20px;
     height: 20px;
   }
-  .main-nav > .content-wrapper > .notifications-section {
-    width: 350px;
-    top: 63px;
-    right: 15px;
-    border-radius: 4px ;
-    scrollbar-width: thin;
-  }
-
+ 
 }

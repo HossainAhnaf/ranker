@@ -2,6 +2,15 @@
 .notifications-section > nav {
   width:calc(100% - 24px) ;
   padding:  12px;
+
+}
+.notifications-section.short-view {
+  top: 63px;
+  right: 15px;
+  border-radius: 4px ;
+}
+
+.notifications-section:not(.short-view) > nav{
   margin-bottom: 20px;
 
 }
