@@ -4,8 +4,6 @@
 justify-content: center;
 gap: 70px;
 }
-.challenges-section > .primary {
-}
 
 
 .challenges-section > .secondary {
@@ -19,6 +17,7 @@ gap: 70px;
   border-radius: 12px;
   padding: 10px 20px;
   gap: 50px;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
 }
 .challenges-section > .secondary > hr {
  width: 100%;

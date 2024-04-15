@@ -3,7 +3,7 @@ import React from 'react'
 import { Outlet } from 'react-router'
 //layouts
 import MainNav from './MainNav/MainNav'
-import SideNavigationBar from "./SideNavigationBar";
+import CreateNewChallengeSideButton from './CreateNewChallengeSideButton'
 function index() {
   return (
    <>
@@ -12,6 +12,7 @@ function index() {
    <MainNav /> 
    </header>
    <main>
+     <CreateNewChallengeSideButton />   
     <Outlet />
    </main>
   

@@ -97,8 +97,10 @@ function Notifications({ shortView,isNotificationOpen,setIsNotificationOpen }) {
     } 
   } 
   const notificationsSectionBlurHandler = ({ relatedTarget }) => {
-    if (relatedTarget === null)
+    if (relatedTarget === null){
       setIsNotificationOpen(false)
+      hideNotificationMoreOptionsWrapper()
+    }
     else
       notificationsSectionRef.current.focus()
   }
@@ -111,8 +113,8 @@ function Notifications({ shortView,isNotificationOpen,setIsNotificationOpen }) {
      
      if (isNotificationOpen)
      notificationsSectionRef.current.focus()
-     else 
-     hideNotificationMoreOptionsWrapper()
+     
+     
      }
 
   },[isNotificationOpen,isNotificationMoreOptionsWrapperClassList])
