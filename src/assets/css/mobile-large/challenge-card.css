@@ -4,24 +4,31 @@
     padding: 12px;
     border-radius: 10px;
   }
+  .challenge-card> .right-wrapper {
+    right: 5px;
+    padding: 4px 15px;
+    gap: 12px;
+    border-radius: 20px;
+  }
+  .challenge-card> .right-wrapper  > .pin-icon {
+    width: 22px;
+    height: 22px;
+  
+  }
+  
+  .challenge-card> .right-wrapper > .difficulty {
+    font-size: 15px;
+  }
+  
   .challenge-card> .title {
-    margin-bottom: 6px;
+    margin-bottom: 10px;
     gap: 8px;
     font-size: 18px
   }
   .challenge-card> .description {
     font-size: 14px 
   }
-  .challenge-card> .title  > .pin {
-    width: 22px;
-    height: 22px;
-    
-  }
-  .challenge-card> .title > .difficulty {
-    padding: 4px 8px;
-    border-radius: 8px;
-    font-size: 12px;
-  }    
+
   .challenge-card> .button-container {
     gap: 4px;
     margin-top: 6px;
