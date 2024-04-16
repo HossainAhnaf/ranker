@@ -2,7 +2,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import useMultyStepForm from '../../hooks/useMultyStepForm'
 //components
-import {StepElementOne, StepElementTwo, StepElementThree} from './StepElements'
+import { StepElementOne, StepElementTwo, StepElementThree } from './StepElements'
 //css
 import '../../assets/css/create-new-challenge.css'
 import '../../assets/css/mobile-large/create-new-challenge.css'
@@ -12,58 +12,59 @@ function CreateNewChallenge() {
   const tabsWrapperRef = useRef(null)
 
 
- const [data, setData] = useState({
-   title: '',
-   description: '',
-   difficulty: 'easy',
-   pinned: false,
-   addDiscription: false,
-   addDueDate: false
- })
- 
- const updateFields = (fields) => {
-  setData(prev => {
-    return {
-      ...prev,
-      ...fields
-    }
+  const [data, setData] = useState({
+    title: '',
+    description: '',
+    difficulty: 'easy',
+    pinned: false,
+    addDiscription: false,
+    addDueDate: false
   })
-}
+
+  const updateFields = (fields) => {
+    setData(prev => {
+      return {
+        ...prev,
+        ...fields
+      }
+    })
+  }
 
   const postChallengeData = (e) => {
     e.preventDefault()
     alert('data posted')
   }
-  
+
   const { stepElement, nextStep, prevStep, currentStepIndex } = useMultyStepForm([
     <StepElementOne
-     {...data}
-     updateFields={updateFields}   
-  />,
-  <StepElementTwo
-  {...data}
-  updateFields={updateFields}  
-  />,
-  <StepElementThree
-  {...data}
-  updateFields={updateFields}  
-  />
+      {...data}
+      updateFields={updateFields}
+    />,
+    <StepElementTwo
+      {...data}
+      updateFields={updateFields}
+    />,
+    <StepElementThree
+      {...data}
+      updateFields={updateFields}
+    />
   ])
 
   return (
     <section className="create-new-challenge-section flex-rw center">
 
       <form  >
-        <div className="step-indicator-wrapper flex-rw center" ref={stepIndicatorWrapperRef}>
-          <div className="step current"></div>
-          <div className="step next"></div>
-          <div className="step next"></div>
+        <div className="step-indicator flex-rw center" ref={stepIndicatorWrapperRef}>
+          <div className={`step ${currentStepIndex === 0 ? 'current' : currentStepIndex > 0 ? "completed" : '' }`}></div>
+          <div className={`step ${currentStepIndex === 1 ? 'current' : currentStepIndex > 1 ? "completed" : '' } `}></div>
+          <div className={`step ${currentStepIndex === 2 ? 'current' : ''}`}></div>
         </div>
-        <div className="step-elements-wrapper">
           {stepElement}
-       
+        <div className="button-wrapper flex-rw">
+         {currentStepIndex > 0 && <button className="button negitive" onClick={prevStep}>Previous</button>}
+         {currentStepIndex < 2 && <button className="button positive" onClick={nextStep}>Next</button>}
+         {currentStepIndex === 2 && <button className="button positive" type="submit" onClick={postChallengeData} >Create</button>}
         </div>
-
       </form>
 
     </section>

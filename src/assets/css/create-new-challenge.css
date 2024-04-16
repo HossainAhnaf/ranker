@@ -1,74 +1,60 @@
 
 .create-new-challenge-section {
+  --margin-top: calc(var(--nav-height) + var(--nav-vertical-padding));
   width: 100vw;
-  height: 100vh;
+  min-height: calc(100vh - var(--margin-top));
+  margin-top: var(--margin-top);
 }
 
 .create-new-challenge-section > form {
   width: 80%;
-  height: 60%;
+  height: 60vh;
+  min-height: 292px;
   padding: 2vw 0;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5); 
   background-color: var(--container-bg-color-secondary);
+  display: flex;
+  flex-direction: column;
+  gap: 10vw;
 }
-.create-new-challenge-section > form > .step-indicator-wrapper {
+.create-new-challenge-section > form > .step-indicator {
   width: 90%;
   margin: 0 auto;
   gap: 3vw;
-  margin-bottom: 5vw;
 }
-.create-new-challenge-section > form > .step-indicator-wrapper > .step {
+.create-new-challenge-section > form > .step-indicator > .step {
   width: 100%;
   height: 1vw;
   content: ' ';
   border-radius: 5vw;
+  background-color: var(--border-color);
   transition: background-color .5s;
 }
-
-.create-new-challenge-section > form > .step-indicator-wrapper > .step.current {
-  background-color:var(--border-active-color) ;
+.create-new-challenge-section > form > .step-indicator > .step.current {
+  background-color: rgb(255, 200, 155);
 }
-.create-new-challenge-section > form > .step-indicator-wrapper > .step.previous {
+
+.create-new-challenge-section > form > .step-indicator > .step.completed {
   background-color:  rgb(255, 153, 0);
 }
 
-.create-new-challenge-section > form > .step-indicator-wrapper > .step.next {
-  background-color: var(--border-color);
-}
 
-.create-new-challenge-section > form > .step-elements-wrapper {
-  overflow: hidden;
-  position: relative;
-  height: 80%;
-  padding: 5vw 0;
+.create-new-challenge-section > form >  .step-element {
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+align-items: center;
+width: 100%;
+opacity: 0;
+ transition: opacity .6s;
 }
-.create-new-challenge-section > form > .step-elements-wrapper > .step-element {
- display: flex;
- flex-direction: column;
- justify-content: flex-start;
- align-items: center;
- width: 100%;
- height: 100%;
- margin: 0 auto;
-position: absolute;
-transition: left .5s;
+.create-new-challenge-section > form >  .step-element.active {
+ opacity: 1;
 }
 
 
-.create-new-challenge-section > form > .step-elements-wrapper > .step-element.current {
-  left: 0;
-}
 
-.create-new-challenge-section > form > .step-elements-wrapper > .step-element.previous {
-  left: -100%;
-}  
-
-
-.create-new-challenge-section > form > .step-elements-wrapper > .step-element.next {
-  left: 100%;
-}  
-
-.create-new-challenge-section > form > .step-elements-wrapper > .step-element > .add-remove-button {
+.create-new-challenge-section > form >  .step-element > .add-remove-button {
   width: 80%;
   background-color: transparent;
   border: none;
@@ -77,22 +63,22 @@ transition: left .5s;
   margin-top: 1vw;
 }
 
-.create-new-challenge-section > form > .step-elements-wrapper > .step-element > .outlined-custom-field {
+.create-new-challenge-section > form >  .step-element > .outlined-custom-field {
   width: 80%;
   --input-font-size: 5vw;
-  --label-font-size: 3vw;  
+  --label-font-size: 4vw;  
 }
 
-.create-new-challenge-section > form > .step-elements-wrapper > .step-element > .outlined-custom-field > :is(input,textarea) {
+.create-new-challenge-section > form >  .step-element > .outlined-custom-field > :is(input,textarea) {
   background-color: var(--container-bg-color-secondary);
 }
-.create-new-challenge-section > form > .step-elements-wrapper > .step-element > .outlined-custom-field > label {
+.create-new-challenge-section > form >  .step-element > .outlined-custom-field > label {
  background-color: var(--container-bg-color-secondary);
 }
-.create-new-challenge-section > form > .step-elements-wrapper > .step-element > .title-field {
+.create-new-challenge-section > form >  .step-element > .title-field {
 margin-bottom: 4vw;
 }
-.create-new-challenge-section > form > .step-elements-wrapper > .step-element >  .difficulty-label{
+.create-new-challenge-section > form >  .step-element >  .difficulty-label{
   width: 80%;
   gap: 3vw;
   font-size: 5vw;
@@ -100,14 +86,14 @@ margin-bottom: 4vw;
   align-items: center;
   margin-top: 7vw;
 }
-.create-new-challenge-section > form > .step-elements-wrapper > .step-element >  .difficulty-label > .name{
+.create-new-challenge-section > form >  .step-element >  .difficulty-label > .name{
  color: var(--paragraph-color-secondary);
 
 }
-.create-new-challenge-section > form > .step-elements-wrapper > .step-element >  .difficulty-label > .select{
+.create-new-challenge-section > form >  .step-element >  .difficulty-label > .select{
  --bg-color:var(--container-bg-color);
 }  
-.create-new-challenge-section > form > .step-elements-wrapper > .step-element > .pinned-field {
+.create-new-challenge-section > form >  .step-element > .pinned-field {
   width: 80%;
   gap: 3vw;
   color: var(--paragraph-color-secondary);
@@ -117,30 +103,30 @@ margin-bottom: 4vw;
   margin-top: 6vw;
 
 }
-.create-new-challenge-section > form > .step-elements-wrapper > .step-element > .pinned-field > .switch-wrapper{
+.create-new-challenge-section > form >  .step-element > .pinned-field > .switch-wrapper{
 width: 40%;
 }
 
-.create-new-challenge-section > form > .step-elements-wrapper > .step-element > .result{
+.create-new-challenge-section > form >  .step-element > .result{
   width: 80%;
   gap: 3vw;
 }
-.create-new-challenge-section > form > .step-elements-wrapper > .step-element > .result > .title{
+.create-new-challenge-section > form >  .step-element > .result > .title{
  color: var(--paragraph-color-secondary);
  font-size: 4vw;
 }
-  .create-new-challenge-section > form >.step-elements-wrapper > .step-element > .button-wrapper {
+  .create-new-challenge-section > form > .button-wrapper {
   width: calc(100% - 2vw);
   align-items: center;
-  justify-content: end;
+  justify-content: flex-end;
   gap: 3vw;
   padding-right: 2vw;
   margin-top: auto;
 }
-.create-new-challenge-section > form >.step-elements-wrapper > .step-element > .button-wrapper > button{
+.create-new-challenge-section > form > .button-wrapper > button{
  padding: 2vw 3.5vw;
  font-weight: bold;
- border-radius: 3vw;
+ border-radius: 5vw;
  border: none;
  font-size: 4vw;
 }
