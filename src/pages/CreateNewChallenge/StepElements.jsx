@@ -41,7 +41,7 @@ export function StepElementTwo({difficulty,  pinned,addDueDate, updateFields}) {
 {
   addDueDate
     ? <>
-      <OutlinedCustomField className="title" placeholder="date" >
+      <OutlinedCustomField className="title" placeholder="Due date" >
         <input type="date" placeholder=" " />
       </OutlinedCustomField>
       <button className="add-remove-button" onClick={() => updateFields({addDueDate:false})}>Remove -</button>

@@ -9,16 +9,27 @@
 .create-new-challenge-section > form {
   width: 80%;
   height: 60vh;
+  max-width: 900px;
+  max-height: 350px;
   min-height: 292px;
-  padding: 2vw 0;
+  padding: 10vw 0;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5); 
   background-color: var(--container-bg-color-secondary);
   display: flex;
   flex-direction: column;
-  gap: 10vw;
+  border-radius: 3vw;
+}
+.create-new-challenge-section > form > .header{
+  width: calc(100% - 4vw);
+  background-color: var(--theme-secondary-default);
+  color: white;
+  text-align: center;
+  padding: 2vw;
+  margin: 5vw 0 10vw 0;
+  font-size: 5vw;
 }
 .create-new-challenge-section > form > .step-indicator {
-  width: 90%;
+  width: 80%;
   margin: 0 auto;
   gap: 3vw;
 }
@@ -31,11 +42,14 @@
   transition: background-color .5s;
 }
 .create-new-challenge-section > form > .step-indicator > .step.current {
-  background-color: rgb(255, 200, 155);
+ opacity: .5;
+ background-color: var(--theme-secondary-default);
+
 }
 
 .create-new-challenge-section > form > .step-indicator > .step.completed {
-  background-color:  rgb(255, 153, 0);
+  background-color: var(--theme-secondary-default);
+
 }
 
 
@@ -116,17 +130,31 @@ width: 40%;
  font-size: 4vw;
 }
   .create-new-challenge-section > form > .button-wrapper {
-  width: calc(100% - 2vw);
+  width: 80% ;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-between;
   gap: 3vw;
-  padding-right: 2vw;
   margin-top: auto;
+  align-self: center;
 }
 .create-new-challenge-section > form > .button-wrapper > button{
- padding: 2vw 3.5vw;
+ padding: 2vw 7vw;
  font-weight: bold;
- border-radius: 5vw;
+ border-radius: 1vw;
  border: none;
  font-size: 4vw;
+}
+.create-new-challenge-section > form > .button-wrapper > button.positive{
+  margin-left: auto;
+
+}
+
+@media screen and (min-width: 550px) {
+  .create-new-challenge-section > form > .button-wrapper {
+  justify-content: flex-end;
+  }  
+  .create-new-challenge-section > form > .button-wrapper > button.positive{
+    margin-left: 0;
+  
+  }
 }

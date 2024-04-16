@@ -18,7 +18,7 @@ function CreateNewChallenge() {
     difficulty: 'easy',
     pinned: false,
     addDiscription: false,
-    addDueDate: false
+    addDueDate: true
   })
 
   const updateFields = (fields) => {
@@ -59,10 +59,13 @@ function CreateNewChallenge() {
           <div className={`step ${currentStepIndex === 1 ? 'current' : currentStepIndex > 1 ? "completed" : '' } `}></div>
           <div className={`step ${currentStepIndex === 2 ? 'current' : ''}`}></div>
         </div>
+        <div className="header">
+          Step - {currentStepIndex + 1}
+        </div>
           {stepElement}
         <div className="button-wrapper flex-rw">
-         {currentStepIndex > 0 && <button className="button negitive" onClick={prevStep}>Previous</button>}
-         {currentStepIndex < 2 && <button className="button positive" onClick={nextStep}>Next</button>}
+         {currentStepIndex > 0 && <button className="button negitive" onClick={prevStep}>&lArr; Back</button>}
+         {currentStepIndex < 2 && <button className="button positive" onClick={nextStep}>Next &rArr; </button>}
          {currentStepIndex === 2 && <button className="button positive" type="submit" onClick={postChallengeData} >Create</button>}
         </div>
       </form>

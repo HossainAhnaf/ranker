@@ -1,84 +1,86 @@
 @media screen and (min-width: 375px) {
   .create-new-challenge-section > form {
-  width: 300px;
-  height: 420px;
-  padding: 8px 0;
+  padding: 40px 0;
+  border-radius: 12px;
+
 }
-.create-new-challenge-section > form > .step-indicator-wrapper {
+.create-new-challenge-section > form > .header{
+  width: calc(100% - 16px);
+  padding: 8px;
+  margin: 20px 0 40px 0;
+  font-size: 19px;
+}
+.create-new-challenge-section > form > .step-indicator {
   gap: 12px;
-  margin-bottom: 20px;
 }
-.create-new-challenge-section > form > .step-indicator-wrapper > .step {
+.create-new-challenge-section > form > .step-indicator > .step {
   height: 4px;
   content: ' ';
   border-radius: 20px;
 }
-.create-new-challenge-section > form > .tabs-wrapper {
-  height: 75%;
-  padding: 20px 0;
-}
 
-.create-new-challenge-section > form > .tabs-wrapper > .tab > .add-remove-button {
+.create-new-challenge-section > form >  .step-element > .add-remove-button {
   font-size: 15px;
   margin-top: 4px;
 }
-.create-new-challenge-section > form > .tabs-wrapper > .tab > .outlined-custom-field {
+.create-new-challenge-section > form >  .step-element > .outlined-custom-field {
   --input-font-size: 20px;
-  --label-font-size: 12px;  
+  --label-font-size: 15px;  
 }
-.create-new-challenge-section > form > .tabs-wrapper > .tab > .outlined-custom-field > :is(input,textarea){
+.create-new-challenge-section > form >  .step-element > .outlined-custom-field > :is(input,textarea){
   padding: 8px;
   width: calc(100% - 16px);
  }
-.create-new-challenge-section > form > .tabs-wrapper > .tab > .title-field {
+.create-new-challenge-section > form >  .step-element > .title-field {
 margin-bottom: 15px;
 }
-.create-new-challenge-section > form > .tabs-wrapper > .tab >  .difficulty-label{
+.create-new-challenge-section > form >  .step-element >  .difficulty-label{
   gap: 12px;
   font-size: 20px;
   margin-top: 35px;
 }
-.create-new-challenge-section > form > .tabs-wrapper > .tab >  .difficulty-label > .select > summary{
+.create-new-challenge-section > form >  .step-element >  .difficulty-label > .select > summary{
  padding: 4px 8px;
  font-size: 19px;
  border-radius: 4px
 }
-.create-new-challenge-section > form > .tabs-wrapper > .tab >  .difficulty-label > .select > summary > .svgCont{
+.create-new-challenge-section > form >  .step-element >  .difficulty-label > .select > summary > .svgCont{
   width: 20px;
   height: 20px; 
 
 }
-.create-new-challenge-section > form > .tabs-wrapper > .tab >  .difficulty-label > .select > .options-wrapper {
+.create-new-challenge-section > form >  .step-element >  .difficulty-label > .select > .options-wrapper {
   border-radius: 4px;
   margin-top: 4px;
 }
-.create-new-challenge-section > form > .tabs-wrapper > .tab >  .difficulty-label > .select > .options-wrapper > .option{
+.create-new-challenge-section > form >  .step-element >  .difficulty-label > .select > .options-wrapper > .option{
   padding: 4px 8px;
   font-size: 19px; 
   width: calc(100% - 16px);
 }
 
-.create-new-challenge-section > form > .tabs-wrapper > .tab > .pinned-field {
+.create-new-challenge-section > form >  .step-element > .pinned-field {
   gap: 12px;
   font-size: 19px;
-  margin-top: 24px;
-
+  margin-top: 24px; 
 }
-.create-new-challenge-section > form > .tabs-wrapper > .tab > .result{
+.create-new-challenge-section > form >  .step-element > .pinned-field > .switch-wrapper{
+  width: 100px;
+}
+
+.create-new-challenge-section > form >  .step-element > .result{
   gap: 12px;
 }
-.create-new-challenge-section > form > .tabs-wrapper > .tab > .result > .title{
+.create-new-challenge-section > form >  .step-element > .result > .title{
  font-size: 14px;
 }
 
   .create-new-challenge-section > form > .button-wrapper {
-  width: calc(100% - 8px);
   gap: 12px;
-  padding-right: 8px;
 }
 .create-new-challenge-section > form > .button-wrapper > button{
- padding: 8px 13px;
- border-radius: 12px;
+ padding: 8px 25px;
+ border-radius: 4px;
  font-size: 15px;
 }
 

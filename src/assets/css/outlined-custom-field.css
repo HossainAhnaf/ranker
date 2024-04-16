@@ -36,13 +36,17 @@ top: 50%;
   background-color: var(--container-bg-color);
 resize: none;
 }
-.outlined-custom-field :is(input,textarea):is(:focus,:not(:placeholder-shown)) {
+
+.outlined-custom-field :is(input,textarea):is(:focus,:not([type="date"],:placeholder-shown)) {
   border-color: var(--border-active-color);  
 }
 
 .outlined-custom-field :is(input,textarea):is(:focus,:not(:placeholder-shown)) + label {
   top: 0;
   transform: translateY(-50%) scale(.9);
+
+}
+.outlined-custom-field :is(input,textarea):is(:focus,:not([type="date"],:placeholder-shown)) + label {
   color: var(--border-active-color);
 
 }
