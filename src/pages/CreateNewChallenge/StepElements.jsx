@@ -5,24 +5,25 @@ import OutlinedCustomField from '../../components/OutlinedCustomField'
 import Select from '../../components/Select'
 import ChallengeCard from '../../components/ChallengeCard'
 
-export function StepElementOne({title, setTitle, addDiscription, setAddDiscription, description, setDescription, next}) {
+export function StepElementOne({title,addDiscription,description,updateFields}) {
+
   return (
     <div className="step-element current">
       <OutlinedCustomField className="title-field" placeholder="Title">
-        <input type="text" placeholder=" " maxLength={20} onChange={(e) => setTitle(e.target.value)} value={title}/>
+        <input type="text" placeholder=" " maxLength={20} onChange={(e) => updateFields({title:e.target.value})} value={title}/>
       </OutlinedCustomField>
       {
         addDiscription
           ? <>
             <OutlinedCustomField className="description-field" placeholder="Description"  >
-              <textarea placeholder=" " maxLength={200} rows={4} onChange={(e) => setDescription(e.target.value)} value={description}></textarea>
+              <textarea placeholder=" " maxLength={200} rows={4} onChange={(e) => updateFields({description:e.target.value})} value={description}></textarea>
             </OutlinedCustomField>
-            <button className="add-remove-button" onClick={() => setAddDiscription(false)}>Remove -</button>
+            <button className="add-remove-button" onClick={() =>{ updateFields({addDiscription:false}); updateFields({description:''})}}>Remove -</button>
           </>
-          : <button className="add-remove-button" onClick={() => { setAddDiscription(true); setDescription('') }}>Add description +</button>
+          : <button className="add-remove-button" onClick={()=>updateFields({addDiscription:true})}>Add description +</button>
       }
-      <div className="button-wrapper flex-rw">
-        <button className="button positive" onClick={next}>Next</button>
+       <div className="button-wrapper flex-rw">
+        <button className="button positive" onClick={"next"}>Next</button>
       </div>
     </div>
   )

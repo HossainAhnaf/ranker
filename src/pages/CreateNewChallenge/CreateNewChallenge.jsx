@@ -11,54 +11,44 @@ function CreateNewChallenge() {
   const stepIndicatorWrapperRef = useRef(null)
   const tabsWrapperRef = useRef(null)
 
-  //data
-  const [title, setTitle] = useState('')
-  const [description, setDescription] = useState('')
-  const [difficulty, setDifficulty] = useState('easy')
-  const [pinned, setPinned] = useState(false)
-  //optional fields
-  const [addDiscription, setAddDiscription] = useState(false)
-  const [addDueDate, setAddDueDate] = useState(false)
 
+ const [data, setData] = useState({
+   title: '',
+   description: '',
+   difficulty: 'easy',
+   pinned: false,
+   addDiscription: false,
+   addDueDate: false
+ })
+ 
+ const updateFields = (fields) => {
+  setData(prev => {
+    return {
+      ...prev,
+      ...fields
+    }
+  })
+}
 
   const postChallengeData = (e) => {
     e.preventDefault()
     alert('data posted')
   }
-  useEffect(() => {
-
-  }, [])
-
-  const { stepElement, nextStep, prevStep } = useMultyStepForm([
+  
+  const { stepElement, nextStep, prevStep, currentStepIndex } = useMultyStepForm([
     <StepElementOne
-    title={title}
-    setTitle={setTitle}
-    addDiscription={addDiscription}
-    setAddDiscription={setAddDiscription}
-    description={description}
-    setDescription={setDescription}
-    next={"nextStep"}
+     {...data}
+     updateFields={updateFields}   
   />,
   <StepElementTwo
-    difficulty={difficulty}
-    setDifficulty={setDifficulty}
-    pinned={pinned}
-    setPinned={setPinned}
-    addDueDate={addDueDate}
-    setAddDueDate={setAddDueDate}
-    previous={"prevStep"}
-    next={"nextStep"}
+  {...data}
+  updateFields={updateFields}  
   />,
   <StepElementThree
-    title={title}
-    description={description}
-    difficulty={difficulty}
-    pinned={pinned}
-    previous={"prevStep"}
-    postChallengeData={postChallengeData}
+  {...data}
+  updateFields={updateFields}  
   />
   ])
- 
 
   return (
     <section className="create-new-challenge-section flex-rw center">
@@ -70,8 +60,8 @@ function CreateNewChallenge() {
           <div className="step next"></div>
         </div>
         <div className="step-elements-wrapper">
-  {stepElement}
-      
+          {stepElement}
+       
         </div>
 
       </form>
