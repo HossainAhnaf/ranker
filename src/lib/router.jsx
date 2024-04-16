@@ -6,7 +6,7 @@ import Layout from "../layouts/";
 import Home from "../pages/Home";
 import Profile from "../pages/Profile";
 import Challenges from "../pages/Challenges";
-import CreateNewChallenge from "../pages/CreateNewChallenge";
+import CreateNewChallenge from "../pages/CreateNewChallenge/CreateNewChallenge";
 import Notifications from "../pages/Notifications/Notifications";
 import Peoples from "../pages/Peoples";
 import Settings from "../pages/Settings/Settings";
