@@ -14,13 +14,18 @@
  color: white;
  overflow: hidden;
  transition: right .4s;
- outline: none
+ outline: none;
+ cursor: pointer;
 }
 
 .create-new-challenge-side-button.active{
   background-color: white;
   right: 0;
 }
+.create-new-challenge-side-button.active:active{
+ filter: brightness(70%);
+}
+
 .create-new-challenge-side-button.hidden{
   display: none;
   }

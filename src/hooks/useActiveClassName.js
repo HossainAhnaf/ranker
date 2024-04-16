@@ -8,11 +8,11 @@
  * @param {boolean} props.isActive - A boolean indicating whether the active class should be returned.
  * @return {string} Returns the string 'active' if isActive is true, otherwise returns an empty string.
  */
-export default function useActiveClassName({isActive}) {
+export default function useActiveClassName({isActive},className='') {
   /**
    * The string 'active' if isActive is true, otherwise an empty string.
    * @type {string}
    */
-  return isActive ? 'active' : '';
+  return isActive ? `active ${className}` : className;
 }
 

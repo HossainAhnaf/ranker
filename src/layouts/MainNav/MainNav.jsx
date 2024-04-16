@@ -11,6 +11,7 @@ import ChallengesSectionNav from '../../components/ChallengesSectionNav'
 import '../../assets/css/main-nav.css'
 import '../../assets/css/mobile-large/main-nav.css'
 import '../../assets/css/tablet/main-nav.css'
+import '../../assets/css/laptop/main-nav.css'
 
 function MainNav() {
   const location = useLocation()

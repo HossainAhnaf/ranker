@@ -68,7 +68,7 @@
   padding: 1.5vw 3vw;
   border-radius: 5vw;
   border: none;
-  background-color: transparent;
+  background-color: var(--layout-bg-color);
   color: var(--paragraph-color-primary);
 }
 
@@ -219,22 +219,25 @@ margin-top: 1vw;
   fill: var(--theme-secondary-default)
 }
 .notifications-section > .bottom-buttons-container {
-  width: calc(100% - 6vw);
+  width: 100%;
   background-color: var(--container-bg-color-secondary);
-  padding: 3vw;
   justify-content: space-between;
-  align-items: center;
   margin-top: auto;
 }
 .notifications-section > .bottom-buttons-container .settings-button{
-  width: 7vw;
-  height: 7vw;
   color: var(--paragraph-color-primary);  
+  padding: 3vw ;
+  background-color: inherit;
 }
-
+.notifications-section > .bottom-buttons-container .settings-button > svg{
+width: 7vw;
+height: 7vw;
+}
 .notifications-section > .bottom-buttons-container > .see-all-button{
   color: var(--theme-secondary-default); 
   font-size: 4vw;
+  align-self: center;
+  margin-right: 4vw;
  }
  
 

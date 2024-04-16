@@ -37,6 +37,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
   }
   .main-nav > .content-wrapper > .primary > .site-brand > .svgCont {
     width: 9vw;
@@ -71,13 +72,13 @@
   .main-nav > .content-wrapper > .secondary >.notification-button-wrapper >  .notification-button {
     width: 9vw;
     height: 9vw;
-    background-color: transparent;
+    background-color: var(--layout-bg-color);
     border: none;
     position: relative;
     border-radius: 100%;
   }
   .main-nav > .content-wrapper > .secondary >.notification-button-wrapper >  .notification-button.active  {
-    background-color: gray;
+    background-color: var(--theme-secondary-default);
    }
   .main-nav > .content-wrapper > .secondary >.notification-button-wrapper >  .notification-button .fill  {
     fill: var(  --icon-color);
@@ -141,6 +142,7 @@
      align-items: flex-start;
      text-decoration: none;
      color: unset;
+     background-color: var(--container-bg-color);
     }
     .main-nav > .content-wrapper > .secondary > .profile-button-wrapper > .profile-menu >  .primary > .user-profile-short-view > .primary {
       gap: 2vw;
@@ -224,6 +226,7 @@
    gap: 5vw;
    border-radius: 1vw;
    font-size: 5vw;
+   background-color: var(--container-bg-color);
   } 
   .main-nav > .content-wrapper > .secondary > .profile-button-wrapper > .profile-menu >  .secondary > :is(.primary-buttons-wrapper,.navigation-buttons-wrapper) > a > .svgCont{
     width: 6vw;
@@ -257,6 +260,8 @@
  padding: 3vw;
  margin: 0 auto;
  border-radius: 1vw;
+ cursor: pointer;
+
  }
 
    .main-nav > .content-wrapper > .secondary > .profile-button-wrapper > .profile-menu >  .secondary > .primary-buttons-wrapper > .appearance-menu-button > summary::marker{
@@ -286,6 +291,7 @@
     background-color: var(--container-bg-color);
     border-radius: 1vw;
     margin: 0 auto;
+    cursor: pointer;
   }
  
   .main-nav > .content-wrapper > .secondary > .profile-button-wrapper > .profile-menu >  .secondary > .primary-buttons-wrapper > .appearance-menu-button > .option > svg{
@@ -296,3 +302,5 @@
   .main-nav > .content-wrapper > .secondary > .profile-button-wrapper > .profile-menu >  .secondary > .primary-buttons-wrapper > .appearance-menu-button > .option.selected > svg{
   display: block;
   }
+
+  

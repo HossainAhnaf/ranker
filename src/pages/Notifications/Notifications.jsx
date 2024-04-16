@@ -194,7 +194,7 @@ function Notifications({ shortView,isNotificationOpen,setIsNotificationOpen }) {
       { 
       shortView &&
        <div className="bottom-buttons-container flex-rw">
-        <Link className="settings-button svgCont" to="/settings/notifications">
+        <Link className="settings-button flex-rw center button" to="/settings/notifications">
           <Icon src={settingsSvg} />
         </Link>
 

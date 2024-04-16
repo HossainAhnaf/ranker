@@ -26,10 +26,10 @@ function ChallengeCard({ title, description, difficulty, pinned, id }) {
       <h4 className="title">{id}. {title}</h4>
       <small className="description">{description}</small>
       <div className="button-container flex-rw center left">
-        <button className="tick svgCont noEffect">
+        <button className="tick button svgCont noEffect">
           <Icon src={tickSvg} />
         </button>
-        <button className="cross svgCont noEffect">
+        <button className="cross button svgCont noEffect">
           <Icon src={closeSvg} />
         </button>
       </div>

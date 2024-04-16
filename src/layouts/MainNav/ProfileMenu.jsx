@@ -42,9 +42,9 @@ function ProfileMenu({ isMenuOpen, setIsMenuOpen }) {
    },[isMenuOpen])
 
   return (
-    <div className={`profile-menu ${isMenuOpen ? 'open' : ''}`} tabIndex='0' ref={profileMenuRef} onBlur={ProfileMenuBlurHandler} >
+    <div className={`profile-menu ${isMenuOpen ? 'open' : ''} `} tabIndex='0' ref={profileMenuRef} onBlur={ProfileMenuBlurHandler} >
       <div className="primary flex-rw">
-        <Link to={`/profile/${username}`} className="user-profile-short-view flex-cm" >
+        <Link to={`/profile/${username}`} className="user-profile-short-view flex-cm button" >
           <div className="primary flex-rw center">
             <UserAvatar avatar={avatar} status={status} level={level} />
             <div className="username-wrapper flex-cm">
@@ -60,27 +60,28 @@ function ProfileMenu({ isMenuOpen, setIsMenuOpen }) {
       </div>
       <div className="secondary">     
         <div className="navigation-buttons-wrapper flex-cm center">
-        <NavLink  className={useActiveClassName} to={`/profile/${username}`}>
+        
+        <NavLink  className={(state)=>useActiveClassName(state,'button')} to={`/profile/${username}`}>
           <span className="svgCont" style={{transform:"scale(.7)"}}>
             <Icon src={profileSvg} />
           </span>
           <span className="name">Profile</span>
         </NavLink>
-        <NavLink className={useActiveClassName} to='/challenges'>
+        <NavLink className={(state)=>useActiveClassName(state,'button')} to='/challenges'>
           <span className="svgCont">
             <Icon src={achievementChallengeSvg} />
           </span>
           <span className="name">Challenges</span>
         </NavLink>
        
-        <NavLink className={useActiveClassName} to='/notifications' >
+        <NavLink className={(state)=>useActiveClassName(state,'button')} to='/notifications' >
           <span className="svgCont badge-wrapper">
             <Icon src={notificationSvg}  style={{transform:"scale(1.2)"}}/>
             <small className="badge">4</small>
           </span>
           <span className="name">Notifications</span>
         </NavLink>
-        <NavLink className={useActiveClassName} to='/peoples'>
+        <NavLink className={(state)=>useActiveClassName(state,'button')} to='/peoples'>
           <span className="svgCont">
             <Icon src={peopleSvg} />
           </span> <span className="name">Peoples</span>
@@ -88,7 +89,7 @@ function ProfileMenu({ isMenuOpen, setIsMenuOpen }) {
         </div>
         <hr />
         <div className="primary-buttons-wrapper flex-cm center">
-        <NavLink className={useActiveClassName} to='/create-new-challenge'>
+        <NavLink className={(state)=>useActiveClassName(state,'button')} to='/create-new-challenge'>
           <span className="svgCont">
             <Icon src={plusSvg}  style={{transform:"scale(.9)"}}/>
           </span> <span className="name">Create new challenge</span>
@@ -117,13 +118,13 @@ function ProfileMenu({ isMenuOpen, setIsMenuOpen }) {
               <Icon src={tickSvg}/>
           </span>
         </details>
-        <NavLink className={useActiveClassName} to='/settings'>
+        <NavLink className={(state)=>useActiveClassName(state,'button')} to='/settings'>
           <span className="svgCont">
             <Icon src={settingsSvg} />
           </span> <span className="name">Settings</span>
         </NavLink>
 
-        <Link to="/accounts/signin" className="logout-button" >
+        <Link to="/accounts/signin" className="logout-button button" >
             <span className="svgCont">
               <Icon src={logoutSvg} />
             </span>

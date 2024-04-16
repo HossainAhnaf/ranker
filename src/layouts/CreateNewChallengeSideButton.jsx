@@ -42,7 +42,7 @@ function CreateNewChallengeSideButton() {
     }
   },[])
   return (
-   <button className={`create-new-challenge-side-button ${hidden ? 'hidden' : ''} flex-rw`}
+   <button className={`create-new-challenge-side-button  ${hidden ? 'hidden' : ''} flex-rw`}
     onClick={({currentTarget,type})=>showFullButton(currentTarget,type)}
     onMouseLeave={hideFullButton}
      onBlur={hideFullButton}

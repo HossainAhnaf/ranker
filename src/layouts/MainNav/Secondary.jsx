@@ -36,7 +36,7 @@ function Secondary() {
         {isLoggedIn
          ? <>
           <div className="notification-button-wrapper">
-          <button className={`notification-button ${(isNotificationOpen || location.pathname === '/notifications') ? 'active' : ''} badge-wrapper svgCont`} onClick={showNotificationsShortView}>
+          <button className={`notification-button button ${(isNotificationOpen || location.pathname === '/notifications') ? 'active' : ''} badge-wrapper svgCont`} onClick={showNotificationsShortView}>
             <Icon src={notificationSvg} />
             <small className="badge">4</small>
           </button>
@@ -44,7 +44,7 @@ function Secondary() {
           </div>
            
         <div className="profile-button-wrapper">
-        <button className="profile-button" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+        <button className="profile-button button" onClick={() => setIsMenuOpen(!isMenuOpen)}>
           <UserAvatar avatar={avatar} status={status} level={level} />
         </button>
           <ProfileMenu isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen}/>        

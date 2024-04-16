@@ -85,16 +85,18 @@ gap: 2px;
   height: 40px;
 }
 
-.notifications-section > .bottom-buttons-container {
-  width:calc(100% - 24px);
+.notifications-section > .bottom-buttons-container .settings-button{
+
   padding: 12px;
 }
-.notifications-section > .bottom-buttons-container .settings-button{
+.notifications-section > .bottom-buttons-container .settings-button > svg{
   width: 24px;
   height: 24px;
 }
+
 .notifications-section > .bottom-buttons-container > .see-all-button{
   font-size: 15px;
+  margin-right: 15px;
  }
   .notification-more-options-wrapper{
   border-radius: 12px;

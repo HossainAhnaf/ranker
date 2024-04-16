@@ -26,14 +26,20 @@
     background: var(--theme-secondary-gradient);
     color: white;
   }
-
+  .button {
+    cursor: pointer;
+  }
   .button:active {
     filter:brightness(70%)
   }  
   .button:disabled{
     filter:brightness(50%)
-
   }
+@media screen and (min-width: 768px) {
+  .button:hover {
+    filter: brightness(70%);
+  }
+}
   .negitive {
     background-color: var(--theme-primary) !important;
     color: white;
@@ -66,10 +72,7 @@
   }
   
   
-  button,button {
-    cursor: pointer;
   
-  }
   
   
   

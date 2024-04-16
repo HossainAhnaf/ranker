@@ -13,6 +13,7 @@
    font-size: 4vw;
    justify-content: space-between;
    align-items: center;
+   cursor: pointer;
  }
  .menu-button-wrapper > .menu-button > .svgCont{
    width: 4vw;
