@@ -19,6 +19,7 @@ import PasswordAndSecurity from "../pages/PasswordAndSecurity";
 import Accounts from "../pages/Accounts/Accounts";
 import Signin from "../pages/Accounts/Signin";
 import Signup from "../pages/Accounts/Signup";
+import ChangePassword from "../pages/Accounts/ChangePassword";
 export default createBrowserRouter(
   [
     {
@@ -90,6 +91,10 @@ export default createBrowserRouter(
             {
               path: 'signin',
               element: <Signin />
+            },
+            {
+              path: 'change-password',
+              element: <ChangePassword />
             }
           ]
         }

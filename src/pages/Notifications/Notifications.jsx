@@ -49,9 +49,9 @@ function Notifications({ shortView, isNotificationOpen, setIsNotificationOpen })
 
 
       notificationMoreOptionsWrapperRef.current.onblur = ({ relatedTarget }) => {
-        if (relatedTarget === null  || (relatedTarget?.classList.contains('more-button') && relatedTarget !== currentActiveMoreButton ) || !notificationMoreOptionsWrapperRef.current.contains(relatedTarget)) 
-        hideNotificationMoreOptionsWrapper()
-         else notificationMoreOptionsWrapperRef.current.focus()
+        if (relatedTarget === null || (relatedTarget?.classList.contains('more-button') && relatedTarget !== currentActiveMoreButton) || !notificationMoreOptionsWrapperRef.current.contains(relatedTarget))
+          hideNotificationMoreOptionsWrapper()
+        else notificationMoreOptionsWrapperRef.current.focus()
       }
     }
   }
@@ -99,9 +99,11 @@ function Notifications({ shortView, isNotificationOpen, setIsNotificationOpen })
     }
   }
   const notificationsSectionBlurHandler = ({ relatedTarget }) => {
-    if (relatedTarget === null || (relatedTarget !== notificationMoreOptionsWrapperRef.current &&
-      !notificationMoreOptionsWrapperRef.current.contains(relatedTarget) &&
-      !notificationsSectionRef.current.contains(relatedTarget))) {
+    if (relatedTarget === null ||
+      (relatedTarget !== notificationMoreOptionsWrapperRef.current &&
+        !relatedTarget.classList.contains('notification-button') &&
+        !notificationMoreOptionsWrapperRef.current.contains(relatedTarget) &&
+        !notificationsSectionRef.current.contains(relatedTarget))) {
       setIsNotificationOpen(false)
       hideNotificationMoreOptionsWrapper()
     }
@@ -109,7 +111,7 @@ function Notifications({ shortView, isNotificationOpen, setIsNotificationOpen })
       notificationsSectionRef.current.focus()
   }
   useEffect(() => {
-    if (shortView) {     
+    if (shortView) {
       if (isNotificationMoreOptionsWrapperClassList.includes('active')) {
         notificationsWrapperRef.current.onscroll = notificationsWrapperScrollHandler
       } else
@@ -117,15 +119,15 @@ function Notifications({ shortView, isNotificationOpen, setIsNotificationOpen })
 
       if (isNotificationOpen)
         notificationsSectionRef.current.focus()
-    }  
+    }
 
   }, [isNotificationOpen, isNotificationMoreOptionsWrapperClassList])
- 
- 
+
+
   return (
     <>
 
-      <section className={`notifications-section ${shortView ? 'short-view' : ''} ${isNotificationOpen ? 'active' : ''} flex-cm`} ref={notificationsSectionRef}  tabIndex='0' onBlur={shortView ? notificationsSectionBlurHandler : null}>
+      <section className={`notifications-section ${shortView ? 'short-view' : ''} ${isNotificationOpen ? 'active' : ''} flex-cm`} ref={notificationsSectionRef} tabIndex='0' onBlur={shortView ? notificationsSectionBlurHandler : null}>
 
         <nav className="flex-rw">
           <h1 className="heading">Notifications</h1>

@@ -1,13 +1,14 @@
 .accounts-section{
   width: 100vw;
   height: 100vh;
+  max-height: 500px;
 }
 .accounts-section > .form {
   width: 80%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2%  1%;
+  padding: 5vw 3vw 10vw 3vw;
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
   border-radius: 2vw;
    background-color: var(--container-bg-color);
@@ -17,14 +18,14 @@
   .accounts-section > .form>.heading {
   font-style: italic;
   color:var(--paragraph-color-primary);
-  font-size: 7vw;
-  margin-bottom: 2vh;
+  font-size: 9vw;
+  margin-bottom: 7vw;
   }
   
   .accounts-section > .form > .outlined-custom-field {
     width: 90%;
-    --input-font-size: 4vw;
-    --label-font-size: 3vw;
+    --input-font-size: 5vw;
+    --label-font-size: 4vw;
    }
    .accounts-section > .form > .outlined-custom-field > input{
      width: calc(100% - 4vw);
@@ -35,9 +36,23 @@
   color: red;
   font-size: 2.5vw;  
   margin-top: .3vw;
-  margin-bottom: 2vw;
   }
-  
+  .accounts-section > .form > .message:not(:last-of-type) {
+    margin-bottom: 2vw;
+  }
+  .accounts-section > .form > .links-container{
+    width: 90%;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5vw;
+  }
+  .accounts-section > .form > .links-container > a{
+   color: var(--theme-secondary-default);
+   text-decoration: none;
+   font-size: 4vw;
+  }
+
+/*   
   .accounts-section > .form > :is(.have-not-account, .already-have-account) {
   width: 90%;
   margin-bottom: 2vw;
@@ -45,7 +60,7 @@
   }
   .accounts-section > .form > :is(.have-not-account, .already-have-account) a{
     color: var(--theme-secondary-default);
-  }
+  } */
   
   .accounts-section > .form > button[type="submit"] {
     width: 90%;
@@ -60,3 +75,23 @@
     .accounts-section > .form :is(button[type="submit"]:hover,button[type="submit"]:active) {
     background-color: orange;
     }
+
+    .accounts-section > .form > .with-platform-wrapper{
+     margin-top: 5vw;
+     gap: 2vw;
+     width: 90%;
+    } 
+
+    .accounts-section > .form > .with-platform-wrapper > .title{
+     font-size: 4vw;      
+    } 
+    .accounts-section > .form > .with-platform-wrapper > .platforms-wrapper{
+      gap: 3vw;
+    } 
+    .accounts-section > .form > .with-platform-wrapper > .platforms-wrapper > .platform{
+     overflow: hidden;
+     border: none;
+     background-color: transparent;
+     width: 7vw;
+     height: 7vw;
+    } 

@@ -40,7 +40,7 @@ function Account() {
               <div className="value-wrapper">
                 <p className="value">********</p>
               </div>
-            <Link className="edit-button button">Change Password</Link>
+            <Link to='/accounts/change-password' className="edit-button button">Change Password</Link>
           </div>
 
         </div>

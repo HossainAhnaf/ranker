@@ -30,7 +30,7 @@ function ProfileMenu({ isMenuOpen, setIsMenuOpen }) {
   const profileMenuRef = useRef(null)
   const appearanceMenuButtonRef = useRef(null)
    const ProfileMenuBlurHandler = ({relatedTarget}) => {
-    if ( relatedTarget === null ||  !profileMenuRef.current.contains(relatedTarget))
+    if ( relatedTarget === null || (!relatedTarget.classList.contains('profile-button') && !profileMenuRef.current.contains(relatedTarget)))
       setIsMenuOpen(false)
     else{
       profileMenuRef.current.focus()
