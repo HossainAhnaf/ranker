@@ -4,7 +4,7 @@ import React from 'react';
 import OutlinedCustomField from '../../components/OutlinedCustomField';
 function ChangePassword() {
   return (
-    <form className="form change-password-form">
+    <form className="form password">
     <h2 className="heading">Change Password</h2>
     <OutlinedCustomField  className="current-password" placeholder="Current Password"  required={true}>
       <input type="password" placeholder=" "  required={true}/>

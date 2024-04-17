@@ -20,6 +20,7 @@ import Accounts from "../pages/Accounts/Accounts";
 import Signin from "../pages/Accounts/Signin";
 import Signup from "../pages/Accounts/Signup";
 import ChangePassword from "../pages/Accounts/ChangePassword";
+import ResetPassword from "../pages/Accounts/ResetPassword";
 export default createBrowserRouter(
   [
     {
@@ -93,9 +94,14 @@ export default createBrowserRouter(
               element: <Signin />
             },
             {
-              path: 'change-password',
+              path: 'password/change',
               element: <ChangePassword />
+            },
+            {
+              path: 'password/reset',
+              element: <ResetPassword />
             }
+         
           ]
         }
       ]

@@ -3,18 +3,24 @@
     padding: 20px 12px 45px 12px;
     border-radius: 8px;
     }
-    .accounts-section > .form.change-password-form {
-      padding: 30px 3vw 55px 3vw;
+    .accounts-section > .form.password {
+      padding: 30px 12px 55px 12px;
     }
   
     .accounts-section > .form>.heading {
     font-size: 33px;
     margin-bottom: 27px;
     }
-    .accounts-section > .form.change-password-form > .heading {
+    .accounts-section > .form.password> .heading {
       font-size: 26px;
+      padding-bottom: 12px;
     }
-    
+    .accounts-section > .form.password >.description{
+      width: calc(90% - 24px);
+      margin-bottom:22px ;
+      padding: 22px 12px;
+      font-size: 15px;
+    }
     .accounts-section > .form > .outlined-custom-field {
       --input-font-size: 19px;
       --label-font-size: 15px;

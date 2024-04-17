@@ -28,7 +28,7 @@ function Signin() {
       </small>
 
       <div className="links-container flex-rw">
-        <Link className="button">Forgot password?</Link>
+        <Link to="../password/reset" className="button">Forgot password?</Link>
       </div>
       <button className="button positive" type="submit">Confirm</button>
       <p className="link-wrapper">

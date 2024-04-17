@@ -17,8 +17,9 @@
    background-color: var(--container-bg-color);
   
   }
-  .accounts-section > .form.change-password-form {
+  .accounts-section > .form.password {
     padding: 8vw 3vw 15vw 3vw;
+    max-width: 300px;
   }
 
   .accounts-section > .form>.heading {
@@ -27,10 +28,20 @@
   font-size: 9vw;
   margin-bottom: 7vw;
   }
-  .accounts-section > .form.change-password-form > .heading {
+  .accounts-section > .form.password > .heading {
     font-size: 7vw;
+    width: 90%;
+  border-bottom: 1px solid lightgray;
+  padding-bottom: 3vw;
   }
-  
+  .accounts-section > .form.password >.description{
+    width: calc(90% - 6vw);
+    margin-bottom:6vw ;
+    background-color: #FFFFE0;
+    padding: 6vw 3vw;
+    border: 1px solid #E6DB55;
+    font-size: 4vw;
+  }
   .accounts-section > .form > .outlined-custom-field {
     width: 90%;
     --input-font-size: 5vw;
