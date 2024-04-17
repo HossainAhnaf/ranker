@@ -28,8 +28,9 @@ function ProfileMenu({ isMenuOpen, setIsMenuOpen }) {
   const dispatch = useDispatch()
 
   const profileMenuRef = useRef(null)
-   const ProfileMenuBlurHandler = (e) => {
-    if (e.relatedTarget === null)
+  const appearanceMenuButtonRef = useRef(null)
+   const ProfileMenuBlurHandler = ({relatedTarget}) => {
+    if ( relatedTarget === null ||  !profileMenuRef.current.contains(relatedTarget))
       setIsMenuOpen(false)
     else{
       profileMenuRef.current.focus()
@@ -40,7 +41,10 @@ function ProfileMenu({ isMenuOpen, setIsMenuOpen }) {
        profileMenuRef.current.focus()
      }
    },[isMenuOpen])
-
+useEffect(() => {
+  if (isMenuOpen === false)
+ appearanceMenuButtonRef.current.open = false
+},[isMenuOpen])
   return (
     <div className={`profile-menu ${isMenuOpen ? 'open' : ''} `} tabIndex='0' ref={profileMenuRef} onBlur={ProfileMenuBlurHandler} >
       <div className="primary flex-rw">
@@ -95,7 +99,7 @@ function ProfileMenu({ isMenuOpen, setIsMenuOpen }) {
           </span> <span className="name">Create new challenge</span>
         </NavLink>
 
-        <details className="appearance-menu-button">
+        <details className="appearance-menu-button" ref={appearanceMenuButtonRef}>
           <summary className='flex-rw button'>
             <span className="svgCont appearance-icon">
               <Icon src={moonSvg} />

@@ -2,7 +2,8 @@
 .create-new-challenge-section {
   --margin-top: calc(var(--nav-height) + var(--nav-vertical-padding));
   width: 100vw;
-  min-height: calc(100vh - var(--margin-top));
+  height: calc(100vh - var(--margin-top));
+  max-height: 600px;
   margin-top: var(--margin-top);
 }
 

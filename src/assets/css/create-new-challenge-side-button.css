@@ -19,7 +19,7 @@
 }
 
 .create-new-challenge-side-button.active{
-  background-color: white;
+  background-color: var(--layout-bg-color);
   right: 0;
 }
 .create-new-challenge-side-button.active:active{

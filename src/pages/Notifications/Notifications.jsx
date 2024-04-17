@@ -45,12 +45,13 @@ function Notifications({ shortView,isNotificationOpen,setIsNotificationOpen }) {
       setNotificationMoreOptionsWrapperOffset({top, left})
       currentActiveNotificationMoreButtonRef.current = currentActiveMoreButton
  
-      notificationMoreOptionsWrapperRef.current.onblur = ({ relatedTarget }) => {
-       
-        if (!notificationMoreOptionsWrapperRef.current.contains(relatedTarget) && (relatedTarget?.classList.contains('more-button') && relatedTarget !== currentActiveMoreButton) ) 
-        hideNotificationMoreOptionsWrapper()
-         else notificationMoreOptionsWrapperRef.current.focus()
-      }
+      // notificationMoreOptionsWrapperRef.current.onblur = ({ relatedTarget }) => {
+      //   console.log(relatedTarget);
+
+      //   if (!notificationMoreOptionsWrapperRef.current.contains(relatedTarget) && relatedTarget !== currentActiveMoreButton ) 
+      //   hideNotificationMoreOptionsWrapper()
+      //    else notificationMoreOptionsWrapperRef.current.focus()
+      // }
     }
   }
 
@@ -97,7 +98,9 @@ function Notifications({ shortView,isNotificationOpen,setIsNotificationOpen }) {
     } 
   } 
   const notificationsSectionBlurHandler = ({ relatedTarget }) => {
-    if (relatedTarget === null){
+    if (relatedTarget === null || (relatedTarget !== notificationMoreOptionsWrapperRef.current && 
+      !notificationMoreOptionsWrapperRef.current.contains(relatedTarget) &&
+      !notificationsSectionRef.current.contains(relatedTarget))){
       setIsNotificationOpen(false)
       hideNotificationMoreOptionsWrapper()
     }
