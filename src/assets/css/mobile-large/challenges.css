@@ -103,17 +103,20 @@
   }
 
   .challenges-section>.primary>.challenges-section-nav>.active-filters-list>.filter {
-    border-radius: 8px;
+    border-radius: 15px;
     padding: 4px 8px;
     font-size: 13px;
     gap: 7px;
   }
 
-  .challenges-section>.primary>.challenges-section-nav>.active-filters-list>.filter>.svgCont {
-    width: 15px;
-    height: 15px;
+  .challenges-section > .primary > .challenges-section-nav >.active-filters-list > .filter > .close-icon{
+    border-radius: 20px;
+   padding: 4px;
   }
-
+  .challenges-section > .primary > .challenges-section-nav >.active-filters-list > .filter > .close-icon > svg{
+    width: 12px;
+    height: 12px;
+  }
   .challenges-section>.primary>.challenge-cards-wrapper {
     gap: 15px;
     padding: 12px 0;

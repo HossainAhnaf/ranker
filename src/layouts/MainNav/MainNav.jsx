@@ -6,7 +6,6 @@ import { useSelector} from 'react-redux'
 //components
 import Primary from './Primary'
 import Secondary from './Secondary'
-import ChallengesSectionNav from '../../components/ChallengesSectionNav'
 //css
 import '../../assets/css/main-nav.css'
 import '../../assets/css/mobile-large/main-nav.css'

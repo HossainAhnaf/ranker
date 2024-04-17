@@ -106,13 +106,14 @@ height: 5vw;
  gap: 2vw;
  text-decoration: none;
  padding: 3vw 5vw;
- background-color: inherit;
+ background-color: var(--layout-bg-color);
  border-radius: 2vw;
 }
 .settings-section > .main-content > .navigation-buttons-wrapper > a.active{
  background-color:  rgba(255, 68, 0, 0.548);
  background: linear-gradient(-150deg, rgba(255, 0, 0, 0.534) 15%, rgba(255, 68, 0, 0.548) 70%, rgba(255, 166, 0, 0.534) 94%);
  color: white;
+ filter: unset !important;
 }
 
 .settings-section > .main-content > .navigation-buttons-wrapper > a > svg{
@@ -274,7 +275,7 @@ justify-content: flex-start;
   width: 30%;  
  }
  .settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content > .value-wrapper > .value-field.select > summary{
-   background-color: transparent;
+   background-color: var(--layout-bg-color);
  }
  .settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content > .value-wrapper > .value-field.select > .options-wrapper{
   background-color: var(--container-bg-color);
@@ -400,4 +401,6 @@ align-items: center;
 .settings-section > .main-content > .content >  .outlet-wrapper >  .notification-settings > .notification-type-container > .notification-type > .right > .checkbox-wrapper > input{
 width: 5vw;
 height: 5vw;
+cursor: pointer;
+
 } 

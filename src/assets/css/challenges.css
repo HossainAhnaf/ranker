@@ -105,15 +105,21 @@ width: calc(100% - 5vw);
  font-size: 3.5vw;
  gap: 2vw;
  display: none;
+
 }
 .challenges-section > .primary > .challenges-section-nav >.active-filters-list > .filter.active{
 display: flex;
-}
-.challenges-section > .primary > .challenges-section-nav >.active-filters-list > .filter > .svgCont{
-  width: 4vw;
-  height: 4vw;
-}
 
+}
+.challenges-section > .primary > .challenges-section-nav >.active-filters-list > .filter > .close-icon{
+  background-color: var(--header-bg-color);
+  border-radius: 5vw;
+ padding: 1vw;
+}
+.challenges-section > .primary > .challenges-section-nav >.active-filters-list > .filter > .close-icon > svg{
+  width: 3vw;
+  height: 3vw;
+}
 /* challenges cards wrapper */
 .challenges-section > .primary >.challenge-cards-wrapper {
   width: 100%;

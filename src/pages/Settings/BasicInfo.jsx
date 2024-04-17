@@ -29,11 +29,11 @@ function BasicInfo() {
               <p className="value">{currentName}</p>
               <input className='value-field' type="text" placeholder='name' onChange={({ target }) => setCurrentName(target.value)} value={currentName} />
               <div className="buttons-wrapper flex-rw center">
-                <button className="save-button positive">Save</button>
-                <button className="cancel-button negitive" onClick={(e) => cancleButtonClickHandler(e, 'name')} >Cancel</button>
+                <button className="save-button button positive">Save</button>
+                <button className="cancel-button button negitive" onClick={(e) => cancleButtonClickHandler(e, 'name')} >Cancel</button>
               </div>
             </div>
-            <button className="edit-button" onClick={editButtonClickHandler}>Edit</button>
+            <button className="edit-button button" onClick={editButtonClickHandler}>Edit</button>
           </div>
 
           <div className="content">
@@ -42,11 +42,11 @@ function BasicInfo() {
               <p className="value">{currentUsername}</p>
               <input className='value-field' type="text" placeholder='username'  onChange={({ target }) => setCurrentUsername(target.value)} value={currentUsername}  />
               <div className="buttons-wrapper flex-rw center">
-                <button className="save-button positive">Save</button>
-                <button className="cancel-button negitive" onClick={(e) => cancleButtonClickHandler(e, 'username')} >Cancel</button>
+                <button className="save-button button positive">Save</button>
+                <button className="cancel-button button negitive" onClick={(e) => cancleButtonClickHandler(e, 'username')} >Cancel</button>
               </div>
             </div>
-            <button className="edit-button" onClick={editButtonClickHandler}>Edit</button>
+            <button className="edit-button button" onClick={editButtonClickHandler}>Edit</button>
           </div>
 
           <div className="content">
@@ -54,15 +54,15 @@ function BasicInfo() {
             <div className="value-wrapper">
               <p className="value">{currentGender}</p>
               <Select className="value-field">
-               <span className={`option ${currentGender === 'Male' ? "selected" : ""}`} datavalue="Male">Male</span>
-              <span className={`option ${currentGender === 'Female' ? "selected" : ""}`} datavalue="Female">Female</span>
-              <span className={`option ${currentGender === 'Other' ? "selected" : ""}`} datavalue="Other">Other</span>
+               <span className={`option button ${currentGender === 'Male' ? "selected" : ""}`} datavalue="Male">Male</span>
+              <span className={`option button ${currentGender === 'Female' ? "selected" : ""}`} datavalue="Female">Female</span>
+              <span className={`option button ${currentGender === 'Other' ? "selected" : ""}`} datavalue="Other">Other</span>
             </Select>              <div className="buttons-wrapper flex-rw center">
-                <button className="save-button positive">Save</button>
-                <button className="cancel-button negitive" >Cancel</button>
+                <button className="save-button button positive">Save</button>
+                <button className="cancel-button button negitive" >Cancel</button>
               </div>
             </div>
-            <button className="edit-button" onClick={editButtonClickHandler}>Edit</button>
+            <button className="edit-button button" onClick={editButtonClickHandler}>Edit</button>
           </div>
 
         </div>

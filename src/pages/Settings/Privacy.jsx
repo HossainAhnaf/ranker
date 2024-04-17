@@ -26,14 +26,14 @@ function Privacy() {
             <p className="value">Yes</p>
             <Select className="value-field ">
               <span  className={`option selected`} datavalue="Yes">Yes</span>
-              <span className={`option `} datavalue="No">No</span>
+              <span className={`option button`} datavalue="No">No</span>
             </Select>
             <div className="buttons-wrapper flex-rw center">
-              <button className="save-button positive">Save</button>
-              <button className="cancel-button negitive" onClick={(e)=>cancleButtonClickHandler(e,'username')}>Cancel</button>
+              <button className="save-button button positive">Save</button>
+              <button className="cancel-button button negitive" onClick={(e)=>cancleButtonClickHandler(e,'username')}>Cancel</button>
             </div>
            </div>
-            <button className="edit-button" onClick={editButtonClickHandler}>Edit</button>
+            <button className="edit-button button" onClick={editButtonClickHandler}>Edit</button>
           </div>
         </div>
         

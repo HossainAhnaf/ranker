@@ -22,9 +22,9 @@ export function StepElementOne({title,addDiscription,description,updateFields}) 
             <OutlinedCustomField className="description-field" placeholder="Description"  >
               <textarea placeholder=" " maxLength={200} rows={4} onChange={(e) => updateFields({description:e.target.value})} value={description}></textarea>
             </OutlinedCustomField>
-            <button className="add-remove-button" onClick={() =>{ updateFields({addDiscription:false}); updateFields({description:''})}}>Remove -</button>
+            <button className="add-remove-button button" onClick={() =>{ updateFields({addDiscription:false}); updateFields({description:''})}}>Remove -</button>
           </>
-          : <button className="add-remove-button" onClick={()=>updateFields({addDiscription:true})}>Add description +</button>
+          : <button className="add-remove-button button" onClick={()=>updateFields({addDiscription:true})}>Add description +</button>
       }
 
     </div>
@@ -44,17 +44,17 @@ export function StepElementTwo({difficulty,  pinned,addDueDate, updateFields}) {
       <OutlinedCustomField className="title" placeholder="Due date" >
         <input type="date" placeholder=" " />
       </OutlinedCustomField>
-      <button className="add-remove-button" onClick={() => updateFields({addDueDate:false})}>Remove -</button>
+      <button className="add-remove-button button" onClick={() => updateFields({addDueDate:false})}>Remove -</button>
     </>
-    : <button className="add-remove-button" onClick={() => updateFields({addDueDate:true})}>Add due date +</button>
+    : <button className="add-remove-button button" onClick={() => updateFields({addDueDate:true})}>Add due date +</button>
 }
 <div className="difficulty-label flex-rw ">
   <span className="name">Difficulty</span>
-  <Select onChange={(value)=>updateFields({difficulty:value})}>
-    <span datavalue="easy" dataselectedclassnames="easy" className={`option easy ${difficulty === "easy" ? 'selected':''}`}>Easy</span>
-    <span datavalue="medium" dataselectedclassnames="medium" className={`option medium ${difficulty === "medium" ? 'selected':''}`}>Medium</span>
-    <span datavalue="hard" dataselectedclassnames="hard" className={`option hard ${difficulty === "hard" ? 'selected':''}`}>Hard</span>
-    <span datavalue="crazy" dataselectedclassnames="crazy" className={`option crazy ${difficulty === "crazy" ? 'selected':''}`}>Crazy</span>
+  <Select  onChange={(value)=>updateFields({difficulty:value})}>
+    <span datavalue="easy" dataselectedclassnames="easy" className={`option button easy ${difficulty === "easy" ? 'selected':''}`}>Easy</span>
+    <span datavalue="medium" dataselectedclassnames="medium" className={`option button medium ${difficulty === "medium" ? 'selected':''}`}>Medium</span>
+    <span datavalue="hard" dataselectedclassnames="hard" className={`option button hard ${difficulty === "hard" ? 'selected':''}`}>Hard</span>
+    <span datavalue="crazy" dataselectedclassnames="crazy" className={`option button crazy ${difficulty === "crazy" ? 'selected':''}`}>Crazy</span>
   </Select>
 </div>
 <div className="pinned-field flex-rw ">

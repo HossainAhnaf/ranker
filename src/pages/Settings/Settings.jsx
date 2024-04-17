@@ -69,19 +69,19 @@ const editButtonClickHandler = ({currentTarget}) => {
       </div>
      <div className="main-content flex-rw">
       <div className="navigation-buttons-wrapper flex-cm ">
-        <NavLink to='/settings' end={true} className={useActiveClassName} onClick={()=>setIsContentActive(true)} >
+        <NavLink to='/settings' end={true} className={(state)=>useActiveClassName(state,'button')} onClick={()=>setIsContentActive(true)} >
           <Icon src={profileSvg} />
           Basic info
           </NavLink>
-        <NavLink to='account' className={useActiveClassName} onClick={()=>setIsContentActive(true)}>
+        <NavLink to='account' className={(state)=>useActiveClassName(state,'button')} onClick={()=>setIsContentActive(true)}>
           <Icon src={settingsSvg} />
           Account
           </NavLink>
-        <NavLink to='privacy' className={useActiveClassName} onClick={()=>setIsContentActive(true)}>
+        <NavLink to='privacy' className={(state)=>useActiveClassName(state,'button')} onClick={()=>setIsContentActive(true)}>
           <Icon src={securityShieldSvg} />
           Privacy
           </NavLink>
-        <NavLink to='notifications' className={useActiveClassName} onClick={()=>setIsContentActive(true)} datalarge='true'>
+        <NavLink to='notifications' className={(state)=>useActiveClassName(state,'button')} onClick={()=>setIsContentActive(true)} datalarge='true'>
           <Icon src={notificationSvg} />
           Notifications
           </NavLink>

@@ -28,11 +28,11 @@ function Account() {
               <p className="value">{currentEmail}</p>
               <input className='value-field' type="text" placeholder='username' onChange={({target})=>setCurrentEmail(target.value)} value={currentEmail}  />
               <div className="buttons-wrapper flex-rw center">
-                <button className="save-button positive">Save</button>
-                <button className="cancel-button negitive" onClick={(e)=>cancleButtonClickHandler(e,'email')} >Cancel</button>
+                <button className="save-button button positive">Save</button>
+                <button className="cancel-button button negitive" onClick={(e)=>cancleButtonClickHandler(e,'email')} >Cancel</button>
               </div>
             </div>
-            <button className="edit-button" onClick={editButtonClickHandler}>Edit</button>
+            <button className="edit-button button" onClick={editButtonClickHandler}>Edit</button>
           </div>
 
           <div className="content">
@@ -40,7 +40,7 @@ function Account() {
               <div className="value-wrapper">
                 <p className="value">********</p>
               </div>
-            <Link className="edit-button">Change Password</Link>
+            <Link className="edit-button button">Change Password</Link>
           </div>
 
         </div>
@@ -59,7 +59,7 @@ function Account() {
            <div className="value-wrapper">
             <p className="value connected">connected</p>
             </div> 
-            <button className="connect-disconnect-button">Disconnect</button>
+            <button className="connect-disconnect-button button">Disconnect</button>
 
           </div>
 
@@ -73,12 +73,12 @@ function Account() {
            <div className="value-wrapper">
             <p className="value not-connected">Not connected</p>
             </div> 
-            <button className="connect-disconnect-button">Connect</button>
+            <button className="connect-disconnect-button button">Connect</button>
 
           </div>
         </div>
       </section>
-      <button className="delete-account-button">Delete Account</button>
+      <button className="delete-account-button button">Delete Account</button>
     </div>
   )
 }

@@ -39,8 +39,8 @@ export default function Select({ className, onChange, children }) {
   return (
     <>
     
-      <details className={`select ${className ? className : ''}`} ref={selectRef}>
-        <summary className={`${selectedClassNames ? selectedClassNames : ''} flex-rw`} >
+      <details className={`select ${className}`} ref={selectRef}>
+        <summary className={`${selectedClassNames ? selectedClassNames : ''} button flex-rw`} >
           {selectedOptionText}
           <span className="svgCont">
             <Icon src={dropDownSvg} />
@@ -57,3 +57,6 @@ export default function Select({ className, onChange, children }) {
   )
 }
 
+Select.defaultProps = {
+  className: ''
+}

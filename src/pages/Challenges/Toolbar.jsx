@@ -52,36 +52,36 @@ function Toolbar() {
           <span className="value">x1</span>
         </span>
       </div>
-      <MenuButton label="Difficulty" optionsType="button-type" onChange={(value)=>addFilter('difficulty',value)}>
-        <span datavalue="easy" className="option easy">Easy
+      <MenuButton  label="Difficulty" optionsType="button-type"  onChange={(value)=>addFilter('difficulty',value)}>
+        <span datavalue="Easy" className="option button easy">Easy
           <Icon src={tickSvg} />
         </span>
-        <span datavalue="medium" className="option medium">Medium
+        <span datavalue="Medium" className="option button medium">Medium
           <Icon src={tickSvg} />
         </span>
-        <span datavalue="hard" className="option hard">Hard
+        <span datavalue="Hard" className="option button hard">Hard
           <Icon src={tickSvg} />
         </span>
       </MenuButton>
 
-      <MenuButton label="Sort by" optionsType="button-type" onChange={(value)=>addFilter('sort-by',value)}>
-        <span datavalue="Ordered" className="option selected">
+      <MenuButton  label="Sort by" optionsType="button-type" onChange={(value)=>addFilter('sort-by',value)}>
+        <span datavalue="Ordered" className="option button selected">
           Ordered
           <Icon src={tickSvg} />
         </span>
-        <span datavalue="Difficulty" className="option">
+        <span datavalue="Difficulty" className="option button">
           Difficulty
           <Icon src={tickSvg} />
         </span>
       </MenuButton>
 
-      <MenuButton label="Features" optionsType="checkbox-type" onChange={(type,value)=>addFilter(type,value)}>
-        <label datavalue='Due Date' datatype="due-date" className="option ">
+      <MenuButton  label="Features" optionsType="checkbox-type" onChange={(type,value)=>addFilter(type,value)}>
+        <label datavalue='Due Date' datatype="due-date" className="option button ">
           <input type="checkbox" hidden />
           <span>Due Date</span>
 
         </label>
-        <label datavalue='Pinned' datatype="pinned" className="option">
+        <label datavalue='Pinned' datatype="pinned" className="option button">
           <input type="checkbox" hidden />
           <span>Pinned</span>
         </label>
@@ -105,25 +105,25 @@ function Toolbar() {
            </span>
            <span className="filter difficulty flex-rw center">
             <span>Easy</span>
-            <span className="svgCont" onClick={()=>removeFilter("difficulty")}>
+            <span className="close-icon flex-rw center button" onClick={()=>removeFilter("difficulty")}>
             <Icon src={closeSvg} />
             </span>
            </span>      
            <span className="filter pinned flex-rw center">
             <span>Pinned</span>
-            <span className="svgCont" onClick={()=>removeFilter('pinned')}>
+            <span className="close-icon flex-rw center button" onClick={()=>removeFilter('pinned')}>
             <Icon src={closeSvg} />
             </span>
            </span>
            <span className="filter due-date flex-rw center">
             <span>Due date</span>
-            <span className="svgCont" onClick={()=>removeFilter('due-date')}>
+            <span className="close-icon flex-rw center button" onClick={()=>removeFilter('due-date')}>
             <Icon src={closeSvg} />
             </span>
            </span>
            <span className="filter search flex-rw center">
             <span></span>
-            <span className="svgCont" onClick={()=>removeFilter('search')}>
+            <span className="close-icon flex-rw center button" onClick={()=>removeFilter('search')}>
             <Icon src={closeSvg} />
             </span>
            </span>
@@ -134,18 +134,4 @@ function Toolbar() {
 }
 
 
-export default ChallengesSectionNav
-
-
-
-// <div className="challenges-search-form flex-rw center left">
-//       <input type="text" placeholder="Type here to search.." />
-//       <div className="button-container flex-rw center">
-//           <button className="search-button flex-rw center  button" type="submit">
-//               <Icon src={searchSvg} />
-//           </button>
-//           <button className="filter-button flex-rw center positive button" onClick={() => dispatch(showFilterOption())}>
-//               <Icon src={filterSvg} />
-//           </button>
-//       </div>
-//   </div>
+export default Toolbar

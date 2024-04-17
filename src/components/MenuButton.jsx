@@ -6,7 +6,7 @@ import Icon from 'react-inlinesvg'
 import '../assets/css/menu-button.css'
 //svg
 import dropDownSvg from '../assets/svg/drop-down.svg'
-function MenuButton({children,label,optionsType,onChange}) {
+function MenuButton({children,label,optionsType,onChange,className}) {
   const menuButtonRef = useRef(null)
   const menuOptionsWrapperRef = useRef(null)
 
@@ -57,8 +57,8 @@ function MenuButton({children,label,optionsType,onChange}) {
     menuOptionsWrapperRef.current.focus()
   },[open])
   return (
-    <div className={`menu-button-wrapper ${open ? 'open' : ''}`}>
-    <div className="menu-button flex-rw" ref={menuButtonRef} >
+    <div className={`menu-button-wrapper ${open ? 'open' : ''} ${className}`}>
+    <div className="menu-button button flex-rw" ref={menuButtonRef} >
       <span>{label}</span>
       <span className="svgCont">
         <Icon src={dropDownSvg} />
@@ -72,6 +72,7 @@ function MenuButton({children,label,optionsType,onChange}) {
 }
 
 MenuButton.defaultProps = {
-  optionsType: 'button-type'
+  optionsType: 'button-type',
+  className: ''
 }
 export default MenuButton
