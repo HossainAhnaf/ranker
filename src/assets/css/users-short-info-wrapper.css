@@ -1,5 +1,6 @@
 .users-short-info-wrapper {
     gap: 5vw;
+    flex-wrap: wrap;
 }
 .users-short-info-wrapper > a{
     color: inherit;
@@ -26,8 +27,9 @@
    width: 13vw;
    height: 13vw;
    border-width: .5vw;
-   --level-badge-font-size: 2vw;
-  } 
+   --level-badge-font-size: 2.5vw;
+   --badge-border-color:var(--container-bg-color);
+    } 
   
   .users-short-info-wrapper .user-short-info >  .info-wrapper > .name{
     font-size: 5vw;
@@ -38,4 +40,8 @@
     color: var(--paragraph-color-secondary);
    font-size: 3.5vw;
   }  
-  
+  @media screen and (min-width: 700px) {
+    .users-short-info-wrapper > a{
+      width: 270px;
+    }
+  }

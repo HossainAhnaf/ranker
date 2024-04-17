@@ -4,12 +4,13 @@ import { Link } from 'react-router-dom'
 import UserAvatar from './UserAvatar'
 //css
 import '../assets/css/users-short-info-wrapper.css'
+import '../assets/css/mobile-large/users-short-info-wrapper.css'
 function UsersShortInfoWrapper({userList}) {
   return (
-    <div className="users-short-info-wrapper flex-cm center">
+    <div className="users-short-info-wrapper flex-rw center">
     {userList.map((user, index) => {
       return (
-        <Link to={`/profile/${user.username}`} key={index}>
+        <Link to={`/profile/${user.username}`} key={index} className='button'>
           <div className="user-short-info flex-rw">
               <UserAvatar avatar={user.avatar} status={user.status} level={user.level} />
               <div className="info-wrapper flex-cm">

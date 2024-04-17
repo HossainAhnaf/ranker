@@ -3,48 +3,32 @@
     margin-top: calc(var(--nav-vertical-padding) + var(--nav-height) + 40px);
 }
 .peoples-section > .search-bar-wrapper {
-    width: 85%;
-    margin: 7vw auto;
-    background-color: var(--container-bg-color-secondary);
-    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5);
-    border-radius: 5vw;
-    justify-content: start;
-    align-items: center;
+    margin: 26px auto;
+    border-radius: 20px;
+    padding:0 12px;
+
   }
-  .peoples-section > .search-bar-wrapper > .search-bar {
+.peoples-section > .search-bar-wrapper > .search-bar {
     width: 85%;
-    height: 8vw;
-    font-size: 4vw;
-    padding:0 3vw;
-    border: none;
-    outline: none;
-    background-color: transparent;
-    align-self: flex-start;
-    color: var(--paragraph-color-primary);
+    height: 29px;
+    font-size: 15px;
   }
-  .peoples-section > .search-bar-wrapper > .close-button {
-     width:4vw;
-     height:4vw;
-     background-color: transparent;
-     border: none;
-     display: none;
-     color: var(--paragraph-color-primary);
-    }
-    .peoples-section > .search-bar-wrapper > .search-bar:not(:placeholder-shown) + .close-button {
-        display: flex;
-    } 
+.peoples-section > .search-bar-wrapper > .close-button {
+     width:15px;   
+     height:15px;
+  }
+ 
 
 .peoples-section > .search-results{
     width: 90%;
     margin: 0 auto;
-    gap: 4vw;
-    margin-bottom: 8vw;
+    gap: 15px;
+    margin-bottom: 30px;
 
 }
 .peoples-section > .search-results > .users-short-info-wrapper{
     width: 90%;
     margin: 0 auto
-
 }
 .peoples-section > .recent-searches{
     width: 90%;
@@ -52,10 +36,8 @@
 }
 
 .peoples-section > .recent-searches > .title{
-    font-size: 5vw;
-    font-weight: 600;
-    color: var(--paragraph-color-secondary);
-    margin-bottom: 4vw;
+    font-size: 19px;
+    margin-bottom: 15px;
 }
 
 .peoples-section > .recent-searches > .users-short-info-wrapper{

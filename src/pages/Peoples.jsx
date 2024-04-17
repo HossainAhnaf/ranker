@@ -16,12 +16,12 @@ function Peoples() {
   const [userList, setUserList] = useState(allUsers)
   return (
     <section className="peoples-section">
-      <div className="search-bar-wrapper flex-rw">
+      <label className="search-bar-wrapper flex-rw">
         <input className='search-bar'  type="text"  placeholder="Search" />
         <button className="close-button button flex-rw center" >
           <Icon src={closeSvg} />
         </button>
-      </div>
+      </label>
 
      <div className="search-results">
      <UsersShortInfoWrapper userList={userList.slice(0,0)} />

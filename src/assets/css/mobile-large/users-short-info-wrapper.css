@@ -1,0 +1,25 @@
+@media screen and (min-width: 375px) {  
+.users-short-info-wrapper {
+    gap: 20px;
+}
+.users-short-info-wrapper .user-short-info{
+    width: calc(100% - 30px);
+    padding: 8px 15px;
+    border-radius: 12px;
+    gap: 6px;
+  }
+  .users-short-info-wrapper .user-short-info >  .user-avatar{
+   width: 48px;
+   height: 48px;
+   border-width: 1px;
+   --level-badge-font-size: 8px;
+  } 
+  
+  .users-short-info-wrapper .user-short-info >  .info-wrapper > .name{
+    font-size: 19px;
+  }
+  
+  .users-short-info-wrapper .user-short-info >   .info-wrapper > .username{
+   font-size: 14px;
+  }  
+}
