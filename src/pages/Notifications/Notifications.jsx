@@ -17,7 +17,7 @@ import removeAllSvg from '../../assets/svg/remove-all.svg'
 //css
 import '../../assets/css/notifications.css'
 import '../../assets/css/mobile-large/notifications.css'
-function Notifications({ shortView,isNotificationOpen,setIsNotificationOpen }) {
+function Notifications({ shortView, isNotificationOpen, setIsNotificationOpen }) {
   const navigate = useNavigate()
 
   const notificationsSectionRef = useRef(null)
@@ -27,31 +27,33 @@ function Notifications({ shortView,isNotificationOpen,setIsNotificationOpen }) {
   const [isNotificationMoreOptionsWrapperClassList, setIsNotificationMoreOptionsWrapperClassList] = useState([])
   const currentActiveNotificationMoreButtonRef = useRef(null)
   const [notificationMoreOptionsWrapperOffset, setNotificationMoreOptionsWrapperOffset] = useState({
-  top: 0,
-  left: 0
- })
- const hideNotificationMoreOptionsWrapper = ()=>{
-  currentActiveNotificationMoreButtonRef.current?.classList.remove('active')
-  setIsNotificationMoreOptionsWrapperClassList([])
-  currentActiveNotificationMoreButtonRef.current = null
- }
-  const notificationMoreButtonClickHandler = ({ currentTarget:currentActiveMoreButton }, isUnread) => {  
-    if (currentActiveMoreButton.classList.contains('active')) 
-    hideNotificationMoreOptionsWrapper()
+    top: 0,
+    left: 0
+  })
+  const hideNotificationMoreOptionsWrapper = () => {
+    currentActiveNotificationMoreButtonRef.current?.classList.remove('active')
+    setIsNotificationMoreOptionsWrapperClassList([])
+    currentActiveNotificationMoreButtonRef.current = null
+  }
+  const notificationMoreButtonClickHandler = ({ currentTarget: currentActiveMoreButton }, isUnread) => {
+    if (currentActiveMoreButton.classList.contains('active'))
+      hideNotificationMoreOptionsWrapper()
     else {
+      notificationsWrapperRef.current.querySelector('.notification > .more-button.active')?.classList.remove('active')
+
       currentActiveMoreButton.classList.add('active')
       setIsNotificationMoreOptionsWrapperClassList(['active', isUnread ? 'unread' : ''])
       const { top, left } = currentActiveMoreButton.getBoundingClientRect()
-      setNotificationMoreOptionsWrapperOffset({top, left})
+      setNotificationMoreOptionsWrapperOffset({ top, left })
       currentActiveNotificationMoreButtonRef.current = currentActiveMoreButton
- 
-      // notificationMoreOptionsWrapperRef.current.onblur = ({ relatedTarget }) => {
-      //   console.log(relatedTarget);
 
-      //   if (!notificationMoreOptionsWrapperRef.current.contains(relatedTarget) && relatedTarget !== currentActiveMoreButton ) 
-      //   hideNotificationMoreOptionsWrapper()
-      //    else notificationMoreOptionsWrapperRef.current.focus()
-      // }
+
+      notificationMoreOptionsWrapperRef.current.onblur = ({ relatedTarget }) => {
+       console.log(relatedTarget);
+        if (relatedTarget === null  || (relatedTarget?.classList.contains('more-button') && relatedTarget !== currentActiveMoreButton )) 
+        hideNotificationMoreOptionsWrapper()
+         else notificationMoreOptionsWrapperRef.current.focus()
+      }
     }
   }
 
@@ -88,19 +90,19 @@ function Notifications({ shortView,isNotificationOpen,setIsNotificationOpen }) {
   }
 
   const notificationsWrapperScrollHandler = (e) => {
-    const { top,left } = currentActiveNotificationMoreButtonRef.current.getBoundingClientRect()
-    const {bottom,height} = notificationMoreOptionsWrapperRef.current.getBoundingClientRect()
-    setNotificationMoreOptionsWrapperOffset({top,left})
+    const { top, left } = currentActiveNotificationMoreButtonRef.current.getBoundingClientRect()
+    const { bottom, height } = notificationMoreOptionsWrapperRef.current.getBoundingClientRect()
+    setNotificationMoreOptionsWrapperOffset({ top, left })
     if (top - height <= -5 || bottom >= e.currentTarget.getBoundingClientRect().bottom) {
       currentActiveNotificationMoreButtonRef.current.classList.remove('active')
       setIsNotificationMoreOptionsWrapperClassList([])
       currentActiveNotificationMoreButtonRef.current = null
-    } 
-  } 
+    }
+  }
   const notificationsSectionBlurHandler = ({ relatedTarget }) => {
-    if (relatedTarget === null || (relatedTarget !== notificationMoreOptionsWrapperRef.current && 
+    if (relatedTarget === null || (relatedTarget !== notificationMoreOptionsWrapperRef.current &&
       !notificationMoreOptionsWrapperRef.current.contains(relatedTarget) &&
-      !notificationsSectionRef.current.contains(relatedTarget))){
+      !notificationsSectionRef.current.contains(relatedTarget))) {
       setIsNotificationOpen(false)
       hideNotificationMoreOptionsWrapper()
     }
@@ -108,23 +110,24 @@ function Notifications({ shortView,isNotificationOpen,setIsNotificationOpen }) {
       notificationsSectionRef.current.focus()
   }
   useEffect(() => {
-    if (shortView){
-      if (isNotificationMoreOptionsWrapperClassList.includes('active')){
-      notificationsWrapperRef.current.onscroll = notificationsWrapperScrollHandler
-    }else 
-     notificationsWrapperRef.current.onscroll = null
-     
-     if (isNotificationOpen)
-     notificationsSectionRef.current.focus()
-     
-     
-     }
+    if (shortView) {
+      notificationsSectionRef.current.onBlur = notificationsSectionBlurHandler
+      if (isNotificationMoreOptionsWrapperClassList.includes('active')) {
+        notificationsWrapperRef.current.onscroll = notificationsWrapperScrollHandler
+      } else
+        notificationsWrapperRef.current.onscroll = null
 
-  },[isNotificationOpen,isNotificationMoreOptionsWrapperClassList])
+      if (isNotificationOpen)
+        notificationsSectionRef.current.focus()
+    } else
+      notificationsSectionRef.current.onBlur = null
+
+
+  }, [isNotificationOpen, isNotificationMoreOptionsWrapperClassList])
   return (
     <>
-     
-      <section className={`notifications-section ${shortView ? 'short-view' : ''} ${isNotificationOpen ? 'active' : ''} flex-cm`} ref={notificationsSectionRef} tabIndex='0' onBlur={notificationsSectionBlurHandler}>
+
+      <section className={`notifications-section ${shortView ? 'short-view' : ''} ${isNotificationOpen ? 'active' : ''} flex-cm`} ref={notificationsSectionRef} tabIndex='0'>
 
         <nav className="flex-rw">
           <h1 className="heading">Notifications</h1>
@@ -133,7 +136,7 @@ function Notifications({ shortView,isNotificationOpen,setIsNotificationOpen }) {
               <button className="active  button">All</button>
               <button className="button">Unread</button>
             </div>
-            { !shortView &&
+            {!shortView &&
               <>
                 <button className="more-button button svgCont" onClick={navMoreButtonClickHandler}>
                   <Icon src={moreSvg} />
@@ -153,8 +156,8 @@ function Notifications({ shortView,isNotificationOpen,setIsNotificationOpen }) {
                     <Link to="/settings/notifications">Notifications Settings</Link>
                   </button>
                 </div>
-                </>
-     }
+              </>
+            }
           </div>
         </nav>
 
@@ -194,20 +197,20 @@ function Notifications({ shortView,isNotificationOpen,setIsNotificationOpen }) {
           </div>
 
         </div>
-      { 
-      shortView &&
-       <div className="bottom-buttons-container flex-rw">
-        <Link className="settings-button flex-rw center button" to="/settings/notifications">
-          <Icon src={settingsSvg} />
-        </Link>
+        {
+          shortView &&
+          <div className="bottom-buttons-container flex-rw">
+            <Link className="settings-button flex-rw center button" to="/settings/notifications">
+              <Icon src={settingsSvg} />
+            </Link>
 
-        <Link className="see-all-button button" to="/notifications">See all</Link>
-       </div>
-       }
+            <Link className="see-all-button button" to="/notifications" onClick={hideNotificationMoreOptionsWrapper}>See all</Link>
+          </div>
+        }
       </section>
-      
-      <NotificationMoreOptionsWrapper ref={notificationMoreOptionsWrapperRef}  classList={isNotificationMoreOptionsWrapperClassList}  offset={notificationMoreOptionsWrapperOffset} />
-     
+
+      <NotificationMoreOptionsWrapper ref={notificationMoreOptionsWrapperRef} classList={isNotificationMoreOptionsWrapperClassList} offset={notificationMoreOptionsWrapperOffset} />
+
     </>
   )
 }
