@@ -6,8 +6,10 @@ import { Link } from 'react-router-dom';
 import OutlinedCustomField from '../../components/OutlinedCustomField';
 import Icon from 'react-inlinesvg';
 //svg
-import googleSvg from '../../assets/svg/google.svg';
 import facebookSvg from '../../assets/svg/facebook.svg';
+import twitterSvg from '../../assets/svg/twitter.svg';
+import googleSvg from '../../assets/svg/google.svg';
+import linkedinSvg from '../../assets/svg/linkedin.svg';
 function Signin() {
   return (
     <form className="form signin-form">
@@ -25,19 +27,35 @@ function Signin() {
     <small className="message">&nbsp;</small>
 
     <div className="links-container flex-rw">
-    <Link to="../signup" className='signup'>Sign up</Link>
-     <Link className="forgot-password">Forgot password?</Link>
+     <Link className="button">Forgot password?</Link>
     </div>
     <button className="button positive" type="submit">Confirm</button>
-      <div className="with-platform-wrapper flex-cm center">
-          <p className='title'>Or Sign In With</p>
-         <div className="platforms-wrapper flex-rw">          
-          <button className="platform button svgCont">
+    <p className="link-wrapper">
+    Don't have an account? <Link to="../signup" className='button'>Sign Up Now</Link>
+    </p>
+   
+    <div className="or">
+          <span className="border"></span>
+          <p>Or</p>  
+        </div>
+
+      <div className="with-social-media-container flex-cm center">
+        <p className="title">Continue with social media</p>
+         <div className="platforms-wrapper flex-rw">
+         <button className="platform button">
+            <Icon src={facebookSvg} />
+          </button>  
+          <button className="platform button">
+            <Icon src={twitterSvg} />
+          </button>  
+    
+          <button className="platform button">
             <Icon src={googleSvg} />
           </button>
-          <button className="platform button svgCont">
-            <Icon src={facebookSvg} />
-             </button>  
+          <button className="platform button">
+            <Icon src={linkedinSvg} />
+          </button>  
+                   
           </div> 
 
       </div>

@@ -1,7 +1,7 @@
 .accounts-section{
   width: 100vw;
   height: 100vh;
-  max-height: 500px;
+  max-height: 700px;
 }
 .accounts-section > .form {
   width: 80%;
@@ -42,7 +42,7 @@
   }
   .accounts-section > .form > .links-container{
     width: 90%;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     margin-bottom: 5vw;
   }
@@ -52,16 +52,7 @@
    font-size: 4vw;
   }
 
-/*   
-  .accounts-section > .form > :is(.have-not-account, .already-have-account) {
-  width: 90%;
-  margin-bottom: 2vw;
-  font-size: 4vw;
-  }
-  .accounts-section > .form > :is(.have-not-account, .already-have-account) a{
-    color: var(--theme-secondary-default);
-  } */
-  
+   
   .accounts-section > .form > button[type="submit"] {
     width: 90%;
     font-weight: bold;
@@ -70,28 +61,66 @@
     padding: 2vw;
     border: none;
     border-radius: 1vw;
-    font-size: 3vw;
+    font-size: 4vw;
     }
     .accounts-section > .form :is(button[type="submit"]:hover,button[type="submit"]:active) {
     background-color: orange;
     }
+    .accounts-section > .form >.link-wrapper{
+      width: 80%;
+      font-size: 4vw;
+      margin-top: 3vw;
+    }
+    .accounts-section > .form >.link-wrapper > a{
+     text-decoration: none;
+     color: var(--theme-secondary-default);
+     font-weight: bold;
+     margin-left: 2vw;
+    }
 
-    .accounts-section > .form > .with-platform-wrapper{
-     margin-top: 5vw;
-     gap: 2vw;
+    .accounts-section > .form >  .or{
+      font-size: 4vw;      
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 10vw 0;
+     }
+     .accounts-section > .form >  .or > p{
+       position: absolute;
+       color: lightgray;
+       background-color: var(--container-bg-color);
+       padding: 0 3vw;
+     }
+     .accounts-section > .form >  .or > .border{
+       width: 100%;
+       border-bottom: 1px solid lightgray;
+     }
+ 
+
+    .accounts-section > .form > .with-social-media-container{
+     gap: 4vw;
      width: 90%;
     } 
-
-    .accounts-section > .form > .with-platform-wrapper > .title{
-     font-size: 4vw;      
+    .accounts-section > .form > .with-social-media-container .title{
+    color: var(--paragraph-color-secondary);
+    font-size: 4vw;
+    }
+    .accounts-section > .form > .with-social-media-container > .platforms-wrapper{
+      gap: 5vw;
     } 
-    .accounts-section > .form > .with-platform-wrapper > .platforms-wrapper{
-      gap: 3vw;
-    } 
-    .accounts-section > .form > .with-platform-wrapper > .platforms-wrapper > .platform{
+    .accounts-section > .form > .with-social-media-container > .platforms-wrapper > .platform{
      overflow: hidden;
      border: none;
-     background-color: transparent;
-     width: 7vw;
-     height: 7vw;
+     background-color: white;
+     box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5);
+     border-radius: 100%;
+     padding: 3vw;
+     display: flex;
+     justify-content: center;
+     align-items: center;
     } 
+    .accounts-section > .form > .with-social-media-container > .platforms-wrapper > .platform > svg{
+      width: 6vw;
+      height: 6vw;
+    }
