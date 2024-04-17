@@ -3,10 +3,16 @@
     padding: 20px 12px 45px 12px;
     border-radius: 8px;
     }
-    
+    .accounts-section > .form.change-password-form {
+      padding: 30px 3vw 55px 3vw;
+    }
+  
     .accounts-section > .form>.heading {
     font-size: 33px;
     margin-bottom: 27px;
+    }
+    .accounts-section > .form.change-password-form > .heading {
+      font-size: 26px;
     }
     
     .accounts-section > .form > .outlined-custom-field {

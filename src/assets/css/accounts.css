@@ -6,7 +6,7 @@
 
 .accounts-section > .form {
   width: 80%;
-  max-width: 500px;
+  max-width: 400px;
 
   display: flex;
   flex-direction: column;
@@ -17,12 +17,18 @@
    background-color: var(--container-bg-color);
   
   }
-  
+  .accounts-section > .form.change-password-form {
+    padding: 8vw 3vw 15vw 3vw;
+  }
+
   .accounts-section > .form>.heading {
   font-style: italic;
   color:var(--paragraph-color-primary);
   font-size: 9vw;
   margin-bottom: 7vw;
+  }
+  .accounts-section > .form.change-password-form > .heading {
+    font-size: 7vw;
   }
   
   .accounts-section > .form > .outlined-custom-field {
