@@ -1,10 +1,13 @@
 .accounts-section{
   width: 100vw;
   height: 100vh;
-  max-height: 700px;
+  max-height: 800px;
 }
+
 .accounts-section > .form {
   width: 80%;
+  max-width: 500px;
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -80,7 +83,7 @@
 
     .accounts-section > .form >  .or{
       font-size: 4vw;      
-      width: 100%;
+      width: 90%;
       display: flex;
       justify-content: center;
       align-items: center;

@@ -1,38 +1,70 @@
 @media screen  and (min-width: 375px) {
   .accounts-section > .form {
-    /* margin: 0 auto; */
-
-  width: 300px;
-  padding: 7px 3px;
-  border-radius: 8px;  
-  }
-  .accounts-section > .form>.heading {
-  font-size: 26px;
-  margin-bottom: 12px;
-  }
-  .accounts-section > .form > .outlined-custom-field {
-    --input-font-size: 15px;
-    --label-font-size: 11px;
-   }   
-   .accounts-section > .form > .outlined-custom-field > input{
-    padding: 8px;    
-    width: calc(100% - 16px);
-
-   }
-  .accounts-section > .form > .message {
-  font-size: 10px;  
-  margin-top: 2px;
-  margin-bottom: 8px;
-  }
-  .accounts-section > .form > :is(.have-not-account, .already-have-account) {
-  margin-bottom: 8px;
-  font-size: 15px;
-  }
-  
-  .accounts-section > .form > button[type="submit"] {
-    padding: 8px;
-    border-radius: 4px;
-    font-size: 12px;
+    padding: 20px 12px 45px 12px;
+    border-radius: 8px;
     }
- 
+    
+    .accounts-section > .form>.heading {
+    font-size: 33px;
+    margin-bottom: 27px;
+    }
+    
+    .accounts-section > .form > .outlined-custom-field {
+      --input-font-size: 19px;
+      --label-font-size: 15px;
+     }
+     .accounts-section > .form > .outlined-custom-field > input{
+       width: calc(100% - 16px);
+       padding: 8px;
+    }
+    .accounts-section > .form > .message {
+    font-size: 9px;  
+    margin-top: 1px;
+    }
+    .accounts-section > .form > .message:not(:last-of-type) {
+      margin-bottom: 8px;
+    }
+    .accounts-section > .form > .links-container{
+      margin-bottom: 20px;
+    }
+    .accounts-section > .form > .links-container > a{
+     font-size: 15px;
+    }
+    .accounts-section > .form > button[type="submit"] {
+      padding: 8px;
+      border-radius: 4px;
+      font-size: 15px;
+      }
+  
+      .accounts-section > .form >.link-wrapper{
+        font-size: 15px;
+        margin-top: 12px;
+      }
+      .accounts-section > .form >.link-wrapper > a{
+       margin-left: 8px;
+      }
+      .accounts-section > .form >  .or{
+        font-size: 15px;      
+        margin: 37px 0;
+       }
+       .accounts-section > .form >  .or > p{
+         padding: 0 12px;
+       }
+      .accounts-section > .form > .with-social-media-container{
+       gap: 15px;
+      } 
+      .accounts-section > .form > .with-social-media-container .title{
+      font-size: 15px;
+      }
+      .accounts-section > .form > .with-social-media-container > .platforms-wrapper{
+        gap: 20px;
+      } 
+      .accounts-section > .form > .with-social-media-container > .platforms-wrapper > .platform{
+       padding: 12px;
+      } 
+      .accounts-section > .form > .with-social-media-container > .platforms-wrapper > .platform > svg{
+        width: 22px;
+        height: 22px;
+      }
+  
   }
