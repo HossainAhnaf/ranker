@@ -13,7 +13,7 @@
     right: 5px;
     padding: 1vw 4vw;
     gap: 3vw;
-    background-color: var(--container-bg-color-secondary);
+    background-color: inherit;
     border-radius: 5vw;
   box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5);
   }

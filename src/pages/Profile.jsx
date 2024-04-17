@@ -2,7 +2,7 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import dummyRecentChallengesData from '../data/recentChallengesData.json'
 import useSetValueFromStart from '../hooks/useSetValueFromStart'
-import { useParams } from 'react-router';
+import { useNavigate, useParams } from 'react-router';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 
@@ -26,10 +26,19 @@ import '../assets/css/tablet/profile.css';
 
 function Profile() {
   const params = useParams()
-  const { username, name, avatar, rank, status, challenges, passed, failed, level, xp } = useSelector(state => state.userSlice)
+  const navigate = useNavigate()
+  const {
+    username,
+    name,
+    avatar,
+    rank, status,
+    challenges,
+    passed,
+    failed,
+    level,
+    xp } = useSelector(state => state.userSlice)
 
   const isAuthor = (username === params.username || params.username === 'me')
-
   const [isProfileEditFormVisible, setIsProfileEditFormVisible] = useState(false)
 
   const [challengesData, setChallengesData] = useState(dummyRecentChallengesData)
@@ -119,18 +128,18 @@ function Profile() {
 
           </div>
           {isAuthor &&
-          <button className="profile-edit-button positive button flex-rw center button" onClick={() => setIsProfileEditFormVisible(true)}>
-            <div className="svgCont flex-rw center">
-            <Icon src={pencilSvg} />   
-            </div> 
-            <span>Edit Profile</span>
-          </button>
-           }
+            <button className="profile-edit-button positive button flex-rw center button" onClick={() => navigate('/settings')}>
+              <div className="svgCont flex-rw center">
+                <Icon src={pencilSvg} />
+              </div>
+              <span>Edit Profile</span>
+            </button>
+          }
         </div>
         <hr />
-       <ChallengesActivity/>
+        <ChallengesActivity />
         <hr />
-      <AuthorProgress authorLevel={authorLevel} authorXp={authorXp} progressParcentage={progressParcentage}/>
+        <AuthorProgress authorLevel={authorLevel} authorXp={authorXp} progressParcentage={progressParcentage} />
       </section>
       {
         isProfileEditFormVisible &&
@@ -139,10 +148,10 @@ function Profile() {
       {
         isAuthor &&
         <section className="recent-challenges flex-cm">
-        <div className="top-nav flex-rw">
-         <h3 className='title'>Recent Challenges</h3>
-         <Link to='/challenges' className="see-all-button button ">See all</Link>
-        </div>
+          <div className="top-nav flex-rw">
+            <h3 className='title'>Recent Challenges</h3>
+            <Link to='/challenges' className="see-all-button button ">See all</Link>
+          </div>
           <ChallengeCardsWrapper data={challengesData} shortDesc={true} />
         </section>
       }

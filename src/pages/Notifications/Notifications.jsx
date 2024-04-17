@@ -49,8 +49,7 @@ function Notifications({ shortView, isNotificationOpen, setIsNotificationOpen })
 
 
       notificationMoreOptionsWrapperRef.current.onblur = ({ relatedTarget }) => {
-       console.log(relatedTarget);
-        if (relatedTarget === null  || (relatedTarget?.classList.contains('more-button') && relatedTarget !== currentActiveMoreButton )) 
+        if (relatedTarget === null  || (relatedTarget?.classList.contains('more-button') && relatedTarget !== currentActiveMoreButton ) || !notificationMoreOptionsWrapperRef.current.contains(relatedTarget)) 
         hideNotificationMoreOptionsWrapper()
          else notificationMoreOptionsWrapperRef.current.focus()
       }
@@ -110,8 +109,7 @@ function Notifications({ shortView, isNotificationOpen, setIsNotificationOpen })
       notificationsSectionRef.current.focus()
   }
   useEffect(() => {
-    if (shortView) {
-      notificationsSectionRef.current.onBlur = notificationsSectionBlurHandler
+    if (shortView) {     
       if (isNotificationMoreOptionsWrapperClassList.includes('active')) {
         notificationsWrapperRef.current.onscroll = notificationsWrapperScrollHandler
       } else
@@ -119,15 +117,15 @@ function Notifications({ shortView, isNotificationOpen, setIsNotificationOpen })
 
       if (isNotificationOpen)
         notificationsSectionRef.current.focus()
-    } else
-      notificationsSectionRef.current.onBlur = null
-
+    }  
 
   }, [isNotificationOpen, isNotificationMoreOptionsWrapperClassList])
+ 
+ 
   return (
     <>
 
-      <section className={`notifications-section ${shortView ? 'short-view' : ''} ${isNotificationOpen ? 'active' : ''} flex-cm`} ref={notificationsSectionRef} tabIndex='0'>
+      <section className={`notifications-section ${shortView ? 'short-view' : ''} ${isNotificationOpen ? 'active' : ''} flex-cm`} ref={notificationsSectionRef}  tabIndex='0' onBlur={shortView ? notificationsSectionBlurHandler : null}>
 
         <nav className="flex-rw">
           <h1 className="heading">Notifications</h1>

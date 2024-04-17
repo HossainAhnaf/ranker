@@ -1,21 +1,21 @@
 //modules
 import React ,{useRef} from 'react'
 import { useDispatch } from 'react-redux'
-import useDebounce from '../hooks/useDebounce'
+import useDebounce from '../../hooks/useDebounce'
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 //components
-import MenuButton from './MenuButton';
+import MenuButton from '../../components/MenuButton';
 import Icon from 'react-inlinesvg'
 
 //svg
-import dropDownSvg from '../assets/svg/drop-down.svg'
-import tickSvg from '../assets/svg/tick(1).svg'
-import plusSvg from '../assets/svg/plus(1).svg'
-import closeSvg from '../assets/svg/close(1).svg'
-import searchSvg from '../assets/svg/search.svg'
-import filterSvg from '../assets/svg/filter.svg'
-function ChallengesSectionNav() {
+import dropDownSvg from '../../assets/svg/drop-down.svg'
+import tickSvg from '../../assets/svg/tick(1).svg'
+import plusSvg from '../../assets/svg/plus(1).svg'
+import closeSvg from '../../assets/svg/close(1).svg'
+import searchSvg from '../../assets/svg/search.svg'
+import filterSvg from '../../assets/svg/filter.svg'
+function Toolbar() {
 
   const activeFiltersListRef = useRef(null)
 
