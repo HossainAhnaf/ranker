@@ -105,8 +105,22 @@
 .profile > .info-section>.primary > .profile-edit-button  .fill{
   fill: white;
 } 
- 
-
+.profile > .info-section>.primary >.user-social-accounts-wrapper{
+  width: 100%;
+  margin-top: 2vw;
+  gap: 3vw;
+}
+.profile > .info-section>.primary >.user-social-accounts-wrapper > .social-account{
+  align-self: flex-start;
+  gap: 2vw;
+  text-decoration: none;
+  color: var(--paragraph-color-secondary);
+  font-size: 4vw;
+}
+.profile > .info-section>.primary >.user-social-accounts-wrapper > .social-account > svg{
+ width: 5vw;
+ height: 5vw;
+}
  
 
 /*recent challenges*/

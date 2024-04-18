@@ -173,8 +173,12 @@
     gap: 12px;
   }
   .settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content.connect-type > .platform > .logo{
+   padding: 10px;
+  }
+  .settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content.connect-type > .platform > .logo > svg{
     width: 26px;
     height: 26px;
+  
   }
 
 

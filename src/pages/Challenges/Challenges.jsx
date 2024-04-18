@@ -1,5 +1,5 @@
 //Modules
-import React, { useState,useMemo } from "react";
+import React, { useState,useMemo, useEffect } from "react";
 import dummyRecentChallengesData from '../../data/challengesData.json'
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
@@ -19,7 +19,11 @@ function Challenges() {
   const progressParcentage = useMemo(()=>(xp /1000)*100)
 
   const [challengesData, setChallengesData] = useState(dummyRecentChallengesData)
-
+  useEffect(() => {
+    if (!document.cookie.includes('isUserAlreadyChallengesPageVisited')) {
+      document.cookie = 'isUserAlreadyChallengesPageVisited=true'
+    }
+  },[])
   return (
     <section className="challenges-section flex-rw">
       <div className="primary">

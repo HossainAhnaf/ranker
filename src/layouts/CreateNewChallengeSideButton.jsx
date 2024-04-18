@@ -2,7 +2,7 @@
 import React, { useEffect,useRef,useState } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
 import useDebounce from '../hooks/useDebounce'
-
+import useIsMobile from '../hooks/useIsMobile'
 //components
 import Icon from 'react-inlinesvg'
 //svg
@@ -30,16 +30,35 @@ function CreateNewChallengeSideButton() {
     if (!createNewChallengeSideButtonRef.current.onmouseenter) 
     createNewChallengeSideButtonRef.current.onmouseenter = ({currentTarget,type}) => showFullButton(currentTarget,type)
   }
+
+
+  const hideShowFullButtonAnimation = () => {
+    setInterval(() => {
+    showFullButton(createNewChallengeSideButtonRef.current,'mouseenter')
+      setTimeout(() => {
+        hideFullButton()
+        },6000)
+    },1000 * 60 * 2.5)
+   }
+
+
+
   useEffect(() => {
     if (location.pathname.startsWith('/create-new-challenge') || location.pathname === '/')
       setHidden(true)
     else
       setHidden(false)
   }, [location])
+
+
+  
   useEffect(() => {
     createNewChallengeSideButtonRef.current.onmouseenter = ({currentTarget,type}) =>{
        showFullButton(currentTarget,type)
     }
+    if (!useIsMobile() && document.cookie.includes('isUserAlreadyChallengesPageVisited'))
+    hideShowFullButtonAnimation()
+    
   },[])
   return (
    <button className={`create-new-challenge-side-button  ${hidden ? 'hidden' : ''} flex-rw`}

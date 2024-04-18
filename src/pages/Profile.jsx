@@ -14,10 +14,13 @@ import UserAvatar from '../components/UserAvatar';
 import ChallengesActivity from '../components/ChallengesActivity/ChallengesActivity';
 import AuthorProgress from '../components/AuthorProgress';
 import ChallengeCardsWrapper from '../components/ChallengeCardsWrapper';
-import Info from '../components/Info';
 import Icon from 'react-inlinesvg';
 //svg
 import pencilSvg from '../assets/svg/pencil.svg';
+import facebookSvg from '../assets/svg/facebook.svg';
+import twitterSvg from '../assets/svg/twitter.svg';
+import googleSvg from '../assets/svg/google.svg';
+import linkedinSvg from '../assets/svg/linkedin.svg';
 //css
 import '../assets/css/profile.css';
 import '../assets/css/mobile-large/profile.css';
@@ -135,6 +138,17 @@ function Profile() {
               <span>Edit Profile</span>
             </button>
           }
+          <div className="user-social-accounts-wrapper flex-cm">
+          <a href="#" className="social-account flex-rw bottom button">
+              <Icon src={facebookSvg} />
+              <p>{username}</p>
+            </a>
+            <a href="#" className="social-account flex-rw bottom button">
+              <Icon src={twitterSvg} />
+              <p>{username}</p>
+            </a>
+           
+          </div>
         </div>
         <hr />
         <ChallengesActivity />

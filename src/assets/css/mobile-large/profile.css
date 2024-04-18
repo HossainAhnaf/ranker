@@ -51,7 +51,19 @@
     height: 15px;
   }
 
-  
+  .profile > .info-section>.primary >.user-social-accounts-wrapper{
+    margin-top: 8px;
+    gap: 15px;
+  }
+  .profile > .info-section>.primary >.user-social-accounts-wrapper > .social-account{
+    gap: 8px;
+    font-size: 15px;
+  }
+  .profile > .info-section>.primary >.user-social-accounts-wrapper > .social-account > svg{
+   width: 20px;
+   height: 20px;
+  }
+   
   
   /*recent challenges*/
   .profile >.recent-challenges { 

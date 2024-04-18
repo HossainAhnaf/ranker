@@ -334,9 +334,18 @@ justify-content: flex-start;
  color: var(--paragraph-color-secondary);
 }
 .settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content.connect-type > .platform > .logo{
- width: 7vw;
- height: 7vw;
+  border-radius: 100%;
+  background-color: white;
+  padding: 2.5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
 }
+.settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content.connect-type > .platform > .logo > svg{
+  width: 7vw;
+  height: 7vw;
+ }
 .settings-section > .main-content > .content >  .outlet-wrapper section > .content-wrapper > .content.connect-type  > .value-wrapper > .value.connected{
   color: var(--paragraph-color-primary);
 }  

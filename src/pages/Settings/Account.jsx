@@ -3,8 +3,10 @@ import {Link, useOutletContext} from 'react-router-dom'
 //components
 import Icon from 'react-inlinesvg'
 //svg
-import googleSvg from '../../assets/svg/google.svg'
 import facebookSvg from '../../assets/svg/facebook.svg'
+import twitterSvg from '../../assets/svg/twitter.svg'
+import googleSvg from '../../assets/svg/google.svg'
+import linkedinSvg from '../../assets/svg/linkedin.svg'
 function Account() {
   const  email = "abc@gmail.com"
   const [currentEmail, setCurrentEmail] = useState(email)
@@ -49,23 +51,9 @@ function Account() {
       <section>
         <b className="section-name">Social Account</b>
         <div className="content-wrapper flex-cm center">
-          <div className="content connect-type">
+        <div className="content connect-type">
           <div className="platform flex-rw center">
-              <div className="logo svgCont">
-                <Icon src={googleSvg} />
-              </div>
-              <p className="title">Google</p>
-            </div> 
-           <div className="value-wrapper">
-            <p className="value connected">connected</p>
-            </div> 
-            <button className="connect-disconnect-button button">Disconnect</button>
-
-          </div>
-
-          <div className="content connect-type">
-          <div className="platform flex-rw center">
-              <div className="logo svgCont">
+              <div className="logo">
                 <Icon src={facebookSvg} />
               </div>
               <p className="title">Facebook</p>
@@ -76,6 +64,48 @@ function Account() {
             <button className="connect-disconnect-button button">Connect</button>
 
           </div>
+          <div className="content connect-type">
+          <div className="platform flex-rw center">
+              <div className="logo">
+                <Icon src={twitterSvg} />
+              </div>
+              <p className="title">Facebook</p>
+            </div> 
+           <div className="value-wrapper">
+            <p className="value not-connected">Not connected</p>
+            </div> 
+            <button className="connect-disconnect-button button">Connect</button>
+
+          </div>
+
+          <div className="content connect-type">
+          <div className="platform flex-rw center">
+              <div className="logo">
+                <Icon src={googleSvg} />
+              </div>
+              <p className="title">Google</p>
+            </div> 
+           <div className="value-wrapper">
+            <p className="value connected">connected</p>
+            </div> 
+            <button className="connect-disconnect-button button">Disconnect</button>
+
+          </div>
+          <div className="content connect-type">
+          <div className="platform flex-rw center">
+              <div className="logo">
+                <Icon src={linkedinSvg} />
+              </div>
+              <p className="title">Facebook</p>
+            </div> 
+           <div className="value-wrapper">
+            <p className="value not-connected">Not connected</p>
+            </div> 
+            <button className="connect-disconnect-button button">Connect</button>
+
+          </div>
+
+
         </div>
       </section>
       <button className="delete-account-button button">Delete Account</button>
