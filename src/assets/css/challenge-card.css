@@ -8,6 +8,43 @@
     color: var(--paragraph-color-primary);
   position: relative;
   }
+
+  .challenge-card > .header{
+   width: 100%;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   width: 30%;
+
+  }
+  .challenge-card > .header > .title {
+    display: flex;
+    flex-direction: row;
+    gap: 2vw;
+    justify-content: start;
+    align-items: center;
+    font-size: 5vw;
+    width: 70%;
+  }
+  .challenge-card > .header > .tags-wrapper {
+    width: 30%;
+    padding: 1vw 4vw;
+    gap: 3vw;
+    background-color: inherit;
+    border-radius: 5vw;
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5);
+  }
+  .challenge-card > .header  > .tags-wrapper  > .pin-icon {
+    width: 6vw;
+    height: 6vw;
+  }
+
+  .challenge-card > .header > .tags-wrapper > .difficulty {
+    font-weight: bold;
+    font-size: 4vw;
+  }
+  
+/* 
   .challenge-card> .right-wrapper {
     position: absolute;
     right: 5px;
@@ -60,4 +97,4 @@
     width: 7vw;
     height: 7vw;
   
-  }
+  } */

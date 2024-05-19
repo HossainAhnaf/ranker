@@ -14,7 +14,9 @@ import '../assets/css/mobile-large/challenge-card.css'
 function ChallengeCard({ title, description, difficulty, pinned, id }) {
   return (
     <div className="challenge-card flex-cm left" datapinned={pinned.toString()}>
-      <div className="right-wrapper flex-rw center">
+     <div className="header">
+     <h4 className="title">{id}. {title}</h4>
+     <div className="tags-wrapper flex-rw center">
         <small className={`difficulty ${difficulty}`}>{difficulty[0].toUpperCase() + difficulty.slice(1)}</small>
         {
           pinned &&
@@ -23,8 +25,10 @@ function ChallengeCard({ title, description, difficulty, pinned, id }) {
           </span>
         }
       </div>
-      <h4 className="title">{id}. {title}</h4>
-      <small className="description">{description}</small>
+     </div>
+
+      
+      {/* <small className="description">{description}</small>
       <div className="button-container flex-rw center left">
         <button className="tick button svgCont noEffect">
           <Icon src={tickSvg} />
@@ -32,7 +36,7 @@ function ChallengeCard({ title, description, difficulty, pinned, id }) {
         <button className="cross button svgCont noEffect">
           <Icon src={closeSvg} />
         </button>
-      </div>
+      </div> */}
 
 
     </div>
