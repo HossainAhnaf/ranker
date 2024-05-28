@@ -45,16 +45,31 @@
     font-size: 3vw;
   }
   /* main */
+  @keyframes spawnAnimation{
+    0%{
+      padding: 0;
+    }
+    100%{
+      padding: 2vw 0;
+    }
+  }
   .challenge-card > .main{
     width: 100%;
-    display: flex;
+    display: none;
     flex-direction: column;
+   animation-name: spawnAnimation;
+   animation-duration: .5s;
+   animation-iteration-count: 1;
+   padding: 2vw 0;
+
+  }
+  .challenge-card > .main.active{
+    display: flex;
   }
   .challenge-card > .main > .task-divisitions-wrapper{
     width: 90%;
     display: flex;
     flex-direction: column;
-    padding: 2vw 0;
     gap: 1vw;
   }
   .challenge-card > .main > .task-divisitions-wrapper > .task-divisition{
@@ -64,6 +79,11 @@
    align-items: center;
    gap: 3vw;
    font-size: 5vw;
+   cursor: pointer;
+  }
+  .challenge-card > .main > .task-divisitions-wrapper > .task-divisition.done{
+  opacity: .5;
+  cursor: default;
   }
   .challenge-card > .main > .task-divisitions-wrapper > .task-divisition.done > .title{
     text-decoration:line-through;
@@ -75,29 +95,56 @@
   .challenge-card > .main > .task-divisitions-wrapper > .task-divisition > .value-percentage{
     color: gray;
   } 
-  .challenge-card > .main > .task-divisitions-wrapper > .task-divisition.done > .value-percentage{
-    color: var(--theme-secondary-default);
-  } 
+
   .challenge-card > .footer{
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
+  .challenge-card > .footer > .left{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2vw;
+  }
   .challenge-card > .footer > .left > .details-toggle-button{
    display: flex;
    background-color: transparent;
    border: none;
    color: gray;
+   cursor: pointer;
   }
   .challenge-card > .footer > .left > .details-toggle-button.active{
     color: var(--theme-secondary-default);
     } 
   .challenge-card > .footer > .left > .details-toggle-button > svg{
-    width: 7vw;
-    height: 7vw;
+    width: 8vw;
+    height: 8vw;
    }
+   .challenge-card > .footer > .left > .complete-progressbar{
+     width: 70px;
+     height: 10px;
+     border: 1px solid black;
+     position: relative;
+    border-radius: 5vw;
+    }
+   .challenge-card > .footer > .left > .complete-progressbar > .percent-text{
+    position: absolute;
+    left: 40%;
+    font-size: 4vw;
+    color: white;
+    mix-blend-mode: difference;
+  }
 
+   .challenge-card > .footer > .left > .complete-progressbar > .progress{
+     width: 0;
+   height: 100%;
+   content: "";
+   background-color: var(--theme-secondary-default);
+   transition: width .3s;
+   }
+  
    .challenge-card> .footer > .right {
     gap: 1vw;
     margin-top: 1vh;
