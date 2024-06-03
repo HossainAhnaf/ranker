@@ -14,14 +14,14 @@
   --header-bg-color:rgb(233, 233, 233);
 
   --container-bg-color: white;
-  --container-bg-color-secondary: whitesmoke;
+  --container-bg-color-secondary: rgb(241, 241, 241);
 
   --paragraph-color-primary:black; 
   --paragraph-color-secondary:gray; 
   --border-color:gray;
   --layout-bg-color:white;
  --challenge-card-bg-color:whitesmoke;
- --item-bg-color:whitesmoke;
+ --item-bg-color:rgb(241, 241, 241);
 
  --notification-unread-bg-color:rgb(248, 228, 210); 
   /* status */
@@ -46,7 +46,7 @@
     --paragraph-color-secondary:lightgray; 
     --border-color:lightgray;
     --layout-bg-color: #333 ;
-    --challenge-card-bg-color:#6e6e6e;
+    --challenge-card-bg-color:#555555;
     --item-bg-color:#ffffff1a;
     --notification-unread-bg-color:rgb(148, 131, 116) ;
     /* status */
@@ -62,14 +62,14 @@
   --body-bg-color:white;
   --icon-color:black;
   --container-bg-color: white;
-  --container-bg-color-secondary: whitesmoke;
+  --container-bg-color-secondary: rgb(241, 241, 241);
 
   --paragraph-color-primary:black; 
   --paragraph-color-secondary:gray; 
   --border-color:gray;
   --layout-bg-color:white;
  --challenge-card-bg-color:whitesmoke;
- --item-bg-color:whitesmoke;
+ --item-bg-color:rgb(241, 241, 241);
  --header-bg-color:rgb(233, 233, 233);
 
  --notification-unread-bg-color:rgb(248, 228, 210); 
@@ -94,7 +94,7 @@
   --paragraph-color-secondary:lightgray; 
   --border-color:lightgray;
   --layout-bg-color: #333 ;
-  --challenge-card-bg-color:#6e6e6e;
+  --challenge-card-bg-color:#555555;
   --item-bg-color:#ffffff1a;
   --header-bg-color:#6e6e6e;
   --notification-unread-bg-color:rgb(148, 131, 116) ;
