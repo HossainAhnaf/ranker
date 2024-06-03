@@ -1,48 +1,81 @@
 @media screen and (min-width: 375px) {
+  
 .challenge-card{
-    width: 90%;
-    padding: 12px;
-    border-radius: 10px;
-  }
-  .challenge-card> .right-wrapper {
-    right: 5px;
-    padding: 4px 15px;
-    gap: 12px;
-    border-radius: 20px;
-  }
-  .challenge-card> .right-wrapper  > .pin-icon {
-    width: 22px;
-    height: 22px;
-  
-  }
-  
-  .challenge-card> .right-wrapper > .difficulty {
-    font-size: 15px;
-  }
-  
-  .challenge-card> .title {
-    margin-bottom: 10px;
-    gap: 8px;
-    font-size: 18px
-  }
-  .challenge-card> .description {
-    font-size: 14px 
-  }
+  padding: 13px;
+  padding-bottom: 4px;
+  border-radius: 13px;
+}
 
-  .challenge-card> .button-container {
-    gap: 4px;
-    margin-top: 6px;
-  }
+.challenge-card > .header{
+gap: 13px;
+}
+.challenge-card > .header > .title {
+  gap: 8px;
+  font-size: 19px;
+}
+.challenge-card > .header > .tags-wrapper {
+  padding: 4px;
+  gap: 13px;
+  border-radius: 20px;
+}
+.challenge-card > .header  > .tags-wrapper  > .pin-icon {
+  width: 20px;
+  height: 20px;
+}
 
-  .challenge-card> .button-container > .tick {
-    width: 30px;
-    height: 30px;
+.challenge-card > .header > .tags-wrapper > .difficulty {
+  font-size: 13px;
+}
+/* main */
+@keyframes spawnAnimation{
+  0%{
+    padding: 0;
   }
-  
-  .challenge-card> .button-container > .cross {
-    width: 26px;
-    height: 26px;
-  
+  100%{
+    padding: 8px 0;
   }
+}
+.challenge-card > .main{
+ padding: 8px 0;
+}
+.challenge-card > .main > .task-divisitions-wrapper{
+  gap: 4px;
+}
+.challenge-card > .main > .task-divisitions-wrapper > .task-divisition{
+ gap: 13px;
+ font-size: 19px;
+}
+
+.challenge-card > .main > .task-divisitions-wrapper > .task-divisition > input{
+width: 15px;
+}
+
+.challenge-card > .footer > .left{
+  gap: 8px;
+}
+.challenge-card > .footer > .left > .details-toggle-button > svg{
+  width: 32px;
+  height: 32px;
+ }
+ .challenge-card > .footer > .left > .complete-progressbar{
+   height: 17px;
+  border-radius: 20px;
+  } 
+  .challenge-card > .footer > .left > .complete-progressbar > .percent-text{
+  font-size: 15px;
+}
+ .challenge-card> .footer > .right {
+  gap: 4px;
+  margin-top: 8px;
+}
+.challenge-card> .footer > .right > .tick {
+  width: 32px;
+  height: 32px;
+}
+.challenge-card> .footer > .right > .cross {
+  width: 28px;
+  height:28px;
+}
+
 
 }
