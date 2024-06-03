@@ -107,6 +107,7 @@
     flex-direction: row;
     align-items: center;
     gap: 2vw;
+    width: 70%;
   }
   .challenge-card > .footer > .left > .details-toggle-button{
    display: flex;
@@ -123,13 +124,20 @@
     height: 8vw;
    }
    .challenge-card > .footer > .left > .complete-progressbar{
-     width: 70px;
-     height: 10px;
+     width: 0;
+     overflow: hidden;
+     height: 4vw;
      border: 1px solid black;
      position: relative;
     border-radius: 5vw;
+    visibility: hidden;
+    transition: width .3s;
     }
-   .challenge-card > .footer > .left > .complete-progressbar > .percent-text{
+    .challenge-card > .footer > .left > .complete-progressbar.active{
+      width: 70%;
+      visibility: visible;
+    }
+    .challenge-card > .footer > .left > .complete-progressbar > .percent-text{
     position: absolute;
     left: 40%;
     font-size: 4vw;
@@ -161,57 +169,3 @@
     width: 7vw;
     height: 7vw;
   }
-  /* 
-  .challenge-card> .right-wrapper {
-    position: absolute;
-    right: 5px;
-    padding: 1vw 4vw;
-    gap: 3vw;
-    background-color: inherit;
-    border-radius: 5vw;
-  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5);
-  }
-  .challenge-card > .right-wrapper  > .pin-icon {
-    width: 6vw;
-    height: 6vw;
-  }
-
-  .challenge-card> .right-wrapper > .difficulty {
-    font-weight: bold;
-    font-size: 4vw;
-  }
-  
-  .challenge-card> .title {
-    margin-bottom: 3vw;
-    display: flex;
-    flex-direction: row;
-    gap: 2vw;
-    justify-content: start;
-    align-items: center;
-    flex-wrap: wrap;
-    font-size: 5vw;
-    width: 70%;
-  }
-  .challenge-card> .description {
-    font-size: 4vw 
-  }
-  
-
-  .challenge-card> .button-container {
-    gap: 1vw;
-    margin-top: 1vh;
-  }
-  .challenge-card> .button-container > button {
-    background-color: transparent;
-    border: none;    
-   }
-  .challenge-card> .button-container > .tick {
-    width: 8vw;
-    height: 8vw;
-  }
-  
-  .challenge-card> .button-container > .cross {
-    width: 7vw;
-    height: 7vw;
-  
-  } */
