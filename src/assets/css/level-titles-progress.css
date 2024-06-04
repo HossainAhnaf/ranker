@@ -1,0 +1,42 @@
+.level-titles-progress{
+
+}
+
+.level-titles-progress >  .title{
+ width: 100%;
+ margin-bottom: 10px;
+ font-size: 3vw;
+ color: var(--paragraph-color-secondary);
+}
+
+.level-titles-progress > .level-title-wrapper{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 3vw;
+}
+.level-titles-progress > .level-title-wrapper >  .level-title{
+ display: flex;
+ align-items: center;
+ font-size: 4vw;
+}
+.level-titles-progress > .level-title-wrapper >  .level-title:not(:nth-child(3n))  > .line{
+ width: 100%;
+ height: .5vw;
+ background-color: black;
+ content: "";
+}
+.level-titles-progress > .level-title-wrapper >  .level-title:nth-child(3n){
+  flex-direction: column;
+  align-items: unset;
+  position: relative;
+ }
+ .level-titles-progress > .level-title-wrapper >  .level-title:nth-child(3n) > .line{
+    height: 20px;
+
+    position: absolute;
+    background-color: red;
+}
+
+ /* .level-titles-progress > .level-title-wrapper >  .level-title:not(:nth-child(3))  > .line{
+
+ } */
