@@ -26,6 +26,8 @@ import '../assets/css/profile.css';
 import '../assets/css/mobile-large/profile.css';
 import '../assets/css/tablet/profile.css';
 // import '../assets/css/laptop/profile.css';
+import'../assets/css/level-titles-progress.css';
+
 
 function Profile() {
   const params = useParams()
@@ -161,6 +163,37 @@ function Profile() {
       }
       {
         isAuthor &&
+        <>
+        <section className="level-titles-progress">
+          <h3 className="title">Level titles</h3> 
+         <div className="level-title-wrapper">
+          <div className="level-title">
+            <span className="name">Blpha</span>
+            <div className="line"></div>
+          </div>
+          <div className="level-title">
+            <span className="name">Blpha</span>
+            <div className="line"></div>
+          </div>
+          <div className="level-title">
+            <span className="name">Blpha</span>
+            <div className="line"></div>
+          </div>
+          <div className="level-title">
+            <span className="name">Blpha</span>
+            <div className="line"></div>
+          </div>
+          <div className="level-title">
+            <span className="name">Blpha</span>
+            <div className="line"></div>
+          </div>
+          <div className="level-title">
+            <span className="name">Blpha</span>
+            <div className="line"></div>
+          </div>
+         </div>
+
+        </section>
         <section className="recent-challenges flex-cm">
           <div className="top-nav flex-rw">
             <h3 className='title'>Recent Challenges</h3>
@@ -168,6 +201,7 @@ function Profile() {
           </div>
           <ChallengeCardsWrapper data={challengesData} shortDesc={true} />
         </section>
+        </>
       }
     </div>
   )
